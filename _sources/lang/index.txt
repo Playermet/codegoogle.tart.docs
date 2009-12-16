@@ -8,6 +8,7 @@ Contents:
 
    intro
    lex
+   operators
    types
    declarations
    expressions

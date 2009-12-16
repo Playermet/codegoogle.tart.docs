@@ -90,30 +90,25 @@ Java, but more concise and requiring less verbose boilerplate.</li>
 <div class="section" id="features-of-tart">
 <h2>Features of Tart<a class="headerlink" href="#features-of-tart" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Able to be compiled directly to native code. Although there may also
-be versions of the Tart compiler that are targeted at virtual machines
-such as the JVM and CLR, Tart doesn&#8217;t require a VM.</li>
 <li>Strong static typing. Tart&#8217;s type system is optimized for
 expressiveness and power. Types can be automatically inferred in many
 cases, which means that the code isn&#8217;t cluttered up by redundant
 type declarations.</li>
-<li>Built-in support for garbage collection.</li>
-<li>Able to interoperate with libraries written in other languages through
-the platform ABI using a foreign function interface (FFI).</li>
 <li>Supports a variety of programming styles: object-oriented, functional
 programming, imperative programming, generic programming, metaprogramming,
 and so on.</li>
-<li>Support for concurrency and multiprocessor programming.</li>
 <li>Built-in support for reflection and type inspection.</li>
+<li>Built-in support for garbage collection.</li>
+<li>Support for closures and anonymous functions.</li>
+<li>Able to interoperate with libraries written in other languages through
+the platform ABI using a foreign function interface (FFI).</li>
+<li>Able to be compiled directly to native code. Although there may also
+be versions of the Tart compiler that are targeted at virtual machines
+such as the JVM and CLR, Tart doesn&#8217;t require a VM.</li>
+<li>Support for concurrency and multiprocessor programming.</li>
 <li>Supports operator overloading via generic functions. Writing a new &#8216;+&#8217;
 operator is simply a matter of writing a new specialization for
 <tt class="docutils literal"><span class="pre">infixAdd</span></tt>.</li>
-<li>Support for closures and anonymous functions.</li>
-<li>Support for &#8220;effect declarations&#8221; - meaning that you can annotate what
-effects a particular function has, and those effects can propagate
-upward at compile time to the calling functions. So for example, if
-a function requires doing I/O, or is not thread-safe you can annotate
-this fact with an effect.</li>
 <li>Regular, unambiguous syntax that is easy to write parsers for. It will
 be easy to support Tart in IDEs and refactoring tools. At the same time,
 Tart&#8217;s syntax has been designed with humans in mind - the syntax provides
@@ -235,7 +230,7 @@ working on those backronyms!</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 10, 2009.
+      Last updated on Dec 15, 2009.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
     </div>
   </body>
