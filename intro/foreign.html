@@ -57,7 +57,7 @@ you don&#8217;t need to write a special &#8220;wrapper&#8221; around the C libra
 Instead, you declare these functions directly in Tart using the <tt class="xref docutils literal"><span class="pre">Extern</span></tt>
 attribute:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="p">[</span><span class="nv">Extern</span><span class="p">(</span><span class="s">&quot;img_open&quot;</span><span class="p">)]</span>
-<span class="k">def</span> <span class="nf">OpenImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span><span class="nc">NativePointer</span><span class="p">&lt;[</span><span class="nc">ubyte</span><span class="p">]&gt;,</span> <span class="nv">length</span><span class="p">:</span><span class="nc">int</span><span class="p">);</span>
+<span class="k">def</span> <span class="nf">OpenImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span><span class="nc">NativePointer</span><span class="gr">[ubyte], length:int</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The argument to <tt class="docutils literal"><span class="pre">Extern</span></tt> is the C linkage name of the function. This causes
@@ -152,7 +152,7 @@ wrapper code that locks objects in memory to handle this case.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 10, 2009.
+      Last updated on Jan 29, 2010.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
     </div>
   </body>

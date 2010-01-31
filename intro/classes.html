@@ -51,7 +51,7 @@
           <div class="body">
             
   <div class="section" id="classes">
-<span id="index-1"></span><h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
+<span id="index-46"></span><h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword is one of the four keywords that are used to define a new
 aggregate type. The others are <tt class="xref docutils literal"><span class="pre">struct</span></tt>, <tt class="xref docutils literal"><span class="pre">interface</span></tt> and <tt class="xref docutils literal"><span class="pre">protocol</span></tt>.</p>
 <ul>
@@ -74,7 +74,7 @@ or the support can be determined implicitly.</p>
 </li>
 </ul>
 <div class="section" id="declaring-a-new-class">
-<span id="index-2"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
+<span id="index-47"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword defines a new class. Here is a sample of a class definition:</p>
 <div class="highlight-tart"><table class="highlighttable"><tr><td class="linenos"><pre> 1
  2
@@ -130,7 +130,7 @@ or the support can be determined implicitly.</p>
     <span class="k">var</span> <span class="nv">fillColor</span><span class="p">:</span><span class="nc">Color</span><span class="p">;</span>
 
     <span class="c">// A variable with parameterized type.</span>
-    <span class="k">var</span> <span class="nv">children</span><span class="p">:</span><span class="nc">List</span><span class="o">&lt;</span><span class="p">[</span><span class="nv">Shape</span><span class="p">]</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="k">var</span> <span class="nv">children</span><span class="p">:</span><span class="nc">List</span><span class="p">[</span><span class="nv">Shape</span><span class="p">];</span>
   <span class="k">}</span>
 
   <span class="c">// A member function.</span>
@@ -170,7 +170,7 @@ class members <tt class="docutils literal"><span class="pre">public</span></tt> 
 functions are dynamically overridable (<tt class="docutils literal"><span class="pre">virtual</span></tt> in C++ parlance) unless declared <tt class="docutils literal"><span class="pre">final</span></tt>.</p>
 </div>
 <div class="section" id="creating-a-new-class-instance">
-<span id="index-3"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
+<span id="index-48"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for creating a new class instance is the same as in Python, which is
 to call the class as if it were a function:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">s</span> <span class="o">=</span> <span class="nv">Rectangle</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">20</span><span class="p">);</span>
@@ -181,7 +181,7 @@ it&#8217;s a value type, the new object will be constructed in place; If it&#821
 for the object will be allocated on the global heap, and a pointer to the object returned.</p>
 </div>
 <div class="section" id="constructors">
-<span id="index-4"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-49"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <p>A <em>constructor method</em> is responsible for initializing the members of a class instance
 when it is created. The constructor method is named <tt class="xref docutils literal"><span class="pre">construct()</span></tt>, and must not declare a
 return value.</p>
@@ -246,12 +246,12 @@ calls it automatically.</p>
 to synthesize a default constructor.</p>
 </li>
 </ul>
-<p id="index-6">Any member variable which is not initialized by the constructor will be set to
+<p id="index-51">Any member variable which is not initialized by the constructor will be set to
 its default value. If the default value for the member variable has not been
 specified, then it uses the default value for that type.</p>
 </div>
 <div class="section" id="default-constructors">
-<span id="index-7"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-52"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
 <p>If the object has no constructor and no <tt class="xref docutils literal"><span class="pre">create()</span></tt> method, and every field within the object is
 either public or has a default value, then a default constructor will be generated by the compiler.
 The default constructor takes an argument for each public field, where the argument name is the same
@@ -328,12 +328,12 @@ the array actually contains embedded instances of that type.</p>
 <p>The array constructor call is actually implemented as a call to the Array
 template class. So the example above is transformed by the compiler into this:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Allocate an array of 10 rectangles.</span>
-<span class="k">let</span> <span class="nv">a</span> <span class="o">=</span> <span class="nv">Array</span><span class="o">&lt;</span><span class="p">[</span><span class="nv">Rectangle</span><span class="p">]</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span>
+<span class="k">let</span> <span class="nv">a</span> <span class="o">=</span> <span class="nv">Array</span><span class="p">[</span><span class="nv">Rectangle</span><span class="p">](</span><span class="mf">10</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The &#8216;&lt;[&#8216; token is used to indicate the start of a template argument list.</p>
+<p class="last">Square brackets &#8216;[]&#8217; are used to indicate a template argument list.</p>
 </div>
 </div>
 <div class="section" id="extending-types">
@@ -403,10 +403,10 @@ class is hidden by another declaration with the same name:</p>
 <p>Extensions can be templates if the class that they are extending is also a template. If the original
 class is a template and the extension is a specialization of that template, then the extension only
 applies when using the specialization:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Foo</span><span class="p">&lt;[</span><span class="nc">%S</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Foo</span><span class="p">[</span><span class="nc">%S</span><span class="p">]</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
 
 <span class="c">// Only extended for strings</span>
-<span class="k">extend</span> <span class="nc">Foo</span><span class="p">&lt;[</span><span class="nc">String</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span> <span class="c">/* ...*/</span> <span class="k">}</span>
+<span class="k">extend</span> <span class="nc">Foo</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span> <span class="k">{</span> <span class="c">/* ...*/</span> <span class="k">}</span>
 </pre></div>
 </div>
 </div>
@@ -481,7 +481,7 @@ applies when using the specialization:</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 10, 2009.
+      Last updated on Jan 29, 2010.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
     </div>
   </body>

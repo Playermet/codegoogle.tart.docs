@@ -84,18 +84,19 @@ sequence.</p>
 </div>
 <div class="section" id="white-space">
 <h2>White Space<a class="headerlink" href="#white-space" title="Permalink to this headline">¶</a></h2>
+<p>TBW</p>
 </div>
-<div class="section" id="comments">
-<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="source-code-comments">
+<h2>Source-code Comments<a class="headerlink" href="#source-code-comments" title="Permalink to this headline">¶</a></h2>
 <p>Tart comments are similar to those seen in C++ and Java:</p>
 <div class="highlight-python"><pre>/* A block comment. */
 // A line comment</pre>
 </div>
 <p>In addition, Tart supports two forms of &#8216;tartdoc&#8217; comments which can be used to
 automatically generate documentation:</p>
-<blockquote>
-/** A tartdoc block comment. <a href="#id1"><span class="problematic" id="id2">*</span></a>/
-/// A tartdoc line comment.</blockquote>
+<div class="highlight-python"><pre>/** A tartdoc block comment. */
+/// A tartdoc line comment.</pre>
+</div>
 <p>Tart supports a lightweight form of markup within comments that can be used to
 call out parameters and return values. Here&#8217;s an example:</p>
 <div class="highlight-python"><pre>/** Collect all type definitions in the AST.
@@ -108,10 +109,16 @@ call out parameters and return values. Here&#8217;s an example:</p>
 </div>
 <p>The doc comment markup language is designed to minimize the impact on the
 readability of comments in the source code. This will be explained in
-greater detail in a later section. [TODO: link]</p>
+greater detail in a later section. [TODO link]</p>
 </div>
 <div class="section" id="identifiers">
 <h2>Identifiers<a class="headerlink" href="#identifiers" title="Permalink to this headline">¶</a></h2>
+<p>The syntax for identifiers is as follows:</p>
+<pre>
+<strong id="grammar-token-ident_start">ident_start</strong> ::=  <tt class="xref docutils literal"><span class="pre">letter</span></tt> | &quot;_&quot;
+<strong id="grammar-token-ident_char">ident_char </strong> ::=  <tt class="xref docutils literal"><span class="pre">letter</span></tt> | <tt class="xref docutils literal"><span class="pre">digit</span></tt> | &quot;_&quot;
+<strong id="grammar-token-ident">ident      </strong> ::=  <a class="reference internal" href="#grammar-token-ident_start"><tt class="xref docutils literal"><span class="pre">ident_start</span></tt></a> <a class="reference internal" href="#grammar-token-ident_char"><tt class="xref docutils literal"><span class="pre">ident_char</span></tt></a>*
+</pre>
 </div>
 <div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
@@ -131,7 +138,7 @@ class      final      int        not        return     super      uint64</pre>
 <div class="section" id="literals">
 <h2>Literals<a class="headerlink" href="#literals" title="Permalink to this headline">¶</a></h2>
 <pre>
-<strong id="grammar-token-literal">literal   </strong> ::=  <a class="reference internal" href="#grammar-token-int_lit"><tt class="xref docutils literal"><span class="pre">int_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-float_lit"><tt class="xref docutils literal"><span class="pre">float_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-string_lit"><tt class="xref docutils literal"><span class="pre">string_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-char_lit"><tt class="xref docutils literal"><span class="pre">char_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-null_lit"><tt class="xref docutils literal"><span class="pre">null_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-array_lit"><tt class="xref docutils literal"><span class="pre">array_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-type_lit"><tt class="xref docutils literal"><span class="pre">type_lit</span></tt></a>
+<strong id="grammar-token-literal">literal   </strong> ::=  <a class="reference internal" href="#grammar-token-int_lit"><tt class="xref docutils literal"><span class="pre">int_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-float_lit"><tt class="xref docutils literal"><span class="pre">float_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-string_lit"><tt class="xref docutils literal"><span class="pre">string_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-char_lit"><tt class="xref docutils literal"><span class="pre">char_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-null_lit"><tt class="xref docutils literal"><span class="pre">null_lit</span></tt></a> | <a class="reference internal" href="#grammar-token-array_lit"><tt class="xref docutils literal"><span class="pre">array_lit</span></tt></a>
 <strong id="grammar-token-int_lit">int_lit   </strong> ::=  [0-9_]+
 <strong id="grammar-token-float_lit">float_lit </strong> ::=  [0-9_](.[0-9_]+)?(e[0-9_]+)
 <strong id="grammar-token-string_lit">string_lit</strong> ::=  '&quot;' chars '&quot;'
@@ -139,7 +146,6 @@ class      final      int        not        return     super      uint64</pre>
 <strong id="grammar-token-bool_lit">bool_lit  </strong> ::=  &quot;true&quot; | &quot;false&quot;
 <strong id="grammar-token-null_lit">null_lit  </strong> ::=  &quot;null&quot;
 <strong id="grammar-token-array_lit">array_lit </strong> ::=  &quot;[&quot; [<tt class="xref docutils literal"><span class="pre">expression</span></tt> (&quot;,&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt>)*] &quot;]&quot;
-<strong id="grammar-token-type_lit">type_lit  </strong> ::=  typeof <tt class="xref docutils literal"><span class="pre">type_expression</span></tt>
 </pre>
 <div class="section" id="integer-literals">
 <h3>Integer Literals<a class="headerlink" href="#integer-literals" title="Permalink to this headline">¶</a></h3>
@@ -167,32 +173,98 @@ either a point or an exponent (signified with the letter &#8216;e&#8217;) in ord
 distinguish it from an integer. The floating-point literal may also contain
 underscore characters, similar to integers.</p>
 <p>Unlike integers, floating-point literals have distinct sizes, which are
-<tt class="docutils literal"><span class="pre">float</span></tt> (32-bits), <tt class="docutils literal"><span class="pre">double</span></tt> (64 bits) and <tt class="docutils literal"><span class="pre">long</span> <span class="pre">double</span></tt> which is
+<tt class="xref docutils literal"><span class="pre">float</span></tt> (32-bits), <tt class="xref docutils literal"><span class="pre">double</span></tt> (64 bits) and <tt class="xref docutils literal"><span class="pre">long</span> <span class="pre">double</span></tt> which is
 somewhere between 80 and 128 bits, depending on the capabilities of the
 processor.</p>
 </div>
 <div class="section" id="boolean-literals">
 <h3>Boolean Literals<a class="headerlink" href="#boolean-literals" title="Permalink to this headline">¶</a></h3>
-<p>The boolean literals are <tt class="docutils literal"><span class="pre">true</span></tt> and <tt class="docutils literal"><span class="pre">false</span></tt>.</p>
+<p>The boolean literals are <tt class="xref docutils literal"><span class="pre">true</span></tt> and <tt class="xref docutils literal"><span class="pre">false</span></tt>.</p>
 </div>
-<div class="section" id="character-and-string-literals">
-<h3>Character and String Literals<a class="headerlink" href="#character-and-string-literals" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="string-literals">
+<h3>String Literals<a class="headerlink" href="#string-literals" title="Permalink to this headline">¶</a></h3>
+<p>String literals are delimited by double-quotes. A string literal creates
+a instance of class <a title="tart.core.String" class="reference external" href="../lib/core/string.html#tart.core.String"><tt class="xref docutils literal"><span class="pre">tart.core.String</span></tt></a>.</p>
+</div>
+<div class="section" id="character-literals">
+<h3>Character Literals<a class="headerlink" href="#character-literals" title="Permalink to this headline">¶</a></h3>
+<p>Character literals are delimited by single quotes. A character literal
+creates a single 32-bit Unicode character value.</p>
 </div>
 <div class="section" id="escape-sequences-for-character-and-string-literals">
 <h3>Escape Sequences for Character and String Literals<a class="headerlink" href="#escape-sequences-for-character-and-string-literals" title="Permalink to this headline">¶</a></h3>
+<p>Escape sequences in character and string literals are introduced by a backslash character (<tt class="docutils literal"><span class="pre">\</span></tt>).</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><tt class="docutils literal"><span class="pre">\\</span></tt></td>
+<td>Literal backslash</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\0</span></tt></td>
+<td>NUL character</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\'</span></tt></td>
+<td>Escaped single quote</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\&quot;</span></tt></td>
+<td>Escaped double quote</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\r</span></tt></td>
+<td>Carriage return</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\n</span></tt></td>
+<td>Line feed</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\t</span></tt></td>
+<td>Tab character</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\b</span></tt></td>
+<td>Backspace character</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\v</span></tt></td>
+<td>Vertical tab character</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\x</span></tt><em>nn</em></td>
+<td>Character specified as 2 hex digits</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\u</span></tt><em>nnnn</em></td>
+<td>Unicode character specified as 4 hex digits</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">\U</span></tt><em>nnnnnnnn</em></td>
+<td>Unicode character specified as 8 hex digits</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
 </div>
 <div class="section" id="array-literals">
 <h3>Array Literals<a class="headerlink" href="#array-literals" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="the-null-literal">
 <h3>The Null Literal<a class="headerlink" href="#the-null-literal" title="Permalink to this headline">¶</a></h3>
+<p>The literal <tt class="xref docutils literal"><span class="pre">null</span></tt> represents a null object reference.</p>
 </div>
 </div>
 <div class="section" id="separators">
 <h2>Separators<a class="headerlink" href="#separators" title="Permalink to this headline">¶</a></h2>
+<p>The list of Tart delimiter tokens:</p>
+<div class="highlight-python"><pre>( ) [ ] { } . , ;</pre>
+</div>
 </div>
 <div class="section" id="operators">
 <h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<p>The list of Tart operator tokens:</p>
+<div class="highlight-python"><pre>: :: &lt;: &gt;:
+== != &gt; &lt; &gt;= &lt;= &gt;? &lt;? &gt;=? &lt;=?
+| |= &amp; &amp;= ^
+&lt;&lt; &lt;&lt;= &gt;&gt; &gt;&gt;=
++ += - -= * *= / /= % %= ++ --
+.. ...</pre>
+</div>
 </div>
 </div>
 
@@ -209,14 +281,15 @@ processor.</p>
 <li><a class="reference external" href="#line-terminators">Line Terminators</a></li>
 <li><a class="reference external" href="#input-elements-and-tokens">Input Elements and Tokens</a></li>
 <li><a class="reference external" href="#white-space">White Space</a></li>
-<li><a class="reference external" href="#comments">Comments</a></li>
+<li><a class="reference external" href="#source-code-comments">Source-code Comments</a></li>
 <li><a class="reference external" href="#identifiers">Identifiers</a></li>
 <li><a class="reference external" href="#keywords">Keywords</a></li>
 <li><a class="reference external" href="#literals">Literals</a><ul>
 <li><a class="reference external" href="#integer-literals">Integer Literals</a></li>
 <li><a class="reference external" href="#floating-point-literals">Floating-Point Literals</a></li>
 <li><a class="reference external" href="#boolean-literals">Boolean Literals</a></li>
-<li><a class="reference external" href="#character-and-string-literals">Character and String Literals</a></li>
+<li><a class="reference external" href="#string-literals">String Literals</a></li>
+<li><a class="reference external" href="#character-literals">Character Literals</a></li>
 <li><a class="reference external" href="#escape-sequences-for-character-and-string-literals">Escape Sequences for Character and String Literals</a></li>
 <li><a class="reference external" href="#array-literals">Array Literals</a></li>
 <li><a class="reference external" href="#the-null-literal">The Null Literal</a></li>
@@ -277,7 +350,7 @@ processor.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 15, 2009.
+      Last updated on Dec 17, 2009.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
     </div>
   </body>

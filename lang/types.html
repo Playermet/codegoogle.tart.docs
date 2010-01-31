@@ -52,26 +52,118 @@
             
   <div class="section" id="types-and-values">
 <h1>Types and Values<a class="headerlink" href="#types-and-values" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="primitive-types-and-values">
-<h2>Primitive Types and Values<a class="headerlink" href="#primitive-types-and-values" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="integral-types">
-<h3>Integral Types<a class="headerlink" href="#integral-types" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="floating-point-types">
-<h3>Floating-Point Types<a class="headerlink" href="#floating-point-types" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="floating-point-operations">
-<h3>Floating-Point Operations<a class="headerlink" href="#floating-point-operations" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="boolean-types">
-<h3>Boolean Types<a class="headerlink" href="#boolean-types" title="Permalink to this headline">¶</a></h3>
-</div>
+<div class="section" id="primitive-types">
+<h2>Primitive Types<a class="headerlink" href="#primitive-types" title="Permalink to this headline">¶</a></h2>
+<p>Built-in types:</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="16%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Type Name</th>
+<th class="head">Alternate Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="xref docutils literal"><span class="pre">void</span></tt></td>
+<td>&nbsp;</td>
+<td>Represents the absence of a value.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">bool</span></tt></td>
+<td>&nbsp;</td>
+<td>Boolean type, can be either <tt class="xref docutils literal"><span class="pre">true</span></tt> or <tt class="xref docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">char</span></tt></td>
+<td>&nbsp;</td>
+<td>A 32-bit character.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">byte</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">int8</span></tt></td>
+<td>An 8-bit signed integer.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">short</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">int16</span></tt></td>
+<td>A 16-bit signed integer.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">int</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">int32</span></tt></td>
+<td>A 32-bit signed integer.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">long</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">int64</span></tt></td>
+<td>A 64-bit signed integer.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">ubyte</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">uint8</span></tt></td>
+<td>An 8-bit unsigned integer.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">ushort</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">uint16</span></tt></td>
+<td>A 16-bit unsigned integer.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">uint</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">uint32</span></tt></td>
+<td>A 32-bit unsigned integer.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">ulong</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">uint64</span></tt></td>
+<td>A 64-bit unsigned integer.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">float</span></tt></td>
+<td>&nbsp;</td>
+<td>A 32-bit IEEE floating-point value.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">double</span></tt></td>
+<td>&nbsp;</td>
+<td>A 64-bit IEEE floating-point value.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">long</span> <span class="pre">double</span></tt></td>
+<td>&nbsp;</td>
+<td>A floating point value larger than 64 bits (platform specific).</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
 <div class="section" id="the-null-type">
-<h3>The &#8216;null&#8217; Type<a class="headerlink" href="#the-null-type" title="Permalink to this headline">¶</a></h3>
+<h3>The &#8216;Null&#8217; Type<a class="headerlink" href="#the-null-type" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="xref docutils literal"><span class="pre">Null</span></tt> type has a single value, <tt class="xref docutils literal"><span class="pre">null</span></tt>, which is used to indicate the absence
+of a reference to an object. Any object reference can be compared with <tt class="xref docutils literal"><span class="pre">null</span></tt>.</p>
 </div>
 </div>
 <div class="section" id="reference-types-and-values">
 <h2>Reference Types and Values<a class="headerlink" href="#reference-types-and-values" title="Permalink to this headline">¶</a></h2>
+<p>Types in tart are either <em>reference types</em> or <em>value types</em>. Reference types are always passed
+around by reference. For example, when you pass an object of reference type as a function parameter,
+what actually gets passed is a pointer to the object. A class member of reference type also holds
+a pointer to the object, not the object itself.</p>
+<p>Value types are passed by value, meaning that the fields of the object are copied whenever the
+object is assigned or passed as a parameter.</p>
+<p>The following example should illustrate the difference:</p>
+<div class="highlight-python"><pre>class RefExample { // Classes are reference types.
+  var data:int;
+}
+
+struct ValExample { // Structs are value types.
+  var data:int;
+}
+
+let a = RefExample();
+a.data = 1;
+let b = a;
+b.data = 2;   // a.data is now 2, becase a and b are the same object.
+
+let c = ValExample();
+c.data = 1;
+let d = c;
+d.data = 2;   // c.data is not affected, still contains the value 1.</pre>
+</div>
+<p>In Tart, only classes and interfaces are reference types, while other types such as structs,
+primitive types, and tuples are value types. Types that have no runtime representation, such
+as void or protocol types, are considered to be neither.</p>
 <div class="section" id="classes-and-objects">
 <h3>Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Permalink to this headline">¶</a></h3>
 </div>
@@ -132,12 +224,8 @@
             <h3><a href="../index.html">Table Of Contents</a></h3>
             <ul>
 <li><a class="reference external" href="">Types and Values</a><ul>
-<li><a class="reference external" href="#primitive-types-and-values">Primitive Types and Values</a><ul>
-<li><a class="reference external" href="#integral-types">Integral Types</a></li>
-<li><a class="reference external" href="#floating-point-types">Floating-Point Types</a></li>
-<li><a class="reference external" href="#floating-point-operations">Floating-Point Operations</a></li>
-<li><a class="reference external" href="#boolean-types">Boolean Types</a></li>
-<li><a class="reference external" href="#the-null-type">The &#8216;null&#8217; Type</a></li>
+<li><a class="reference external" href="#primitive-types">Primitive Types</a><ul>
+<li><a class="reference external" href="#the-null-type">The &#8216;Null&#8217; Type</a></li>
 </ul>
 </li>
 <li><a class="reference external" href="#reference-types-and-values">Reference Types and Values</a><ul>
@@ -216,7 +304,7 @@
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 10, 2009.
+      Last updated on Jan 29, 2010.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
     </div>
   </body>

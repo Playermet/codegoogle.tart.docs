@@ -50,20 +50,20 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <span class="target" id="index-22"></span><div class="section" id="templates-and-metaprogramming">
-<span id="index-23"></span><h1>Templates and Metaprogramming<a class="headerlink" href="#templates-and-metaprogramming" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="index-57"></span><div class="section" id="templates-and-metaprogramming">
+<span id="index-58"></span><h1>Templates and Metaprogramming<a class="headerlink" href="#templates-and-metaprogramming" title="Permalink to this headline">¶</a></h1>
 <p>Tart allows functions (including macros) and user-defined types (including classes, structs,
 interfaces and protocols) to be templates. Tart templates are &#8220;pattern-based&#8221;, in that the list of
 template parameters for a type are specified with a list of patterns to be matched.</p>
 <p>Here&#8217;s a simple example of a template:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Example</span><span class="p">&lt;[</span><span class="nc">%T</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Example</span><span class="p">[</span><span class="nc">%T</span><span class="p">]</span> <span class="k">{</span>
   <span class="k">var</span> <span class="nv">x</span><span class="p">:</span><span class="nc">T</span><span class="p">;</span>
 <span class="k">}</span>
 
-<span class="k">var</span> <span class="nv">x</span><span class="p">:</span><span class="nc">Example</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">String</span><span class="p">]</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">var</span> <span class="nv">x</span><span class="p">:</span><span class="nc">Example</span><span class="p">[</span><span class="kt">String</span><span class="p">];</span>
 </pre></div>
 </div>
-<p>The two-character sequence <tt class="docutils literal"><span class="pre">&lt;[</span></tt> starts a template parameter list, and <tt class="docutils literal"><span class="pre">]&gt;</span></tt> terminates the list.
+<p>Square brackets(<tt class="docutils literal"><span class="pre">[</span></tt> and <tt class="docutils literal"><span class="pre">]</span></tt>) denote a template argument list.
 The same syntax is used both for definition template parameters and explicitly invoking templates.</p>
 <p>Each template parameter is a pattern to be matched. Patterns can either be a type expression (which
 match a type), or a value expression (which match a constant value).</p>
@@ -73,20 +73,20 @@ Thus, in the above example, the pattern variable <tt class="docutils literal"><s
 <p>Note that the percent-sign prefix is only used within the template parameter list. In the template
 body, the variable is used without the prefix.</p>
 <p>Pattern variables can be used within complex type expressions:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Example2</span><span class="p">&lt;[</span><span class="nc">List</span><span class="o">&lt;</span><span class="gr">[%T]</span><span class="o">&gt;</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Example2</span><span class="p">[</span><span class="nc">List</span><span class="gr">[%T]] {}</span>
 
-<span class="k">var</span> <span class="nv">x</span><span class="p">:</span><span class="nc">Example2</span><span class="o">&lt;</span><span class="p">[</span><span class="nv">List</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">String</span><span class="p">]</span><span class="o">&gt;</span><span class="p">]</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="gr">var x:Example2&lt;[String]&gt;; // ERROR -- template argument does not match.</span>
+<span class="gr">var x:Example2[List[String]];</span>
+<span class="gr">var x:Example2[String]; // ERROR -- template argument does not match.</span>
 </pre></div>
 </div>
 <p>This example requires that the template argument be a List of some type <tt class="docutils literal"><span class="pre">T</span></tt>. The <tt class="docutils literal"><span class="pre">T</span></tt> parameter
 will be bound to the element type of the list.</p>
 <div class="section" id="explicit-specialization">
-<span id="index-24"></span><h2>Explicit specialization<a class="headerlink" href="#explicit-specialization" title="Permalink to this headline">¶</a></h2>
+<span id="index-59"></span><h2>Explicit specialization<a class="headerlink" href="#explicit-specialization" title="Permalink to this headline">¶</a></h2>
 <p>A template argument list need not contain any pattern variables. This is generally only useful when
 you want to create an explicit specialization of a generic type.:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Example3</span><span class="p">&lt;[</span><span class="nc">List</span><span class="o">&lt;</span><span class="gr">[%T]</span><span class="o">&gt;</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span> <span class="c">/* non-string version. */</span> <span class="k">}</span>
-<span class="k">class</span> <span class="nc">Example3</span><span class="p">&lt;[</span><span class="nc">List</span><span class="o">&lt;</span><span class="gr">[String]</span><span class="o">&gt;</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span> <span class="c">/* string version. */</span> <span class="k">}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Example3</span><span class="p">[</span><span class="nc">List</span><span class="gr">[%T]] { /* non-string version. */ }</span>
+<span class="gr">class Example3[List[String]] { /* string version. */ }</span>
 </pre></div>
 </div>
 <p>In the above example, if the template argument is <tt class="xref docutils literal"><span class="pre">String</span></tt> it will use the second template;
@@ -95,7 +95,7 @@ if it is not, then it will use the first.</p>
 <div class="section" id="function-templates">
 <h2>Function templates<a class="headerlink" href="#function-templates" title="Permalink to this headline">¶</a></h2>
 <p>For functions, the syntax is similar:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">forall</span><span class="p">&lt;[</span><span class="gr">%T]</span><span class="o">&gt;</span><span class="gr">(Iterator&lt;[T]</span><span class="o">&gt;</span><span class="gr">) { /* ... */ }</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">forall</span><span class="p">[</span><span class="nc">%T</span><span class="p">](</span><span class="nv">Iterator</span><span class="gr">[T]</span><span class="p">)</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
 </pre></div>
 </div>
 <p>The example shows a function that takes an iterator of some type.</p>
@@ -105,9 +105,9 @@ if it is not, then it will use the first.</p>
 <p>When a template is used, its arguments can be specified either explicitly via a template argument
 list, or implicitly based on function arguments. For example:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Return the lesser of two values.</span>
-<span class="k">def</span> <span class="nf">min</span><span class="p">&lt;[</span><span class="gr">%T]</span><span class="o">&gt;</span><span class="gr">(v0:T, v1:T) -</span><span class="o">&gt;</span> <span class="nc">T</span><span class="gr">;</span>
+<span class="k">def</span> <span class="nf">min</span><span class="p">[</span><span class="nc">%T</span><span class="p">](</span><span class="nv">v0</span><span class="p">:</span><span class="nc">T</span><span class="p">,</span> <span class="nv">v1</span><span class="p">:</span><span class="nc">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">T</span><span class="p">;</span>
 
-<span class="gr">let x = min(1, 2);</span>
+<span class="k">let</span> <span class="nv">x</span> <span class="o">=</span> <span class="nv">min</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In the above example, the template arguments did not need to be specified, as the compiler was able
@@ -117,12 +117,12 @@ function arguments.</p>
 have a function :func:<tt class="docutils literal"><span class="pre">emptyList</span></tt> which decides what kind of list to return based on what it is
 being assigned to:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">namespace</span> <span class="nc">Collections</span> <span class="k">{</span>
-  <span class="k">def</span> <span class="nf">emptyList</span><span class="p">&lt;[</span><span class="gr">%T]</span><span class="o">&gt;</span><span class="gr">() {</span>
-<span class="gr">     return List&lt;[T]</span><span class="o">&gt;</span><span class="gr">();</span>
-<span class="gr">  }</span>
-<span class="gr">}</span>
+  <span class="k">def</span> <span class="nf">emptyList</span><span class="p">[</span><span class="nc">%T</span><span class="p">]()</span> <span class="k">{</span>
+     <span class="k">return</span> <span class="nv">List</span><span class="p">[</span><span class="nv">T</span><span class="p">]();</span>
+  <span class="k">}</span>
+<span class="k">}</span>
 
-<span class="gr">let x:List&lt;[String]</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="nc">emptyList</span><span class="gr">();</span>
+<span class="k">let</span> <span class="nv">x</span><span class="p">:</span><span class="nc">List</span><span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="nv">Collections</span><span class="o">.</span><span class="nv">emptyList</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -155,9 +155,9 @@ is the eventual plan, anyway.)</p>
 <div class="section" id="non-type-template-arguments">
 <h2>Non-type template arguments<a class="headerlink" href="#non-type-template-arguments" title="Permalink to this headline">¶</a></h2>
 <p>To declare a non-type template parameter, add a type specifier just as would be used to define the type of a variable:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">func</span><span class="p">&lt;[</span><span class="gr">%N:int]</span><span class="o">&gt;</span><span class="gr">();</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">func</span><span class="p">[</span><span class="nc">%N</span><span class="p">:</span><span class="nc">int</span><span class="p">]();</span>
 
-<span class="gr">func&lt;[4]</span><span class="o">&gt;</span><span class="gr">();</span>
+<span class="nv">func</span><span class="p">[</span><span class="mf">4</span><span class="p">]();</span>
 </pre></div>
 </div>
 <p>The template argument must be a compile-time computable.</p>
@@ -167,27 +167,27 @@ is the eventual plan, anyway.)</p>
 <p>A guard condition is an additional restriction on the kind of value that can be bound to a template.
 For example, suppose we wanted a template parameter to only bind to subclasses of &#8220;Node&#8221;, so we
 define a restriction using the subclass test operator <tt class="docutils literal"><span class="pre">&lt;:</span></tt>:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Visitor</span><span class="p">&lt;[</span><span class="nc">%T</span> <span class="nc">require</span> <span class="nc">%T</span> <span class="o">&lt;:</span> <span class="nc">Node</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Visitor</span><span class="p">[</span><span class="nc">%T</span> <span class="nc">require</span> <span class="nc">%T</span> <span class="o">&lt;:</span> <span class="nc">Node</span><span class="p">]</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
 </pre></div>
 </div>
 <p>This also works with non-type arguments:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Visitor</span><span class="p">&lt;[</span><span class="nc">%A</span><span class="p">:</span><span class="nc">int</span> <span class="nc">require</span> <span class="nc">%A</span> <span class="o">&lt;=</span> <span class="mf">10</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Visitor</span><span class="p">[</span><span class="nc">%A</span><span class="p">:</span><span class="nc">int</span> <span class="nc">require</span> <span class="nc">%A</span> <span class="o">&lt;=</span> <span class="mf">10</span><span class="p">]</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
 </pre></div>
 </div>
 <p>The &#8220;require&#8221; clause must come after all of the template arguments:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Visitor</span><span class="p">&lt;[</span><span class="nc">%A</span><span class="p">,</span> <span class="nc">%B</span> <span class="nc">require</span> <span class="nc">%A</span> <span class="o">&lt;:</span> <span class="nc">%B</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Visitor</span><span class="p">[</span><span class="nc">%A</span><span class="p">,</span> <span class="nc">%B</span> <span class="nc">require</span> <span class="nc">%A</span> <span class="o">&lt;:</span> <span class="nc">%B</span><span class="p">]</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
 </pre></div>
 </div>
 <p>However, the require clause can also introduce new pattern variables. Here&#8217;s a more realistic
 example, where we want to define a template that operates on all subclasses of iterators of a given
 type:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">forall</span><span class="p">&lt;[</span><span class="gr">%IterType require %IterType &lt;: Iterator&lt;[%T]</span><span class="o">&gt;</span><span class="p">]&gt;(</span><span class="nv">iter</span><span class="p">:</span><span class="nc">IterType</span><span class="p">);</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">forall</span><span class="p">[</span><span class="nc">%IterType</span> <span class="nc">require</span> <span class="nc">%IterType</span> <span class="o">&lt;:</span> <span class="nc">Iterator</span><span class="gr">[%T]](iter:IterType);</span>
 </pre></div>
 </div>
 <p>Because expressions like this are so common, there is a shortcut syntax which allows us to omit the
 &#8220;requires&#8221; keyword:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">forall</span><span class="p">&lt;[</span><span class="gr">%IterType &lt;: Iterator&lt;[%T]</span><span class="o">&gt;</span><span class="p">]&gt;(</span><span class="nv">iter</span><span class="p">:</span><span class="nc">IterType</span><span class="p">);</span>
-<span class="k">class</span> <span class="nc">Visitor</span><span class="p">&lt;[</span><span class="nc">%A</span><span class="p">:</span><span class="nc">int</span> <span class="o">&lt;=</span> <span class="mf">10</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span> <span class="c">/* ... */</span> <span class="k">}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">forall</span><span class="p">[</span><span class="nc">%IterType</span> <span class="o">&lt;:</span> <span class="nc">Iterator</span><span class="gr">[%T]](iter:IterType);</span>
+<span class="gr">class Visitor[%A:int &lt;= 10] { /* ... */ }</span>
 </pre></div>
 </div>
 <p>The general rule is as follows: A template argument consisting of a binary operator expression,
@@ -213,11 +213,11 @@ protocols, and has more in common with diplomatic protocols, meaning a
 set of guidelines for interaction between two parties.</p>
 </div>
 <p>A protocol is much like an interface, and in fact the syntax for declaring them is very similar:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">interface</span> <span class="nc">Iterator</span><span class="p">&lt;[</span><span class="nc">%T</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">interface</span> <span class="nc">Iterator</span><span class="p">[</span><span class="nc">%T</span><span class="p">]</span> <span class="k">{</span>
   <span class="k">def</span> <span class="nf">next</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nv">T</span><span class="p">;</span>
 <span class="k">}</span>
 
-<span class="k">protocol</span> <span class="nc">AbstractIterator</span><span class="p">&lt;[</span><span class="nc">%T</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{</span>
+<span class="k">protocol</span> <span class="nc">AbstractIterator</span><span class="p">[</span><span class="nc">%T</span><span class="p">]</span> <span class="k">{</span>
   <span class="k">def</span> <span class="nf">next</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nv">T</span><span class="p">;</span>
 <span class="k">}</span>
 </pre></div>
@@ -252,7 +252,7 @@ implicitly or explicitly using &#8216;extend&#8217;. (The &#8216;extend&#8217; k
 only be used with reference types (classes).</li>
 </ul>
 <p>Protocols will most often be used in template guard conditions:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">IteratorWrapper</span><span class="p">&lt;[</span><span class="nc">%IterType</span> <span class="o">&lt;:</span> <span class="nc">AbstractIterator</span><span class="o">&lt;</span><span class="gr">[%T]</span><span class="o">&gt;</span><span class="p">]</span><span class="o">&gt;</span> <span class="k">{}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">IteratorWrapper</span><span class="p">[</span><span class="nc">%IterType</span> <span class="o">&lt;:</span> <span class="nc">AbstractIterator</span><span class="gr">[%T]] {}</span>
 </pre></div>
 </div>
 <p>What this example says is that the IteratorWrapper can only be used with types that conform to the
@@ -358,7 +358,7 @@ resulting members is the output class.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 10, 2009.
+      Last updated on Jan 29, 2010.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
     </div>
   </body>

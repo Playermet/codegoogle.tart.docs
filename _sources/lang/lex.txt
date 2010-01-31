@@ -39,8 +39,10 @@ Input Elements and Tokens
 White Space
 -----------
 
-Comments
---------
+TBW
+
+Source-code Comments
+--------------------
 
 Tart comments are similar to those seen in C++ and Java::
 
@@ -48,7 +50,7 @@ Tart comments are similar to those seen in C++ and Java::
   // A line comment
 
 In addition, Tart supports two forms of 'tartdoc' comments which can be used to
-automatically generate documentation:
+automatically generate documentation::
 
   /** A tartdoc block comment. */
   /// A tartdoc line comment.
@@ -66,10 +68,17 @@ call out parameters and return values. Here's an example::
 
 The doc comment markup language is designed to minimize the impact on the
 readability of comments in the source code. This will be explained in
-greater detail in a later section. [TODO: link]
+greater detail in a later section. [TODO link]
 
 Identifiers
 -----------
+
+The syntax for identifiers is as follows:
+
+.. productionlist::
+  ident_start: `letter` | "_"
+  ident_char: `letter` | `digit` | "_"
+  ident: `ident_start` `ident_char`*
 
 Keywords
 --------
@@ -91,7 +100,7 @@ Literals
 --------
 
 .. productionlist::
-  literal: `int_lit` | `float_lit` | `string_lit` | `char_lit` | `null_lit` | `array_lit` | `type_lit`
+  literal: `int_lit` | `float_lit` | `string_lit` | `char_lit` | `null_lit` | `array_lit`
   int_lit: [0-9_]+
   float_lit: [0-9_](.[0-9_]+)?(e[0-9_]+)
   string_lit: '"' chars '"'
@@ -99,7 +108,6 @@ Literals
   bool_lit: "true" | "false"
   null_lit: "null"
   array_lit: "[" [`expression` ("," `expression`)*] "]"
-  type_lit: typeof `type_expression`
 
 Integer Literals
 ^^^^^^^^^^^^^^^^
@@ -132,20 +140,46 @@ distinguish it from an integer. The floating-point literal may also contain
 underscore characters, similar to integers.
 
 Unlike integers, floating-point literals have distinct sizes, which are
-``float`` (32-bits), ``double`` (64 bits) and ``long double`` which is
+:ctype:`float` (32-bits), :ctype:`double` (64 bits) and :ctype:`long double` which is
 somewhere between 80 and 128 bits, depending on the capabilities of the
 processor.
 
 Boolean Literals
 ^^^^^^^^^^^^^^^^
 
-The boolean literals are ``true`` and ``false``.
+The boolean literals are :const:`true` and :const:`false`.
 
-Character and String Literals
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+String Literals
+^^^^^^^^^^^^^^^
+
+String literals are delimited by double-quotes. A string literal creates
+a instance of class :ctype:`tart.core.String`.
+
+Character Literals
+^^^^^^^^^^^^^^^^^^
+
+Character literals are delimited by single quotes. A character literal
+creates a single 32-bit Unicode character value.
 
 Escape Sequences for Character and String Literals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Escape sequences in character and string literals are introduced by a backslash character (``\``).
+
+  =================== ============================================
+  ``\\``              Literal backslash
+  ``\0``              NUL character
+  ``\'``              Escaped single quote
+  ``\"``              Escaped double quote
+  ``\r``              Carriage return
+  ``\n``              Line feed
+  ``\t``              Tab character
+  ``\b``              Backspace character
+  ``\v``              Vertical tab character
+  ``\x``\ *nn*        Character specified as 2 hex digits
+  ``\u``\ *nnnn*      Unicode character specified as 4 hex digits
+  ``\U``\ *nnnnnnnn*  Unicode character specified as 8 hex digits
+  =================== ============================================
 
 Array Literals
 ^^^^^^^^^^^^^^
@@ -153,8 +187,23 @@ Array Literals
 The Null Literal
 ^^^^^^^^^^^^^^^^
 
+The literal :const:`null` represents a null object reference.
+
 Separators
 ----------
 
+The list of Tart delimiter tokens::
+
+  ( ) [ ] { } . , ;
+
 Operators
 ---------
+
+The list of Tart operator tokens::
+
+  : :: <: >:
+  == != > < >= <= >? <? >=? <=?
+  | |= & &= ^
+  << <<= >> >>=
+  + += - -= * *= / /= % %= ++ --
+  .. ...

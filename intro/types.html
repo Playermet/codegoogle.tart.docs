@@ -51,7 +51,7 @@
           <div class="body">
             
   <div class="section" id="type-expressions">
-<span id="index-25"></span><h1>Type Expressions<a class="headerlink" href="#type-expressions" title="Permalink to this headline">¶</a></h1>
+<span id="index-61"></span><h1>Type Expressions<a class="headerlink" href="#type-expressions" title="Permalink to this headline">¶</a></h1>
 <p>Because Tart is a strongly-typed language, it supports a rich hierarchy of types. All types in
 Tart fall into one of the following groups:</p>
 <table border="1" class="docutils">
@@ -109,26 +109,29 @@ Tart fall into one of the following groups:</p>
 </thead>
 <tbody valign="top">
 <tr><td>8</td>
-<td><tt class="xref docutils literal"><span class="pre">byte</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">ubyte</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">int8</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">uint8</span></tt></td>
 </tr>
 <tr><td>16</td>
-<td><tt class="xref docutils literal"><span class="pre">short</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">ushort</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">int16</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">uint16</span></tt></td>
 </tr>
 <tr><td>32</td>
-<td><tt class="xref docutils literal"><span class="pre">int</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">uint</span></tt>, <tt class="xref docutils literal"><span class="pre">char</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">int32</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">uint32</span></tt>, <tt class="xref docutils literal"><span class="pre">char</span></tt></td>
 </tr>
 <tr><td>64</td>
-<td><tt class="xref docutils literal"><span class="pre">long</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">ulong</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">int64</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">uint64</span></tt></td>
 </tr>
 </tbody>
 </table>
 <p>The naming convention is that unsigned types always begin with the letter &#8216;u&#8217;.</p>
+<p>Types <tt class="xref docutils literal"><span class="pre">int</span></tt> and <tt class="xref docutils literal"><span class="pre">uint</span></tt> are either 32 or 64 bits, depending on whether
+the target platform is a 32-bit or 64-bit processor. On a 32-bit processor, <tt class="xref docutils literal"><span class="pre">int</span></tt>
+is an alias for <tt class="xref docutils literal"><span class="pre">int32</span></tt>, and on a 64-bit processor it is an alias for <tt class="xref docutils literal"><span class="pre">int64</span></tt>.</p>
 <p>The <tt class="xref docutils literal"><span class="pre">char</span></tt> type is a 32-bit integer which represents a Unicode character, but it is not the
-same as the <tt class="xref docutils literal"><span class="pre">uint</span></tt> type. The <tt class="xref docutils literal"><span class="pre">char</span></tt> type is generally only used when dealing with
+same as the <tt class="xref docutils literal"><span class="pre">uint32</span></tt> type. The <tt class="xref docutils literal"><span class="pre">char</span></tt> type is generally only used when dealing with
 individual characters. For sequences of characters, it is more convenient to use the
 <tt class="xref docutils literal"><span class="pre">String</span></tt> type, which stores text encoded in UTF-8.</p>
 <div class="admonition note">
@@ -201,13 +204,18 @@ permitted to declare a variable having void type.</p>
 happen to have one or more template parameters. For example, the <tt class="xref docutils literal"><span class="pre">Array</span></tt> type is not
 a built-in type, it is a template class. (For that matter, <tt class="xref docutils literal"><span class="pre">Object</span></tt> is not a built-in type
 either, however it is a type that the compiler knows a lot about.)</p>
-<p>There are a couple of exceptions, meaning types that are so special (or so weird) that the compiler
-has to treat them in a fundamentally different way. These types are <em>functions</em>, <em>disjoint types</em>,
-<em>tuples</em>, and <em>native types</em>. These all all derived from one or more base types, and their
-identity is determined solely by these base types - thus a tuple containing (String, int) is
-always the same type as any other tuple containing (String, int).</p>
+<p>There are a couple of exceptions to this rule, meaning types that are so special (or so weird)
+that the compiler has to treat them in a fundamentally different way. These types
+are <em>functions</em>, <em>disjoint types</em>, <em>tuples</em>, and <em>native types</em>. These all all derived from
+one or more base types, and their identity is determined solely by these base types - thus a
+tuple containing (String, int) is always the same type as any other tuple containing (String, int).</p>
 <p>Although the <tt class="xref docutils literal"><span class="pre">Array</span></tt> type is just a template class, there is some special syntax for
-declaring arrays - the type expression <tt class="docutils literal"><em><span class="pre">type</span></em><span class="pre">[]</span></tt> denotes an array of <tt class="docutils literal"><em><span class="pre">type</span></em></tt>.</p>
+declaring arrays - the type expression <tt class="docutils literal"><em><span class="pre">type</span></em><span class="pre">[]</span></tt> denotes an array of <tt class="docutils literal"><em><span class="pre">type</span></em></tt>,
+which is equivalent to the type expression <tt class="docutils literal"><span class="pre">Array[</span><em><span class="pre">type</span></em><span class="pre">]</span></tt>. In the latter case, however,
+the square brackets are used to denote a template argument list. (In type expressions, empty
+brackets always indicate an array, whereas brackets that are non-empty always indicate
+a template argument list. For non-type expressions, the compiler uses contextual information
+to distinguish the two cases.)</p>
 </div>
 </div>
 
@@ -282,7 +290,7 @@ declaring arrays - the type expression <tt class="docutils literal"><em><span cl
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 10, 2009.
+      Last updated on Jan 29, 2010.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
     </div>
   </body>

@@ -11,9 +11,9 @@ tart.core.InvalidTypecastError exception lib/core/exceptions.html
 tart.core.Throwable exception lib/core/exceptions.html
 tart.core.Math class lib/core/math.html
 tart.core.AssertionError exception lib/core/exceptions.html
-tart.core.ThreadLocalAttribute class lib/core/attributes.html
+tart.core.InvalidOperationError exception lib/core/exceptions.html
 tart.core.Exception exception lib/core/exceptions.html
 tart.core.IndexOutOfRangeError exception lib/core/exceptions.html
 tart.core.String class lib/core/string.html
 tart.core.NotImplementedError exception lib/core/exceptions.html
-tart.core.InvalidOperationError exception lib/core/exceptions.html
+tart.core.ThreadLocalAttribute class lib/core/attributes.html

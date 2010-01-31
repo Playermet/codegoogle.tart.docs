@@ -68,10 +68,10 @@ macro. This means that you can control how many times (if at all) the
 expression and its associated side effects are evaluated.</p>
 <p>Take for example the <tt class="xref docutils literal"><span class="pre">cond</span></tt> macro, which is part of the Tart core
 library:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">macro</span> <span class="nf">cond</span><span class="p">&lt;[</span><span class="gr">%T]</span><span class="o">&gt;</span><span class="gr">(condition:bool, trueVal:T, falseVal:T) -</span><span class="o">&gt;</span> <span class="nc">T</span> <span class="gr">{</span>
-<span class="gr">  if condition { return trueVal; }</span>
-<span class="gr">  else { return falseVal; }</span>
-<span class="gr">}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">macro</span> <span class="nf">cond</span><span class="p">[</span><span class="nc">%T</span><span class="p">](</span><span class="nv">condition</span><span class="p">:</span><span class="nc">bool</span><span class="p">,</span> <span class="nv">trueVal</span><span class="p">:</span><span class="nc">T</span><span class="p">,</span> <span class="nv">falseVal</span><span class="p">:</span><span class="nc">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">T</span> <span class="k">{</span>
+  <span class="k">if</span> <span class="nv">condition</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">trueVal</span><span class="p">;</span> <span class="k">}</span>
+  <span class="k">else</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">falseVal</span><span class="p">;</span> <span class="k">}</span>
+<span class="k">}</span>
 </pre></div>
 </div>
 <p>The <tt class="xref docutils literal"><span class="pre">cond</span></tt> macro operates exactly like the ternary ? operator in C.</p>
@@ -88,11 +88,11 @@ as a macro. More about templates in the next section.</p>
 of the AST. For example, <tt class="xref docutils literal"><span class="pre">stringify()</span></tt> converts an AST node into its string
 representation. This is used by the <tt class="xref docutils literal"><span class="pre">assert</span></tt> macro, which is another
 part of the Tart core library:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">macro</span> <span class="nf">assert</span><span class="p">&lt;[</span><span class="gr">%T]</span><span class="o">&gt;</span><span class="gr">(expression:T) {</span>
-<span class="gr">  if not expression {</span>
-<span class="gr">    throw AssertionError(stringify(expression));</span>
-<span class="gr">  }</span>
-<span class="gr">}</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">macro</span> <span class="nf">assert</span><span class="p">[</span><span class="nc">%T</span><span class="p">](</span><span class="nv">expression</span><span class="p">:</span><span class="nc">T</span><span class="p">)</span> <span class="k">{</span>
+  <span class="k">if</span> <span class="nv">not</span> <span class="nv">expression</span> <span class="k">{</span>
+    <span class="k">throw</span> <span class="nv">AssertionError</span><span class="p">(</span><span class="nv">stringify</span><span class="p">(</span><span class="nv">expression</span><span class="p">));</span>
+  <span class="k">}</span>
+<span class="k">}</span>
 </pre></div>
 </div>
 </div>
@@ -152,7 +152,7 @@ part of the Tart core library:</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 10, 2009.
+      Last updated on Jan 29, 2010.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
     </div>
   </body>
