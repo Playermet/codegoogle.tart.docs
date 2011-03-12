@@ -51,7 +51,7 @@
           <div class="body">
             
   <div class="section" id="collections">
-<span id="index-53"></span><h1>Collections<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h1>
+<span id="index-8"></span><h1>Collections<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h1>
 <p>The Tart core library contains a rich set of collection classes which include a variety of sequence,
 map, and set collections.</p>
 <table border="1" class="docutils">
@@ -132,7 +132,7 @@ edge [dir=back];
 </p>
 <p>See the <a class="reference external" href="../lib/collections/index.html#collections-library"><em>tart.collections - common collection classes</em></a> section for more information about the collection classes.</p>
 <div class="section" id="collection-literal-syntax">
-<span id="index-54"></span><h2>Collection Literal Syntax<a class="headerlink" href="#collection-literal-syntax" title="Permalink to this headline">¶</a></h2>
+<span id="index-9"></span><h2>Collection Literal Syntax<a class="headerlink" href="#collection-literal-syntax" title="Permalink to this headline">¶</a></h2>
 <p>All of the list and set collections in the core collections library have a constructor which takes
 a variable-length list of initializers:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// ArrayList of integers</span>
@@ -187,7 +187,7 @@ a list of items:</p>
 </div>
 </div>
 <div class="section" id="map-literals">
-<span id="index-55"></span><h2>Map Literals<a class="headerlink" href="#map-literals" title="Permalink to this headline">¶</a></h2>
+<span id="index-10"></span><h2>Map Literals<a class="headerlink" href="#map-literals" title="Permalink to this headline">¶</a></h2>
 <p>Map literals are handled a little differently, because the key and the value may not be the same
 type. The <tt class="xref docutils literal"><span class="pre">-&gt;</span></tt> operator is used to indicate a key/value pair. This special meaning of the
 <tt class="xref docutils literal"><span class="pre">-&gt;</span></tt> operator is only valid within a map initializer list - otherwise it is used to indicate
@@ -213,7 +213,7 @@ may or may not actually use the &#8220;Entry&#8221; class internally - it is fre
 representation is convenient.</p>
 </div>
 <div class="section" id="generator-expressions-and-comprehensions">
-<span id="index-56"></span><h2>Generator expressions and comprehensions<a class="headerlink" href="#generator-expressions-and-comprehensions" title="Permalink to this headline">¶</a></h2>
+<span id="index-11"></span><h2>Generator expressions and comprehensions<a class="headerlink" href="#generator-expressions-and-comprehensions" title="Permalink to this headline">¶</a></h2>
 <p>Tart supports &#8220;generator expressions&#8221; similar to those found in Python. A generator expression
 produces an iterator, which can be passed directly to the <tt class="xref docutils literal"><span class="pre">from()</span></tt> method of a collection:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">s0</span> <span class="o">=</span> <span class="nv">ImmutableSet</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="o">.</span><span class="nv">from</span><span class="p">(</span><span class="nv">x</span> <span class="o">*</span> <span class="nv">x</span> <span class="k">for</span> <span class="nv">x</span> <span class="k">in</span> <span class="mf">0</span> <span class="o">..</span> <span class="mf">10</span><span class="p">);</span>
@@ -271,7 +271,7 @@ platform ABI.</p>
         <div class="sphinxsidebarwrapper">
             <h3><a href="../index.html">Table Of Contents</a></h3>
             <ul>
-<li><a class="reference external" href="">Collections</a><ul>
+<li><a class="reference external" href="#">Collections</a><ul>
 <li><a class="reference external" href="#collection-literal-syntax">Collection Literal Syntax</a></li>
 <li><a class="reference external" href="#map-literals">Map Literals</a></li>
 <li><a class="reference external" href="#generator-expressions-and-comprehensions">Generator expressions and comprehensions</a></li>
@@ -329,8 +329,8 @@ platform ABI.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Jan 29, 2010.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
+      Last updated on Mar 11, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>
 </html>

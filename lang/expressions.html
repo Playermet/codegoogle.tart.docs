@@ -55,7 +55,7 @@
 <div class="section" id="primary-expressions">
 <span id="index-26"></span><h2>Primary Expressions<a class="headerlink" href="#primary-expressions" title="Permalink to this headline">¶</a></h2>
 <pre>
-<strong id="grammar-token-primary">primary</strong> ::=  &quot;(&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;)&quot; | <tt class="xref docutils literal"><span class="pre">ident</span></tt> | <a class="reference external" href="lex.html#grammar-token-literal"><tt class="xref docutils literal"><span class="pre">literal</span></tt></a>
+<strong id="grammar-token-primary">primary</strong> ::=  &quot;(&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;)&quot; | <a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> | <a class="reference external" href="lex.html#grammar-token-literal"><tt class="xref docutils literal"><span class="pre">literal</span></tt></a>
 </pre>
 </div>
 <div class="section" id="object-creation-expressions">
@@ -67,7 +67,7 @@
 <div class="section" id="member-access-expressions">
 <h2>Member Access Expressions<a class="headerlink" href="#member-access-expressions" title="Permalink to this headline">¶</a></h2>
 <pre>
-<strong id="grammar-token-get_member">get_member</strong> ::=  <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;.&quot; <tt class="xref docutils literal"><span class="pre">ident</span></tt>
+<strong id="grammar-token-get_member">get_member</strong> ::=  <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;.&quot; <a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a>
 </pre>
 </div>
 <div class="section" id="function-invocation-expressions">
@@ -838,7 +838,7 @@ whose type defines some kind of ordering.</p>
         <div class="sphinxsidebarwrapper">
             <h3><a href="../index.html">Table Of Contents</a></h3>
             <ul>
-<li><a class="reference external" href="">Expressions</a><ul>
+<li><a class="reference external" href="#">Expressions</a><ul>
 <li><a class="reference external" href="#primary-expressions">Primary Expressions</a></li>
 <li><a class="reference external" href="#object-creation-expressions">Object Creation Expressions</a></li>
 <li><a class="reference external" href="#member-access-expressions">Member Access Expressions</a></li>
@@ -908,8 +908,8 @@ whose type defines some kind of ordering.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 10, 2009.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
+      Last updated on Mar 11, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>
 </html>

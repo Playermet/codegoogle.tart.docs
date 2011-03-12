@@ -69,7 +69,7 @@
 <div class="section" id="assignment-statement">
 <span id="index-29"></span><h3>Assignment Statement<a class="headerlink" href="#assignment-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-assign_stmt">assign_stmt</strong> ::=  <tt class="xref docutils literal"><span class="pre">ident</span></tt> &quot;=&quot; (<tt class="xref docutils literal"><span class="pre">ident</span></tt> &quot;=&quot;)* <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;;&quot;
+<strong id="grammar-token-assign_stmt">assign_stmt</strong> ::=  <a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> &quot;=&quot; (<a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> &quot;=&quot;)* <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;;&quot;
 </pre>
 </div>
 <div class="section" id="return-statement">
@@ -145,7 +145,7 @@ block_stmt: &#8220;{&#8221; (<cite>statement</cite>)* &#8220;}&#8221;</blockquot
 <pre>
 <strong id="grammar-token-try_stmt">try_stmt </strong> ::=  try_stmt1 | try_stmt2
 <strong id="grammar-token-try_stmt1">try_stmt1</strong> ::=  &quot;try&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>
-               (&quot;except&quot; [<tt class="xref docutils literal"><span class="pre">ident</span></tt> &quot;:&quot; <tt class="xref docutils literal"><span class="pre">type</span></tt>] <tt class="xref docutils literal"><span class="pre">statement</span></tt>)+
+               (&quot;except&quot; [<a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> &quot;:&quot; <tt class="xref docutils literal"><span class="pre">type</span></tt>] <tt class="xref docutils literal"><span class="pre">statement</span></tt>)+
                [&quot;else&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>]
                [&quot;finally&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>]
 <strong id="grammar-token-try_stmt2">try_stmt2</strong> ::=  &quot;try&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>
@@ -171,7 +171,7 @@ data directly, but influence how subsequent code is compiled.</p>
         <div class="sphinxsidebarwrapper">
             <h3><a href="../index.html">Table Of Contents</a></h3>
             <ul>
-<li><a class="reference external" href="">Statements and Control Structures</a><ul>
+<li><a class="reference external" href="#">Statements and Control Structures</a><ul>
 <li><a class="reference external" href="#simple-statements">Simple Statements</a><ul>
 <li><a class="reference external" href="#the-empty-statement">The Empty Statement</a></li>
 <li><a class="reference external" href="#expression-statement">Expression Statement</a></li>
@@ -260,8 +260,8 @@ data directly, but influence how subsequent code is compiled.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008, Talin.
-      Last updated on Dec 10, 2009.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
+      Last updated on Mar 11, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>
 </html>
