@@ -61,7 +61,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#traceDescriptors">traceDescriptors</a>(</td>
-                    <td class="sig2"><span class="symbol">baseAddr</span>:Address[uint8], <span class="symbol">descriptorList</span>:Address[tart.gc.TraceDescriptor]<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">baseAddr</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">descriptorList</span>:Address[<span class="type-name">tart.gc.TraceDescriptor</span>]<span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Trace an object given a list of trace descriptor structures.</td>
@@ -69,7 +69,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#traceObject">traceObject</a>(</td>
-                    <td class="sig2"><span class="symbol">v</span>:Object<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">v</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Trace the object <span class="symbol">v</span>, which must not be null.</td>
@@ -77,7 +77,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">protected def <a class="member-table-link symbol" href="#tracePointer">tracePointer</a>(</td>
-                    <td class="sig2"><span class="symbol">ptrAddr</span>:Address[Object]<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">ptrAddr</span>:Address[<span class="type-name">Object</span>]<span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Trace a single pointer. Override this in the subclass to implement the trace algorithm.</td>
@@ -85,7 +85,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">protected def <a class="member-table-link symbol" href="#tracePointers">tracePointers</a>(</td>
-                    <td class="sig2"><span class="symbol">baseAddr</span>:Address[uint8], <span class="symbol">fieldOffsets</span>:Address[uint32], <span class="symbol">fieldCount</span>:uint32<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">baseAddr</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">fieldOffsets</span>:Address[<span class="type-name">uint32</span>], <span class="symbol">fieldCount</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Trace a list of pointers as specified by offsets from a base address. TraceAction subclasses should probably re-implement this for effiency and inline the call to <span class="symbol">tracePointer()</span>.</td>
@@ -104,7 +104,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="traceDescriptors">
-	              public def <span class="symbol">traceDescriptors</span>(<span class="symbol">baseAddr</span>:Address[uint8], <span class="symbol">descriptorList</span>:Address[tart.gc.TraceDescriptor]<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">traceDescriptors</span>(<span class="symbol">baseAddr</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">descriptorList</span>:Address[<span class="type-name">tart.gc.TraceDescriptor</span>]<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -113,7 +113,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="traceObject">
-	              public def <span class="symbol">traceObject</span>(<span class="symbol">v</span>:Object<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">traceObject</span>(<span class="symbol">v</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -122,7 +122,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="tracePointer">
-	              protected def <span class="symbol">tracePointer</span>(<span class="symbol">ptrAddr</span>:Address[Object]<span style="white-space: nowrap">)</span>
+	              protected def <span class="symbol">tracePointer</span>(<span class="symbol">ptrAddr</span>:Address[<span class="type-name">Object</span>]<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -131,7 +131,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="tracePointers">
-	              protected def <span class="symbol">tracePointers</span>(<span class="symbol">baseAddr</span>:Address[uint8], <span class="symbol">fieldOffsets</span>:Address[uint32], <span class="symbol">fieldCount</span>:uint32<span style="white-space: nowrap">)</span>
+	              protected def <span class="symbol">tracePointers</span>(<span class="symbol">baseAddr</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">fieldOffsets</span>:Address[<span class="type-name">uint32</span>], <span class="symbol">fieldCount</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">

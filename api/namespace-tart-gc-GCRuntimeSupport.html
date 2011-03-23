@@ -73,7 +73,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#allocAligned">allocAligned</a>(</td>
-                    <td class="sig2"><span class="symbol">size</span>:uint32<span style="white-space: nowrap">) -&gt; Address[uint8]</span></td>
+                    <td class="sig2"><span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">uint8</span>]</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Allocate memory that is aligned on a page boundary, where the page size is the value returned by <span class="symbol">pageSize</span>.</td>
@@ -81,7 +81,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#getThreadLocalData">getThreadLocalData</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; Object</span></td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return a reference to the thread-local data for the current thread.</td>
@@ -89,7 +89,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#initStackFrameDescMap">initStackFrameDescMap</a>(</td>
-                    <td class="sig2"><span class="symbol">stackTraceDescMap</span>:Address[uint32]<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">stackTraceDescMap</span>:Address[<span class="type-name">uint32</span>]<span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Construct a map that associates instruction addresses with stack frame descriptors.</td>
@@ -105,7 +105,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#pageSize">pageSize</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; uint32</span></td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return the size of a memory page, for page-aligned memory allocations.</td>
@@ -113,7 +113,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#setThreadLocalData">setThreadLocalData</a>(</td>
-                    <td class="sig2"><span class="symbol">state</span>:Object<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">state</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return a reference to the thread-local data for the current thread.</td>
@@ -121,7 +121,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#traceStack">traceStack</a>(</td>
-                    <td class="sig2"><span class="symbol">action</span>:tart.gc.TraceAction<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">action</span>:<span class="type-name">tart.gc.TraceAction</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Trace all of the pointers in the calling stack for this thread, using the specified trace</td>
@@ -129,7 +129,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#traceStaticRoots">traceStaticRoots</a>(</td>
-                    <td class="sig2"><span class="symbol">action</span>:tart.gc.TraceAction<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">action</span>:<span class="type-name">tart.gc.TraceAction</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Apply the specified trace action to all static roots.</td>
@@ -142,7 +142,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="allocAligned">
-	              public def <span class="symbol">allocAligned</span>(<span class="symbol">size</span>:uint32<span style="white-space: nowrap">) -&gt; Address[uint8]</span>
+	              public def <span class="symbol">allocAligned</span>(<span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">uint8</span>]</span>
               </a>
             </header>
             <div class="member-description">
@@ -151,7 +151,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="getThreadLocalData">
-	              public def <span class="symbol">getThreadLocalData</span>(<span style="white-space: nowrap">) -&gt; Object</span>
+	              public def <span class="symbol">getThreadLocalData</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -160,7 +160,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="initStackFrameDescMap">
-	              public def <span class="symbol">initStackFrameDescMap</span>(<span class="symbol">stackTraceDescMap</span>:Address[uint32]<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">initStackFrameDescMap</span>(<span class="symbol">stackTraceDescMap</span>:Address[<span class="type-name">uint32</span>]<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -180,7 +180,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="pageSize">
-	              public def <span class="symbol">pageSize</span>(<span style="white-space: nowrap">) -&gt; uint32</span>
+	              public def <span class="symbol">pageSize</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -189,7 +189,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="setThreadLocalData">
-	              public def <span class="symbol">setThreadLocalData</span>(<span class="symbol">state</span>:Object<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">setThreadLocalData</span>(<span class="symbol">state</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -198,7 +198,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="traceStack">
-	              public def <span class="symbol">traceStack</span>(<span class="symbol">action</span>:tart.gc.TraceAction<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">traceStack</span>(<span class="symbol">action</span>:<span class="type-name">tart.gc.TraceAction</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -208,7 +208,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="traceStaticRoots">
-	              public def <span class="symbol">traceStaticRoots</span>(<span class="symbol">action</span>:tart.gc.TraceAction<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">traceStaticRoots</span>(<span class="symbol">action</span>:<span class="type-name">tart.gc.TraceAction</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">

@@ -73,7 +73,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#of">of</a>(</td>
-                    <td class="sig2"><span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; tart.reflect.Type</span></td>
+                    <td class="sig2"><span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Given a type literal, return the reflected type object.</td>
@@ -93,7 +93,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#checkCast">checkCast</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:Object<span style="white-space: nowrap">) -&gt; Object</span></td>
+                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">If <span class="symbol">obj</span> is castable to this type, do the cast and return the object, otherwise throw a typecast exception.</td>
@@ -101,7 +101,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">protected def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
-                    <td class="sig2"><span class="symbol">typeKind</span>:tart.reflect.Type.TypeKind<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">typeKind</span>:<span class="type-name">tart.reflect.Type.TypeKind</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data"></td>
@@ -109,7 +109,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#downCast">downCast</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:Object<span style="white-space: nowrap">) -&gt; Address[void]</span></td>
+                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">void</span>]</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">If <span class="symbol">obj</span> is castable to this type, do the cast and return the raw address, otherwise throw a typecast exception.</td>
@@ -117,7 +117,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#getFieldValue">getFieldValue</a>(</td>
-                    <td class="sig2"><span class="symbol">fieldAddr</span>:Address[void]<span style="white-space: nowrap">) -&gt; Object</span></td>
+                    <td class="sig2"><span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Given the address of a field of this type, return a boxed copy of the field value.</td>
@@ -125,7 +125,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#getPropertyValue">getPropertyValue</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:Object, <span class="symbol">getterFn</span>:Address[void]<span style="white-space: nowrap">) -&gt; Object</span></td>
+                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">getterFn</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Given an object reference and a pointer to a getter function which returns this type, invoke the getter and return the result, boxing the result if needed.</td>
@@ -133,7 +133,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#setFieldValue">setFieldValue</a>(</td>
-                    <td class="sig2"><span class="symbol">fieldAddr</span>:Address[void], <span class="symbol">value</span>:Object<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Given the address of a field of this type, and a boxed value, set the field to the unboxed</td>
@@ -141,7 +141,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#setPropertyValue">setPropertyValue</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:Object, <span class="symbol">setterFn</span>:Address[void], <span class="symbol">value</span>:Object<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">setterFn</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Given an object reference and a pointer to a setter function which takes a value of this type, unbox the value yielding a value of this type, and pass that to the setter.</td>
@@ -154,7 +154,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="checkCast">
-	              public def <span class="symbol">checkCast</span>(<span class="symbol">obj</span>:Object<span style="white-space: nowrap">) -&gt; Object</span>
+	              public def <span class="symbol">checkCast</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -163,13 +163,13 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="construct">
-	              protected def <span class="symbol">construct</span>(<span class="symbol">typeKind</span>:tart.reflect.Type.TypeKind<span style="white-space: nowrap">)</span>
+	              protected def <span class="symbol">construct</span>(<span class="symbol">typeKind</span>:<span class="type-name">tart.reflect.Type.TypeKind</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="downCast">
-	              public def <span class="symbol">downCast</span>(<span class="symbol">obj</span>:Object<span style="white-space: nowrap">) -&gt; Address[void]</span>
+	              public def <span class="symbol">downCast</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">void</span>]</span>
               </a>
             </header>
             <div class="member-description">
@@ -178,7 +178,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="getFieldValue">
-	              public def <span class="symbol">getFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[void]<span style="white-space: nowrap">) -&gt; Object</span>
+	              public def <span class="symbol">getFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -187,7 +187,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="getPropertyValue">
-	              public def <span class="symbol">getPropertyValue</span>(<span class="symbol">obj</span>:Object, <span class="symbol">getterFn</span>:Address[void]<span style="white-space: nowrap">) -&gt; Object</span>
+	              public def <span class="symbol">getPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">getterFn</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -196,7 +196,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="of">
-	              public static def <span class="symbol">of</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; tart.reflect.Type</span>
+	              public static def <span class="symbol">of</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -205,7 +205,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="setFieldValue">
-	              public def <span class="symbol">setFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[void], <span class="symbol">value</span>:Object<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">setFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -215,7 +215,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="setPropertyValue">
-	              public def <span class="symbol">setPropertyValue</span>(<span class="symbol">obj</span>:Object, <span class="symbol">setterFn</span>:Address[void], <span class="symbol">value</span>:Object<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">setPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">setterFn</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">

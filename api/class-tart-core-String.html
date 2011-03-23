@@ -53,39 +53,39 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#concat">concat</a>(</td>
-                    <td class="sig2"><span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Concatenate a list of strings.</td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#concat">concat</a>(</td>
-                    <td class="sig2"><span class="symbol">strings</span>:Iterable<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">strings</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Concatenate a list of strings.</td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">bytes</span>:uint8[]<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">bytes</span>:<span class="type-name">uint8</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data">Construct a string from a byte array.</td>
+	              <td class="member-table-data">Construct a string from a byte array. The byte array is presumed to contain character data encoded as UTF-8.</td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">bytes</span>:uint8[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">bytes</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data">Construct a string from a subrange of a byte array.</td>
+	              <td class="member-table-data">Construct a string from a subrange of a byte array. The byte array is presumed to contain character data encoded as UTF-8.</td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">str</span>:String, <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">str</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Construct a string from a subrange of another string. Note that the bytes that make up the string are shared between the two instances rather than copied.</td>
@@ -93,15 +93,15 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">chars</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data">Construct a string from a char array.</td>
+	              <td class="member-table-data">Construct a string from an array of characters.</td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">bytes</span>:Address[uint8], <span class="symbol">length</span>:int32<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">bytes</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Construct a string from a native byte array.</td>
@@ -109,7 +109,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">value</span><span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Explicitly convert values to String types.</td>
@@ -117,50 +117,50 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">value</span><span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Create a string from a type that has a <span class="symbol">toString</span> method.</td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">value</span>:Object<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Create a string from a subclass of <span class="symbol">Object</span> using the object's <span class="symbol">toString</span> method.</td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#format">format</a>(</td>
-                    <td class="sig2"><span class="symbol">formatString</span>:String, <span class="symbol">args</span>:Object<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">formatString</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Create a new <span class="symbol">String</span> object using a format string and a list of arguments.</td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#format">format</a>(</td>
-                    <td class="sig2"><span class="symbol">formatString</span>:String, <span class="symbol">args</span>:Object[]<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">formatString</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Create a new <span class="symbol">String</span> object using a format string and an array of arguments.</td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#join">join</a>(</td>
-                    <td class="sig2"><span class="symbol">sep</span>:String, <span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">sep</span>:<span class="type-name">String</span>, <span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Join together a list of strings with a separator string.</td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public static def <a class="member-table-link symbol" href="#join">join</a>(</td>
-                    <td class="sig2"><span class="symbol">sep</span>:String, <span class="symbol">strings</span>:Iterable<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">sep</span>:<span class="type-name">String</span>, <span class="symbol">strings</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Join together a list of strings with a separator string.</td>
 	            </tr>
 	          </table>
           </div>
@@ -177,7 +177,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#asBuffer">asBuffer</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; Memory.Buffer</span></td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">Memory.Buffer</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return an immutable buffer representation of this string's data.</td>
@@ -185,7 +185,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#charAt">charAt</a>(</td>
-                    <td class="sig2"><span class="symbol">index</span>:int32<span style="white-space: nowrap">) -&gt; char</span></td>
+                    <td class="sig2"><span class="symbol">index</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Given a byte index into the string, return the character at the given index.</td>
@@ -193,7 +193,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#charLength">charLength</a>(</td>
-                    <td class="sig2"><span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                    <td class="sig2"><span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">The length of the string in characters.</td>
@@ -201,7 +201,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#copyChars">copyChars</a>(</td>
-                    <td class="sig2"><span class="symbol">index</span>:int32, <span class="symbol">dst</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; (int32, int32)</span></td>
+                    <td class="sig2"><span class="symbol">index</span>:<span class="type-name">int32</span>, <span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; (<span class="type-name">int32</span>, <span class="type-name">int32</span>)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Copy characters from this string into a character array.</td>
@@ -209,7 +209,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#endsWith">endsWith</a>(</td>
-                    <td class="sig2"><span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; bool</span></td>
+                    <td class="sig2"><span class="symbol">s</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return true if this string ends with the substring <span class="symbol">s</span>.</td>
@@ -217,7 +217,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#equals">equals</a>(</td>
-                    <td class="sig2"><span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; bool</span></td>
+                    <td class="sig2"><span class="symbol">s</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data"><span class="symbol">true</span> if <span class="symbol">s</span> is equal to to this string.</td>
@@ -225,23 +225,23 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#format">format</a>(</td>
-                    <td class="sig2"><span class="symbol">args</span>:Object<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Create a new <span class="symbol">String</span> object using this <span class="symbol">String</span> as the format string.</td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#format">format</a>(</td>
-                    <td class="sig2"><span class="symbol">args</span>:Object[]<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Create a new <span class="symbol">String</span> object using this <span class="symbol">String</span> as the format string.</td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#iterate">iterate</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; Iterator</span></td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Iterate over the characters in this string.</td>
@@ -249,23 +249,23 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#join">join</a>(</td>
-                    <td class="sig2"><span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Join together a list of strings using this string as a separator.</td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#join">join</a>(</td>
-                    <td class="sig2"><span class="symbol">strings</span>:Iterable<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">strings</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Join together a list of strings using this string as a separator.</td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#nextCh">nextCh</a>(</td>
-                    <td class="sig2"><span class="symbol">index</span>:int32<span style="white-space: nowrap">) -&gt; (char, int32)</span></td>
+                    <td class="sig2"><span class="symbol">index</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; (<span class="type-name">char</span>, <span class="type-name">int32</span>)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Given a byte index into the string, return the character at the given index, as well as the byte index of the next character.</td>
@@ -273,7 +273,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#startsWith">startsWith</a>(</td>
-                    <td class="sig2"><span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; bool</span></td>
+                    <td class="sig2"><span class="symbol">s</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return true if this string starts with the substring <span class="symbol">s</span>.</td>
@@ -281,23 +281,23 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#substr">substr</a>(</td>
-                    <td class="sig2"><span class="symbol">beginIndex</span>:int32, <span class="symbol">endIndex</span>:int32<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">beginIndex</span>:<span class="type-name">int32</span>, <span class="symbol">endIndex</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Return a new <span class="symbol">String</span> which containing all of the characters between <span class="symbol">beginIndex</span> and <span class="symbol">endIndex</span>.</td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#substr">substr</a>(</td>
-                    <td class="sig2"><span class="symbol">beginIndex</span>:int32<span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span class="symbol">beginIndex</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
-	              <td class="member-table-data"></td>
+	              <td class="member-table-data">Return a new <span class="symbol">String</span> containing all of the characters starting from position <span class="symbol">beginIndex</span> until the end of the string.</td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#toCharArray">toCharArray</a>(</td>
-                    <td class="sig2"><span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; char[]</span></td>
+                    <td class="sig2"><span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span>[]</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Convert this string to a character array.</td>
@@ -305,7 +305,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#toLowerCase">toLowerCase</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return the value of this string, converted to lower case.</td>
@@ -313,7 +313,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#toUpperCase">toUpperCase</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; String</span></td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return the value of this string, converted to upper case.</td>
@@ -326,7 +326,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="asBuffer">
-	              public def <span class="symbol">asBuffer</span>(<span style="white-space: nowrap">) -&gt; Memory.Buffer</span>
+	              public def <span class="symbol">asBuffer</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Memory.Buffer</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -335,7 +335,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="charAt">
-	              public def <span class="symbol">charAt</span>(<span class="symbol">index</span>:int32<span style="white-space: nowrap">) -&gt; char</span>
+	              public def <span class="symbol">charAt</span>(<span class="symbol">index</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -344,7 +344,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="charLength">
-	              public def <span class="symbol">charLength</span>(<span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+	              public def <span class="symbol">charLength</span>(<span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -367,19 +367,63 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="concat">
-	              public static def <span class="symbol">concat</span>(<span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">concat</span>(<span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Concatenate a list of strings.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">s</span>
+                      - the list of strings to concatenate.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the concatenation of the input strings.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="concat">
-	              public static def <span class="symbol">concat</span>(<span class="symbol">strings</span>:Iterable<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">concat</span>(<span class="symbol">strings</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Concatenate a list of strings.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">s</span>
+                      - an <span class="symbol">Iterable</span> which returns the strings to be concatenated.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the concatenation of the input strings.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="copyChars">
-	              public def <span class="symbol">copyChars</span>(<span class="symbol">index</span>:int32, <span class="symbol">dst</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; (int32, int32)</span>
+	              public def <span class="symbol">copyChars</span>(<span class="symbol">index</span>:<span class="type-name">int32</span>, <span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; (<span class="type-name">int32</span>, <span class="type-name">int32</span>)</span>
               </a>
             </header>
             <div class="member-description">
@@ -405,6 +449,14 @@
                   </td>
                 </tr>
                 <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      A tuple containing the number of characters actually copied, and the byte index of the last character copied plus one.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
                   <th class="member-feature">Exceptions</th>
                   <td class="member-feature-data">
                     <div class="exception-name">
@@ -420,11 +472,11 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              public static def <span class="symbol">create</span>(<span class="symbol">bytes</span>:uint8[]<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">create</span>(<span class="symbol">bytes</span>:<span class="type-name">uint8</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
-            <p>Construct a string from a byte array.</p>
+            <p>Construct a string from a byte array. The byte array is presumed to contain character data encoded as UTF-8.</p>
             </div>
               <table class="member-features-table" cellspacing="6px">
                 <tr>
@@ -440,11 +492,11 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              public static def <span class="symbol">create</span>(<span class="symbol">bytes</span>:uint8[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">create</span>(<span class="symbol">bytes</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
-            <p>Construct a string from a subrange of a byte array.</p>
+            <p>Construct a string from a subrange of a byte array. The byte array is presumed to contain character data encoded as UTF-8.</p>
             </div>
               <table class="member-features-table" cellspacing="6px">
                 <tr>
@@ -462,11 +514,23 @@
                     </div>
                   </td>
                 </tr>
+                <tr>
+                  <th class="member-feature">Exceptions</th>
+                  <td class="member-feature-data">
+                    <div class="exception-name">
+                      <span class="symbol">IndexError</span>
+                      - if <span class="symbol">start</span> is less than zero.
+                    </div><div class="exception-name">
+                      <span class="symbol">ArgumentError</span>
+                      - if <span class="symbol">count</span> is less than zero.
+                    </div>
+                  </td>
+                </tr>
               </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              public static def <span class="symbol">create</span>(<span class="symbol">str</span>:String, <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">create</span>(<span class="symbol">str</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -481,10 +545,22 @@
                       - The source string.
                     </div><div class="parameter-name">
                       <span class="symbol">start</span>
-                      - The starting index within the byte array.
+                      - The starting index within the byte array. This will be clamped to the end of the source string.
                     </div><div class="parameter-name">
                       <span class="symbol">count</span>
                       - The number of bytes to use in constructing the string. Will be clamped to the end of the string if there are fewer than <span class="symbol">count</span> bytes following <span class="symbol">start</span>.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Exceptions</th>
+                  <td class="member-feature-data">
+                    <div class="exception-name">
+                      <span class="symbol">IndexError</span>
+                      - if <span class="symbol">start</span> is less than zero.
+                    </div><div class="exception-name">
+                      <span class="symbol">ArgumentError</span>
+                      - if <span class="symbol">count</span> is less than zero.
                     </div>
                   </td>
                 </tr>
@@ -492,11 +568,11 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              public static def <span class="symbol">create</span>(<span class="symbol">chars</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">create</span>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
-            <p>Construct a string from a char array.</p>
+            <p>Construct a string from an array of characters.</p>
             </div>
               <table class="member-features-table" cellspacing="6px">
                 <tr>
@@ -514,11 +590,23 @@
                     </div>
                   </td>
                 </tr>
+                <tr>
+                  <th class="member-feature">Exceptions</th>
+                  <td class="member-feature-data">
+                    <div class="exception-name">
+                      <span class="symbol">IndexError</span>
+                      - if <span class="symbol">start</span> is less than zero.
+                    </div><div class="exception-name">
+                      <span class="symbol">ArgumentError</span>
+                      - if <span class="symbol">count</span> is less than zero.
+                    </div>
+                  </td>
+                </tr>
               </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              public static def <span class="symbol">create</span>(<span class="symbol">bytes</span>:Address[uint8], <span class="symbol">length</span>:int32<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">create</span>(<span class="symbol">bytes</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -527,7 +615,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              public static def <span class="symbol">create</span>(<span class="symbol">value</span><span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">create</span>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -536,19 +624,25 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              public static def <span class="symbol">create</span>(<span class="symbol">value</span><span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">create</span>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Create a string from a type that has a <span class="symbol">toString</span> method.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              public static def <span class="symbol">create</span>(<span class="symbol">value</span>:Object<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">create</span>(<span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Create a string from a subclass of <span class="symbol">Object</span> using the object's <span class="symbol">toString</span> method.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="endsWith">
-	              public def <span class="symbol">endsWith</span>(<span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; bool</span>
+	              public def <span class="symbol">endsWith</span>(<span class="symbol">s</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -557,7 +651,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="equals">
-	              public def <span class="symbol">equals</span>(<span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; bool</span>
+	              public def <span class="symbol">equals</span>(<span class="symbol">s</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -566,31 +660,125 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="format">
-	              public static def <span class="symbol">format</span>(<span class="symbol">formatString</span>:String, <span class="symbol">args</span>:Object<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">format</span>(<span class="symbol">formatString</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Create a new <span class="symbol">String</span> object using a format string and a list of arguments.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">formatString</span>
+                      - the format string.
+                    </div><div class="parameter-name">
+                      <span class="symbol">args</span>
+                      - the values to be substituted into the format string.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the result of the format operation.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="format">
-	              public static def <span class="symbol">format</span>(<span class="symbol">formatString</span>:String, <span class="symbol">args</span>:Object[]<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">format</span>(<span class="symbol">formatString</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Create a new <span class="symbol">String</span> object using a format string and an array of arguments.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">formatString</span>
+                      - the format string.
+                    </div><div class="parameter-name">
+                      <span class="symbol">args</span>
+                      - the values to be substituted into the format string.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the result of the format operation.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="format">
-	              public def <span class="symbol">format</span>(<span class="symbol">args</span>:Object<span style="white-space: nowrap">) -&gt; String</span>
+	              public def <span class="symbol">format</span>(<span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Create a new <span class="symbol">String</span> object using this <span class="symbol">String</span> as the format string.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">args</span>
+                      - the values to be substituted into the format string.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the result of the format operation.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="format">
-	              public def <span class="symbol">format</span>(<span class="symbol">args</span>:Object[]<span style="white-space: nowrap">) -&gt; String</span>
+	              public def <span class="symbol">format</span>(<span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Create a new <span class="symbol">String</span> object using this <span class="symbol">String</span> as the format string.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">args</span>
+                      - the values to be substituted into the format string.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the result of the format operation.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="iterate">
-	              public def <span class="symbol">iterate</span>(<span style="white-space: nowrap">) -&gt; Iterator</span>
+	              public def <span class="symbol">iterate</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -599,31 +787,125 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="join">
-	              public def <span class="symbol">join</span>(<span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; String</span>
+	              public def <span class="symbol">join</span>(<span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Join together a list of strings using this string as a separator.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">s</span>
+                      - the list of strings to join.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the joined string.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="join">
-	              public def <span class="symbol">join</span>(<span class="symbol">strings</span>:Iterable<span style="white-space: nowrap">) -&gt; String</span>
+	              public def <span class="symbol">join</span>(<span class="symbol">strings</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Join together a list of strings using this string as a separator.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">s</span>
+                      - an <span class="symbol">Iterable</span> which produces the strings to join.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the joined string.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="join">
-	              public static def <span class="symbol">join</span>(<span class="symbol">sep</span>:String, <span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">join</span>(<span class="symbol">sep</span>:<span class="type-name">String</span>, <span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Join together a list of strings with a separator string.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">sep</span>
+                      - the separator string which is inserted between each pair of input strings.
+                    </div><div class="parameter-name">
+                      <span class="symbol">s</span>
+                      - the list of strings to join.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the joined string.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="join">
-	              public static def <span class="symbol">join</span>(<span class="symbol">sep</span>:String, <span class="symbol">strings</span>:Iterable<span style="white-space: nowrap">) -&gt; String</span>
+	              public static def <span class="symbol">join</span>(<span class="symbol">sep</span>:<span class="type-name">String</span>, <span class="symbol">strings</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Join together a list of strings with a separator string.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">sep</span>
+                      - the separator string which is inserted between each pair of input strings.
+                    </div><div class="parameter-name">
+                      <span class="symbol">s</span>
+                      - an <span class="symbol">Iterable</span> which produces the strings to join.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the joined string.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="nextCh">
-	              public def <span class="symbol">nextCh</span>(<span class="symbol">index</span>:int32<span style="white-space: nowrap">) -&gt; (char, int32)</span>
+	              public def <span class="symbol">nextCh</span>(<span class="symbol">index</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; (<span class="type-name">char</span>, <span class="type-name">int32</span>)</span>
               </a>
             </header>
             <div class="member-description">
@@ -632,7 +914,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="startsWith">
-	              public def <span class="symbol">startsWith</span>(<span class="symbol">s</span>:String<span style="white-space: nowrap">) -&gt; bool</span>
+	              public def <span class="symbol">startsWith</span>(<span class="symbol">s</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -641,19 +923,90 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="substr">
-	              public def <span class="symbol">substr</span>(<span class="symbol">beginIndex</span>:int32, <span class="symbol">endIndex</span>:int32<span style="white-space: nowrap">) -&gt; String</span>
+	              public def <span class="symbol">substr</span>(<span class="symbol">beginIndex</span>:<span class="type-name">int32</span>, <span class="symbol">endIndex</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Return a new <span class="symbol">String</span> which containing all of the characters between <span class="symbol">beginIndex</span> and <span class="symbol">endIndex</span>.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">beginIndex</span>
+                      - the starting index of the substring. This value will be clamped to the end of the string.
+                    </div><div class="parameter-name">
+                      <span class="symbol">endIndex</span>
+                      - the ending index of the substring. This value will be clamped to the end of the string.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the substring.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Exceptions</th>
+                  <td class="member-feature-data">
+                    <div class="exception-name">
+                      <span class="symbol">IndexError</span>
+                      - if <span class="symbol">beginIndex</span> is less than zero.
+                    </div><div class="exception-name">
+                      <span class="symbol">ArgumentError</span>
+                      - if <span class="symbol">endIndex</span> is less than <span class="symbol">beginIndex</span>.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="substr">
-	              public def <span class="symbol">substr</span>(<span class="symbol">beginIndex</span>:int32<span style="white-space: nowrap">) -&gt; String</span>
+	              public def <span class="symbol">substr</span>(<span class="symbol">beginIndex</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Return a new <span class="symbol">String</span> containing all of the characters starting from position <span class="symbol">beginIndex</span> until the end of the string.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">beginIndex</span>
+                      - the starting index of the substring.
+                    </div><div class="parameter-name">
+                      <span class="symbol">endIndex</span>
+                      - the ending index of the substring.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      the substring.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Exceptions</th>
+                  <td class="member-feature-data">
+                    <div class="exception-name">
+                      <span class="symbol">IndexError</span>
+                      - if <span class="symbol">beginIndex</span> is less than zero.
+                    </div>
+                  </td>
+                </tr>
+              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="toCharArray">
-	              public def <span class="symbol">toCharArray</span>(<span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; char[]</span>
+	              public def <span class="symbol">toCharArray</span>(<span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span>[]</span>
               </a>
             </header>
             <div class="member-description">
@@ -676,7 +1029,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="toLowerCase">
-	              public def <span class="symbol">toLowerCase</span>(<span style="white-space: nowrap">) -&gt; String</span>
+	              public def <span class="symbol">toLowerCase</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -685,7 +1038,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="toUpperCase">
-	              public def <span class="symbol">toUpperCase</span>(<span style="white-space: nowrap">) -&gt; String</span>
+	              public def <span class="symbol">toUpperCase</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">

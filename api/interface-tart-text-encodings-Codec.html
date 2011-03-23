@@ -73,7 +73,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#decode">decode</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:char[], <span class="symbol">dstOffset</span>:int32, <span class="symbol">src</span>:uint8[], <span class="symbol">srcOffset</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                    <td class="sig2"><span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Decode the characters in <span class="symbol">src</span>.</td>
@@ -81,7 +81,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#decodedLength">decodedLength</a>(</td>
-                    <td class="sig2"><span class="symbol">src</span>:uint8[], <span class="symbol">srcOffset</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                    <td class="sig2"><span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return the length, in characters, of the byte array when decoded.</td>
@@ -89,7 +89,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#encode">encode</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:uint8[], <span class="symbol">dstOffset</span>:int32, <span class="symbol">src</span>:char[], <span class="symbol">srcOffset</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                    <td class="sig2"><span class="symbol">dst</span>:<span class="type-name">uint8</span>[], <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Encode the characters in <span class="symbol">src</span>.</td>
@@ -97,7 +97,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#encodedLength">encodedLength</a>(</td>
-                    <td class="sig2"><span class="symbol">src</span>:char[], <span class="symbol">srcOffset</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                    <td class="sig2"><span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return the length, in bytes, of the character array when encoded.</td>
@@ -110,7 +110,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="decode">
-	              public def <span class="symbol">decode</span>(<span class="symbol">dst</span>:char[], <span class="symbol">dstOffset</span>:int32, <span class="symbol">src</span>:uint8[], <span class="symbol">srcOffset</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+	              public def <span class="symbol">decode</span>(<span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -138,11 +138,19 @@
                     </div>
                   </td>
                 </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      The number of characters written to <span class="symbol">dst</span>.
+                    </div>
+                  </td>
+                </tr>
               </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="decodedLength">
-	              public def <span class="symbol">decodedLength</span>(<span class="symbol">src</span>:uint8[], <span class="symbol">srcOffset</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+	              public def <span class="symbol">decodedLength</span>(<span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -164,11 +172,19 @@
                     </div>
                   </td>
                 </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      The number of encoded characters.
+                    </div>
+                  </td>
+                </tr>
               </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="encode">
-	              public def <span class="symbol">encode</span>(<span class="symbol">dst</span>:uint8[], <span class="symbol">dstOffset</span>:int32, <span class="symbol">src</span>:char[], <span class="symbol">srcOffset</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+	              public def <span class="symbol">encode</span>(<span class="symbol">dst</span>:<span class="type-name">uint8</span>[], <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -196,11 +212,19 @@
                     </div>
                   </td>
                 </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      The number of bytes written to <span class="symbol">dst</span>.
+                    </div>
+                  </td>
+                </tr>
               </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="encodedLength">
-	              public def <span class="symbol">encodedLength</span>(<span class="symbol">src</span>:char[], <span class="symbol">srcOffset</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+	              public def <span class="symbol">encodedLength</span>(<span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -219,6 +243,14 @@
                     </div><div class="parameter-name">
                       <span class="symbol">count</span>
                       - The number of characters to encode.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Returns</th>
+                  <td class="member-feature-data">
+                    <div class="returns-desc">
+                      The number of bytes required to encode the specified character range.
                     </div>
                   </td>
                 </tr>

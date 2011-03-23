@@ -73,7 +73,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#addressOf">addressOf</a>(</td>
-                    <td class="sig2"><span class="symbol">value</span><span style="white-space: nowrap">) -&gt; Address[]</span></td>
+                    <td class="sig2"><span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">T</span>]</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Take the address of a variable and return the result as a native pointer. <span class="symbol">Value</span> can be a complex expression that resolves to an l-value.</td>
@@ -81,7 +81,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#arrayCopy">arrayCopy</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:Address[], <span class="symbol">src</span>:Address[], <span class="symbol">length</span>:int32<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Copies a range of elements from one native array to another. Does not check array bounds. Does not guarantee correct behavior if the source and destination overlap.</td>
@@ -89,7 +89,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#arrayCopy">arrayCopy</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:Address[], <span class="symbol">src</span>:Address[], <span class="symbol">length</span>:uint32<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data"></td>
@@ -97,7 +97,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#arrayCopy">arrayCopy</a>(</td>
-                    <td class="sig2"><span class="symbol">dstBegin</span>:Address[], <span class="symbol">dstEnd</span>:Address[], <span class="symbol">src</span>:Address[]<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">dstBegin</span>:Address[<span class="type-name">T</span>], <span class="symbol">dstEnd</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Copies a range of elements from one native array to another. Does not check array bounds. Does not guarantee correct behavior if the source and destination overlap.</td>
@@ -105,7 +105,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#arrayMove">arrayMove</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:Address[], <span class="symbol">src</span>:Address[], <span class="symbol">length</span>:int32<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Copies a range of elements from one native array to another. Does not check array bounds. Handles the case of overlapping ranges.</td>
@@ -113,7 +113,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#arrayMove">arrayMove</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:Address[], <span class="symbol">src</span>:Address[], <span class="symbol">length</span>:uint32<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data"></td>
@@ -121,7 +121,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#arrayMove">arrayMove</a>(</td>
-                    <td class="sig2"><span class="symbol">dstBegin</span>:Address[], <span class="symbol">dstEnd</span>:Address[], <span class="symbol">src</span>:Address[]<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">dstBegin</span>:Address[<span class="type-name">T</span>], <span class="symbol">dstEnd</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Copies a range of elements from one native array to another. Does not check array bounds. Handles the case of overlapping ranges.</td>
@@ -129,7 +129,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#bitCast">bitCast</a>(</td>
-                    <td class="sig2"><span class="symbol">from</span><span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">from</span>:<span class="type-name">S</span><span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">An unchecked cast of one type to another. Types must be the same size.</td>
@@ -137,7 +137,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#deref">deref</a>(</td>
-                    <td class="sig2"><span class="symbol">from</span>:Address[]<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">from</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Dereference a pointer value.</td>
@@ -145,7 +145,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#nullObject">nullObject</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">ElemTy</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">The null pointer, converted to an object reference.</td>
@@ -153,7 +153,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#objectAddress">objectAddress</a>(</td>
-                    <td class="sig2"><span class="symbol">value</span>:Object<span style="white-space: nowrap">) -&gt; Address[Object]</span></td>
+                    <td class="sig2"><span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">Object</span>]</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Convert an object reference into a native address.</td>
@@ -169,7 +169,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#ptrDiff">ptrDiff</a>(</td>
-                    <td class="sig2"><span class="symbol">first</span>:Address[], <span class="symbol">last</span>:Address[]<span style="white-space: nowrap">) -&gt; int32</span></td>
+                    <td class="sig2"><span class="symbol">first</span>:Address[<span class="type-name">ValTy</span>], <span class="symbol">last</span>:Address[<span class="type-name">ValTy</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return the difference between two pointers. Subtracts the pointer values, and then divides by the size of <span class="symbol">T</span>. Raises an exception if the value is too large to be contained within a signed integer.</td>
@@ -185,7 +185,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#reinterpretPtr">reinterpretPtr</a>(</td>
-                    <td class="sig2"><span class="symbol">from</span>:Address[]<span style="white-space: nowrap">) -&gt; Address[]</span></td>
+                    <td class="sig2"><span class="symbol">from</span>:Address[<span class="type-name">S</span>]<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">T</span>]</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">An unchecked cast of one pointer type to another.</td>
@@ -198,7 +198,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="addressOf">
-	              public def <span class="symbol">addressOf</span>(<span class="symbol">value</span><span style="white-space: nowrap">) -&gt; Address[]</span>
+	              public def <span class="symbol">addressOf</span>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">T</span>]</span>
               </a>
             </header>
             <div class="member-description">
@@ -207,7 +207,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="arrayCopy">
-	              public def <span class="symbol">arrayCopy</span>(<span class="symbol">dst</span>:Address[], <span class="symbol">src</span>:Address[], <span class="symbol">length</span>:int32<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">arrayCopy</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -234,13 +234,13 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="arrayCopy">
-	              public def <span class="symbol">arrayCopy</span>(<span class="symbol">dst</span>:Address[], <span class="symbol">src</span>:Address[], <span class="symbol">length</span>:uint32<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">arrayCopy</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="arrayCopy">
-	              public def <span class="symbol">arrayCopy</span>(<span class="symbol">dstBegin</span>:Address[], <span class="symbol">dstEnd</span>:Address[], <span class="symbol">src</span>:Address[]<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">arrayCopy</span>(<span class="symbol">dstBegin</span>:Address[<span class="type-name">T</span>], <span class="symbol">dstEnd</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -267,7 +267,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="arrayMove">
-	              public def <span class="symbol">arrayMove</span>(<span class="symbol">dst</span>:Address[], <span class="symbol">src</span>:Address[], <span class="symbol">length</span>:int32<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">arrayMove</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -300,13 +300,13 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="arrayMove">
-	              public def <span class="symbol">arrayMove</span>(<span class="symbol">dst</span>:Address[], <span class="symbol">src</span>:Address[], <span class="symbol">length</span>:uint32<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">arrayMove</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="arrayMove">
-	              public def <span class="symbol">arrayMove</span>(<span class="symbol">dstBegin</span>:Address[], <span class="symbol">dstEnd</span>:Address[], <span class="symbol">src</span>:Address[]<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">arrayMove</span>(<span class="symbol">dstBegin</span>:Address[<span class="type-name">T</span>], <span class="symbol">dstEnd</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -333,7 +333,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="bitCast">
-	              public def <span class="symbol">bitCast</span>(<span class="symbol">from</span><span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">bitCast</span>(<span class="symbol">from</span>:<span class="type-name">S</span><span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -342,7 +342,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="deref">
-	              public def <span class="symbol">deref</span>(<span class="symbol">from</span>:Address[]<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">deref</span>(<span class="symbol">from</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -351,7 +351,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="nullObject">
-	              public def <span class="symbol">nullObject</span>(<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">nullObject</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">ElemTy</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -360,7 +360,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="objectAddress">
-	              public def <span class="symbol">objectAddress</span>(<span class="symbol">value</span>:Object<span style="white-space: nowrap">) -&gt; Address[Object]</span>
+	              public def <span class="symbol">objectAddress</span>(<span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">Object</span>]</span>
               </a>
             </header>
             <div class="member-description">
@@ -378,7 +378,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="ptrDiff">
-	              public def <span class="symbol">ptrDiff</span>(<span class="symbol">first</span>:Address[], <span class="symbol">last</span>:Address[]<span style="white-space: nowrap">) -&gt; int32</span>
+	              public def <span class="symbol">ptrDiff</span>(<span class="symbol">first</span>:Address[<span class="type-name">ValTy</span>], <span class="symbol">last</span>:Address[<span class="type-name">ValTy</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -396,7 +396,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="reinterpretPtr">
-	              public def <span class="symbol">reinterpretPtr</span>(<span class="symbol">from</span>:Address[]<span style="white-space: nowrap">) -&gt; Address[]</span>
+	              public def <span class="symbol">reinterpretPtr</span>(<span class="symbol">from</span>:Address[<span class="type-name">S</span>]<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">T</span>]</span>
               </a>
             </header>
             <div class="member-description">

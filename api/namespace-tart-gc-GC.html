@@ -73,7 +73,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#addFinalizer">addFinalizer</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:Object, <span class="symbol">finalizer</span>:Function<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Register a finalizer function for an object.</td>
@@ -81,7 +81,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#alloc">alloc</a>(</td>
-                    <td class="sig2"><span class="symbol">context</span>:Object, <span class="symbol">size</span>:uint32<span style="white-space: nowrap">) -&gt; Object</span></td>
+                    <td class="sig2"><span class="symbol">context</span>:<span class="type-name">Object</span>, <span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Obtain a block of memory from the alloc pool associated with the given thread local state. This is implicitly a sync point. This should be passed the context object returned by <span class="symbol">allocContext</span>.</td>
@@ -89,7 +89,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#allocContext">allocContext</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; Object</span></td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return a reference to the thread-local context pointer for the current thread. This should only need to be done once per function that allocates memory. The compiler will generate a call to this as needed, and pass the result to <span class="symbol">alloc</span>.</td>
@@ -129,7 +129,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#removeFinalizer">removeFinalizer</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:Object, <span class="symbol">finalizer</span>:Function<span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Unregister a finalizer function for an object.</td>
@@ -166,7 +166,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="addFinalizer">
-	              public def <span class="symbol">addFinalizer</span>(<span class="symbol">obj</span>:Object, <span class="symbol">finalizer</span>:Function<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">addFinalizer</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -175,7 +175,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="alloc">
-	              public def <span class="symbol">alloc</span>(<span class="symbol">context</span>:Object, <span class="symbol">size</span>:uint32<span style="white-space: nowrap">) -&gt; Object</span>
+	              public def <span class="symbol">alloc</span>(<span class="symbol">context</span>:<span class="type-name">Object</span>, <span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -184,7 +184,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="allocContext">
-	              public def <span class="symbol">allocContext</span>(<span style="white-space: nowrap">) -&gt; Object</span>
+	              public def <span class="symbol">allocContext</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -229,7 +229,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="removeFinalizer">
-	              public def <span class="symbol">removeFinalizer</span>(<span class="symbol">obj</span>:Object, <span class="symbol">finalizer</span>:Function<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">removeFinalizer</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
