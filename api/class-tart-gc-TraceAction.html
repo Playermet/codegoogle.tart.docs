@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="apidocs.css">
+<meta charset="UTF-8">
+<head>
+  <title>class TraceAction</title>
+  <link rel="stylesheet" type="text/css" href="apidoc.css">
+  </head>
+<body>
+  <section class="page-header">
+  <header class="page-header-title"><strong>Tart Standard Library</strong> [libstd]</header>
+  </section>
+  <section class="nav-section">
+  <nav class="nav-item">
+    <a class="nav-link" href="index.html">Overview</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="packages.html">Packages</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="modules.html">Modules</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="types.html">Types</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="names.html">Index</a>
+  </nav>
+  </section>
+  <section class="content-section">
+    <header class="content-header">
+      <span class="defn-declarator">class</span>
+      tart.gc.<span class="defn-name">TraceAction</span>
+    </header>
+	    <section class="defn-section-description">
+          <p>Handles the logic of a tracing pass.</p>
+	    </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Instance Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
+                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#traceDescriptors">traceDescriptors</a>(</td>
+                    <td class="sig2"><span class="symbol">baseAddr</span>:Address[uint8], <span class="symbol">descriptorList</span>:Address[tart.gc.TraceDescriptor]<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Trace an object given a list of trace descriptor structures.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#traceObject">traceObject</a>(</td>
+                    <td class="sig2"><span class="symbol">v</span>:Object<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Trace the object <span class="symbol">v</span>, which must not be null.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">protected def <a class="member-table-link symbol" href="#tracePointer">tracePointer</a>(</td>
+                    <td class="sig2"><span class="symbol">ptrAddr</span>:Address[Object]<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Trace a single pointer. Override this in the subclass to implement the trace algorithm.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">protected def <a class="member-table-link symbol" href="#tracePointers">tracePointers</a>(</td>
+                    <td class="sig2"><span class="symbol">baseAddr</span>:Address[uint8], <span class="symbol">fieldOffsets</span>:Address[uint32], <span class="symbol">fieldCount</span>:uint32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Trace a list of pointers as specified by offsets from a base address. TraceAction subclasses should probably re-implement this for effiency and inline the call to <span class="symbol">tracePointer()</span>.</td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-details-section">
+          <header class="member-details-section-header">Method Details</header>
+          <section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              public def <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="traceDescriptors">
+	              public def <span class="symbol">traceDescriptors</span>(<span class="symbol">baseAddr</span>:Address[uint8], <span class="symbol">descriptorList</span>:Address[tart.gc.TraceDescriptor]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Trace an object given a list of trace descriptor structures.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="traceObject">
+	              public def <span class="symbol">traceObject</span>(<span class="symbol">v</span>:Object<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Trace the object <span class="symbol">v</span>, which must not be null.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="tracePointer">
+	              protected def <span class="symbol">tracePointer</span>(<span class="symbol">ptrAddr</span>:Address[Object]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Trace a single pointer. Override this in the subclass to implement the trace algorithm.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="tracePointers">
+	              protected def <span class="symbol">tracePointers</span>(<span class="symbol">baseAddr</span>:Address[uint8], <span class="symbol">fieldOffsets</span>:Address[uint32], <span class="symbol">fieldCount</span>:uint32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Trace a list of pointers as specified by offsets from a base address. TraceAction subclasses should probably re-implement this for effiency and inline the call to <span class="symbol">tracePointer()</span>.</p>
+            </div>
+          </section>
+        </section>
+  </section>
+  <section class="page-footer">Generated by doclobster.</section>
+</body>
+</html>

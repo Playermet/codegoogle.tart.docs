@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="apidocs.css">
+<meta charset="UTF-8">
+<head>
+  <title>class StringBuilder</title>
+  <link rel="stylesheet" type="text/css" href="apidoc.css">
+  </head>
+<body>
+  <section class="page-header">
+  <header class="page-header-title"><strong>Tart Standard Library</strong> [libstd]</header>
+  </section>
+  <section class="nav-section">
+  <nav class="nav-item">
+    <a class="nav-link" href="index.html">Overview</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="packages.html">Packages</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="modules.html">Modules</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="types.html">Types</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="names.html">Index</a>
+  </nav>
+  </section>
+  <section class="content-section">
+    <header class="content-header">
+      <span class="defn-declarator">class</span>
+      tart.core.<span class="defn-name">StringBuilder</span>
+    </header>
+	    <section class="defn-section-description">
+          <p>A mutable, extensible string.</p>
+	    </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Instance Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#append">append</a>(</td>
+                    <td class="sig2"><span class="symbol">c</span>:char<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Append a single character to the buffer.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#append">append</a>(</td>
+                    <td class="sig2"><span class="symbol">c</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Append all or part of a character array to the buffer.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#append">append</a>(</td>
+                    <td class="sig2"><span class="symbol">s</span>:String, <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Append all or part of a String to the buffer.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#append">append</a>(</td>
+                    <td class="sig2"><span class="symbol">s</span>:tart.collections.Collection<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#append">append</a>(</td>
+                    <td class="sig2"><span class="symbol">s</span>:Iterator<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#clear">clear</a>(</td>
+                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Remove all characters from the buffer.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
+                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Construct an empty StringBuilder.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
+                    <td class="sig2"><span class="symbol">reservedSize</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Construct an empty StringBuilder.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
+                    <td class="sig2"><span class="symbol">str</span>:String, <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Construct a StringBuilder from an existing String.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
+                    <td class="sig2"><span class="symbol">chars</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Construct a StringBuilder from a character array.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#insert">insert</a>(</td>
+                    <td class="sig2"><span class="symbol">insertPos</span>:int32, <span class="symbol">c</span>:char<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#insert">insert</a>(</td>
+                    <td class="sig2"><span class="symbol">insertPos</span>:int32, <span class="symbol">chars</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Insert all or part of a character array to the buffer at position <span class="symbol">insertPos</span>.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#insert">insert</a>(</td>
+                    <td class="sig2"><span class="symbol">insertPos</span>:int32, <span class="symbol">src</span>:String, <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Append all or part of a String to the buffer at position <span class="symbol">insertPos</span>.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#insert">insert</a>(</td>
+                    <td class="sig2"><span class="symbol">insertPos</span>:int32, <span class="symbol">s</span>:tart.collections.Collection<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#insert">insert</a>(</td>
+                    <td class="sig2"><span class="symbol">insertPos</span>:int32, <span class="symbol">s</span>:Iterator<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#remove">remove</a>(</td>
+                    <td class="sig2"><span class="symbol">n</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Remove the character at position <span class="symbol">n</span>.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#remove">remove</a>(</td>
+                    <td class="sig2"><span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Remove <span class="symbol">count</span> characters starting at position <span class="symbol">start</span>. If there are fewer than <span class="symbol">count</span> elements following <span class="symbol">start</span>, then all characters following <span class="symbol">start</span> will be removed.</td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-details-section">
+          <header class="member-details-section-header">Method Details</header>
+          <section class="member-section">
+            <header class="member-header">
+              <a name="append">
+	              public def <span class="symbol">append</span>(<span class="symbol">c</span>:char<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Append a single character to the buffer.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">c</span>
+                      - The character to append.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="append">
+	              public def <span class="symbol">append</span>(<span class="symbol">c</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Append all or part of a character array to the buffer.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="append">
+	              public def <span class="symbol">append</span>(<span class="symbol">s</span>:String, <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Append all or part of a String to the buffer.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="append">
+	              public def <span class="symbol">append</span>(<span class="symbol">s</span>:tart.collections.Collection<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="append">
+	              public def <span class="symbol">append</span>(<span class="symbol">s</span>:Iterator<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="clear">
+	              public def <span class="symbol">clear</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Remove all characters from the buffer.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              public def <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Construct an empty StringBuilder.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              public def <span class="symbol">construct</span>(<span class="symbol">reservedSize</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Construct an empty StringBuilder.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">reservedSize</span>
+                      - The reserved size of the buffer, in characters.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              public def <span class="symbol">construct</span>(<span class="symbol">str</span>:String, <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Construct a StringBuilder from an existing String.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              public def <span class="symbol">construct</span>(<span class="symbol">chars</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Construct a StringBuilder from a character array.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="insert">
+	              public def <span class="symbol">insert</span>(<span class="symbol">insertPos</span>:int32, <span class="symbol">c</span>:char<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="insert">
+	              public def <span class="symbol">insert</span>(<span class="symbol">insertPos</span>:int32, <span class="symbol">chars</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Insert all or part of a character array to the buffer at position <span class="symbol">insertPos</span>.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="insert">
+	              public def <span class="symbol">insert</span>(<span class="symbol">insertPos</span>:int32, <span class="symbol">src</span>:String, <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Append all or part of a String to the buffer at position <span class="symbol">insertPos</span>.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">insertPos</span>
+                      - Where to insert the characters.
+                    </div><div class="parameter-name">
+                      <span class="symbol">src</span>
+                      - The source String.
+                    </div><div class="parameter-name">
+                      <span class="symbol">start</span>
+                      - The start position within the source String. This will be clamped to the end of the source string.
+                    </div><div class="parameter-name">
+                      <span class="symbol">count</span>
+                      - The number of characters to insert. This will be clamped to the number of characters actually available.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Exceptions</th>
+                  <td class="member-feature-data">
+                    <div class="exception-name">
+                      <span class="symbol">IndexOutOfRangeException</span>
+                      - If <span class="symbol">count</span> or <span class="symbol">start</span> are less than zero, or if the insertPos is outside of the range of the buffer.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="insert">
+	              public def <span class="symbol">insert</span>(<span class="symbol">insertPos</span>:int32, <span class="symbol">s</span>:tart.collections.Collection<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="insert">
+	              public def <span class="symbol">insert</span>(<span class="symbol">insertPos</span>:int32, <span class="symbol">s</span>:Iterator<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="remove">
+	              public def <span class="symbol">remove</span>(<span class="symbol">n</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Remove the character at position <span class="symbol">n</span>.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">n</span>
+                      - The index of the character to remove.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="remove">
+	              public def <span class="symbol">remove</span>(<span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Remove <span class="symbol">count</span> characters starting at position <span class="symbol">start</span>. If there are fewer than <span class="symbol">count</span> elements following <span class="symbol">start</span>, then all characters following <span class="symbol">start</span> will be removed.</p>
+            </div>
+              <table class="member-features-table" cellspacing="6px">
+                <tr>
+                  <th class="member-feature">Parameters</th>
+                  <td class="member-feature-data">
+                    <div class="parameter-name">
+                      <span class="symbol">start</span>
+                      - The starting index of the range of characters to be removed.
+                    </div><div class="parameter-name">
+                      <span class="symbol">count</span>
+                      - The number of characters to remove.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="member-feature">Exceptions</th>
+                  <td class="member-feature-data">
+                    <div class="exception-name">
+                      <span class="symbol">IndexOutOfRangeException</span>
+                      - If <span class="symbol">count</span> or <span class="symbol">start</span> are less than zero.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+          </section>
+        </section>
+  </section>
+  <section class="page-footer">Generated by doclobster.</section>
+</body>
+</html>

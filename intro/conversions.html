@@ -98,7 +98,7 @@ exception.</p>
 </pre></div>
 </div>
 <p>Of course, the template parameters can be omitted if the type can be deduced by the compiler:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">str</span><span class="p">:</span><span class="nc">String</span> <span class="o">=</span> <span class="nv">typecast</span><span class="p">(</span><span class="nv">inVal</span><span class="p">);</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">str</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="nv">typecast</span><span class="p">(</span><span class="nv">inVal</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Unconditional casts work with disjoint types as well as pointer types:</p>
@@ -120,13 +120,13 @@ dynamic cast:</p>
 object is not the correct type:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">obj</span><span class="p">:</span><span class="nc">Object</span><span class="p">;</span>
 <span class="k">var</span> <span class="nv">s</span> <span class="o">=</span> <span class="nv">typecast</span><span class="p">[</span><span class="kt">String</span><span class="p">](</span><span class="nv">obj</span><span class="p">);</span> <span class="c">// throw exception if obj is not a String.</span>
-<span class="k">var</span> <span class="nv">s</span><span class="p">:</span><span class="nc">String</span> <span class="o">=</span> <span class="nv">typecast</span><span class="p">(</span><span class="nv">obj</span><span class="p">);</span>   <span class="c">// Same as above, except return type is inferred.</span>
+<span class="k">var</span> <span class="nv">s</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="nv">typecast</span><span class="p">(</span><span class="nv">obj</span><span class="p">);</span>   <span class="c">// Same as above, except return type is inferred.</span>
 </pre></div>
 </div>
 <p>The <tt class="xref docutils literal"><span class="pre">typecast()</span></tt> function can of course be overridden for specific types.</p>
 <p>For converting value types, there are various conversion constructors and
 conversion functions:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">i</span><span class="p">:</span><span class="nc">int</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">i</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
 <span class="k">var</span> <span class="nv">f</span> <span class="o">=</span> <span class="kt">float</span><span class="p">(</span><span class="nv">i</span><span class="p">);</span> <span class="c">// Convert int to float</span>
 </pre></div>
 </div>
@@ -139,7 +139,7 @@ is the wrong type to contain the value.</p>
 <p>There is another type of conditional cast called an <em>implied conditional
 cast</em> which is used in conjunction with the <tt class="xref docutils literal"><span class="pre">if</span></tt> statement:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">obj</span><span class="p">:</span><span class="nc">Object</span><span class="p">;</span>
-<span class="k">if</span> <span class="k">let</span> <span class="nv">s</span><span class="p">:</span><span class="nc">String</span> <span class="o">=</span> <span class="nv">obj</span> <span class="k">{</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">s</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="nv">obj</span> <span class="k">{</span>
   <span class="c">// Do something with s</span>
 <span class="k">}</span>
 </pre></div>
@@ -166,7 +166,7 @@ For example, the type <tt class="docutils literal"><span class="pre">int</span> 
 a float. A variable of that type would include an extra bit that says
 what type of data it currently contains.</p>
 <p>To store a value into a union type, you can just use a regular assignment:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">a</span><span class="p">:</span><span class="nc">int</span> <span class="nc">or</span> <span class="nc">float</span><span class="p">;</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">a</span><span class="p">:</span><span class="kt">int</span> <span class="nc">or</span> <span class="kt">float</span><span class="p">;</span>
 <span class="nv">a</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span> <span class="c">// works</span>
 <span class="nv">a</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span> <span class="c">// also works.</span>
 </pre></div>
@@ -175,7 +175,7 @@ what type of data it currently contains.</p>
 the type of the data that it currently contains - there&#8217;s no way to read
 the data otherwise. One way to achieve this is to use the implied
 conditional cast mentioned above:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">if</span> <span class="k">let</span> <span class="nv">i</span><span class="p">:</span><span class="nc">int</span> <span class="o">=</span> <span class="nv">a</span> <span class="k">{</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">if</span> <span class="k">let</span> <span class="nv">i</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="nv">a</span> <span class="k">{</span>
   <span class="c">// a is an int</span>
 <span class="k">}</span>
 </pre></div>
@@ -188,7 +188,7 @@ types.</p>
 <p>One common usage pattern for union types is used to indicate that a variable
 may optionally contain a value:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Either holds an int, or it doesn&#39;t.</span>
-<span class="k">var</span> <span class="nv">a</span><span class="p">:</span><span class="nc">int</span> <span class="nc">or</span> <span class="nc">Nothing</span><span class="p">;</span>
+<span class="k">var</span> <span class="nv">a</span><span class="p">:</span><span class="kt">int</span> <span class="nc">or</span> <span class="nc">Nothing</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>In this case, the special <tt class="xref docutils literal"><span class="pre">Nothing</span></tt> type (which means the same as
@@ -276,8 +276,8 @@ can be used for this. It works for both reference types and union types:</p>
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2008, Talin.
-      Last updated on Mar 11, 2011.
+      &copy; Copyright 2008-2011, Talin.
+      Last updated on Mar 15, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

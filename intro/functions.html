@@ -65,7 +65,7 @@ argument, or no arguments at all, then the parentheses can be omitted:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">fn</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span>          <span class="c">// No-argument function</span>
 <span class="k">fn</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span>       <span class="c">// No-argument function (alternate form)</span>
 <span class="k">fn</span> <span class="nv">x</span><span class="p">:</span><span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span>    <span class="c">// Single argument function</span>
-<span class="k">fn</span> <span class="p">(</span><span class="nv">x</span><span class="p">:</span><span class="nc">int</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span><span class="nc">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span> <span class="c">// Two argument function</span>
+<span class="k">fn</span> <span class="p">(</span><span class="nv">x</span><span class="p">:</span><span class="kt">int</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span><span class="kt">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span> <span class="c">// Two argument function</span>
 </pre></div>
 </div>
 <p>If you&#8217;re just declaring the type of a function, you can omit the argument
@@ -78,7 +78,7 @@ name - but you still have to include the colon before the type name:</p>
 <p>The &#8216;-&gt;&#8217; operator means &#8216;returns value of type&#8217;, and is right-associative.
 This allows you to define functions that return functions:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">fn</span> <span class="nv">x</span><span class="p">:</span><span class="kt">int</span> <span class="o">-&gt;</span> <span class="k">fn</span> <span class="nv">y</span><span class="p">:</span><span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span>
-<span class="k">fn</span> <span class="nv">x</span><span class="p">:</span><span class="kt">int</span> <span class="o">-&gt;</span> <span class="k">fn</span> <span class="p">(</span><span class="nv">y</span><span class="p">:</span><span class="nc">int</span><span class="p">,</span> <span class="nv">z</span><span class="p">:</span><span class="nc">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span>
+<span class="k">fn</span> <span class="nv">x</span><span class="p">:</span><span class="kt">int</span> <span class="o">-&gt;</span> <span class="k">fn</span> <span class="p">(</span><span class="nv">y</span><span class="p">:</span><span class="kt">int</span><span class="p">,</span> <span class="nv">z</span><span class="p">:</span><span class="kt">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -117,7 +117,7 @@ you&#8217;ll have to put parentheses around the list of return types if there is
 arguments by reference, a technique often used in C++) is that the compiler can
 know for certain that the variable has changed. This allows the compiler to do
 additional optimizations:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">a</span><span class="p">:</span><span class="nc">String</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span><span class="nc">int</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">a</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span><span class="kt">int</span>
 <span class="nc">a</span> <span class="o">=</span> <span class="mf">10</span><span class="p">;</span> <span class="c">// Dead code</span>
 <span class="nv">a</span><span class="p">,</span> <span class="nv">b</span> <span class="o">=</span> <span class="nv">returnStringAndInt</span><span class="p">();</span>
 </pre></div>
@@ -131,14 +131,14 @@ the compiler can&#8217;t determine whether <tt class="docutils literal"><span cl
 <p>In addition to regular positional arguments, functions support both
 keyword and variadic arguments. Variadic arguments are indicated via an
 ellipsis (<tt class="docutils literal"><span class="pre">...</span></tt>):</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">fn</span> <span class="p">(</span><span class="nv">format</span><span class="p">:</span><span class="nc">int</span><span class="p">,</span> <span class="nv">args</span><span class="p">:</span><span class="nc">int</span><span class="gr">...</span><span class="p">);</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">fn</span> <span class="p">(</span><span class="nv">format</span><span class="p">:</span><span class="kt">int</span><span class="p">,</span> <span class="nv">args</span><span class="p">:</span><span class="kt">int</span><span class="gr">...</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Variadic arguments must be the last positional argument. The actual type of a
 variadic argument is a variable-length array of the given type. So in the
 example above, the actual type of <tt class="docutils literal"><span class="pre">args</span></tt> would be <tt class="docutils literal"><span class="pre">int[]</span></tt>.</p>
 <p>Default argument values are specified using <tt class="docutils literal"><span class="pre">=</span></tt>:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">fn</span> <span class="p">(</span><span class="nv">format</span><span class="p">:</span><span class="nc">String</span><span class="p">,</span> <span class="nv">npos</span><span class="p">:</span><span class="nc">int</span><span class="p">=0,</span> <span class="nv">sep</span><span class="p">=false);</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">fn</span> <span class="p">(</span><span class="nv">format</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">npos</span><span class="p">:</span><span class="kt">int</span><span class="p">=0,</span> <span class="nv">sep</span><span class="p">=false);</span>
 </pre></div>
 </div>
 <p>Function arguments use the same kind type deduction as <tt class="xref docutils literal"><span class="pre">var</span></tt> and
@@ -156,7 +156,7 @@ unfilled parameters.</p>
 that it can only be specified via keyword instead of positionally. A semicolon
 can be used to segregate regular positional parameters from keyword-only
 parameters:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">print</span> <span class="p">(</span><span class="nv">format</span><span class="p">:</span><span class="nc">String</span><span class="p">;</span> <span class="nv">npos</span><span class="p">:</span><span class="nc">int</span><span class="p">=0,</span> <span class="nv">sep</span><span class="p">=false);</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">print</span> <span class="p">(</span><span class="nv">format</span><span class="p">:</span><span class="kt">String</span><span class="p">;</span> <span class="nv">npos</span><span class="p">:</span><span class="kt">int</span><span class="p">=0,</span> <span class="nv">sep</span><span class="p">=false);</span>
 
 <span class="nv">print</span><span class="p">(</span><span class="s">&quot;Hello world!&quot;</span><span class="p">,</span> <span class="nv">npos</span><span class="o">=</span><span class="mf">1</span><span class="p">);</span> <span class="c">// OK</span>
 <span class="gr">print(&quot;Hello world!&quot;, 1); // ERROR - too many positional arguments</span>
@@ -170,7 +170,7 @@ would be an error.</p>
 <h2>Functions as Arguments<a class="headerlink" href="#functions-as-arguments" title="Permalink to this headline">¶</a></h2>
 <p>How would you declare the type of a function that takes another function as an
 argument? Like this:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">fn</span> <span class="p">(:</span><span class="nc">fn</span> <span class="nc">i</span><span class="p">:</span><span class="nc">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">fn</span> <span class="p">(:</span><span class="nc">fn</span> <span class="nc">i</span><span class="p">:</span><span class="kt">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -183,7 +183,7 @@ operator is higher than that of the <tt class="xref docutils literal"><span clas
 <span id="index-19"></span><h2>Anonymous Functions<a class="headerlink" href="#anonymous-functions" title="Permalink to this headline">¶</a></h2>
 <p>If a function type declaration is followed by a function body, the result
 is an <em>anonymous function</em>:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">square</span> <span class="o">=</span> <span class="k">fn</span> <span class="p">(</span><span class="nv">x</span><span class="p">:</span><span class="nc">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">x</span> <span class="o">*</span> <span class="nv">x</span> <span class="k">}</span><span class="p">;</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">square</span> <span class="o">=</span> <span class="k">fn</span> <span class="p">(</span><span class="nv">x</span><span class="p">:</span><span class="kt">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">x</span> <span class="o">*</span> <span class="nv">x</span> <span class="k">}</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Here&#8217;s an example of a function with no arguments and void return type being
@@ -260,8 +260,8 @@ used as a callback to a timer. As you can see, the syntax is minimal:</p>
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2008, Talin.
-      Last updated on Mar 11, 2011.
+      &copy; Copyright 2008-2011, Talin.
+      Last updated on Mar 15, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

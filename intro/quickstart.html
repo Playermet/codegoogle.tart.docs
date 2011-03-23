@@ -57,8 +57,8 @@
 <tt class="docutils literal"><span class="pre">Point</span></tt>, which contains two integers <tt class="docutils literal"><span class="pre">x</span></tt> and <tt class="docutils literal"><span class="pre">y</span></tt>:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// A basic structure declaration</span>
 <span class="k">struct</span> <span class="nc">Point</span> <span class="k">{</span>
-  <span class="k">var</span> <span class="nv">x</span><span class="p">:</span><span class="nc">int</span><span class="p">;</span>
-  <span class="k">var</span> <span class="nv">y</span><span class="p">:</span><span class="nc">int</span><span class="p">;</span>
+  <span class="k">var</span> <span class="nv">x</span><span class="p">:</span><span class="kt">int</span><span class="p">;</span>
+  <span class="k">var</span> <span class="nv">y</span><span class="p">:</span><span class="kt">int</span><span class="p">;</span>
 <span class="k">}</span>
 
 <span class="k">var</span> <span class="nv">p</span> <span class="o">=</span> <span class="nv">Point</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
@@ -113,16 +113,16 @@ constructor has the type signature <tt class="docutils literal"><span class="pre
 28
 29
 30</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">// An interface that defines a mapping between a key type and a value type.</span>
-<span class="k">class</span> <span class="nc">Scrollbar</span> <span class="p">:</span> <span class="nv">Widget</span> <span class="k">{</span>
+<span class="k">class</span> <span class="nc">Scrollbar</span> <span class="p">:</span> <span class="nc">Widget</span> <span class="k">{</span>
   <span class="c">// Member variables</span>
   <span class="k">private</span> <span class="k">{</span>
-    <span class="k">var</span> <span class="nv">val</span><span class="p">:</span><span class="nc">int</span><span class="p">;</span>
-    <span class="k">var</span> <span class="nv">minVal</span><span class="p">:</span><span class="nc">int</span><span class="p">;</span>
-    <span class="k">var</span> <span class="nv">maxVal</span><span class="p">:</span><span class="nc">int</span><span class="p">;</span>
+    <span class="k">var</span> <span class="nv">val</span><span class="p">:</span><span class="kt">int</span><span class="p">;</span>
+    <span class="k">var</span> <span class="nv">minVal</span><span class="p">:</span><span class="kt">int</span><span class="p">;</span>
+    <span class="k">var</span> <span class="nv">maxVal</span><span class="p">:</span><span class="kt">int</span><span class="p">;</span>
   <span class="k">}</span>
 
   <span class="c">// Constructor</span>
-  <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="nv">var</span><span class="p">:</span><span class="nc">minValue</span><span class="p">,</span> <span class="nv">var</span><span class="p">:</span><span class="nc">maxValue</span><span class="p">)</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="nv">minValue</span><span class="p">:</span><span class="kt">int</span><span class="p">,</span> <span class="nv">maxValue</span><span class="p">:</span><span class="kt">int</span><span class="p">)</span> <span class="k">{</span>
     <span class="c">// Initialize member variables from constructor args.</span>
     <span class="nv">minVal</span> <span class="o">=</span> <span class="nv">val</span> <span class="o">=</span> <span class="nv">minValue</span><span class="p">;</span>
     <span class="nv">maxVal</span> <span class="o">=</span> <span class="nv">maxValue</span><span class="p">;</span>
@@ -215,8 +215,8 @@ however, and therefore are omitted from this simple example.</p>
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2008, Talin.
-      Last updated on Mar 11, 2011.
+      &copy; Copyright 2008-2011, Talin.
+      Last updated on Mar 15, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

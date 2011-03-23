@@ -154,7 +154,7 @@ the type explicitly, as seen in the last line in the previous example.</p>
 </pre></div>
 </div>
 <p>There is also a shortcut syntax, which can be used when the list type is deducible:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">a0</span><span class="p">:</span><span class="nc">int</span><span class="p">[]</span> <span class="o">=</span> <span class="k">{</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="k">}</span><span class="p">;</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">a0</span><span class="p">:</span><span class="kt">int</span><span class="p">[]</span> <span class="o">=</span> <span class="k">{</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="k">}</span><span class="p">;</span>
 <span class="k">let</span> <span class="nv">a1</span><span class="p">:</span><span class="nc">ImmutableList</span><span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="k">{</span><span class="s">&quot;Hydrogen&quot;</span><span class="p">,</span> <span class="s">&quot;Helium&quot;</span><span class="p">,</span> <span class="s">&quot;Lithium&quot;</span><span class="k">}</span><span class="p">;</span>
 <span class="k">let</span> <span class="nv">a1</span><span class="p">:</span><span class="nc">HashSet</span><span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="k">{</span><span class="s">&quot;Clubs&quot;</span><span class="p">,</span> <span class="s">&quot;Spades&quot;</span><span class="p">,</span> <span class="s">&quot;Hearts&quot;</span><span class="p">,</span> <span class="s">&quot;Diamonds&quot;</span><span class="k">}</span><span class="p">;</span>
 </pre></div>
@@ -229,12 +229,12 @@ produces an iterator, which can be passed directly to the <tt class="xref docuti
 <h2>Sequence Unpacking<a class="headerlink" href="#sequence-unpacking" title="Permalink to this headline">¶</a></h2>
 <p>Tart supports a Python-like ability to unpack variables from a sequence:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">a</span><span class="p">,</span> <span class="nv">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">];</span>
-<span class="k">let</span> <span class="nv">a</span><span class="p">:</span><span class="nc">int</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span><span class="nc">int</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">];</span>
+<span class="k">let</span> <span class="nv">a</span><span class="p">:</span><span class="kt">int</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>The last variable in the unpacking assignment can be a variadic argument, meaning it scoops up all
 the remaining values:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">a</span><span class="p">:</span><span class="nc">int</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span><span class="nc">int</span><span class="o">...</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">,</span> <span class="mf">4</span><span class="p">];</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">a</span><span class="p">:</span><span class="kt">int</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span><span class="kt">int</span><span class="o">...</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">,</span> <span class="mf">4</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>As with function arguments, the &#8216;...&#8217; syntax changes the type of the argument into an array of the
@@ -250,7 +250,7 @@ exchange the values of two variables:</p>
   <span class="k">return</span> <span class="s">&quot;Hello&quot;</span><span class="p">,</span> <span class="mf">12</span><span class="p">;</span>
 <span class="k">}</span>
 
-<span class="k">let</span> <span class="nv">a</span><span class="p">:</span><span class="nc">String</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span><span class="nc">int</span> <span class="o">=</span> <span class="nv">returnStringAndInt</span><span class="p">();</span>
+<span class="k">let</span> <span class="nv">a</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="nv">returnStringAndInt</span><span class="p">();</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -328,8 +328,8 @@ platform ABI.</p>
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2008, Talin.
-      Last updated on Mar 11, 2011.
+      &copy; Copyright 2008-2011, Talin.
+      Last updated on Mar 15, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="apidocs.css">
+<meta charset="UTF-8">
+<head>
+  <title>class Object</title>
+  <link rel="stylesheet" type="text/css" href="apidoc.css">
+  </head>
+<body>
+  <section class="page-header">
+  <header class="page-header-title"><strong>Tart Standard Library</strong> [libstd]</header>
+  </section>
+  <section class="nav-section">
+  <nav class="nav-item">
+    <a class="nav-link" href="index.html">Overview</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="packages.html">Packages</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="modules.html">Modules</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="types.html">Types</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="names.html">Index</a>
+  </nav>
+  </section>
+  <section class="content-section">
+    <header class="content-header">
+      <span class="defn-declarator">class</span>
+      tart.core.<span class="defn-name">Object</span>
+    </header>
+	    <section class="defn-section-description">
+          <p>Base class of all reference types.</p>
+	    </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Static Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public static def <a class="member-table-link symbol" href="#__downcast">__downcast</a>(</td>
+                    <td class="sig2"><span class="symbol">o</span>:Object<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Non-intrinsic version of typecast for object types.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">protected static def <a class="member-table-link symbol" href="#__flexAlloc">__flexAlloc</a>(</td>
+                    <td class="sig2"><span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Compiler intrinsic used to create and initialize instances of variable-length object types.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public static def <a class="member-table-link symbol" href="#coerce">coerce</a>(</td>
+                    <td class="sig2"><span class="symbol">value</span><span style="white-space: nowrap">) -&gt; Object</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Implicitly convert non-object values to Boxed types.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public static def <a class="member-table-link symbol" href="#coerce">coerce</a>(</td>
+                    <td class="sig2"><span class="symbol">value</span>:Object<span style="white-space: nowrap">) -&gt; Object</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Instance Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#__typeHasBase">__typeHasBase</a>(</td>
+                    <td class="sig2"><span class="symbol">baseType</span>:Address[TypeInfoBlock]<span style="white-space: nowrap">) -&gt; bool</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Return true if the type of this object is (or is a subtype of) <span class="symbol">baseType</span>.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#computeHash">computeHash</a>(</td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; uint64</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Return a hash value for this object. The base version hashes the object address.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
+                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Default constructor.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#toString">toString</a>(</td>
+                    <td class="sig2"><span style="white-space: nowrap">) -&gt; String</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Return a string representation of this object.</td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-details-section">
+          <header class="member-details-section-header">Method Details</header>
+          <section class="member-section">
+            <header class="member-header">
+              <a name="__downcast">
+	              public static def <span class="symbol">__downcast</span>(<span class="symbol">o</span>:Object<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Non-intrinsic version of typecast for object types.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="__flexAlloc">
+	              protected static def <span class="symbol">__flexAlloc</span>(<span class="symbol">count</span>:int32<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Compiler intrinsic used to create and initialize instances of variable-length object types.</p>
+            <p>Type <span class="symbol">T</span> represents a user-defined type whose last data member is a FlexibleArray. <span class="symbol">count</span> represents the number of elements in the FlexibleArray.</p>
+            <p><span class="symbol">__flexAlloc</span> allocates a block of memory large enough to hold the object, using the default allocator, then initializes its TIB pointer to the TIB for <span class="symbol">T</span>.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="__typeHasBase">
+	              public def <span class="symbol">__typeHasBase</span>(<span class="symbol">baseType</span>:Address[TypeInfoBlock]<span style="white-space: nowrap">) -&gt; bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return true if the type of this object is (or is a subtype of) <span class="symbol">baseType</span>.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="coerce">
+	              public static def <span class="symbol">coerce</span>(<span class="symbol">value</span><span style="white-space: nowrap">) -&gt; Object</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Implicitly convert non-object values to Boxed types.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="coerce">
+	              public static def <span class="symbol">coerce</span>(<span class="symbol">value</span>:Object<span style="white-space: nowrap">) -&gt; Object</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="computeHash">
+	              public def <span class="symbol">computeHash</span>(<span style="white-space: nowrap">) -&gt; uint64</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return a hash value for this object. The base version hashes the object address.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              public def <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Default constructor.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="toString">
+	              public def <span class="symbol">toString</span>(<span style="white-space: nowrap">) -&gt; String</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return a string representation of this object.</p>
+            </div>
+          </section>
+        </section>
+  </section>
+  <section class="page-footer">Generated by doclobster.</section>
+</body>
+</html>

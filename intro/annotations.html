@@ -52,9 +52,9 @@
             
   <div class="section" id="annotations">
 <span id="index-0"></span><h1>Annotations<a class="headerlink" href="#annotations" title="Permalink to this headline">¶</a></h1>
-<p>Tart uses the C# syntax for declaring annotations:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="p">[</span><span class="nv">throws</span><span class="p">(</span><span class="nv">ArrayBoundsException</span><span class="p">)]</span>
-<span class="k">def</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span><span class="nc">int</span><span class="p">)</span> <span class="k">{</span>
+<p>Tart uses the Java syntax for declaring annotations:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="nv">@Throws</span><span class="p">(</span><span class="nv">ArrayBoundsException</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span><span class="kt">int</span><span class="p">)</span> <span class="k">{</span>
     <span class="k">return</span> <span class="nv">table</span><span class="p">[</span><span class="nv">index</span><span class="p">];</span>
 <span class="k">}</span>
 </pre></div>
@@ -79,7 +79,7 @@ signature of the calling function - instead it&#8217;s calculated for you.</p>
 try/catch can remove the effect of a &#8216;throws&#8217; in Java, you can have statements
 that remove effects from a block of code. You can also have annotations that
 verify that a particular effect is present or absent:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="p">[</span><span class="nv">assertEffect</span><span class="p">(</span><span class="nv">threadSafe</span><span class="p">)]</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="nv">@AssertEffect</span><span class="p">(</span><span class="nv">threadSafe</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">threadSafeFunc</span><span class="p">()</span> <span class="k">{</span>
     <span class="c">// m.withLock removes the &#39;not threadsafe&#39; effect.</span>
     <span class="nv">m</span><span class="o">.</span><span class="nv">withLock</span><span class="p">(</span><span class="k">{</span>
@@ -153,8 +153,8 @@ function or class, and act on those assertions later.</p>
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2008, Talin.
-      Last updated on Mar 11, 2011.
+      &copy; Copyright 2008-2011, Talin.
+      Last updated on Mar 15, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

@@ -146,7 +146,7 @@ can be added, either as static overloads or as generic functions. Of course, the
 compiler will try to inline such functions whenever possible, so that <tt class="docutils literal"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></tt>
 will still be a compile-time constant.</p>
 <p>For example, we can define string concatenation with the &#8216;+&#8217; operator:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">infixAdd</span><span class="p">(</span><span class="nv">s0</span><span class="p">:</span><span class="nc">String</span><span class="p">,</span> <span class="nv">s1</span><span class="p">:</span><span class="nc">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="k">{</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">infixAdd</span><span class="p">(</span><span class="nv">s0</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">s1</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="k">{</span>
   <span class="k">var</span> <span class="nv">result</span> <span class="o">=</span> <span class="kt">String</span><span class="o">.</span><span class="nv">concat</span><span class="p">(</span><span class="nv">s0</span><span class="p">,</span> <span class="nv">s1</span><span class="p">);</span>
 <span class="k">}</span>
 </pre></div>
@@ -189,7 +189,7 @@ themselves together. On the other hand, the ability to &#8220;call&#8221; an obj
 seen as a facility that the object itself provides.</p>
 <p>To make an object callable, define a member function with no name:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Foo</span> <span class="k">{</span>
-  <span class="k">def</span> <span class="p">(</span><span class="nv">s</span><span class="p">:</span><span class="nc">String</span><span class="p">)</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="p">(</span><span class="nv">s</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="k">{</span>
     <span class="c">// ...</span>
   <span class="k">}</span>
 <span class="k">}</span>
@@ -201,7 +201,7 @@ seen as a facility that the object itself provides.</p>
 <p>You can also overload the array subscript operator. The syntax is similar to
 defining a property:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">StringMap</span><span class="p">[</span><span class="nc">%T</span><span class="p">]</span> <span class="k">{</span>
-  <span class="k">def</span> <span class="p">[</span><span class="nc">key</span><span class="p">:</span><span class="nc">String</span><span class="p">]:</span><span class="nv">T</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="p">[</span><span class="nc">key</span><span class="p">:</span><span class="kt">String</span><span class="p">]:</span><span class="nv">T</span> <span class="k">{</span>
     <span class="k">get</span> <span class="k">{</span> <span class="c">/* getter code */</span> <span class="k">}</span>
     <span class="k">set</span> <span class="k">{</span> <span class="c">/* setter code */</span> <span class="k">}</span>
   <span class="k">}</span>
@@ -276,8 +276,8 @@ defining a property:</p>
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2008, Talin.
-      Last updated on Mar 11, 2011.
+      &copy; Copyright 2008-2011, Talin.
+      Last updated on Mar 15, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

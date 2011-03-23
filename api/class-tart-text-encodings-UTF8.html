@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="apidocs.css">
+<meta charset="UTF-8">
+<head>
+  <title>class UTF8</title>
+  <link rel="stylesheet" type="text/css" href="apidoc.css">
+  </head>
+<body>
+  <section class="page-header">
+  <header class="page-header-title"><strong>Tart Standard Library</strong> [libstd]</header>
+  </section>
+  <section class="nav-section">
+  <nav class="nav-item">
+    <a class="nav-link" href="index.html">Overview</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="packages.html">Packages</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="modules.html">Modules</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="types.html">Types</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="names.html">Index</a>
+  </nav>
+  </section>
+  <section class="content-section">
+    <header class="content-header">
+      <span class="defn-declarator">class</span>
+      tart.text.encodings.<span class="defn-name">UTF8</span>
+    </header>
+	    <section class="defn-section-description">
+            <p>Construct a new UTF8 codec.</p>
+	    </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Static Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public static def <a class="member-table-link symbol" href="#charLength">charLength</a>(</td>
+                    <td class="sig2"><span class="symbol">byteVal</span>:uint8<span style="white-space: nowrap">) -&gt; int32</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Return the length in bytes of the encoding character starting with the byte <span class="symbol">byteVal</span>. Returns 0 if <span class="symbol">byteVal</span> is not a valid UFT-8 prefix byte.</td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Instance Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
+                    <td class="sig2"><span class="symbol">errorAction</span>:tart.text.encodings.Codec.ErrorAction<span style="white-space: nowrap">)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Construct a new UTF8 codec.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#decode">decode</a>(</td>
+                    <td class="sig2"><span class="symbol">dst</span>:char[], <span class="symbol">dstIndex</span>:int32, <span class="symbol">src</span>:uint8[], <span class="symbol">srcIndex</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#decodeOne">decodeOne</a>(</td>
+                    <td class="sig2"><span class="symbol">src</span>:Address[uint8], <span class="symbol">srcIndex</span>:int32, <span class="symbol">srcLength</span>:int32<span style="white-space: nowrap">) -&gt; (char, int32)</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#decodeRaw">decodeRaw</a>(</td>
+                    <td class="sig2"><span class="symbol">dst</span>:Address[char], <span class="symbol">dstLength</span>:int32, <span class="symbol">src</span>:Address[uint8], <span class="symbol">srcLength</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#decodedLength">decodedLength</a>(</td>
+                    <td class="sig2"><span class="symbol">buffer</span>:uint8[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Return the number of characters in the byte sequence.</td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#decodedLengthRaw">decodedLengthRaw</a>(</td>
+                    <td class="sig2"><span class="symbol">buffer</span>:Address[uint8], <span class="symbol">length</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data">Return the number of characters in the byte sequence.</td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#encode">encode</a>(</td>
+                    <td class="sig2"><span class="symbol">dst</span>:uint8[], <span class="symbol">dstIndex</span>:int32, <span class="symbol">src</span>:char[], <span class="symbol">srcIndex</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#encodeRaw">encodeRaw</a>(</td>
+                    <td class="sig2"><span class="symbol">dst</span>:Address[uint8], <span class="symbol">dstLength</span>:int32, <span class="symbol">src</span>:Address[char], <span class="symbol">srcLength</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header">
+                  <table border="0" cellspacing="0" cellpadding="0"><tr>
+                    <td class="sig1">public def <a class="member-table-link symbol" href="#encodedLength">encodedLength</a>(</td>
+                    <td class="sig2"><span class="symbol">src</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span></td>
+                  </tr></table>
+                </td>
+	              <td class="member-table-data"></td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-details-section">
+          <header class="member-details-section-header">Method Details</header>
+          <section class="member-section">
+            <header class="member-header">
+              <a name="charLength">
+	              public static def <span class="symbol">charLength</span>(<span class="symbol">byteVal</span>:uint8<span style="white-space: nowrap">) -&gt; int32</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return the length in bytes of the encoding character starting with the byte <span class="symbol">byteVal</span>. Returns 0 if <span class="symbol">byteVal</span> is not a valid UFT-8 prefix byte.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              public def <span class="symbol">construct</span>(<span class="symbol">errorAction</span>:tart.text.encodings.Codec.ErrorAction<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Construct a new UTF8 codec.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="decode">
+	              public def <span class="symbol">decode</span>(<span class="symbol">dst</span>:char[], <span class="symbol">dstIndex</span>:int32, <span class="symbol">src</span>:uint8[], <span class="symbol">srcIndex</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="decodeOne">
+	              public def <span class="symbol">decodeOne</span>(<span class="symbol">src</span>:Address[uint8], <span class="symbol">srcIndex</span>:int32, <span class="symbol">srcLength</span>:int32<span style="white-space: nowrap">) -&gt; (char, int32)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="decodeRaw">
+	              public def <span class="symbol">decodeRaw</span>(<span class="symbol">dst</span>:Address[char], <span class="symbol">dstLength</span>:int32, <span class="symbol">src</span>:Address[uint8], <span class="symbol">srcLength</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="decodedLength">
+	              public def <span class="symbol">decodedLength</span>(<span class="symbol">buffer</span>:uint8[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return the number of characters in the byte sequence.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="decodedLengthRaw">
+	              public def <span class="symbol">decodedLengthRaw</span>(<span class="symbol">buffer</span>:Address[uint8], <span class="symbol">length</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return the number of characters in the byte sequence.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="encode">
+	              public def <span class="symbol">encode</span>(<span class="symbol">dst</span>:uint8[], <span class="symbol">dstIndex</span>:int32, <span class="symbol">src</span>:char[], <span class="symbol">srcIndex</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="encodeRaw">
+	              public def <span class="symbol">encodeRaw</span>(<span class="symbol">dst</span>:Address[uint8], <span class="symbol">dstLength</span>:int32, <span class="symbol">src</span>:Address[char], <span class="symbol">srcLength</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="encodedLength">
+	              public def <span class="symbol">encodedLength</span>(<span class="symbol">src</span>:char[], <span class="symbol">start</span>:int32, <span class="symbol">count</span>:int32<span style="white-space: nowrap">) -&gt; int32</span>
+              </a>
+            </header>
+          </section>
+        </section>
+  </section>
+  <section class="page-footer">Generated by doclobster.</section>
+</body>
+</html>

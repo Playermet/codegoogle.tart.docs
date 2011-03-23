@@ -67,7 +67,7 @@ as <tt class="xref docutils literal"><span class="pre">repeat</span></tt>.</p>
 <span class="k">}</span>
 
 <span class="c">// while loop, showing a test expression that also declares a variable.</span>
-<span class="k">while</span> <span class="k">let</span> <span class="nv">m</span> <span class="o">=</span> <span class="nv">re</span><span class="o">.</span><span class="nv">match</span><span class="p">(</span><span class="nv">str</span><span class="p">)</span> <span class="k">{</span>
+<span class="k">while</span> <span class="k">let</span> <span class="nv">m</span> <span class="o">=</span> <span class="nv">re</span><span class="o">.</span><span class="k">match</span><span class="p">(</span><span class="nv">str</span><span class="p">)</span> <span class="k">{</span>
   <span class="nv">console</span><span class="o">.</span><span class="nv">stdout</span><span class="o">.</span><span class="nv">writeLn</span><span class="p">(</span><span class="nv">m</span><span class="o">.</span><span class="nv">group</span><span class="p">(</span><span class="mf">1</span><span class="p">));</span>
 <span class="k">}</span>
 
@@ -89,8 +89,8 @@ body are always required.</p>
 <p>Tart supports both forms of <tt class="xref docutils literal"><span class="pre">for</span></tt> (the C++ and Python forms), just
 like Java &amp; JavaScript do:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// C-style for loop</span>
-<span class="k">var</span> <span class="nv">total</span><span class="p">:</span><span class="nc">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-<span class="k">for</span> <span class="p">(</span><span class="k">var</span> <span class="nv">i</span><span class="p">:</span><span class="nc">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nv">i</span> <span class="o">&lt;</span> <span class="mf">10</span><span class="p">;</span> <span class="o">++</span><span class="nv">i</span><span class="p">)</span> <span class="k">{</span>
+<span class="k">var</span> <span class="nv">total</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="k">var</span> <span class="nv">i</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nv">i</span> <span class="o">&lt;</span> <span class="mf">10</span><span class="p">;</span> <span class="o">++</span><span class="nv">i</span><span class="p">)</span> <span class="k">{</span>
   <span class="nv">total</span> <span class="o">+=</span> <span class="nv">i</span><span class="p">;</span>
 <span class="k">}</span>
 
@@ -145,7 +145,7 @@ post-conditions within a function body.</p>
 statement, as execution does not &#8216;fall through&#8217; from one case body to the next.</p>
 <p>There is also a <tt class="xref docutils literal"><span class="pre">typeselect</span></tt> statement which is used to differentiate
 based on the type of the input expression:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">typeselect</span> <span class="nv">input</span> <span class="k">{</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="nv">typeselect</span> <span class="nv">input</span> <span class="k">{</span>
   <span class="k">case</span> <span class="nv">str</span><span class="p">:</span><span class="kt">String</span> <span class="k">{</span>
     <span class="c">// ...</span>
   <span class="k">}</span>
@@ -270,8 +270,8 @@ remove a &#8216;thread-unsafe&#8217; effect.</p>
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2008, Talin.
-      Last updated on Mar 11, 2011.
+      &copy; Copyright 2008-2011, Talin.
+      Last updated on Mar 15, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

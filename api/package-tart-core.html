@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="apidocs.css">
+<meta charset="UTF-8">
+  <title>Package tart.core</title>
+</head>
+<body>
+  <section class="page-header">
+  <header class="page-header-title"><strong>Tart Standard Library</strong> [libstd]</header>
+  </section>
+  <section class="nav-section">
+  <nav class="nav-item">
+    <a class="nav-link" href="index.html">Overview</a>
+  </nav>
+    •
+	<nav class="nav-item nav-item-selected">Packages</nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="modules.html">Modules</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="types.html">Types</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="names.html">Index</a>
+  </nav>
+  </section>
+  <section class="content-section">
+    <header class="content-header">
+      Package: <span class="defn-name">tart.core</span>
+    </header>
+	      <section class="defn-list-section">
+	        <header class="defn-list-header">Namespaces</header>
+	        <ul class="defn-list">
+            <li>
+              <a class="defn-list-link" href="namespace-tart-core-BitTricks.html">BitTricks</a>
+              - Miscellaneous operations on primitive types.
+            </li><li>
+              <a class="defn-list-link" href="namespace-tart-core-Debug.html">Debug</a>
+              - Simple debug printing facility for testing the compiler.
+            </li><li>
+              <a class="defn-list-link" href="namespace-tart-core-Hashing.html">Hashing</a>
+              - Various useful hash functions.
+            </li><li>
+              <a class="defn-list-link" href="namespace-tart-core-Math.html">Math</a>
+              - Math functions.
+            </li><li>
+              <a class="defn-list-link" href="namespace-tart-core-Memory.html">Memory</a>
+              - Memory utility functions. These functions are inherently unsafe and will cause memory corruption if misused.
+            </li><li>
+              <a class="defn-list-link" href="namespace-tart-core-Preconditions.html">Preconditions</a>
+              - Namespace of convenience macros that support design-by-contract programming.
+            </li><li>
+              <a class="defn-list-link" href="namespace-tart-core-Refs.html">Refs</a>
+              - Abstract class used to represent a reference to some value.
+            </li><li>
+              <a class="defn-list-link" href="namespace-tart-core-Strings.html">Strings</a>
+              - Collection of utility functions for converting and manipulating strings.
+            </li>
+	        </ul>
+	      </section>
+	      <section class="defn-list-section">
+	        <header class="defn-list-header">Interfaces</header>
+	        <ul class="defn-list">
+            <li>
+              <a class="defn-list-link" href="interface-tart-core-Function.html">Function</a>
+              - Interface that represents a callable object.
+            </li><li>
+              <a class="defn-list-link" href="interface-tart-core-HasLength.html">HasLength</a>
+              - An interface for reference types that have a <span class="symbol">length</span> property.
+            </li><li>
+              <a class="defn-list-link" href="interface-tart-core-Iterable.html">Iterable</a>
+              - An iterface for iterable collections.
+            </li><li>
+              <a class="defn-list-link" href="interface-tart-core-Iterator.html">Iterator</a>
+              - The iterator interface. An iterator has a <span class="symbol">next</span> method which returns either the next value in the sequence, or <span class="symbol">Nothing</span> to indicate the end of the sequence.
+            </li><li>
+              <a class="defn-list-link" href="interface-tart-core-ScopedObject.html">ScopedObject</a>
+              - Represents an object that has a bounded lifetime. Typically used in
+            </li>
+	        </ul>
+	      </section>
+	      <section class="defn-list-section">
+	        <header class="defn-list-header">General Classes</header>
+	        <ul class="defn-list">
+            <li>
+              <a class="defn-list-link" href="class-tart-core-Array.html">Array</a>
+              - Built-in array class
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-MutableRef.html">MutableRef</a>
+              - A reference to a mutable value. Use for implementing closure cells, among other things.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-Object.html">Object</a>
+              - Base class of all reference types.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-Ref.html">Ref</a>
+              - Abstract class used to represent a reference to some value.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-String.html">String</a>
+              - The built-in string class. Strings are immutable.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-StringBuilder.html">StringBuilder</a>
+              - A mutable, extensible string.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-StringFormatter.html">StringFormatter</a>
+              - Class to handle string formatting.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-ValueRef.html">ValueRef</a>
+              - A reference type used to contain a value type.
+            </li>
+	        </ul>
+	      </section>
+	      <section class="defn-list-section">
+	        <header class="defn-list-header">Exceptions</header>
+	        <ul class="defn-list">
+            <li>
+              <a class="defn-list-link" href="class-tart-core-ArgumentError.html">ArgumentError</a>
+              - Exception thrown when a method argument is invalid.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-AssertionFailureError.html">AssertionFailureError</a>
+              - Exception thrown when an assertion fails.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-Exception.html">Exception</a>
+              - Base class of exceptions.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-IndexError.html">IndexError</a>
+              - Exception thrown when an array index is outside of the valid range of array indices.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-InputFormatError.html">InputFormatError</a>
+              - Exception that is thrown when attempting to convert a string to another type, such
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-InvalidArgumentError.html">InvalidArgumentError</a>
+              - Thrown to indicate a function has been passed an illegal argument value.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-OverflowError.html">OverflowError</a>
+              - Exception that is thrown when an arithmetic, casting, or conversion operation on
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-Throwable.html">Throwable</a>
+              - The base class for all throwable objects.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-TypecastError.html">TypecastError</a>
+              - Exception thrown when an attempt to cast an object reference to a type that is not a subclass of the instance.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-UnsupportedOperationError.html">UnsupportedOperationError</a>
+              - Exception thrown when a method does not have an implementation.
+            </li>
+	        </ul>
+	      </section>
+	      <section class="defn-list-section">
+	        <header class="defn-list-header">Attributes</header>
+	        <ul class="defn-list">
+            <li>
+              <a class="defn-list-link" href="class-tart-core-Attribute.html">Attribute</a>
+              - Base class for all attributes.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-EntryPoint.html">EntryPoint</a>
+              - Attribute that indicates that the associated function is where execution of the application should start.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-Extern.html">Extern</a>
+              - Attribute that specifies that this method or variable is an externally-defined symbol.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-Flags.html">Flags</a>
+              - Attribute used to indicate that an enumeration is a set of flags.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-LinkageName.html">LinkageName</a>
+              - Attribute that allows the linkage name of this function to be explicitly specified.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-NoInline.html">NoInline</a>
+              - Attribute that indicates that the associated function should not be inlined.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-core-Unsafe.html">Unsafe</a>
+              - Attribute that indicates that the associated function or type cannot be used without the <span class="symbol">unsafe</span> option to the compiler.
+            </li>
+	        </ul>
+	      </section>
+	      <section class="defn-list-section">
+	        <header class="defn-list-header">Structs</header>
+	        <ul class="defn-list">
+            <li>
+              <a class="defn-list-link" href="struct-tart-core-TypeInfoBlock.html">TypeInfoBlock</a>
+              - All objects contain a pointer to a TypeInfoBlock, which contains the pointer to the type object and the method table.
+            </li>
+	        </ul>
+	      </section>
+	      <section class="defn-list-section">
+	        <header class="defn-list-header">Functions</header>
+	        <ul class="defn-list">
+            <li>
+              <a class="defn-list-link" href="method-tart-core-infixEQ.html">infixEQ</a>
+              - Default comparison for all classes.
+            </li><li>
+              <a class="defn-list-link" href="method-tart-core-infixEQ.html">infixEQ</a>
+              - Equality comparison operator for strings.
+            </li><li>
+              <a class="defn-list-link" href="method-tart-core-range.html">range</a>
+              - Returns an iterator that counts from 0..(end-1).
+            </li><li>
+              <a class="defn-list-link" href="method-tart-core-range.html">range</a>
+              - Returns an iterator that counts from start..(end-1).
+            </li><li>
+              <a class="defn-list-link" href="method-tart-core-typecast.html">typecast</a>
+              - The generic typecast function. Throws an exception if the cast fails.
+            </li>
+	        </ul>
+	      </section>
+  </section>
+  <section class="page-footer">Generated by doclobster.</section>
+</body>
+</html>

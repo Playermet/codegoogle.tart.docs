@@ -68,7 +68,7 @@ macro. This means that you can control how many times (if at all) the
 expression and its associated side effects are evaluated.</p>
 <p>Take for example the <tt class="xref docutils literal"><span class="pre">cond</span></tt> macro, which is part of the Tart core
 library:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">macro</span> <span class="nf">cond</span><span class="p">[</span><span class="nc">%T</span><span class="p">](</span><span class="nv">condition</span><span class="p">:</span><span class="nc">bool</span><span class="p">,</span> <span class="nv">trueVal</span><span class="p">:</span><span class="nc">T</span><span class="p">,</span> <span class="nv">falseVal</span><span class="p">:</span><span class="nc">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">T</span> <span class="k">{</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">macro</span> <span class="nf">cond</span><span class="p">[</span><span class="nc">%T</span><span class="p">](</span><span class="nv">condition</span><span class="p">:</span><span class="kt">bool</span><span class="p">,</span> <span class="nv">trueVal</span><span class="p">:</span><span class="nc">T</span><span class="p">,</span> <span class="nv">falseVal</span><span class="p">:</span><span class="nc">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">T</span> <span class="k">{</span>
   <span class="k">if</span> <span class="nv">condition</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">trueVal</span><span class="p">;</span> <span class="k">}</span>
   <span class="k">else</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">falseVal</span><span class="p">;</span> <span class="k">}</span>
 <span class="k">}</span>
@@ -151,8 +151,8 @@ part of the Tart core library:</p>
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2008, Talin.
-      Last updated on Mar 11, 2011.
+      &copy; Copyright 2008-2011, Talin.
+      Last updated on Mar 15, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>
