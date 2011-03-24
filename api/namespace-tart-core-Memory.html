@@ -161,7 +161,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#objectReference">objectReference</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Convert a native address into an object reference.</td>
@@ -177,7 +177,7 @@
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
                     <td class="sig1">public def <a class="member-table-link symbol" href="#ptrToInt">ptrToInt</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
+                    <td class="sig2"><span class="symbol">addr</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span></td>
                   </tr></table>
                 </td>
 	              <td class="member-table-data">Return the integer value of a pointer. Not guaranteed to be convertible back into a pointer (may be truncated.)</td>
@@ -369,7 +369,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="objectReference">
-	              public def <span class="symbol">objectReference</span>(<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">objectReference</span>(<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -387,7 +387,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="ptrToInt">
-	              public def <span class="symbol">ptrToInt</span>(<span style="white-space: nowrap">)</span>
+	              public def <span class="symbol">ptrToInt</span>(<span class="symbol">addr</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span>
               </a>
             </header>
             <div class="member-description">
