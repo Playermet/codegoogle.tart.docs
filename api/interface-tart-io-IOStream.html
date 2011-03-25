@@ -39,7 +39,7 @@
       tart.io.<span class="defn-name">IOStream</span>
     </header>
 	    <section class="defn-section-description">
-          <p>Interface to a stream of bytes, which may be readable and/or writeable.</p>
+          <p>Abstract interface for i/o streams.</p>
 	    </section>
         <section class="member-list-section">
           <header class="member-table-header">Enumerations</header>
@@ -52,7 +52,7 @@
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public static enum <a class="member-table-link symbol" href="#SeekFrom">SeekFrom</a></td>
+                    <td class="sig1">static enum <a class="member-table-link symbol" href="#SeekFrom">SeekFrom</a></td>
                     <td class="sig2"></td>
                   </tr></table>
                 </td>
@@ -72,7 +72,7 @@
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public property <a class="member-table-link symbol" href="#atEnd">atEnd</a>:</td>
+                    <td class="sig1">property <a class="member-table-link symbol" href="#atEnd">atEnd</a>:</td>
                     <td class="sig2"><span class="type-name">bool</span></td>
                   </tr></table>
                 </td>
@@ -80,7 +80,7 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public property <a class="member-table-link symbol" href="#canRead">canRead</a>:</td>
+                    <td class="sig1">property <a class="member-table-link symbol" href="#canRead">canRead</a>:</td>
                     <td class="sig2"><span class="type-name">bool</span></td>
                   </tr></table>
                 </td>
@@ -88,7 +88,7 @@
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public property <a class="member-table-link symbol" href="#canSeek">canSeek</a>:</td>
+                    <td class="sig1">property <a class="member-table-link symbol" href="#canSeek">canSeek</a>:</td>
                     <td class="sig2"><span class="type-name">bool</span></td>
                   </tr></table>
                 </td>
@@ -96,7 +96,7 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public property <a class="member-table-link symbol" href="#canWrite">canWrite</a>:</td>
+                    <td class="sig1">property <a class="member-table-link symbol" href="#canWrite">canWrite</a>:</td>
                     <td class="sig2"><span class="type-name">bool</span></td>
                   </tr></table>
                 </td>
@@ -104,7 +104,7 @@
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public property <a class="member-table-link symbol" href="#position">position</a>:</td>
+                    <td class="sig1">property <a class="member-table-link symbol" href="#position">position</a>:</td>
                     <td class="sig2"><span class="type-name">int64</span></td>
                   </tr></table>
                 </td>
@@ -112,7 +112,7 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public property <a class="member-table-link symbol" href="#size">size</a>:</td>
+                    <td class="sig1">property <a class="member-table-link symbol" href="#size">size</a>:</td>
                     <td class="sig2"><span class="type-name">int64</span></td>
                   </tr></table>
                 </td>
@@ -132,7 +132,7 @@
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public def <a class="member-table-link symbol" href="#close">close</a>(</td>
+                    <td class="sig1">def <a class="member-table-link symbol" href="#close">close</a>(</td>
                     <td class="sig2"><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
@@ -140,7 +140,7 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public def <a class="member-table-link symbol" href="#flush">flush</a>(</td>
+                    <td class="sig1">def <a class="member-table-link symbol" href="#flush">flush</a>(</td>
                     <td class="sig2"><span style="white-space: nowrap">)</span></td>
                   </tr></table>
                 </td>
@@ -148,7 +148,7 @@
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header">
                   <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">public def <a class="member-table-link symbol" href="#seek">seek</a>(</td>
+                    <td class="sig1">def <a class="member-table-link symbol" href="#seek">seek</a>(</td>
                     <td class="sig2"><span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span></td>
                   </tr></table>
                 </td>
@@ -158,11 +158,37 @@
           </div>
         </section>
         <section class="member-details-section">
+          <header class="member-details-section-header">Enum Details</header>
+          <section class="member-section">
+            <header class="member-header">
+              <a name="SeekFrom">
+                static enum <span class="symbol">SeekFrom</span>
+              </a>
+            </header>
+            <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
+              <tr class="enum-constant-header">
+                <th class="enum-constant-name-header">Name</th>
+                <th class="enum-constant-value-header">Description</th>
+              </tr>
+              <tr>
+                <th class="enum-constant-name">CURRENT</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">END</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">START</th>
+                <td class="enum-constant-value"></td>
+              </tr>
+            </table>
+          </section>
+        </section>
+        <section class="member-details-section">
           <header class="member-details-section-header">Property Details</header>
           <section class="member-section">
             <header class="member-header">
               <a name="atEnd">
-	              public property <span class="symbol">atEnd</span>:<span class="type-name">bool</span>
+	              property <span class="symbol">atEnd</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -171,7 +197,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="canRead">
-	              public property <span class="symbol">canRead</span>:<span class="type-name">bool</span>
+	              property <span class="symbol">canRead</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -180,7 +206,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="canSeek">
-	              public property <span class="symbol">canSeek</span>:<span class="type-name">bool</span>
+	              property <span class="symbol">canSeek</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -189,7 +215,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="canWrite">
-	              public property <span class="symbol">canWrite</span>:<span class="type-name">bool</span>
+	              property <span class="symbol">canWrite</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -198,7 +224,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="position">
-	              public property <span class="symbol">position</span>:<span class="type-name">int64</span>
+	              property <span class="symbol">position</span>:<span class="type-name">int64</span>
               </a>
             </header>
             <div class="member-description">
@@ -207,7 +233,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="size">
-	              public property <span class="symbol">size</span>:<span class="type-name">int64</span>
+	              property <span class="symbol">size</span>:<span class="type-name">int64</span>
               </a>
             </header>
             <div class="member-description">
@@ -220,7 +246,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="close">
-	              public def <span class="symbol">close</span>(<span style="white-space: nowrap">)</span>
+	              def <span class="symbol">close</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -229,7 +255,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="flush">
-	              public def <span class="symbol">flush</span>(<span style="white-space: nowrap">)</span>
+	              def <span class="symbol">flush</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -238,7 +264,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="seek">
-	              public def <span class="symbol">seek</span>(<span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span>
+	              def <span class="symbol">seek</span>(<span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span>
               </a>
             </header>
             <div class="member-description">
