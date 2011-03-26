@@ -27,7 +27,7 @@
   </section>
   <section class="content-section">
     <header class="content-header">
-      <span class="defn-declarator">interface</span>
+      <span class="defn-declarator">interface  </span>
       tart.collections.<span class="defn-name">Map</span>[%<span class="type-variable-name">Key</span>, %<span class="type-variable-name">Value</span>]
     </header>
       <section class="base-class-section">
@@ -53,6 +53,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#isEmpty">isEmpty</a>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">Return true if there are no entries in this map.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#keys">keys</a>:<span class="type-name">Iterator</span>[<span class="type-name">Key</span>]</div>
+	                <div class="member-summary">Return an iterator over all keys in the map.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#keys">keys</a>:<span class="type-name">Iterator</span>[<span class="type-name">Key</span>]</div>
 	                <div class="member-summary">Return an iterator over all keys in the map.</div>
 	              </td>
@@ -61,6 +73,18 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#size">size</a>:<span class="type-name">int32</span></div>
 	                <div class="member-summary">The number of items in the map.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#size">size</a>:<span class="type-name">int32</span></div>
+	                <div class="member-summary">The number of items in the map.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#values">values</a>:<span class="type-name">Iterator</span>[<span class="type-name">Value</span>]</div>
+	                <div class="member-summary">Return an iterator over all values in the map.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
@@ -87,6 +111,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#add">add</a>(<span class="symbol">entry</span>:(<span class="type-name">Key</span>, <span class="type-name">Value</span>)<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Add the specified key/value pair to the map.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#addAll">addAll</a>(<span class="symbol">entries</span>:(<span class="type-name">Key</span>, <span class="type-name">Value</span>)...<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Add to the map all of the key value pairs in <span class="symbol">entries</span>.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#addAll">addAll</a>(<span class="symbol">entries</span>:(<span class="type-name">Key</span>, <span class="type-name">Value</span>)...<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Add to the map all of the key value pairs in <span class="symbol">entries</span>.</div>
 	              </td>
@@ -94,6 +130,18 @@
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#addAll">addAll</a>(<span class="symbol">entries</span>:<span class="type-name">Iterable</span>[(<span class="type-name">Key</span>, <span class="type-name">Value</span>)]<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#addAll">addAll</a>(<span class="symbol">entries</span>:<span class="type-name">Iterable</span>[(<span class="type-name">Key</span>, <span class="type-name">Value</span>)]<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#addAll">addAll</a>(<span class="symbol">entries</span>:<span class="type-name">Iterator</span>[(<span class="type-name">Key</span>, <span class="type-name">Value</span>)]<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
@@ -111,6 +159,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#clear">clear</a>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Remove all entries from the map.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#contains">contains</a>(<span class="symbol">key</span>:<span class="type-name">Key</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">Return true if the map contains the specified key.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#contains">contains</a>(<span class="symbol">key</span>:<span class="type-name">Key</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
 	                <div class="member-summary">Return true if the map contains the specified key.</div>
 	              </td>
@@ -123,6 +183,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#remove">remove</a>(<span class="symbol">key</span>:<span class="type-name">Key</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">Remove an entry from the collection by key. Returns <span class="symbol">true</span> if the item was in the collection and was removed, <span class="symbol">false</span> if the item wasn't in the collection to begin with.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#removeAll">removeAll</a>(<span class="symbol">keys</span>:<span class="type-name">Key</span>...<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Remove all of the entries having a key contained in <span class="symbol">keys</span>.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#removeAll">removeAll</a>(<span class="symbol">keys</span>:<span class="type-name">Key</span>...<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Remove all of the entries having a key contained in <span class="symbol">keys</span>.</div>
 	              </td>
@@ -130,6 +202,18 @@
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#removeAll">removeAll</a>(<span class="symbol">keys</span>:<span class="type-name">Iterable</span>[<span class="type-name">Key</span>]<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#removeAll">removeAll</a>(<span class="symbol">keys</span>:<span class="type-name">Iterable</span>[<span class="type-name">Key</span>]<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-collections-Map.html#removeAll">removeAll</a>(<span class="symbol">keys</span>:<span class="type-name">Iterator</span>[<span class="type-name">Key</span>]<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
@@ -155,6 +239,24 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="isEmpty">
+	              property  <span class="symbol">isEmpty</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return true if there are no entries in this map.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="keys">
+	              property  <span class="symbol">keys</span>:<span class="type-name">Iterator</span>[<span class="type-name">Key</span>]
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return an iterator over all keys in the map.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="keys">
 	              property  <span class="symbol">keys</span>:<span class="type-name">Iterator</span>[<span class="type-name">Key</span>]
               </a>
@@ -170,6 +272,24 @@
             </header>
             <div class="member-description">
             <p>The number of items in the map.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="size">
+	              property  <span class="symbol">size</span>:<span class="type-name">int32</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>The number of items in the map.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="values">
+	              property  <span class="symbol">values</span>:<span class="type-name">Iterator</span>[<span class="type-name">Value</span>]
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return an iterator over all values in the map.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -195,6 +315,24 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="add">
+	              def  <span class="symbol">add</span>(<span class="symbol">entry</span>:(<span class="type-name">Key</span>, <span class="type-name">Value</span>)<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Add the specified key/value pair to the map.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="addAll">
+	              def  <span class="symbol">addAll</span>(<span class="symbol">entries</span>:(<span class="type-name">Key</span>, <span class="type-name">Value</span>)...<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Add to the map all of the key value pairs in <span class="symbol">entries</span>.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="addAll">
 	              def  <span class="symbol">addAll</span>(<span class="symbol">entries</span>:(<span class="type-name">Key</span>, <span class="type-name">Value</span>)...<span style="white-space: nowrap">)</span>
               </a>
@@ -206,6 +344,18 @@
             <header class="member-header">
               <a name="addAll">
 	              def  <span class="symbol">addAll</span>(<span class="symbol">entries</span>:<span class="type-name">Iterable</span>[(<span class="type-name">Key</span>, <span class="type-name">Value</span>)]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="addAll">
+	              def  <span class="symbol">addAll</span>(<span class="symbol">entries</span>:<span class="type-name">Iterable</span>[(<span class="type-name">Key</span>, <span class="type-name">Value</span>)]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="addAll">
+	              def  <span class="symbol">addAll</span>(<span class="symbol">entries</span>:<span class="type-name">Iterator</span>[(<span class="type-name">Key</span>, <span class="type-name">Value</span>)]<span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
@@ -225,12 +375,39 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="clear">
+	              def  <span class="symbol">clear</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Remove all entries from the map.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="contains">
 	              def  <span class="symbol">contains</span>(<span class="symbol">key</span>:<span class="type-name">Key</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Return true if the map contains the specified key.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="contains">
+	              def  <span class="symbol">contains</span>(<span class="symbol">key</span>:<span class="type-name">Key</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return true if the map contains the specified key.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="remove">
+	              def  <span class="symbol">remove</span>(<span class="symbol">key</span>:<span class="type-name">Key</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Remove an entry from the collection by key. Returns <span class="symbol">true</span> if the item was in the collection and was removed, <span class="symbol">false</span> if the item wasn't in the collection to begin with.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -253,7 +430,28 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="removeAll">
+	              def  <span class="symbol">removeAll</span>(<span class="symbol">keys</span>:<span class="type-name">Key</span>...<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Remove all of the entries having a key contained in <span class="symbol">keys</span>.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="removeAll">
 	              def  <span class="symbol">removeAll</span>(<span class="symbol">keys</span>:<span class="type-name">Iterable</span>[<span class="type-name">Key</span>]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="removeAll">
+	              def  <span class="symbol">removeAll</span>(<span class="symbol">keys</span>:<span class="type-name">Iterable</span>[<span class="type-name">Key</span>]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="removeAll">
+	              def  <span class="symbol">removeAll</span>(<span class="symbol">keys</span>:<span class="type-name">Iterator</span>[<span class="type-name">Key</span>]<span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">

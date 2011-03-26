@@ -27,7 +27,7 @@
   </section>
   <section class="content-section">
     <header class="content-header">
-      <span class="defn-declarator">class</span>
+      <span class="defn-declarator">class  </span>
       tart.reflect.<span class="defn-name">StreamDecoder</span>
     </header>
       <section class="base-class-section">
@@ -50,6 +50,12 @@
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-StreamDecoder.html#position">position</a>:<span class="type-name">int32</span></div>
 	                <div class="member-summary"></div>
 	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-StreamDecoder.html#position">position</a>:<span class="type-name">int32</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -67,6 +73,18 @@
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-StreamDecoder.html#construct">construct</a>(<span class="symbol">data</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-StreamDecoder.html#readByte">readByte</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">uint8</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-StreamDecoder.html#readByte">readByte</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">uint8</span></span></div>
@@ -76,6 +94,18 @@
                 <td class="member-table-row-header member-declarator">final def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-StreamDecoder.html#readString">readString</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-StreamDecoder.html#readString">readString</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-StreamDecoder.html#readVarInt">readVarInt</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
@@ -96,11 +126,23 @@
 	              property  <span class="symbol">position</span>:<span class="type-name">int32</span>
               </a>
             </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="position">
+	              property  <span class="symbol">position</span>:<span class="type-name">int32</span>
+              </a>
+            </header>
           </section>
         </section>
         <section class="member-details-section">
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              def  <span class="symbol">construct</span>(<span class="symbol">data</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
             <header class="member-header">
               <a name="construct">
 	              def  <span class="symbol">construct</span>(<span class="symbol">data</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">)</span>
@@ -114,8 +156,26 @@
             </header>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="readByte">
+	              final def  <span class="symbol">readByte</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">uint8</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="readString">
 	              final def  <span class="symbol">readString</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="readString">
+	              final def  <span class="symbol">readString</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="readVarInt">
+	              final def  <span class="symbol">readVarInt</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
           </section><section class="member-section">

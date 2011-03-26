@@ -27,7 +27,7 @@
   </section>
   <section class="content-section">
     <header class="content-header">
-      <span class="defn-declarator">interface</span>
+      <span class="defn-declarator">interface  </span>
       tart.io.<span class="defn-name">IOStream</span>
     </header>
       <section class="base-class-section">
@@ -45,6 +45,12 @@
 	            	 <th class="member-table-col-header" colspan="2">Enumerations</th>
 	            </tr>
 	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static enum  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#SeekFrom">SeekFrom</a></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">static enum  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#SeekFrom">SeekFrom</a></div>
@@ -69,6 +75,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#atEnd">atEnd</a>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if we've reached the end of available input.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#canRead">canRead</a>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if the stream supports reading.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#canRead">canRead</a>:<span class="type-name">bool</span></div>
 	                <div class="member-summary">True if the stream supports reading.</div>
 	              </td>
@@ -81,6 +99,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#canSeek">canSeek</a>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this stream supports seek operations.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#canWrite">canWrite</a>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if the stream supports writing.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#canWrite">canWrite</a>:<span class="type-name">bool</span></div>
 	                <div class="member-summary">True if the stream supports writing.</div>
 	              </td>
@@ -89,6 +119,18 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#position">position</a>:<span class="type-name">int64</span></div>
 	                <div class="member-summary">Returns the current position in the stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#position">position</a>:<span class="type-name">int64</span></div>
+	                <div class="member-summary">Returns the current position in the stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#size">size</a>:<span class="type-name">int64</span></div>
+	                <div class="member-summary">Return the length of the stream, or -1 if indeterminate.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
@@ -115,10 +157,28 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#close">close</a>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Close the stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#flush">flush</a>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Flush any pending writes.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#flush">flush</a>(<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Flush any pending writes.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#seek">seek</a>(<span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span></div>
+	                <div class="member-summary">Change the current read/write position of the stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-IOStream.html#seek">seek</a>(<span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span></div>
@@ -145,7 +205,47 @@
                 <th class="enum-constant-name">CURRENT</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
+                <th class="enum-constant-name">CURRENT</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
                 <th class="enum-constant-name">END</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">END</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">START</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">START</th>
+                <td class="enum-constant-value"></td>
+              </tr>
+            </table>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="SeekFrom">
+                static enum  <span class="symbol">SeekFrom</span>
+              </a>
+            </header>
+            <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
+              <tr class="enum-constant-header">
+                <th class="enum-constant-name-header">Name</th>
+                <th class="enum-constant-value-header">Description</th>
+              </tr>
+              <tr>
+                <th class="enum-constant-name">CURRENT</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">CURRENT</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">END</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">END</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">START</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">START</th>
@@ -167,12 +267,39 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="atEnd">
+	              property  <span class="symbol">atEnd</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if we've reached the end of available input.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="canRead">
 	              property  <span class="symbol">canRead</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
             <p>True if the stream supports reading.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="canRead">
+	              property  <span class="symbol">canRead</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if the stream supports reading.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="canSeek">
+	              property  <span class="symbol">canSeek</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if this stream supports seek operations.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -194,12 +321,39 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="canWrite">
+	              property  <span class="symbol">canWrite</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if the stream supports writing.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="position">
 	              property  <span class="symbol">position</span>:<span class="type-name">int64</span>
               </a>
             </header>
             <div class="member-description">
             <p>Returns the current position in the stream.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="position">
+	              property  <span class="symbol">position</span>:<span class="type-name">int64</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Returns the current position in the stream.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="size">
+	              property  <span class="symbol">size</span>:<span class="type-name">int64</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return the length of the stream, or -1 if indeterminate.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -225,12 +379,39 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="close">
+	              def  <span class="symbol">close</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Close the stream.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="flush">
 	              def  <span class="symbol">flush</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
             <p>Flush any pending writes.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="flush">
+	              def  <span class="symbol">flush</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Flush any pending writes.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="seek">
+	              def  <span class="symbol">seek</span>(<span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Change the current read/write position of the stream.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">

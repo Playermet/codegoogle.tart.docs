@@ -27,7 +27,7 @@
   </section>
   <section class="content-section">
     <header class="content-header">
-      <span class="defn-declarator">namespace</span>
+      <span class="defn-declarator">namespace  </span>
       tart.collections.<span class="defn-name">Iterators</span>
     </header>
 	    <section class="defn-section-description">
@@ -49,6 +49,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">class  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#CountingIterator">CountingIterator</a></div>
+	                <div class="member-summary">An iterator that returns the integers 0..N-1, for some N.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">class  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#Enumerator">Enumerator</a>[<span class="type-name">T</span>]</div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">class  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#Enumerator">Enumerator</a>[<span class="type-name">T</span>]</div>
 	                <div class="member-summary"></div>
 	              </td>
@@ -65,32 +77,8 @@
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#CountingIterator-construct">construct</a>(<span class="symbol">end</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#CountingIterator-construct">construct</a>(<span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">end</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#CountingIterator-next">next</a>(<span style="white-space: nowrap">) -&gt; union??</span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#Enumerator-construct">construct</a>(<span class="symbol">iter</span>:<span class="type-name">Iterator</span>[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#Enumerator-next">next</a>(<span style="white-space: nowrap">) -&gt; union??</span></div>
-	                <div class="member-summary"></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#enumerate">enumerate</a>(<span class="symbol">iter</span>:<span class="type-name">Iterator</span>[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span>[(<span class="type-name">int32</span>, <span class="type-name">T</span>)]</span></div>
+	                <div class="member-summary">Given an iterator, return an iterator that returns each item as a tuple containing the original item and its ordinal index.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -107,6 +95,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#enumerate">enumerate</a>(<span class="symbol">iter</span>:<span class="type-name">Iterable</span>[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span>[(<span class="type-name">int32</span>, <span class="type-name">T</span>)]</span></div>
+	                <div class="member-summary">Given an iterable, return an iterator that returns each item as a tuple containing the original item and its ordinal index.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#equal">equal</a>(<span class="symbol">a0</span>:<span class="type-name">Iterable</span>[<span class="type-name">T</span>], <span class="symbol">a1</span>:<span class="type-name">Iterable</span>[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">Return true if both iterable sequences are the same.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-collections-Iterators.html#equal">equal</a>(<span class="symbol">a0</span>:<span class="type-name">Iterable</span>[<span class="type-name">T</span>], <span class="symbol">a1</span>:<span class="type-name">Iterable</span>[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
 	                <div class="member-summary">Return true if both iterable sequences are the same.</div>
 	              </td>
@@ -118,34 +118,13 @@
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="construct">
-	              def  <span class="symbol">construct</span>(<span class="symbol">end</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
+              <a name="enumerate">
+	              def  <span class="symbol">enumerate</span>(<span class="symbol">iter</span>:<span class="type-name">Iterator</span>[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span>[(<span class="type-name">int32</span>, <span class="type-name">T</span>)]</span>
               </a>
             </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="construct">
-	              def  <span class="symbol">construct</span>(<span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">end</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="next">
-	              def  <span class="symbol">next</span>(<span style="white-space: nowrap">) -&gt; union??</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="construct">
-	              def  <span class="symbol">construct</span>(<span class="symbol">iter</span>:<span class="type-name">Iterator</span>[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="next">
-	              def  <span class="symbol">next</span>(<span style="white-space: nowrap">) -&gt; union??</span>
-              </a>
-            </header>
+            <div class="member-description">
+            <p>Given an iterator, return an iterator that returns each item as a tuple containing the original item and its ordinal index.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="enumerate">
@@ -163,6 +142,24 @@
             </header>
             <div class="member-description">
             <p>Given an iterable, return an iterator that returns each item as a tuple containing the original item and its ordinal index.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="enumerate">
+	              def  <span class="symbol">enumerate</span>(<span class="symbol">iter</span>:<span class="type-name">Iterable</span>[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span>[(<span class="type-name">int32</span>, <span class="type-name">T</span>)]</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Given an iterable, return an iterator that returns each item as a tuple containing the original item and its ordinal index.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="equal">
+	              def  <span class="symbol">equal</span>(<span class="symbol">a0</span>:<span class="type-name">Iterable</span>[<span class="type-name">T</span>], <span class="symbol">a1</span>:<span class="type-name">Iterable</span>[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return true if both iterable sequences are the same.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">

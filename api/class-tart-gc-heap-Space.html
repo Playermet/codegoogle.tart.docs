@@ -27,7 +27,7 @@
   </section>
   <section class="content-section">
     <header class="content-header">
-      <span class="defn-declarator">class</span>
+      <span class="defn-declarator">abstract class  </span>
       tart.gc.heap.<span class="defn-name">Space</span>
     </header>
       <section class="base-class-section">
@@ -50,6 +50,12 @@
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-Space.html#extent">extent</a>:<span class="type-name">tart.gc.AddressRange</span></div>
 	                <div class="member-summary">The range of addresses that contain this space.</div>
 	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-Space.html#extent">extent</a>:<span class="type-name">tart.gc.AddressRange</span></div>
+	                <div class="member-summary">The range of addresses that contain this space.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -65,6 +71,18 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-Space.html#construct">construct</a>(<span class="symbol">extent</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-Space.html#construct">construct</a>(<span class="symbol">extent</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-Space.html#contains">contains</a>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">True if the space contains the specified address.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
@@ -87,6 +105,15 @@
             <div class="member-description">
             <p>The range of addresses that contain this space.</p>
             </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="extent">
+	              property  <span class="symbol">extent</span>:<span class="type-name">tart.gc.AddressRange</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>The range of addresses that contain this space.</p>
+            </div>
           </section>
         </section>
         <section class="member-details-section">
@@ -97,6 +124,21 @@
 	              def  <span class="symbol">construct</span>(<span class="symbol">extent</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              def  <span class="symbol">construct</span>(<span class="symbol">extent</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="contains">
+	              final def  <span class="symbol">contains</span>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if the space contains the specified address.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="contains">

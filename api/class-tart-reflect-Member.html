@@ -27,7 +27,7 @@
   </section>
   <section class="content-section">
     <header class="content-header">
-      <span class="defn-declarator">class</span>
+      <span class="defn-declarator">class  </span>
       tart.reflect.<span class="defn-name">Member</span>
     </header>
       <section class="base-class-section">
@@ -48,6 +48,18 @@
                 <td class="member-table-row-header member-declarator">static enum  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#Traits">Traits</a></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">static enum  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#Traits">Traits</a></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static enum  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#Visibility">Visibility</a></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
@@ -75,6 +87,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#attributes">attributes</a>:<span class="type-name">tart.collections.List</span>[<span class="type-name">Object</span>]</div>
+	                <div class="member-summary">Array of attributes for this member.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#memberType">memberType</a>:<span class="type-name">tart.reflect.Type</span></div>
+	                <div class="member-summary">The type of this member.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#memberType">memberType</a>:<span class="type-name">tart.reflect.Type</span></div>
 	                <div class="member-summary">The type of this member.</div>
 	              </td>
@@ -87,10 +111,28 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#name">name</a>:<span class="type-name">String</span></div>
+	                <div class="member-summary">The unqualified member name.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#traits">traits</a>:<span class="type-name">tart.reflect.Member.Traits</span></div>
+	                <div class="member-summary">Various member flags.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#traits">traits</a>:<span class="type-name">tart.reflect.Member.Traits</span></div>
 	                <div class="member-summary">Various member flags.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#visibility">visibility</a>:<span class="type-name">tart.reflect.Member.Visibility</span></div>
+	                <div class="member-summary">Accessibility of this member.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#visibility">visibility</a>:<span class="type-name">tart.reflect.Member.Visibility</span></div>
@@ -115,23 +157,53 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#findAttribute">findAttribute</a>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; union??</span></div>
+	                <div class="member-summary">Return the first attribute of type <span class="symbol">attrType</span>.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#hasAttribute">hasAttribute</a>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">Return true if this member has an attribute of type <span class="symbol">attrType</span>.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#hasAttribute">hasAttribute</a>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
 	                <div class="member-summary">Return true if this member has an attribute of type <span class="symbol">attrType</span>.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
+                <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#infixBitAnd">infixBitAnd</a>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#infixBitAnd">infixBitAnd</a>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#infixBitOr">infixBitOr</a>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#infixBitOr">infixBitOr</a>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#infixBitXor">infixBitXor</a>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#infixBitXor">infixBitXor</a>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span></div>
 	                <div class="member-summary"></div>
@@ -157,13 +229,71 @@
                 <th class="enum-constant-name">ABSTRACT</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
+                <th class="enum-constant-name">ABSTRACT</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">FINAL</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
                 <th class="enum-constant-name">FINAL</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">OVERRIDE</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
+                <th class="enum-constant-name">OVERRIDE</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
                 <th class="enum-constant-name">STATIC</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">STATIC</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">UNSAFE</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">UNSAFE</th>
+                <td class="enum-constant-value"></td>
+              </tr>
+            </table>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="Traits">
+                static enum  <span class="symbol">Traits</span>
+              </a>
+            </header>
+            <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
+              <tr class="enum-constant-header">
+                <th class="enum-constant-name-header">Name</th>
+                <th class="enum-constant-value-header">Description</th>
+              </tr>
+              <tr>
+                <th class="enum-constant-name">ABSTRACT</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">ABSTRACT</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">FINAL</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">FINAL</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">OVERRIDE</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">OVERRIDE</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">STATIC</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">STATIC</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">UNSAFE</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">UNSAFE</th>
@@ -185,7 +315,47 @@
                 <th class="enum-constant-name">PRIVATE</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
+                <th class="enum-constant-name">PRIVATE</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
                 <th class="enum-constant-name">PROTECTED</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PROTECTED</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PUBLIC</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PUBLIC</th>
+                <td class="enum-constant-value"></td>
+              </tr>
+            </table>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="Visibility">
+                static enum  <span class="symbol">Visibility</span>
+              </a>
+            </header>
+            <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
+              <tr class="enum-constant-header">
+                <th class="enum-constant-name-header">Name</th>
+                <th class="enum-constant-value-header">Description</th>
+              </tr>
+              <tr>
+                <th class="enum-constant-name">PRIVATE</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PRIVATE</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PROTECTED</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PROTECTED</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PUBLIC</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">PUBLIC</th>
@@ -207,6 +377,24 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="attributes">
+	              property  <span class="symbol">attributes</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">Object</span>]
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Array of attributes for this member.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="memberType">
+	              property  <span class="symbol">memberType</span>:<span class="type-name">tart.reflect.Type</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>The type of this member.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="memberType">
 	              property  <span class="symbol">memberType</span>:<span class="type-name">tart.reflect.Type</span>
               </a>
@@ -225,12 +413,39 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="name">
+	              property  <span class="symbol">name</span>:<span class="type-name">String</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>The unqualified member name.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="traits">
 	              property  <span class="symbol">traits</span>:<span class="type-name">tart.reflect.Member.Traits</span>
               </a>
             </header>
             <div class="member-description">
             <p>Various member flags.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="traits">
+	              property  <span class="symbol">traits</span>:<span class="type-name">tart.reflect.Member.Traits</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Various member flags.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="visibility">
+	              property  <span class="symbol">visibility</span>:<span class="type-name">tart.reflect.Member.Visibility</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Accessibility of this member.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -256,6 +471,24 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="findAttribute">
+	              final def  <span class="symbol">findAttribute</span>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; union??</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return the first attribute of type <span class="symbol">attrType</span>.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="hasAttribute">
+	              final def  <span class="symbol">hasAttribute</span>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return true if this member has an attribute of type <span class="symbol">attrType</span>.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="hasAttribute">
 	              final def  <span class="symbol">hasAttribute</span>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
@@ -266,19 +499,37 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="infixBitAnd">
-	              final def  <span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
+	              def  <span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="infixBitAnd">
+	              def  <span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="infixBitOr">
-	              final def  <span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
+	              def  <span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="infixBitOr">
+	              def  <span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="infixBitXor">
-	              final def  <span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
+	              def  <span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="infixBitXor">
+	              def  <span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
               </a>
             </header>
           </section>

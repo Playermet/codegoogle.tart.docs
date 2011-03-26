@@ -27,7 +27,7 @@
   </section>
   <section class="content-section">
     <header class="content-header">
-      <span class="defn-declarator">class</span>
+      <span class="defn-declarator">final class  </span>
       tart.reflect.<span class="defn-name">Module</span>
     </header>
       <section class="base-class-section">
@@ -53,6 +53,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#methods">methods</a>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Method</span>]</div>
+	                <div class="member-summary">Array of types defined in this module.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#name">name</a>:<span class="type-name">String</span></div>
+	                <div class="member-summary">Short name of the module.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#name">name</a>:<span class="type-name">String</span></div>
 	                <div class="member-summary">Short name of the module.</div>
 	              </td>
@@ -65,10 +77,28 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#packageName">packageName</a>:<span class="type-name">String</span></div>
+	                <div class="member-summary">Name of the package containing the module.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#qualifiedName">qualifiedName</a>:<span class="type-name">String</span></div>
+	                <div class="member-summary">Fully-qualified name of the module.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#qualifiedName">qualifiedName</a>:<span class="type-name">String</span></div>
 	                <div class="member-summary">Fully-qualified name of the module.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#types">types</a>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>]</div>
+	                <div class="member-summary">Array of types defined in this module.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#types">types</a>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>]</div>
@@ -85,13 +115,25 @@
 	            	 <th class="member-table-col-header" colspan="2">Static Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static final def  </td>
+                <td class="member-table-row-header member-declarator">static def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#of">of</a>(<span class="symbol">type</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span></div>
 	                <div class="member-summary">Returns a reference to module that contains the specified type.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static final def  </td>
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#of">of</a>(<span class="symbol">type</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span></div>
+	                <div class="member-summary">Returns a reference to module that contains the specified type.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#thisModule">thisModule</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span></div>
+	                <div class="member-summary">Returns a reference to the caller's module.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">static def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#thisModule">thisModule</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span></div>
 	                <div class="member-summary">Returns a reference to the caller's module.</div>
@@ -107,7 +149,13 @@
 	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#findMethod">findMethod</a>(<span class="symbol">name</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; union??</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Module.html#findMethod">findMethod</a>(<span class="symbol">name</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; union??</span></div>
 	                <div class="member-summary"></div>
@@ -129,12 +177,39 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="methods">
+	              property  <span class="symbol">methods</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Method</span>]
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Array of types defined in this module.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="name">
 	              property  <span class="symbol">name</span>:<span class="type-name">String</span>
               </a>
             </header>
             <div class="member-description">
             <p>Short name of the module.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="name">
+	              property  <span class="symbol">name</span>:<span class="type-name">String</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Short name of the module.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="packageName">
+	              property  <span class="symbol">packageName</span>:<span class="type-name">String</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Name of the package containing the module.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -156,6 +231,24 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="qualifiedName">
+	              property  <span class="symbol">qualifiedName</span>:<span class="type-name">String</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Fully-qualified name of the module.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="types">
+	              property  <span class="symbol">types</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>]
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Array of types defined in this module.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="types">
 	              property  <span class="symbol">types</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>]
               </a>
@@ -170,13 +263,28 @@
           <section class="member-section">
             <header class="member-header">
               <a name="findMethod">
-	              final def  <span class="symbol">findMethod</span>(<span class="symbol">name</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; union??</span>
+	              def  <span class="symbol">findMethod</span>(<span class="symbol">name</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; union??</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="findMethod">
+	              def  <span class="symbol">findMethod</span>(<span class="symbol">name</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; union??</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="of">
-	              static final def  <span class="symbol">of</span>(<span class="symbol">type</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span>
+	              static def  <span class="symbol">of</span>(<span class="symbol">type</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Returns a reference to module that contains the specified type.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="of">
+	              static def  <span class="symbol">of</span>(<span class="symbol">type</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -185,7 +293,16 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="thisModule">
-	              static final def  <span class="symbol">thisModule</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span>
+	              static def  <span class="symbol">thisModule</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Returns a reference to the caller's module.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="thisModule">
+	              static def  <span class="symbol">thisModule</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Module</span></span>
               </a>
             </header>
             <div class="member-description">

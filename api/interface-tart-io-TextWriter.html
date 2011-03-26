@@ -27,7 +27,7 @@
   </section>
   <section class="content-section">
     <header class="content-header">
-      <span class="defn-declarator">interface</span>
+      <span class="defn-declarator">interface  </span>
       tart.io.<span class="defn-name">TextWriter</span>
     </header>
       <section class="base-class-section">
@@ -53,6 +53,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#close">close</a>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Close the reader and release any resources held by the reader instance.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#flush">flush</a>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Flush any pending writes.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#flush">flush</a>(<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Flush any pending writes.</div>
 	              </td>
@@ -65,6 +77,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#write">write</a>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Write a string of text to the output stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#write">write</a>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Concatenate strings and write them to the output stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#write">write</a>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
 	                <div class="member-summary">Concatenate strings and write them to the output stream.</div>
 	              </td>
@@ -72,6 +96,18 @@
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#writeChars">writeChars</a>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#writeChars">writeChars</a>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#writeChars">writeChars</a>(<span class="symbol">text</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
@@ -89,6 +125,18 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#writeFmt">writeFmt</a>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Write values to the output stream using a format string.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#writeLn">writeLn</a>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Write a string of text to the output stream followed by a line break.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#writeLn">writeLn</a>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
 	                <div class="member-summary">Write a string of text to the output stream followed by a line break.</div>
 	              </td>
@@ -97,6 +145,18 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#writeLn">writeLn</a>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
 	                <div class="member-summary">Concatenate strings and write them to the output stream, followed by a line break.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#writeLn">writeLn</a>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Concatenate strings and write them to the output stream, followed by a line break.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextWriter.html#writeLnFmt">writeLnFmt</a>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Write values to the output stream using a format string, followed by a line break.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -121,12 +181,39 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="close">
+	              def  <span class="symbol">close</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Close the reader and release any resources held by the reader instance.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="flush">
 	              def  <span class="symbol">flush</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
             <p>Flush any pending writes.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="flush">
+	              def  <span class="symbol">flush</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Flush any pending writes.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="write">
+	              def  <span class="symbol">write</span>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Write a string of text to the output stream.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -148,6 +235,21 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="write">
+	              def  <span class="symbol">write</span>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Concatenate strings and write them to the output stream.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeChars">
+	              def  <span class="symbol">writeChars</span>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="writeChars">
 	              def  <span class="symbol">writeChars</span>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
@@ -158,6 +260,21 @@
 	              def  <span class="symbol">writeChars</span>(<span class="symbol">text</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeChars">
+	              def  <span class="symbol">writeChars</span>(<span class="symbol">text</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeFmt">
+	              def  <span class="symbol">writeFmt</span>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Write values to the output stream using a format string.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="writeFmt">
@@ -179,11 +296,38 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="writeLn">
+	              def  <span class="symbol">writeLn</span>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Write a string of text to the output stream followed by a line break.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeLn">
 	              def  <span class="symbol">writeLn</span>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Concatenate strings and write them to the output stream, followed by a line break.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeLn">
+	              def  <span class="symbol">writeLn</span>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Concatenate strings and write them to the output stream, followed by a line break.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeLnFmt">
+	              def  <span class="symbol">writeLnFmt</span>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Write values to the output stream using a format string, followed by a line break.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
