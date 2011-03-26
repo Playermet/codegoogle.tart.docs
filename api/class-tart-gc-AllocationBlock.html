@@ -38,31 +38,30 @@
           <p>Class which represents a contiguous region of memory which is allocated via</p>
           <p>a simple &#34;bump pointer&#34; strategy.</p>
 	    </section>
+    <header class="member-table-header">Member Summary</header>
         <section class="member-list-section">
-          <header class="member-table-header">Instance Methods Summary</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">addrs</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-AllocationBlock.html#bump">bump</a>(<span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">uint8</span>]</span></div>
+	                <div class="member-summary">Bump the allocation pointer. Does not check if there is enough space. Does no alignment calculations.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">canFit</span>(<span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-AllocationBlock.html#canFit">canFit</a>(<span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
 	                <div class="member-summary">Return true if there is at least <span class="symbol">size</span> bytes available in this block. Does no alignment</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">bump</span>(<span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">uint8</span>]</span></div>
-	                <div class="member-summary">Bump the allocation pointer. Does not check if there is enough space. Does no alignment calculations.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-AllocationBlock.html#construct">construct</a>(<span class="symbol">addrs</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
 	              </td>
 	            </tr>
 	          </table>
@@ -72,10 +71,13 @@
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="construct">
-	              def  <span class="symbol">construct</span>(<span class="symbol">addrs</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span>
+              <a name="bump">
+	              def  <span class="symbol">bump</span>(<span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">uint8</span>]</span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Bump the allocation pointer. Does not check if there is enough space. Does no alignment calculations.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="canFit">
@@ -88,13 +90,10 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="bump">
-	              def  <span class="symbol">bump</span>(<span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">uint8</span>]</span>
+              <a name="construct">
+	              def  <span class="symbol">construct</span>(<span class="symbol">addrs</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
-            <div class="member-description">
-            <p>Bump the allocation pointer. Does not check if there is enough space. Does no alignment calculations.</p>
-            </div>
           </section>
         </section>
   </section>

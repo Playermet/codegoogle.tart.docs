@@ -37,90 +37,87 @@
 	    <section class="defn-section-description">
           <p>Base class for all attributes.</p>
 	    </section>
+    <header class="member-table-header">Member Summary</header>
         <section class="member-list-section">
-          <header class="member-table-header">Enumerations</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            	 <th class="member-table-col-header" colspan="2">Enumerations</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">static enum  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">Target</span></div>
-	                <div class="member-summary">Defines what types of elements the attribute can be attached to.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#Propagation">Propagation</a></div>
+	                <div class="member-summary">Indicates whether derived elements (callers, subclasses) get the attribute as well.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">static enum  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">Retention</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#Retention">Retention</a></div>
 	                <div class="member-summary">Indicates whether the attribute is retained in the compiled binary.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">static enum  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">Propagation</span></div>
-	                <div class="member-summary">Indicates whether derived elements (callers, subclasses) get the attribute as well.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#Target">Target</a></div>
+	                <div class="member-summary">Defines what types of elements the attribute can be attached to.</div>
 	              </td>
 	            </tr>
 	          </table>
           </div>
         </section>
         <section class="member-list-section">
-          <header class="member-table-header">Instance Methods Summary</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">construct</span>(<span style="white-space: nowrap">)</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#construct">construct</a>(<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">target</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">retention</span>:<span class="type-name">Attribute.Retention</span>, <span class="symbol">propagation</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">)</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#construct">construct</a>(<span class="symbol">target</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">retention</span>:<span class="type-name">Attribute.Retention</span>, <span class="symbol">propagation</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#infixBitAnd">infixBitAnd</a>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#infixBitAnd">infixBitAnd</a>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Propagation</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Propagation</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#infixBitOr">infixBitOr</a>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Propagation</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Propagation</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#infixBitOr">infixBitOr</a>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Propagation</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Propagation</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Propagation</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Propagation</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#infixBitXor">infixBitXor</a>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Propagation</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Propagation</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-Attribute.html#infixBitXor">infixBitXor</a>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Propagation</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Propagation</span></span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr>
@@ -131,12 +128,12 @@
           <header class="member-details-section-header">Enum Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="Target">
-                static enum  <span class="symbol">Target</span>
+              <a name="Propagation">
+                static enum  <span class="symbol">Propagation</span>
               </a>
             </header>
             <div class="member-description">
-            <p>Defines what types of elements the attribute can be attached to.</p>
+            <p>Indicates whether derived elements (callers, subclasses) get the attribute as well.</p>
             </div>
             <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
               <tr class="enum-constant-header">
@@ -144,74 +141,22 @@
                 <th class="enum-constant-value-header">Description</th>
               </tr>
               <tr>
-                <th class="enum-constant-name">CLASS</th>
+                <th class="enum-constant-name">CALLERS</th>
                 <td class="enum-constant-value">
-              <p>Attribute can annotate class types.</p>
+              <p>Attribute propagates to callers</p>
             </td>
               </tr><tr>
-                <th class="enum-constant-name">STRUCT</th>
+                <th class="enum-constant-name">MEMBERS</th>
                 <td class="enum-constant-value">
-              <p>Attribute can annotate struct types.</p>
+              <p>Attribute propagates to members of attached type</p>
             </td>
               </tr><tr>
-                <th class="enum-constant-name">INTERFACE</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate interface types.</p>
-            </td>
+                <th class="enum-constant-name">NONE</th>
+                <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">ENUM</th>
+                <th class="enum-constant-name">SUBTYPES</th>
                 <td class="enum-constant-value">
-              <p>Attribute can annotate enum types.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">NAMESPACE</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate namespaces.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">FUNCTION</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate functions and methods.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">CONSTRUCTOR</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate constructors.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">PARAMETER</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate parameters.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">VARIABLE</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate variables and constants.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">PROPERTY</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate properties.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">MACRO</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate macros.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">TYPE</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate any type definition.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">CALLABLE</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate any callable.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">ANY</th>
-                <td class="enum-constant-value">
-              <p>Attribute can annotate any declaration.</p>
+              <p>Attribute propagates to subtypes</p>
             </td>
               </tr>
             </table>
@@ -248,12 +193,12 @@
             </table>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="Propagation">
-                static enum  <span class="symbol">Propagation</span>
+              <a name="Target">
+                static enum  <span class="symbol">Target</span>
               </a>
             </header>
             <div class="member-description">
-            <p>Indicates whether derived elements (callers, subclasses) get the attribute as well.</p>
+            <p>Defines what types of elements the attribute can be attached to.</p>
             </div>
             <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
               <tr class="enum-constant-header">
@@ -261,22 +206,74 @@
                 <th class="enum-constant-value-header">Description</th>
               </tr>
               <tr>
-                <th class="enum-constant-name">NONE</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">SUBTYPES</th>
+                <th class="enum-constant-name">ANY</th>
                 <td class="enum-constant-value">
-              <p>Attribute propagates to subtypes</p>
+              <p>Attribute can annotate any declaration.</p>
             </td>
               </tr><tr>
-                <th class="enum-constant-name">MEMBERS</th>
+                <th class="enum-constant-name">CALLABLE</th>
                 <td class="enum-constant-value">
-              <p>Attribute propagates to members of attached type</p>
+              <p>Attribute can annotate any callable.</p>
             </td>
               </tr><tr>
-                <th class="enum-constant-name">CALLERS</th>
+                <th class="enum-constant-name">CLASS</th>
                 <td class="enum-constant-value">
-              <p>Attribute propagates to callers</p>
+              <p>Attribute can annotate class types.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">CONSTRUCTOR</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate constructors.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">ENUM</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate enum types.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">FUNCTION</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate functions and methods.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">INTERFACE</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate interface types.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">MACRO</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate macros.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">NAMESPACE</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate namespaces.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">PARAMETER</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate parameters.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">PROPERTY</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate properties.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">STRUCT</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate struct types.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">TYPE</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate any type definition.</p>
+            </td>
+              </tr><tr>
+                <th class="enum-constant-name">VARIABLE</th>
+                <td class="enum-constant-value">
+              <p>Attribute can annotate variables and constants.</p>
             </td>
               </tr>
             </table>
@@ -304,18 +301,6 @@
             </header>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="infixBitOr">
-	              final def  <span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="infixBitXor">
-	              final def  <span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="infixBitAnd">
 	              final def  <span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Propagation</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Propagation</span></span>
               </a>
@@ -323,7 +308,19 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="infixBitOr">
+	              final def  <span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="infixBitOr">
 	              final def  <span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Propagation</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Propagation</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Propagation</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="infixBitXor">
+	              final def  <span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">Attribute.Target</span>, <span class="symbol">e2</span>:<span class="type-name">Attribute.Target</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Attribute.Target</span></span>
               </a>
             </header>
           </section><section class="member-section">

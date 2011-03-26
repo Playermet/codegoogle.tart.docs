@@ -37,18 +37,17 @@
 	    <section class="defn-section-description">
           <p>A class which can read a sequence of characters.</p>
 	    </section>
+    <header class="member-table-header">Member Summary</header>
         <section class="member-list-section">
-          <header class="member-table-header">Static Constants</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            	 <th class="member-table-col-header" colspan="2">Static Constants</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">static let  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">EOF</span>:<span class="type-name">char</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextReader.html#EOF">EOF</a>:<span class="type-name">char</span></div>
 	                <div class="member-summary">Character constant that signals no more characters can be read.</div>
 	              </td>
 	            </tr>
@@ -56,42 +55,40 @@
           </div>
         </section>
         <section class="member-list-section">
-          <header class="member-table-header">Instance Methods Summary</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">close</span>(<span style="white-space: nowrap">)</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextReader.html#close">close</a>(<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Close the reader and release any resources held by the reader instance.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">readCh</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextReader.html#read">read</a>(<span class="symbol">buffer</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary">Read up to <span class="symbol">length</span> characters into the array <span class="symbol">buffer</span>, starting at position <span class="symbol">start</span>. returns the actual number of characters read, or 0 if there were no characters remaining.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextReader.html#readAll">readAll</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Read all remaining characters in the stream. Returns an empty string if there are no more characters to be read.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextReader.html#readCh">readCh</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></div>
 	                <div class="member-summary">Read a single character from the stream. Return <span class="symbol">EOF</span> if no more characters can be read.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">read</span>(<span class="symbol">buffer</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary">Read up to <span class="symbol">length</span> characters into the array <span class="symbol">buffer</span>, starting at position <span class="symbol">start</span>. returns the actual number of characters read, or 0 if there were no characters remaining.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">readLn</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-io-TextReader.html#readLn">readLn</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
 	                <div class="member-summary">Read characters until the next line-end delimiter. The delimiter is not included in the result string. Returns an empty string if there are no more characters to be read.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">readAll</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Read all remaining characters in the stream. Returns an empty string if there are no more characters to be read.</div>
 	              </td>
 	            </tr>
 	          </table>
@@ -110,15 +107,6 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="readCh">
-	              def  <span class="symbol">readCh</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Read a single character from the stream. Return <span class="symbol">EOF</span> if no more characters can be read.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="read">
 	              def  <span class="symbol">read</span>(<span class="symbol">buffer</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
@@ -128,21 +116,30 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="readLn">
-	              def  <span class="symbol">readLn</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Read characters until the next line-end delimiter. The delimiter is not included in the result string. Returns an empty string if there are no more characters to be read.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="readAll">
 	              def  <span class="symbol">readAll</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Read all remaining characters in the stream. Returns an empty string if there are no more characters to be read.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="readCh">
+	              def  <span class="symbol">readCh</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Read a single character from the stream. Return <span class="symbol">EOF</span> if no more characters can be read.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="readLn">
+	              def  <span class="symbol">readLn</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Read characters until the next line-end delimiter. The delimiter is not included in the result string. Returns an empty string if there are no more characters to be read.</p>
             </div>
           </section>
         </section>

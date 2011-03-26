@@ -41,48 +41,47 @@
 	    <section class="defn-section-description">
           <p>A stream which can read / write to a C stdio FILE handle.</p>
 	    </section>
+    <header class="member-table-header">Member Summary</header>
         <section class="member-list-section">
-          <header class="member-table-header">Properties</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            	 <th class="member-table-col-header" colspan="2">Properties</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">property  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">atEnd</span>:<span class="type-name">bool</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#atEnd">atEnd</a>:<span class="type-name">bool</span></div>
 	                <div class="member-summary">True if we've reached the end of available input.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">canRead</span>:<span class="type-name">bool</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#canRead">canRead</a>:<span class="type-name">bool</span></div>
 	                <div class="member-summary">True if the stream supports reading.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">property  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">canWrite</span>:<span class="type-name">bool</span></div>
-	                <div class="member-summary">True if the stream supports writing.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#canSeek">canSeek</a>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this stream supports seek operations.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">canSeek</span>:<span class="type-name">bool</span></div>
-	                <div class="member-summary">True if this stream supports seek operations.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#canWrite">canWrite</a>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if the stream supports writing.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">property  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">position</span>:<span class="type-name">int64</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#position">position</a>:<span class="type-name">int64</span></div>
 	                <div class="member-summary">Returns the current position in the stream.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">size</span>:<span class="type-name">int64</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#size">size</a>:<span class="type-name">int64</span></div>
 	                <div class="member-summary">Return the length of the stream, or -1 if indeterminate.</div>
 	              </td>
 	            </tr>
@@ -90,150 +89,148 @@
           </div>
         </section>
         <section class="member-list-section">
-          <header class="member-table-header">Instance Methods Summary</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">construct</span>(<span style="white-space: nowrap">)</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#FILE-construct">construct</a>(<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">file</span>:Address[<span class="type-name">tart.io.StdFileStream.FILE</span>], <span class="symbol">canRead</span>:<span class="type-name">bool</span>, <span class="symbol">canWrite</span>:<span class="type-name">bool</span>, <span class="symbol">canSeek</span>:<span class="type-name">bool</span><span style="white-space: nowrap">)</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#acquire">acquire</a>(<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">read</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary">Read a single byte from the stream.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">readCh</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">read</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary">Read a buffer of bytes from the stream.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">read</span>(<span class="symbol">buffer</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">readLn</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">readAll</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">write</span>(<span class="symbol">value</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary">Write a single byte to the stream.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">write</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary">Write a buffer of bytes to the stream.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">writeChars</span>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">writeChars</span>(<span class="symbol">text</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">write</span>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
-	                <div class="member-summary">Write a string of text to the output stream.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">write</span>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
-	                <div class="member-summary">Concatenate strings and write them to the output stream.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">writeLn</span>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
-	                <div class="member-summary">Write a string of text to the output stream followed by a line break.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">writeLn</span>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
-	                <div class="member-summary">Concatenate strings and write them to the output stream, followed by a line break.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">writeFmt</span>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
-	                <div class="member-summary">Write values to the output stream using a format string.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">writeLnFmt</span>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
-	                <div class="member-summary">Write values to the output stream using a format string, followed by a line break.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">seek</span>(<span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span></div>
-	                <div class="member-summary">Change the current read/write position of the stream.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">flush</span>(<span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary">Flush any pending writes.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">close</span>(<span style="white-space: nowrap">)</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#close">close</a>(<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Close the stream.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">acquire</span>(<span style="white-space: nowrap">)</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#construct">construct</a>(<span class="symbol">file</span>:Address[<span class="type-name">tart.io.StdFileStream.FILE</span>], <span class="symbol">canRead</span>:<span class="type-name">bool</span>, <span class="symbol">canWrite</span>:<span class="type-name">bool</span>, <span class="symbol">canSeek</span>:<span class="type-name">bool</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">final def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">release</span>(<span style="white-space: nowrap">)</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#flush">flush</a>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Flush any pending writes.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#read">read</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary">Read a single byte from the stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#read">read</a>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary">Read a buffer of bytes from the stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#read">read</a>(<span class="symbol">buffer</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
 	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#readAll">readAll</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#readCh">readCh</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#readLn">readLn</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#release">release</a>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#seek">seek</a>(<span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span></div>
+	                <div class="member-summary">Change the current read/write position of the stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#write">write</a>(<span class="symbol">value</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Write a single byte to the stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#write">write</a>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Write a buffer of bytes to the stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#write">write</a>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Write a string of text to the output stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#write">write</a>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Concatenate strings and write them to the output stream.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#writeChars">writeChars</a>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#writeChars">writeChars</a>(<span class="symbol">text</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#writeFmt">writeFmt</a>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Write values to the output stream using a format string.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#writeLn">writeLn</a>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Write a string of text to the output stream followed by a line break.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#writeLn">writeLn</a>(<span class="symbol">text</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Concatenate strings and write them to the output stream, followed by a line break.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-io-StdFileStream.html#writeLnFmt">writeLnFmt</a>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span></div>
+	                <div class="member-summary">Write values to the output stream using a format string, followed by a line break.</div>
 	              </td>
 	            </tr>
 	          </table>
@@ -261,21 +258,21 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="canWrite">
-	              property  <span class="symbol">canWrite</span>:<span class="type-name">bool</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>True if the stream supports writing.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="canSeek">
 	              property  <span class="symbol">canSeek</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
             <p>True if this stream supports seek operations.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="canWrite">
+	              property  <span class="symbol">canWrite</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if the stream supports writing.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -307,10 +304,34 @@
             </header>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="acquire">
+	              final def  <span class="symbol">acquire</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="close">
+	              final def  <span class="symbol">close</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Close the stream.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="construct">
 	              final def  <span class="symbol">construct</span>(<span class="symbol">file</span>:Address[<span class="type-name">tart.io.StdFileStream.FILE</span>], <span class="symbol">canRead</span>:<span class="type-name">bool</span>, <span class="symbol">canWrite</span>:<span class="type-name">bool</span>, <span class="symbol">canSeek</span>:<span class="type-name">bool</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="flush">
+	              final def  <span class="symbol">flush</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Flush any pending writes.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="read">
@@ -320,12 +341,6 @@
             <div class="member-description">
             <p>Read a single byte from the stream.</p>
             </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="readCh">
-	              final def  <span class="symbol">readCh</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
-              </a>
-            </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="read">
@@ -343,16 +358,37 @@
             </header>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="readAll">
+	              final def  <span class="symbol">readAll</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="readCh">
+	              final def  <span class="symbol">readCh</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="readLn">
 	              final def  <span class="symbol">readLn</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="readAll">
-	              final def  <span class="symbol">readAll</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+              <a name="release">
+	              final def  <span class="symbol">release</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="seek">
+	              final def  <span class="symbol">seek</span>(<span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Change the current read/write position of the stream.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="write">
@@ -373,18 +409,6 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="writeChars">
-	              final def  <span class="symbol">writeChars</span>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="writeChars">
-	              final def  <span class="symbol">writeChars</span>(<span class="symbol">text</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="write">
 	              final def  <span class="symbol">write</span>(<span class="symbol">text</span>:<span class="type-name">String</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
               </a>
@@ -400,6 +424,27 @@
             </header>
             <div class="member-description">
             <p>Concatenate strings and write them to the output stream.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeChars">
+	              final def  <span class="symbol">writeChars</span>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeChars">
+	              final def  <span class="symbol">writeChars</span>(<span class="symbol">text</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeFmt">
+	              final def  <span class="symbol">writeFmt</span>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Write values to the output stream using a format string.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -421,15 +466,6 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="writeFmt">
-	              final def  <span class="symbol">writeFmt</span>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Write values to the output stream using a format string.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="writeLnFmt">
 	              final def  <span class="symbol">writeLnFmt</span>(<span class="symbol">format</span>:<span class="type-name">String</span>, <span class="symbol">values</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.io.TextWriter</span></span>
               </a>
@@ -437,45 +473,6 @@
             <div class="member-description">
             <p>Write values to the output stream using a format string, followed by a line break.</p>
             </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="seek">
-	              final def  <span class="symbol">seek</span>(<span class="symbol">from</span>:<span class="type-name">tart.io.IOStream.SeekFrom</span>, <span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int64</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Change the current read/write position of the stream.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="flush">
-	              final def  <span class="symbol">flush</span>(<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Flush any pending writes.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="close">
-	              final def  <span class="symbol">close</span>(<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Close the stream.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="acquire">
-	              final def  <span class="symbol">acquire</span>(<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="release">
-	              final def  <span class="symbol">release</span>(<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
           </section>
         </section>
   </section>

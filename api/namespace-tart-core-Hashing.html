@@ -33,79 +33,78 @@
 	    <section class="defn-section-description">
           <p>Various useful hash functions.</p>
 	    </section>
+    <header class="member-table-header">Member Summary</header>
         <section class="member-list-section">
-          <header class="member-table-header">Instance Methods Summary</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">hash</span>(<span class="symbol">value</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span></div>
-	                <div class="member-summary">Hash a single 32-bit integer.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#HashFn-hash">hash</a>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">hash</span>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#Hasher-construct">construct</a>(<span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">hash</span>(<span class="symbol">value</span>:<span class="type-name">uint64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
-	                <div class="member-summary">Hash a single 64-bit integer.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#hash">hash</a>(<span class="symbol">value</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span></div>
+	                <div class="member-summary">Hash a single 32-bit integer.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">hash</span>(<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
-	                <div class="member-summary">Hash a pointer.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#hash">hash</a>(<span class="symbol">value</span>:<span class="type-name">uint64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	                <div class="member-summary">Hash a single 64-bit integer.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">hash</span>(<span class="symbol">buffer</span>:<span class="type-name">Memory.Buffer</span>[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#hash">hash</a>(<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	                <div class="member-summary">Hash a pointer.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#hash">hash</a>(<span class="symbol">buffer</span>:<span class="type-name">Memory.Buffer</span>[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
 	                <div class="member-summary">Hash a buffer of bytes.</div>
 	              </td>
-	            </tr><tr class="member-table-row row-even">
+	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">murmurHash</span>(<span class="symbol">key</span>:<span class="type-name">uint32</span>, <span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#murmurHash">murmurHash</a>(<span class="symbol">key</span>:<span class="type-name">uint32</span>, <span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span></div>
 	                <div class="member-summary">Hash a single 32-bit integer.</div>
 	              </td>
-	            </tr><tr class="member-table-row ">
+	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">murmurHash</span>(<span class="symbol">key</span>:<span class="type-name">uint64</span>, <span class="symbol">seed</span>:<span class="type-name">uint64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#murmurHash">murmurHash</a>(<span class="symbol">key</span>:<span class="type-name">uint64</span>, <span class="symbol">seed</span>:<span class="type-name">uint64</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
 	                <div class="member-summary">Hash a single 64-bit integer.</div>
 	              </td>
-	            </tr><tr class="member-table-row row-even">
+	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">murmurHash</span>(<span class="symbol">key</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#murmurHash">murmurHash</a>(<span class="symbol">key</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
 	                <div class="member-summary">Hash a pointer.</div>
 	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">murmurHash</span>(<span class="symbol">buffer</span>:<span class="type-name">Memory.Buffer</span>[<span class="type-name">uint8</span>], <span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
-	                <div class="member-summary">Hash a byte buffer segment.</div>
-	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">murmurHash</span>(<span class="symbol">first</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">last</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
-	                <div class="member-summary">Hash a region of memory.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#murmurHash">murmurHash</a>(<span class="symbol">buffer</span>:<span class="type-name">Memory.Buffer</span>[<span class="type-name">uint8</span>], <span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	                <div class="member-summary">Hash a byte buffer segment.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#murmurHash">murmurHash</a>(<span class="symbol">first</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">last</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	                <div class="member-summary">Hash a region of memory.</div>
 	              </td>
 	            </tr>
 	          </table>
@@ -116,18 +115,24 @@
           <section class="member-section">
             <header class="member-header">
               <a name="hash">
+	              def  <span class="symbol">hash</span>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              def  <span class="symbol">construct</span>(<span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="hash">
 	              def  <span class="symbol">hash</span>(<span class="symbol">value</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Hash a single 32-bit integer.</p>
             </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="hash">
-	              def  <span class="symbol">hash</span>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span>
-              </a>
-            </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="hash">
@@ -200,12 +205,6 @@
             <div class="member-description">
             <p>Hash a region of memory.</p>
             </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="construct">
-	              def  <span class="symbol">construct</span>(<span class="symbol">seed</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
           </section>
         </section>
   </section>

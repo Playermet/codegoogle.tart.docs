@@ -33,49 +33,48 @@
 	    <section class="defn-section-description">
           <p>Manages the global list of memory regions.</p>
 	    </section>
+    <header class="member-table-header">Member Summary</header>
         <section class="member-list-section">
-          <header class="member-table-header">Instance Methods Summary</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">init</span>(<span class="symbol">pageAllocator</span>:<span class="type-name">tart.gc.heap.PageAllocator</span><span style="white-space: nowrap">)</span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-gc-heap-SpaceMgr.html#assignToSpace">assignToSpace</a>(<span class="symbol">space</span>:<span class="type-name">tart.gc.heap.Space</span>, <span class="symbol">addrs</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Mark the specified address range as being managed by <span class="symbol">space</span>.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-gc-heap-SpaceMgr.html#cleanup">cleanup</a>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-gc-heap-SpaceMgr.html#init">init</a>(<span class="symbol">pageAllocator</span>:<span class="type-name">tart.gc.heap.PageAllocator</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Initialize the global space manager.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">assignToSpace</span>(<span class="symbol">space</span>:<span class="type-name">tart.gc.heap.Space</span>, <span class="symbol">addrs</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary">Mark the specified address range as being managed by <span class="symbol">space</span>.</div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-gc-heap-SpaceMgr.html#pageIndex">pageIndex</a>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">spaceFor</span>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.gc.heap.Space</span></span></div>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-gc-heap-SpaceMgr.html#pageIndexMinusOne">pageIndexMinusOne</a>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-gc-heap-SpaceMgr.html#spaceFor">spaceFor</a>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.gc.heap.Space</span></span></div>
 	                <div class="member-summary">Given an address, return the region containing that address.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">pageIndex</span>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">pageIndexMinusOne</span>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data">
-	                <div class="member-signature"><span class="symbol">cleanup</span>(<span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
 	              </td>
 	            </tr>
 	          </table>
@@ -84,15 +83,6 @@
         <section class="member-details-section">
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
-            <header class="member-header">
-              <a name="init">
-	              def  <span class="symbol">init</span>(<span class="symbol">pageAllocator</span>:<span class="type-name">tart.gc.heap.PageAllocator</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Initialize the global space manager.</p>
-            </div>
-          </section><section class="member-section">
             <header class="member-header">
               <a name="assignToSpace">
 	              def  <span class="symbol">assignToSpace</span>(<span class="symbol">space</span>:<span class="type-name">tart.gc.heap.Space</span>, <span class="symbol">addrs</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span>
@@ -103,12 +93,18 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="spaceFor">
-	              def  <span class="symbol">spaceFor</span>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.gc.heap.Space</span></span>
+              <a name="cleanup">
+	              def  <span class="symbol">cleanup</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="init">
+	              def  <span class="symbol">init</span>(<span class="symbol">pageAllocator</span>:<span class="type-name">tart.gc.heap.PageAllocator</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
-            <p>Given an address, return the region containing that address.</p>
+            <p>Initialize the global space manager.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -124,10 +120,13 @@
             </header>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="cleanup">
-	              def  <span class="symbol">cleanup</span>(<span style="white-space: nowrap">)</span>
+              <a name="spaceFor">
+	              def  <span class="symbol">spaceFor</span>(<span class="symbol">address</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.gc.heap.Space</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Given an address, return the region containing that address.</p>
+            </div>
           </section>
         </section>
   </section>

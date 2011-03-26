@@ -129,6 +129,7 @@ p {
 
 .member-table-col-header {
   padding: 4px 10px;
+  text-align: left;
   border-bottom: 1px double black;
   background-color: #f4f6e5;
 }
@@ -139,16 +140,10 @@ p {
   white-space: nowrap;
   vertical-align: top;
   padding: 5px 3px 5px 10px;
-  border-right: 1px solid #d9dfa2;
   border-bottom: 1px solid #919946;
-  -background-color: #e0e3ad;
   text-align: right;
   color: #32311d;
   font-weight: normal;
-}
-
-.row-even .member-declarator {
-  -background-color: #e8e9bd;
 }
 
 .member-table-data {
@@ -163,7 +158,9 @@ p {
 }
 
 .member-summary {
-  margin-left: 4em;
+  color: #6d584a;
+  font-size: 95%;
+  margin-left: 1em;
   margin-top: 8px;
 }
 
