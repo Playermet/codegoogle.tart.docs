@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>class Package</title>
+  <title>tart.reflect.Package</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,10 @@
       <span class="defn-declarator">class</span>
       tart.reflect.<span class="defn-name">Package</span>
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+      </section>
 	    <section class="defn-section-description">
           <p>Description of a package.</p>
 	    </section>
@@ -47,32 +43,26 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#modules">modules</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.reflect.Module</span>[]</td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Array of all of the modules contained within this package.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">name</span>:<span class="type-name">String</span></div>
+	                <div class="member-summary">Fully-qualified name of the package.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#name">name</a>:</td>
-                    <td class="sig2"><span class="type-name">String</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Fully-qualified name of the package.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">modules</span>:<span class="type-name">tart.reflect.Module</span>[]</div>
+	                <div class="member-summary">Array of all of the modules contained within this package.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#subpackages">subpackages</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.reflect.Package</span>[]</td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Array of any subpackages contained in this package.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">subpackages</span>:<span class="type-name">tart.reflect.Package</span>[]</div>
+	                <div class="member-summary">Array of any subpackages contained in this package.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -83,24 +73,20 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static def <a class="member-table-link symbol" href="#of">of</a>(</td>
-                    <td class="sig2"><span class="symbol">type</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Package</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Returns a reference to package that contains a specific type.</td>
+                <td class="member-table-row-header member-declarator">static final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">thisPackage</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Package</span></span></div>
+	                <div class="member-summary">Returns a reference to the caller's package.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static def <a class="member-table-link symbol" href="#thisPackage">thisPackage</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Package</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Returns a reference to the caller's package.</td>
+                <td class="member-table-row-header member-declarator">static final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">of</span>(<span class="symbol">type</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Package</span></span></div>
+	                <div class="member-summary">Returns a reference to package that contains a specific type.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -109,17 +95,8 @@
           <header class="member-details-section-header">Property Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="modules">
-	              property <span class="symbol">modules</span>:<span class="type-name">tart.reflect.Module</span>[]
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Array of all of the modules contained within this package.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="name">
-	              property <span class="symbol">name</span>:<span class="type-name">String</span>
+	              property  <span class="symbol">name</span>:<span class="type-name">String</span>
               </a>
             </header>
             <div class="member-description">
@@ -127,8 +104,17 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="modules">
+	              property  <span class="symbol">modules</span>:<span class="type-name">tart.reflect.Module</span>[]
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Array of all of the modules contained within this package.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="subpackages">
-	              property <span class="symbol">subpackages</span>:<span class="type-name">tart.reflect.Package</span>[]
+	              property  <span class="symbol">subpackages</span>:<span class="type-name">tart.reflect.Package</span>[]
               </a>
             </header>
             <div class="member-description">
@@ -140,21 +126,21 @@
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="of">
-	              static def <span class="symbol">of</span>(<span class="symbol">type</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Package</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Returns a reference to package that contains a specific type.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="thisPackage">
-	              static def <span class="symbol">thisPackage</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Package</span></span>
+	              static final def  <span class="symbol">thisPackage</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Package</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Returns a reference to the caller's package.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="of">
+	              static final def  <span class="symbol">of</span>(<span class="symbol">type</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Package</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Returns a reference to package that contains a specific type.</p>
             </div>
           </section>
         </section>

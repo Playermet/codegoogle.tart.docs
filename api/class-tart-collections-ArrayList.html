@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>class ArrayList</title>
+  <title>tart.collections.ArrayList</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,14 @@
       <span class="defn-declarator">class</span>
       tart.collections.<span class="defn-name">ArrayList</span>[%<span class="type-variable-name">ElementType</span>]
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+      </section>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Implements:</header>
+        <div class="base-class"><a href="interface-tart-collections-List.html" class="type-name-link">tart.collections.List</a>[<span class="type-name">ElementType</span>]</div>
+      </section>
 	    <section class="defn-section-description">
           <p>Array-backed list type.</p>
 	    </section>
@@ -47,32 +47,26 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#capacity">capacity</a>:</td>
-                    <td class="sig2"><span class="type-name">int32</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">The amount of space currently reserved.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">size</span>:<span class="type-name">int32</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isEmpty">isEmpty</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isEmpty</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#size">size</a>:</td>
-                    <td class="sig2"><span class="type-name">int32</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">capacity</span>:<span class="type-name">int32</span></div>
+	                <div class="member-summary">The amount of space currently reserved.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -83,72 +77,56 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#add">add</a>(</td>
-                    <td class="sig2"><span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">data</span>:<span class="type-name">ElementType</span>..., <span class="symbol">initialCapacity</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Construct a new ArrayList from a variable number of input arguments.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#clear">clear</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">data</span>:<span class="type-name">ElementType</span>[], <span class="symbol">initialCapacity</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Construct a new ArrayList from an array.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
-                    <td class="sig2"><span class="symbol">data</span>:<span class="type-name">ElementType</span>..., <span class="symbol">initialCapacity</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Construct a new ArrayList from a variable number of input arguments.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">add</span>(<span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
-                    <td class="sig2"><span class="symbol">data</span>:<span class="type-name">ElementType</span>[], <span class="symbol">initialCapacity</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Construct a new ArrayList from an array.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">insert</span>(<span class="symbol">index</span>:<span class="type-name">int32</span>, <span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#contains">contains</a>(</td>
-                    <td class="sig2"><span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">remove</span>(<span class="symbol">index</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#insert">insert</a>(</td>
-                    <td class="sig2"><span class="symbol">index</span>:<span class="type-name">int32</span>, <span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">clear</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#iterate">iterate</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">contains</span>(<span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#remove">remove</a>(</td>
-                    <td class="sig2"><span class="symbol">index</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">iterate</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span>[<span class="type-name">ElementType</span>]</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -157,109 +135,81 @@
           <header class="member-details-section-header">Property Details</header>
           <section class="member-section">
             <header class="member-header">
+              <a name="size">
+	              property  <span class="symbol">size</span>:<span class="type-name">int32</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="isEmpty">
+	              property  <span class="symbol">isEmpty</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="capacity">
-	              property <span class="symbol">capacity</span>:<span class="type-name">int32</span>
+	              property  <span class="symbol">capacity</span>:<span class="type-name">int32</span>
               </a>
             </header>
             <div class="member-description">
             <p>The amount of space currently reserved.</p>
             </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="isEmpty">
-	              property <span class="symbol">isEmpty</span>:<span class="type-name">bool</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="size">
-	              property <span class="symbol">size</span>:<span class="type-name">int32</span>
-              </a>
-            </header>
           </section>
         </section>
         <section class="member-details-section">
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="add">
-	              def <span class="symbol">add</span>(<span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="clear">
-	              def <span class="symbol">clear</span>(<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="construct">
-	              def <span class="symbol">construct</span>(<span class="symbol">data</span>:<span class="type-name">ElementType</span>..., <span class="symbol">initialCapacity</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
+	              final def  <span class="symbol">construct</span>(<span class="symbol">data</span>:<span class="type-name">ElementType</span>..., <span class="symbol">initialCapacity</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
             <p>Construct a new ArrayList from a variable number of input arguments.</p>
             </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">data</span>
-                      - The list of values to store in the ArrayList.
-                    </div><div class="parameter-name">
-                      <span class="symbol">initialCapacity</span>
-                      - This optional parameter, if present, indicates how much initial space to reserve.
-                    </div>
-                  </td>
-                </tr>
-              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="construct">
-	              def <span class="symbol">construct</span>(<span class="symbol">data</span>:<span class="type-name">ElementType</span>[], <span class="symbol">initialCapacity</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
+	              final def  <span class="symbol">construct</span>(<span class="symbol">data</span>:<span class="type-name">ElementType</span>[], <span class="symbol">initialCapacity</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
             <p>Construct a new ArrayList from an array.</p>
             </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">data</span>
-                      - The array of values to store in the ArrayList.
-                    </div><div class="parameter-name">
-                      <span class="symbol">initialCapacity</span>
-                      - This optional parameter, if present, indicates how much initial space to reserve.
-                    </div>
-                  </td>
-                </tr>
-              </table>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="contains">
-	              def <span class="symbol">contains</span>(<span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              <a name="add">
+	              final def  <span class="symbol">add</span>(<span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="insert">
-	              def <span class="symbol">insert</span>(<span class="symbol">index</span>:<span class="type-name">int32</span>, <span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="iterate">
-	              def <span class="symbol">iterate</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span></span>
+	              final def  <span class="symbol">insert</span>(<span class="symbol">index</span>:<span class="type-name">int32</span>, <span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="remove">
-	              def <span class="symbol">remove</span>(<span class="symbol">index</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
+	              final def  <span class="symbol">remove</span>(<span class="symbol">index</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="clear">
+	              final def  <span class="symbol">clear</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="contains">
+	              final def  <span class="symbol">contains</span>(<span class="symbol">e</span>:<span class="type-name">ElementType</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="iterate">
+	              final def  <span class="symbol">iterate</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span>[<span class="type-name">ElementType</span>]</span>
               </a>
             </header>
           </section>

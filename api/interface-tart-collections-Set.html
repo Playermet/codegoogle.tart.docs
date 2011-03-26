@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>interface Set</title>
+  <title>tart.collections.Set</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,10 @@
       <span class="defn-declarator">interface</span>
       tart.collections.<span class="defn-name">Set</span>[%<span class="type-variable-name">ItemType</span>]
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="interface-tart-collections-Collection.html" class="type-name-link">tart.collections.Collection</a>[<span class="type-name">ItemType</span>]</div>
+      </section>
 	    <section class="defn-section-description">
           <p>Set interface</p>
 	    </section>
@@ -47,48 +43,38 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#contains">contains</a>(</td>
-                    <td class="sig2"><span class="symbol">item</span>:<span class="type-name">ItemType</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return true if the specified item is in the collection.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">contains</span>(<span class="symbol">item</span>:<span class="type-name">ItemType</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">Return true if the specified item is in the collection.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#containsAll">containsAll</a>(</td>
-                    <td class="sig2"><span class="symbol">items</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return true if this set contains all of the specified items.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">containsAll</span>(<span class="symbol">items</span>:<span class="type-name">Iterable</span>[<span class="type-name">ItemType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">Return true if this set contains all of the specified items.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#containsAll">containsAll</a>(</td>
-                    <td class="sig2"><span class="symbol">items</span>:<span class="type-name">Iterator</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">containsAll</span>(<span class="symbol">items</span>:<span class="type-name">Iterator</span>[<span class="type-name">ItemType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#containsAny">containsAny</a>(</td>
-                    <td class="sig2"><span class="symbol">items</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return true if this set contains any of the specified items.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">containsAny</span>(<span class="symbol">items</span>:<span class="type-name">Iterable</span>[<span class="type-name">ItemType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">Return true if this set contains any of the specified items.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#containsAny">containsAny</a>(</td>
-                    <td class="sig2"><span class="symbol">items</span>:<span class="type-name">Iterator</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">containsAny</span>(<span class="symbol">items</span>:<span class="type-name">Iterator</span>[<span class="type-name">ItemType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -98,7 +84,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="contains">
-	              def <span class="symbol">contains</span>(<span class="symbol">item</span>:<span class="type-name">ItemType</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              def  <span class="symbol">contains</span>(<span class="symbol">item</span>:<span class="type-name">ItemType</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -107,7 +93,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="containsAll">
-	              def <span class="symbol">containsAll</span>(<span class="symbol">items</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              def  <span class="symbol">containsAll</span>(<span class="symbol">items</span>:<span class="type-name">Iterable</span>[<span class="type-name">ItemType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -116,13 +102,13 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="containsAll">
-	              def <span class="symbol">containsAll</span>(<span class="symbol">items</span>:<span class="type-name">Iterator</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              def  <span class="symbol">containsAll</span>(<span class="symbol">items</span>:<span class="type-name">Iterator</span>[<span class="type-name">ItemType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="containsAny">
-	              def <span class="symbol">containsAny</span>(<span class="symbol">items</span>:<span class="type-name">Iterable</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              def  <span class="symbol">containsAny</span>(<span class="symbol">items</span>:<span class="type-name">Iterable</span>[<span class="type-name">ItemType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -131,7 +117,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="containsAny">
-	              def <span class="symbol">containsAny</span>(<span class="symbol">items</span>:<span class="type-name">Iterator</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              def  <span class="symbol">containsAny</span>(<span class="symbol">items</span>:<span class="type-name">Iterator</span>[<span class="type-name">ItemType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
           </section>

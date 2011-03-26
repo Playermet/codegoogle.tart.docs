@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>namespace Character</title>
+  <title>tart.text.Character</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,33 +30,26 @@
       <span class="defn-declarator">namespace</span>
       tart.text.<span class="defn-name">Character</span>
     </header>
-	    <section class="defn-section-description">
-            <p>True if the character <span class="symbol">ch</span> is a defined Unicode character.</p>
-	    </section>
         <section class="member-list-section">
           <header class="member-table-header">Enumerations</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static enum <a class="member-table-link symbol" href="#Category">Category</a></td>
-                    <td class="sig2"></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">static enum  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">Category</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static enum <a class="member-table-link symbol" href="#CategoryGroups">CategoryGroups</a></td>
-                    <td class="sig2"></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">static enum  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">CategoryGroups</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -75,120 +60,92 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#infixBitAnd">infixBitAnd</a>(</td>
-                    <td class="sig2"><span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isDefined</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">True if the character <span class="symbol">ch</span> is a defined Unicode character.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#infixBitOr">infixBitOr</a>(</td>
-                    <td class="sig2"><span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isControl</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">True if the character <span class="symbol">ch</span> is an ISO control character.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#infixBitXor">infixBitXor</a>(</td>
-                    <td class="sig2"><span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isLetter</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">True if the character <span class="symbol">ch</span> is a letter.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#isCased">isCased</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if the character <span class="symbol">ch</span> is cased.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isLetterOrDigit</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">True if the character <span class="symbol">ch</span> is a letter.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#isControl">isControl</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if the character <span class="symbol">ch</span> is an ISO control character.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isDigit</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">True if the character <span class="symbol">ch</span> is a decimal digit.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#isDefined">isDefined</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if the character <span class="symbol">ch</span> is a defined Unicode character.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isUpperCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">True if the character <span class="symbol">ch</span> is an upper case character.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#isDigit">isDigit</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if the character <span class="symbol">ch</span> is a decimal digit.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isLowerCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">True if the character <span class="symbol">ch</span> is a lower case character.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#isLetter">isLetter</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if the character <span class="symbol">ch</span> is a letter.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isCased</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-summary">True if the character <span class="symbol">ch</span> is cased.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#isLetterOrDigit">isLetterOrDigit</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if the character <span class="symbol">ch</span> is a letter.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">toUpperCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></div>
+	                <div class="member-summary">Conver the character <span class="symbol">ch</span> to upper case.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#isLowerCase">isLowerCase</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if the character <span class="symbol">ch</span> is a lower case character.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">toLowerCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></div>
+	                <div class="member-summary">Conver the character <span class="symbol">ch</span> to lower case.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#isUpperCase">isUpperCase</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if the character <span class="symbol">ch</span> is an upper case character.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">toTitleCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></div>
+	                <div class="member-summary">Conver the character <span class="symbol">ch</span> to title case.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#toLowerCase">toLowerCase</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Conver the character <span class="symbol">ch</span> to lower case.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#toTitleCase">toTitleCase</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Conver the character <span class="symbol">ch</span> to title case.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#toUpperCase">toUpperCase</a>(</td>
-                    <td class="sig2"><span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Conver the character <span class="symbol">ch</span> to upper case.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -198,7 +155,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="Category">
-                static enum <span class="symbol">Category</span>
+                static enum  <span class="symbol">Category</span>
               </a>
             </header>
             <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
@@ -207,101 +164,101 @@
                 <th class="enum-constant-value-header">Description</th>
               </tr>
               <tr>
-                <th class="enum-constant-name">CLOSE_PUNCTUATION</th>
+                <th class="enum-constant-name">UNASSIGNED</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">CONNECTOR_PUNCTUATION</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">CONTROL</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">CURRENCY_SYMBOL</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">DASH_PUNCTUATION</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">DECIMAL_NUMBER</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">ENCLOSING_MARK</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">FINAL_PUNCTUATION</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">FORMAT</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">INITIAL_PUNCTUATION</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">LETTER_NUMBER</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">LINE_SEPARATOR</th>
+                <th class="enum-constant-name">UPPERCASE_LETTER</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">LOWERCASE_LETTER</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">MATH_SYMBOL</th>
+                <th class="enum-constant-name">TITLECASE_LETTER</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">MODIFIER_LETTER</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">MODIFIER_SYMBOL</th>
+                <th class="enum-constant-name">OTHER_LETTER</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">NONSPACING_MARK</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">OPEN_PUNCTUATION</th>
+                <th class="enum-constant-name">SPACING_MARK</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">OTHER_LETTER</th>
+                <th class="enum-constant-name">ENCLOSING_MARK</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">DECIMAL_NUMBER</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">LETTER_NUMBER</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">OTHER_NUMBER</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
+                <th class="enum-constant-name">CONNECTOR_PUNCTUATION</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">DASH_PUNCTUATION</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">OPEN_PUNCTUATION</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">CLOSE_PUNCTUATION</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">INITIAL_PUNCTUATION</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">FINAL_PUNCTUATION</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
                 <th class="enum-constant-name">OTHER_PUNCTUATION</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">MATH_SYMBOL</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">CURRENCY_SYMBOL</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">MODIFIER_SYMBOL</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">OTHER_SYMBOL</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">PARAGRAPH_SEPARATOR</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">PRIVATE_USE</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
                 <th class="enum-constant-name">SPACE_SEPARATOR</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">SPACING_MARK</th>
+                <th class="enum-constant-name">LINE_SEPARATOR</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PARAGRAPH_SEPARATOR</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">CONTROL</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">FORMAT</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">SURROGATE</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">TITLECASE_LETTER</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">UNASSIGNED</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">UPPERCASE_LETTER</th>
+                <th class="enum-constant-name">PRIVATE_USE</th>
                 <td class="enum-constant-value"></td>
               </tr>
             </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="CategoryGroups">
-                static enum <span class="symbol">CategoryGroups</span>
+                static enum  <span class="symbol">CategoryGroups</span>
               </a>
             </header>
             <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
@@ -323,44 +280,8 @@
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="infixBitAnd">
-	              def <span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="infixBitOr">
-	              def <span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="infixBitXor">
-	              def <span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="isCased">
-	              def <span class="symbol">isCased</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>True if the character <span class="symbol">ch</span> is cased.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="isControl">
-	              def <span class="symbol">isControl</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>True if the character <span class="symbol">ch</span> is an ISO control character.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="isDefined">
-	              def <span class="symbol">isDefined</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              def  <span class="symbol">isDefined</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -368,17 +289,17 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="isDigit">
-	              def <span class="symbol">isDigit</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              <a name="isControl">
+	              def  <span class="symbol">isControl</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
-            <p>True if the character <span class="symbol">ch</span> is a decimal digit.</p>
+            <p>True if the character <span class="symbol">ch</span> is an ISO control character.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="isLetter">
-	              def <span class="symbol">isLetter</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              def  <span class="symbol">isLetter</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -387,7 +308,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="isLetterOrDigit">
-	              def <span class="symbol">isLetterOrDigit</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              def  <span class="symbol">isLetterOrDigit</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -395,17 +316,17 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="isLowerCase">
-	              def <span class="symbol">isLowerCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              <a name="isDigit">
+	              def  <span class="symbol">isDigit</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
-            <p>True if the character <span class="symbol">ch</span> is a lower case character.</p>
+            <p>True if the character <span class="symbol">ch</span> is a decimal digit.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="isUpperCase">
-	              def <span class="symbol">isUpperCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              def  <span class="symbol">isUpperCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -413,8 +334,35 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="isLowerCase">
+	              def  <span class="symbol">isLowerCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if the character <span class="symbol">ch</span> is a lower case character.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="isCased">
+	              def  <span class="symbol">isCased</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if the character <span class="symbol">ch</span> is cased.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="toUpperCase">
+	              def  <span class="symbol">toUpperCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Conver the character <span class="symbol">ch</span> to upper case.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="toLowerCase">
-	              def <span class="symbol">toLowerCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
+	              def  <span class="symbol">toLowerCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -423,7 +371,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="toTitleCase">
-	              def <span class="symbol">toTitleCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
+	              def  <span class="symbol">toTitleCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -431,13 +379,22 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="toUpperCase">
-	              def <span class="symbol">toUpperCase</span>(<span class="symbol">ch</span>:<span class="type-name">char</span><span style="white-space: nowrap">) -&gt; <span class="type-name">char</span></span>
+              <a name="infixBitAnd">
+	              final def  <span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span>
               </a>
             </header>
-            <div class="member-description">
-            <p>Conver the character <span class="symbol">ch</span> to upper case.</p>
-            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="infixBitOr">
+	              final def  <span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="infixBitXor">
+	              final def  <span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">tart.text.Character.CategoryGroups</span>, <span class="symbol">e2</span>:<span class="type-name">tart.text.Character.CategoryGroups</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.text.Character.CategoryGroups</span></span>
+              </a>
+            </header>
           </section>
         </section>
   </section>

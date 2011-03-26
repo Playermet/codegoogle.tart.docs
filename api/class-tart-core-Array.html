@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>class Array</title>
+  <title>tart.core.Array</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,14 @@
       <span class="defn-declarator">class</span>
       tart.core.<span class="defn-name">Array</span>[%<span class="type-variable-name">ElementType</span>]
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+      </section>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Implements:</header>
+        <div class="base-class"><a href="interface-tart-collections-Collection.html" class="type-name-link">tart.collections.Collection</a>[<span class="type-name">ElementType</span>]</div>
+      </section>
 	    <section class="defn-section-description">
           <p>Built-in array class</p>
 	    </section>
@@ -47,32 +47,26 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#data">data</a>:</td>
-                    <td class="sig2">Address[<span class="type-name">ElementType</span>]</td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isEmpty</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if the array is zero size.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isEmpty">isEmpty</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if the array is zero size.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">size</span>:<span class="type-name">int32</span></div>
+	                <div class="member-summary">The length of the array.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#size">size</a>:</td>
-                    <td class="sig2"><span class="type-name">int32</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">The length of the array.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">data</span>:Address[<span class="type-name">ElementType</span>]</div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -83,40 +77,32 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static def <a class="member-table-link symbol" href="#copyElements">copyElements</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:<span class="type-name">Array</span>, <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">Array</span>, <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Copy <span class="symbol">count</span> elements, starting from offset <span class="symbol">srcOffset</span> in array <span class="symbol">src</span>, to offset <span class="symbol">dstOffset</span> in array <span class="symbol">dst</span>.</td>
+                <td class="member-table-row-header member-declarator">static final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">create</span>(<span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span></div>
+	                <div class="member-summary">Construct an array of a given length</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static def <a class="member-table-link symbol" href="#copyOf">copyOf</a>(</td>
-                    <td class="sig2"><span class="symbol">collection</span>:<span class="type-name">tart.collections.Collection</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">static final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">of</span>(<span class="symbol">elements</span>:<span class="type-name">ElementType</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span></div>
+	                <div class="member-summary">Static factory function which takes advantage of the built-in behavior of variadic parameters to build an Array.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Construct an array of a given length</td>
+                <td class="member-table-row-header member-declarator">static final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">copyOf</span>(<span class="symbol">collection</span>:<span class="type-name">tart.collections.Collection</span>[<span class="type-name">ElementType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static def <a class="member-table-link symbol" href="#of">of</a>(</td>
-                    <td class="sig2"><span class="symbol">elements</span>:<span class="type-name">ElementType</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Static factory function which takes advantage of the built-in behavior of variadic parameters to build an Array.</td>
+                <td class="member-table-row-header member-declarator">static final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">copyElements</span>(<span class="symbol">dst</span>:<span class="type-name">Array</span>, <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">Array</span>, <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Copy <span class="symbol">count</span> elements, starting from offset <span class="symbol">srcOffset</span> in array <span class="symbol">src</span>, to offset <span class="symbol">dstOffset</span> in array <span class="symbol">dst</span>.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -127,40 +113,32 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#copy">copy</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Make a copy of this array.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">elementAddress</span>(<span class="symbol">offset</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">ElementType</span>]</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#elementAddress">elementAddress</a>(</td>
-                    <td class="sig2"><span class="symbol">offset</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">ElementType</span>]</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">elementAddress</span>(<span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">ElementType</span>]</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#elementAddress">elementAddress</a>(</td>
-                    <td class="sig2"><span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">ElementType</span>]</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">copy</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span></div>
+	                <div class="member-summary">Make a copy of this array.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#iterate">iterate</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Iterate over the elements of the array.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">iterate</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span>[<span class="type-name">ElementType</span>]</span></div>
+	                <div class="member-summary">Iterate over the elements of the array.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -169,14 +147,8 @@
           <header class="member-details-section-header">Property Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="data">
-	              property <span class="symbol">data</span>:Address[<span class="type-name">ElementType</span>]
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="isEmpty">
-	              property <span class="symbol">isEmpty</span>:<span class="type-name">bool</span>
+	              property  <span class="symbol">isEmpty</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -185,44 +157,26 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="size">
-	              property <span class="symbol">size</span>:<span class="type-name">int32</span>
+	              property  <span class="symbol">size</span>:<span class="type-name">int32</span>
               </a>
             </header>
             <div class="member-description">
             <p>The length of the array.</p>
             </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="data">
+	              property  <span class="symbol">data</span>:Address[<span class="type-name">ElementType</span>]
+              </a>
+            </header>
           </section>
         </section>
         <section class="member-details-section">
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="copy">
-	              def <span class="symbol">copy</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Make a copy of this array.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="copyElements">
-	              static def <span class="symbol">copyElements</span>(<span class="symbol">dst</span>:<span class="type-name">Array</span>, <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">Array</span>, <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Copy <span class="symbol">count</span> elements, starting from offset <span class="symbol">srcOffset</span> in array <span class="symbol">src</span>, to offset <span class="symbol">dstOffset</span> in array <span class="symbol">dst</span>.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="copyOf">
-	              static def <span class="symbol">copyOf</span>(<span class="symbol">collection</span>:<span class="type-name">tart.collections.Collection</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="create">
-	              static def <span class="symbol">create</span>(<span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span>
+	              static final def  <span class="symbol">create</span>(<span class="symbol">size</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -230,20 +184,44 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="elementAddress">
-	              def <span class="symbol">elementAddress</span>(<span class="symbol">offset</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">ElementType</span>]</span>
+              <a name="of">
+	              static final def  <span class="symbol">of</span>(<span class="symbol">elements</span>:<span class="type-name">ElementType</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Static factory function which takes advantage of the built-in behavior of variadic parameters to build an Array.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="copyOf">
+	              static final def  <span class="symbol">copyOf</span>(<span class="symbol">collection</span>:<span class="type-name">tart.collections.Collection</span>[<span class="type-name">ElementType</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="elementAddress">
-	              def <span class="symbol">elementAddress</span>(<span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">ElementType</span>]</span>
+	              final def  <span class="symbol">elementAddress</span>(<span class="symbol">offset</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">ElementType</span>]</span>
               </a>
             </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="elementAddress">
+	              final def  <span class="symbol">elementAddress</span>(<span class="symbol">offset</span>:<span class="type-name">int64</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">ElementType</span>]</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="copy">
+	              final def  <span class="symbol">copy</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Make a copy of this array.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="iterate">
-	              def <span class="symbol">iterate</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span></span>
+	              final def  <span class="symbol">iterate</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Iterator</span>[<span class="type-name">ElementType</span>]</span>
               </a>
             </header>
             <div class="member-description">
@@ -251,12 +229,12 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="of">
-	              static def <span class="symbol">of</span>(<span class="symbol">elements</span>:<span class="type-name">ElementType</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">Array</span></span>
+              <a name="copyElements">
+	              static final def  <span class="symbol">copyElements</span>(<span class="symbol">dst</span>:<span class="type-name">Array</span>, <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">Array</span>, <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
-            <p>Static factory function which takes advantage of the built-in behavior of variadic parameters to build an Array.</p>
+            <p>Copy <span class="symbol">count</span> elements, starting from offset <span class="symbol">srcOffset</span> in array <span class="symbol">src</span>, to offset <span class="symbol">dstOffset</span> in array <span class="symbol">dst</span>.</p>
             </div>
           </section>
         </section>

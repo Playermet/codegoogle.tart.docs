@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>class UTF8</title>
+  <title>tart.text.encodings.UTF8</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,25 +30,28 @@
       <span class="defn-declarator">class</span>
       tart.text.encodings.<span class="defn-name">UTF8</span>
     </header>
-	    <section class="defn-section-description">
-            <p>Construct a new UTF8 codec.</p>
-	    </section>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+      </section>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Implements:</header>
+        <div class="base-class"><a href="interface-tart-text-encodings-Codec.html" class="type-name-link">tart.text.encodings.Codec</a></div>
+      </section>
         <section class="member-list-section">
           <header class="member-table-header">Properties</header>
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#name">name</a>:</td>
-                    <td class="sig2"><span class="type-name">String</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">name</span>:<span class="type-name">String</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -67,16 +62,14 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static def <a class="member-table-link symbol" href="#charLength">charLength</a>(</td>
-                    <td class="sig2"><span class="symbol">byteVal</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return the length in bytes of the encoding character starting with the byte <span class="symbol">byteVal</span>. Returns 0 if <span class="symbol">byteVal</span> is not a valid UFT-8 prefix byte.</td>
+                <td class="member-table-row-header member-declarator">static final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">charLength</span>(<span class="symbol">byteVal</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary">Return the length in bytes of the encoding character starting with the byte <span class="symbol">byteVal</span>. Returns 0 if <span class="symbol">byteVal</span> is not a valid UFT-8 prefix byte.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -87,80 +80,62 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
-                    <td class="sig2"><span class="symbol">errorAction</span>:<span class="type-name">tart.text.encodings.Codec.ErrorAction</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Construct a new UTF8 codec.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">errorAction</span>:<span class="type-name">tart.text.encodings.Codec.ErrorAction</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Construct a new UTF8 codec.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#decode">decode</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">dstIndex</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">encodedLength</span>(<span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#decodeOne">decodeOne</a>(</td>
-                    <td class="sig2"><span class="symbol">src</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; (<span class="type-name">char</span>, <span class="type-name">int32</span>)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">decodedLength</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary">Return the number of characters in the byte sequence.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#decodeRaw">decodeRaw</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:Address[<span class="type-name">char</span>], <span class="symbol">dstLength</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">decodedLengthRaw</span>(<span class="symbol">buffer</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary">Return the number of characters in the byte sequence.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#decodedLength">decodedLength</a>(</td>
-                    <td class="sig2"><span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return the number of characters in the byte sequence.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">encode</span>(<span class="symbol">dst</span>:<span class="type-name">uint8</span>[], <span class="symbol">dstIndex</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#decodedLengthRaw">decodedLengthRaw</a>(</td>
-                    <td class="sig2"><span class="symbol">buffer</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return the number of characters in the byte sequence.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">encodeRaw</span>(<span class="symbol">dst</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">dstLength</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:Address[<span class="type-name">char</span>], <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#encode">encode</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:<span class="type-name">uint8</span>[], <span class="symbol">dstIndex</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">decode</span>(<span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">dstIndex</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#encodeRaw">encodeRaw</a>(</td>
-                    <td class="sig2"><span class="symbol">dst</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">dstLength</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:Address[<span class="type-name">char</span>], <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">decodeRaw</span>(<span class="symbol">dst</span>:Address[<span class="type-name">char</span>], <span class="symbol">dstLength</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#encodedLength">encodedLength</a>(</td>
-                    <td class="sig2"><span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">decodeOne</span>(<span class="symbol">src</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; (<span class="type-name">char</span>, <span class="type-name">int32</span>)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -170,7 +145,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="name">
-	              property <span class="symbol">name</span>:<span class="type-name">String</span>
+	              property  <span class="symbol">name</span>:<span class="type-name">String</span>
               </a>
             </header>
           </section>
@@ -179,17 +154,8 @@
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="charLength">
-	              static def <span class="symbol">charLength</span>(<span class="symbol">byteVal</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Return the length in bytes of the encoding character starting with the byte <span class="symbol">byteVal</span>. Returns 0 if <span class="symbol">byteVal</span> is not a valid UFT-8 prefix byte.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="construct">
-	              def <span class="symbol">construct</span>(<span class="symbol">errorAction</span>:<span class="type-name">tart.text.encodings.Codec.ErrorAction</span><span style="white-space: nowrap">)</span>
+	              final def  <span class="symbol">construct</span>(<span class="symbol">errorAction</span>:<span class="type-name">tart.text.encodings.Codec.ErrorAction</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -197,26 +163,23 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="decode">
-	              def <span class="symbol">decode</span>(<span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">dstIndex</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+              <a name="charLength">
+	              static final def  <span class="symbol">charLength</span>(<span class="symbol">byteVal</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Return the length in bytes of the encoding character starting with the byte <span class="symbol">byteVal</span>. Returns 0 if <span class="symbol">byteVal</span> is not a valid UFT-8 prefix byte.</p>
+            </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="decodeOne">
-	              def <span class="symbol">decodeOne</span>(<span class="symbol">src</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; (<span class="type-name">char</span>, <span class="type-name">int32</span>)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="decodeRaw">
-	              def <span class="symbol">decodeRaw</span>(<span class="symbol">dst</span>:Address[<span class="type-name">char</span>], <span class="symbol">dstLength</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+              <a name="encodedLength">
+	              final def  <span class="symbol">encodedLength</span>(<span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="decodedLength">
-	              def <span class="symbol">decodedLength</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+	              final def  <span class="symbol">decodedLength</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -225,7 +188,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="decodedLengthRaw">
-	              def <span class="symbol">decodedLengthRaw</span>(<span class="symbol">buffer</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+	              final def  <span class="symbol">decodedLengthRaw</span>(<span class="symbol">buffer</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -234,19 +197,31 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="encode">
-	              def <span class="symbol">encode</span>(<span class="symbol">dst</span>:<span class="type-name">uint8</span>[], <span class="symbol">dstIndex</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+	              final def  <span class="symbol">encode</span>(<span class="symbol">dst</span>:<span class="type-name">uint8</span>[], <span class="symbol">dstIndex</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="encodeRaw">
-	              def <span class="symbol">encodeRaw</span>(<span class="symbol">dst</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">dstLength</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:Address[<span class="type-name">char</span>], <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+	              final def  <span class="symbol">encodeRaw</span>(<span class="symbol">dst</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">dstLength</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:Address[<span class="type-name">char</span>], <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="encodedLength">
-	              def <span class="symbol">encodedLength</span>(<span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+              <a name="decode">
+	              final def  <span class="symbol">decode</span>(<span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">dstIndex</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="decodeRaw">
+	              final def  <span class="symbol">decodeRaw</span>(<span class="symbol">dst</span>:Address[<span class="type-name">char</span>], <span class="symbol">dstLength</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="decodeOne">
+	              final def  <span class="symbol">decodeOne</span>(<span class="symbol">src</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">srcIndex</span>:<span class="type-name">int32</span>, <span class="symbol">srcLength</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; (<span class="type-name">char</span>, <span class="type-name">int32</span>)</span>
               </a>
             </header>
           </section>

@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>class Method</title>
+  <title>tart.reflect.Method</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,10 @@
       <span class="defn-declarator">class</span>
       tart.reflect.<span class="defn-name">Method</span>
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="class-tart-reflect-Member.html" class="type-name-link">tart.reflect.Member</a></div>
+      </section>
 	    <section class="defn-section-description">
           <p>Description of a callable method.</p>
 	    </section>
@@ -47,64 +43,50 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#functionType">functionType</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.reflect.FunctionType</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">The type of the method.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">typeParams</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>]</div>
+	                <div class="member-summary">Array of type parameters.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isConstructor">isConstructor</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this method is a constructor.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">functionType</span>:<span class="type-name">tart.reflect.FunctionType</span></div>
+	                <div class="member-summary">The type of the method.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#numParams">numParams</a>:</td>
-                    <td class="sig2"><span class="type-name">int32</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Number of parameters for this method.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">returnType</span>:<span class="type-name">tart.reflect.Type</span></div>
+	                <div class="member-summary">The return type of the method.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#paramTypes">paramTypes</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.collections.List</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">The array of function parameter types.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">numParams</span>:<span class="type-name">int32</span></div>
+	                <div class="member-summary">Number of parameters for this method.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#params">params</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.collections.List</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">The parameters of this method.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">paramTypes</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>]</div>
+	                <div class="member-summary">The array of function parameter types.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#returnType">returnType</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.reflect.Type</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">The return type of the method.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">params</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Parameter</span>]</div>
+	                <div class="member-summary">The parameters of this method.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#typeParams">typeParams</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.collections.List</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Array of type parameters.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isConstructor</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this method is a constructor.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -115,24 +97,38 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#call">call</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Call this method with the given arguments.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">call</span>(<span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">Call this method with the given arguments.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#call">call</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Call this method with the given arguments.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">call</span>(<span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">Call this method with the given arguments.</div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Overridden Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final override  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">toString</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -141,8 +137,17 @@
           <header class="member-details-section-header">Property Details</header>
           <section class="member-section">
             <header class="member-header">
+              <a name="typeParams">
+	              property  <span class="symbol">typeParams</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>]
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Array of type parameters.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="functionType">
-	              property <span class="symbol">functionType</span>:<span class="type-name">tart.reflect.FunctionType</span>
+	              property  <span class="symbol">functionType</span>:<span class="type-name">tart.reflect.FunctionType</span>
               </a>
             </header>
             <div class="member-description">
@@ -150,17 +155,17 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="isConstructor">
-	              property <span class="symbol">isConstructor</span>:<span class="type-name">bool</span>
+              <a name="returnType">
+	              property  <span class="symbol">returnType</span>:<span class="type-name">tart.reflect.Type</span>
               </a>
             </header>
             <div class="member-description">
-            <p>True if this method is a constructor.</p>
+            <p>The return type of the method.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="numParams">
-	              property <span class="symbol">numParams</span>:<span class="type-name">int32</span>
+	              property  <span class="symbol">numParams</span>:<span class="type-name">int32</span>
               </a>
             </header>
             <div class="member-description">
@@ -169,7 +174,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="paramTypes">
-	              property <span class="symbol">paramTypes</span>:<span class="type-name">tart.collections.List</span>
+	              property  <span class="symbol">paramTypes</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>]
               </a>
             </header>
             <div class="member-description">
@@ -178,7 +183,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="params">
-	              property <span class="symbol">params</span>:<span class="type-name">tart.collections.List</span>
+	              property  <span class="symbol">params</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Parameter</span>]
               </a>
             </header>
             <div class="member-description">
@@ -186,21 +191,12 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="returnType">
-	              property <span class="symbol">returnType</span>:<span class="type-name">tart.reflect.Type</span>
+              <a name="isConstructor">
+	              property  <span class="symbol">isConstructor</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
-            <p>The return type of the method.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="typeParams">
-	              property <span class="symbol">typeParams</span>:<span class="type-name">tart.collections.List</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Array of type parameters.</p>
+            <p>True if this method is a constructor.</p>
             </div>
           </section>
         </section>
@@ -209,49 +205,21 @@
           <section class="member-section">
             <header class="member-header">
               <a name="call">
-	              def <span class="symbol">call</span>(<span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+	              final def  <span class="symbol">call</span>(<span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Call this method with the given arguments.</p>
             </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">obj</span>
-                      - The <span class="symbol">self</span> argument, or null if this is a static method.
-                    </div><div class="parameter-name">
-                      <span class="symbol">args</span>
-                      - The list of arguments to the method.
-                    </div>
-                  </td>
-                </tr>
-              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="call">
-	              def <span class="symbol">call</span>(<span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+	              final def  <span class="symbol">call</span>(<span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Call this method with the given arguments.</p>
             </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">obj</span>
-                      - The <span class="symbol">self</span> argument, or null if this is a static method.
-                    </div><div class="parameter-name">
-                      <span class="symbol">args</span>
-                      - The list of arguments to the method.
-                    </div>
-                  </td>
-                </tr>
-              </table>
           </section>
         </section>
   </section>

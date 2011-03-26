@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>class NameTable</title>
+  <title>tart.reflect.NameTable</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,10 @@
       <span class="defn-declarator">class</span>
       tart.reflect.<span class="defn-name">NameTable</span>
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+      </section>
 	    <section class="defn-section-description">
           <p>Contains the encoded table of strings for a module.</p>
 	    </section>
@@ -47,16 +43,14 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static let <a class="member-table-link symbol" href="#COMPOUND_NAME_FLAG">COMPOUND_NAME_FLAG</a>:</td>
-                    <td class="sig2"><span class="type-name">int32</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">static let  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">COMPOUND_NAME_FLAG</span>:<span class="type-name">int32</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -67,16 +61,14 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#strings">strings</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.collections.ImmutableList</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">strings</span>:<span class="type-name">tart.collections.ImmutableList</span>[<span class="type-name">String</span>]</div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -87,48 +79,44 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">first</span>:<span class="type-name">int32</span>, <span class="symbol">second</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#getLocalName">getLocalName</a>(</td>
-                    <td class="sig2"><span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return the local part of the name associated with a given name id.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">getName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Return the complete name for the given name id.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#getName">getName</a>(</td>
-                    <td class="sig2"><span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return the complete name for the given name id.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">getQualifiedName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Return the fully-qualified name for the given name id.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#getQualifiedName">getQualifiedName</a>(</td>
-                    <td class="sig2"><span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return the fully-qualified name for the given name id.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">getScopeName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Return the scope part of the name associated with a given name id.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#getScopeName">getScopeName</a>(</td>
-                    <td class="sig2"><span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return the scope part of the name associated with a given name id.</td>
+                <td class="member-table-row-header member-declarator">final def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">getLocalName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Return the local part of the name associated with a given name id.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">construct</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -138,7 +126,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="strings">
-	              property <span class="symbol">strings</span>:<span class="type-name">tart.collections.ImmutableList</span>
+	              property  <span class="symbol">strings</span>:<span class="type-name">tart.collections.ImmutableList</span>[<span class="type-name">String</span>]
               </a>
             </header>
           </section>
@@ -148,22 +136,13 @@
           <section class="member-section">
             <header class="member-header">
               <a name="construct">
-	              def <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">construct</span>(<span class="symbol">first</span>:<span class="type-name">int32</span>, <span class="symbol">second</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="getLocalName">
-	              def <span class="symbol">getLocalName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Return the local part of the name associated with a given name id.</p>
-            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="getName">
-	              def <span class="symbol">getName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+	              final def  <span class="symbol">getName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -172,7 +151,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="getQualifiedName">
-	              def <span class="symbol">getQualifiedName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+	              final def  <span class="symbol">getQualifiedName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -181,12 +160,27 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="getScopeName">
-	              def <span class="symbol">getScopeName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+	              final def  <span class="symbol">getScopeName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Return the scope part of the name associated with a given name id.</p>
             </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="getLocalName">
+	              final def  <span class="symbol">getLocalName</span>(<span class="symbol">i</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return the local part of the name associated with a given name id.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="construct">
+	              def  <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
           </section>
         </section>
   </section>

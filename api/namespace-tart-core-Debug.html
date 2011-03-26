@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>namespace Debug</title>
+  <title>tart.core.Debug</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -47,128 +39,134 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#assertEqFailed">assertEqFailed</a>(</td>
-                    <td class="sig2"><span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">expected</span>:<span class="type-name">String</span>, <span class="symbol">actual</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">stringify</span>(<span class="symbol">expr</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#assertFalseFailed">assertFalseFailed</a>(</td>
-                    <td class="sig2"><span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">cond</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">locationOf</span>(<span class="symbol">expr</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#assertNeFailed">assertNeFailed</a>(</td>
-                    <td class="sig2"><span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">expected</span>:<span class="type-name">String</span>, <span class="symbol">actual</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">write</span>(<span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#assertTrueFailed">assertTrueFailed</a>(</td>
-                    <td class="sig2"><span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">cond</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">write</span>(<span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#fail">fail</a>(</td>
-                    <td class="sig2"><span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">writeLn</span>(<span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#fail">fail</a>(</td>
-                    <td class="sig2"><span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">writeLn</span>(<span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#failFmt">failFmt</a>(</td>
-                    <td class="sig2"><span class="symbol">fmt</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">writeLnFmt</span>(<span class="symbol">fmt</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#locationOf">locationOf</a>(</td>
-                    <td class="sig2"><span class="symbol">expr</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">fail</span>(<span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#stringify">stringify</a>(</td>
-                    <td class="sig2"><span class="symbol">expr</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">fail</span>(<span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#write">write</a>(</td>
-                    <td class="sig2"><span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">failFmt</span>(<span class="symbol">fmt</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#write">write</a>(</td>
-                    <td class="sig2"><span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">writeIntLn</span>(<span class="symbol">msg</span>:<span class="type-name">String</span>, <span class="symbol">val</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#writeIntLn">writeIntLn</a>(</td>
-                    <td class="sig2"><span class="symbol">msg</span>:<span class="type-name">String</span>, <span class="symbol">val</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">assertTrueFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">cond</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#writeLn">writeLn</a>(</td>
-                    <td class="sig2"><span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">assertFalseFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">cond</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#writeLn">writeLn</a>(</td>
-                    <td class="sig2"><span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">assertEqFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">expected</span>:<span class="type-name">String</span>, <span class="symbol">actual</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#writeLnFmt">writeLnFmt</a>(</td>
-                    <td class="sig2"><span class="symbol">fmt</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">assertNeFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">expected</span>:<span class="type-name">String</span>, <span class="symbol">actual</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Macros Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">macro  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">assertTrue</span>(<span class="symbol">cond</span>:<span class="type-name">bool</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">macro  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">assertFalse</span>(<span class="symbol">cond</span>:<span class="type-name">bool</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">macro  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">assertEq</span>(<span class="symbol">expected</span>:<span class="type-name">T</span>, <span class="symbol">actual</span>:<span class="type-name">T</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">macro  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">assertNe</span>(<span class="symbol">expected</span>:<span class="type-name">T</span>, <span class="symbol">actual</span>:<span class="type-name">T</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -177,92 +175,92 @@
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="assertEqFailed">
-	              def <span class="symbol">assertEqFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">expected</span>:<span class="type-name">String</span>, <span class="symbol">actual</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="assertFalseFailed">
-	              def <span class="symbol">assertFalseFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">cond</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="assertNeFailed">
-	              def <span class="symbol">assertNeFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">expected</span>:<span class="type-name">String</span>, <span class="symbol">actual</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="assertTrueFailed">
-	              def <span class="symbol">assertTrueFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">cond</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="fail">
-	              def <span class="symbol">fail</span>(<span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="fail">
-	              def <span class="symbol">fail</span>(<span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="failFmt">
-	              def <span class="symbol">failFmt</span>(<span class="symbol">fmt</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">)</span>
+              <a name="stringify">
+	              def  <span class="symbol">stringify</span>(<span class="symbol">expr</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="locationOf">
-	              def <span class="symbol">locationOf</span>(<span class="symbol">expr</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="stringify">
-	              def <span class="symbol">stringify</span>(<span class="symbol">expr</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+	              def  <span class="symbol">locationOf</span>(<span class="symbol">expr</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="write">
-	              def <span class="symbol">write</span>(<span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">write</span>(<span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="write">
-	              def <span class="symbol">write</span>(<span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="writeIntLn">
-	              def <span class="symbol">writeIntLn</span>(<span class="symbol">msg</span>:<span class="type-name">String</span>, <span class="symbol">val</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">write</span>(<span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="writeLn">
-	              def <span class="symbol">writeLn</span>(<span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">writeLn</span>(<span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="writeLn">
-	              def <span class="symbol">writeLn</span>(<span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">writeLn</span>(<span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="writeLnFmt">
-	              def <span class="symbol">writeLnFmt</span>(<span class="symbol">fmt</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">writeLnFmt</span>(<span class="symbol">fmt</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="fail">
+	              def  <span class="symbol">fail</span>(<span class="symbol">msg</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="fail">
+	              def  <span class="symbol">fail</span>(<span class="symbol">msgs</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="failFmt">
+	              def  <span class="symbol">failFmt</span>(<span class="symbol">fmt</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="writeIntLn">
+	              def  <span class="symbol">writeIntLn</span>(<span class="symbol">msg</span>:<span class="type-name">String</span>, <span class="symbol">val</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="assertTrueFailed">
+	              def  <span class="symbol">assertTrueFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">cond</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="assertFalseFailed">
+	              def  <span class="symbol">assertFalseFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">cond</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="assertEqFailed">
+	              def  <span class="symbol">assertEqFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">expected</span>:<span class="type-name">String</span>, <span class="symbol">actual</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="assertNeFailed">
+	              def  <span class="symbol">assertNeFailed</span>(<span class="symbol">loc</span>:<span class="type-name">String</span>, <span class="symbol">expected</span>:<span class="type-name">String</span>, <span class="symbol">actual</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section>

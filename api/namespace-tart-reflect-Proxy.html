@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>namespace Proxy</title>
+  <title>tart.reflect.Proxy</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -47,16 +39,32 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#create">create</a>(</td>
-                    <td class="sig2"><span class="symbol">handler</span>:<span class="type-name">tart.reflect.Proxy.InvocationHandler</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Create a proxy object that implements the listed interfaces.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">getPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">property</span>:<span class="type-name">tart.reflect.Property</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">Get the value of the specified property.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">setPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">property</span>:<span class="type-name">tart.reflect.Property</span>, <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Set the value of the specified property.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">callMethod</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">method</span>:<span class="type-name">tart.reflect.Method</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">Call the given method with the given arguments.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">create</span>(<span class="symbol">handler</span>:<span class="type-name">tart.reflect.Proxy.InvocationHandler</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">Create a proxy object that implements the listed interfaces.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -65,8 +73,35 @@
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
+              <a name="getPropertyValue">
+	              def  <span class="symbol">getPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">property</span>:<span class="type-name">tart.reflect.Property</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+              <p>Get the value of the specified property.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="setPropertyValue">
+	              def  <span class="symbol">setPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">property</span>:<span class="type-name">tart.reflect.Property</span>, <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+              <p>Set the value of the specified property.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="callMethod">
+	              def  <span class="symbol">callMethod</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">method</span>:<span class="type-name">tart.reflect.Method</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+              <p>Call the given method with the given arguments.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="create">
-	              def <span class="symbol">create</span>(<span class="symbol">handler</span>:<span class="type-name">tart.reflect.Proxy.InvocationHandler</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+	              def  <span class="symbol">create</span>(<span class="symbol">handler</span>:<span class="type-name">tart.reflect.Proxy.InvocationHandler</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">

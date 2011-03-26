@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>class EnumType</title>
+  <title>tart.reflect.EnumType</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,10 @@
       <span class="defn-declarator">class</span>
       tart.reflect.<span class="defn-name">EnumType</span>
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="class-tart-reflect-Type.html" class="type-name-link">tart.reflect.Type</a></div>
+      </section>
 	    <section class="defn-section-description">
           <p>Interface type for enums.</p>
 	    </section>
@@ -47,40 +43,74 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#name">name</a>:</td>
-                    <td class="sig2"><span class="type-name">String</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Fully-qualified name of this type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">name</span>:<span class="type-name">String</span></div>
+	                <div class="member-summary">Fully-qualified name of this type.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#qualifiedName">qualifiedName</a>:</td>
-                    <td class="sig2"><span class="type-name">String</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Fully-qualified name of this type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">qualifiedName</span>:<span class="type-name">String</span></div>
+	                <div class="member-summary">Fully-qualified name of this type.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#scopeName">scopeName</a>:</td>
-                    <td class="sig2"><span class="type-name">String</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Fully-qualified name of the scope in which this type is defined.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">scopeName</span>:<span class="type-name">String</span></div>
+	                <div class="member-summary">Fully-qualified name of the scope in which this type is defined.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#supertype">supertype</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.reflect.Type</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Pointer to this type's supertype.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">supertype</span>:<span class="type-name">tart.reflect.Type</span></div>
+	                <div class="member-summary">Pointer to this type's supertype.</div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Overridden Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final override  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">toString</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Array of enumeration constants.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final override  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">getFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final override  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">setFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">final override  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">getPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">getterFn</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">final override  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">setPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">setterFn</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -90,7 +120,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="name">
-	              property <span class="symbol">name</span>:<span class="type-name">String</span>
+	              property  <span class="symbol">name</span>:<span class="type-name">String</span>
               </a>
             </header>
             <div class="member-description">
@@ -99,7 +129,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="qualifiedName">
-	              property <span class="symbol">qualifiedName</span>:<span class="type-name">String</span>
+	              property  <span class="symbol">qualifiedName</span>:<span class="type-name">String</span>
               </a>
             </header>
             <div class="member-description">
@@ -108,7 +138,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="scopeName">
-	              property <span class="symbol">scopeName</span>:<span class="type-name">String</span>
+	              property  <span class="symbol">scopeName</span>:<span class="type-name">String</span>
               </a>
             </header>
             <div class="member-description">
@@ -117,7 +147,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="supertype">
-	              property <span class="symbol">supertype</span>:<span class="type-name">tart.reflect.Type</span>
+	              property  <span class="symbol">supertype</span>:<span class="type-name">tart.reflect.Type</span>
               </a>
             </header>
             <div class="member-description">

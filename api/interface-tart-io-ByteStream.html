@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>interface ByteStream</title>
+  <title>tart.io.ByteStream</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,10 @@
       <span class="defn-declarator">interface</span>
       tart.io.<span class="defn-name">ByteStream</span>
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="interface-tart-io-IOStream.html" class="type-name-link">tart.io.IOStream</a></div>
+      </section>
 	    <section class="defn-section-description">
           <p>Interface to a stream of bytes, which may be readable and/or writeable.</p>
 	    </section>
@@ -47,40 +43,32 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#read">read</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">uint8</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Read a single byte from the stream.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">read</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">uint8</span></span></div>
+	                <div class="member-summary">Read a single byte from the stream.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#read">read</a>(</td>
-                    <td class="sig2"><span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">offset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Read a buffer of bytes from the stream.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">read</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">offset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
+	                <div class="member-summary">Read a buffer of bytes from the stream.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#write">write</a>(</td>
-                    <td class="sig2"><span class="symbol">value</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Write a single byte to the stream.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">write</span>(<span class="symbol">value</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Write a single byte to the stream.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#write">write</a>(</td>
-                    <td class="sig2"><span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">offset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Write a buffer of bytes to the stream.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">write</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">offset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Write a buffer of bytes to the stream.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -90,7 +78,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="read">
-	              def <span class="symbol">read</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">uint8</span></span>
+	              def  <span class="symbol">read</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">uint8</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -99,7 +87,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="read">
-	              def <span class="symbol">read</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">offset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
+	              def  <span class="symbol">read</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">offset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -108,7 +96,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="write">
-	              def <span class="symbol">write</span>(<span class="symbol">value</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">write</span>(<span class="symbol">value</span>:<span class="type-name">uint8</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -117,7 +105,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="write">
-	              def <span class="symbol">write</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">offset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">write</span>(<span class="symbol">buffer</span>:<span class="type-name">uint8</span>[], <span class="symbol">offset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">

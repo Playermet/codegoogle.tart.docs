@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>class Exception</title>
+  <title>tart.core.Exception</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,10 @@
       <span class="defn-declarator">class</span>
       tart.core.<span class="defn-name">Exception</span>
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="class-tart-core-Throwable.html" class="type-name-link">Throwable</a></div>
+      </section>
 	    <section class="defn-section-description">
           <p>Base class of exceptions.</p>
 	    </section>
@@ -47,24 +43,20 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#cause">cause</a>:</td>
-                    <td class="sig2">union??</td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">The lower-level exception that caused this one, if any.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">message</span>:<span class="type-name">String</span></div>
+	                <div class="member-summary">The error message for this exception.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#message">message</a>:</td>
-                    <td class="sig2"><span class="type-name">String</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">The error message for this exception.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">cause</span>:union??</div>
+	                <div class="member-summary">The lower-level exception that caused this one, if any.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -75,24 +67,38 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Default constructor.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">construct</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Default constructor.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
-                    <td class="sig2"><span class="symbol">message</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Message constructor.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">message</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Message constructor.</div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Overridden Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">override  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">toString</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -101,21 +107,21 @@
           <header class="member-details-section-header">Property Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="cause">
-	              property <span class="symbol">cause</span>:union??
-              </a>
-            </header>
-            <div class="member-description">
-            <p>The lower-level exception that caused this one, if any.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="message">
-	              property <span class="symbol">message</span>:<span class="type-name">String</span>
+	              property  <span class="symbol">message</span>:<span class="type-name">String</span>
               </a>
             </header>
             <div class="member-description">
             <p>The error message for this exception.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="cause">
+	              property  <span class="symbol">cause</span>:union??
+              </a>
+            </header>
+            <div class="member-description">
+            <p>The lower-level exception that caused this one, if any.</p>
             </div>
           </section>
         </section>
@@ -124,7 +130,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="construct">
-	              def <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -133,7 +139,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="construct">
-	              def <span class="symbol">construct</span>(<span class="symbol">message</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">construct</span>(<span class="symbol">message</span>:<span class="type-name">String</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">

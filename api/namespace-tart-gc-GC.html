@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>namespace GC</title>
+  <title>tart.gc.GC</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -47,16 +39,14 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static def <a class="member-table-link symbol" href="#traceTableOf">traceTableOf</a>(</td>
-                    <td class="sig2"><span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">tart.gc.TraceDescriptor</span>]</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return the list of trace descriptors for the given type.</td>
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">traceTableOf</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">tart.gc.TraceDescriptor</span>]</span></div>
+	                <div class="member-summary">Return the list of trace descriptors for the given type.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -67,96 +57,74 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#addFinalizer">addFinalizer</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Register a finalizer function for an object.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">init</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Initialize the garbage collector. This also does an implicit enterThread() call.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#alloc">alloc</a>(</td>
-                    <td class="sig2"><span class="symbol">context</span>:<span class="type-name">Object</span>, <span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Obtain a block of memory from the alloc pool associated with the given thread local state. This is implicitly a sync point. This should be passed the context object returned by <span class="symbol">allocContext</span>.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">enterThread</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Set up the thread-local state for the current thread. Called when creating a new thread.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#allocContext">allocContext</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Return a reference to the thread-local context pointer for the current thread. This should only need to be done once per function that allocates memory. The compiler will generate a call to this as needed, and pass the result to <span class="symbol">alloc</span>.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">exitThread</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Clean up the thread-local state for the current thread.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#collect">collect</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Force an immediate garbage collection.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">sync</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">A sync point. Called to let the garbage collector know it's OK to do a collection at the</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#enterThread">enterThread</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Set up the thread-local state for the current thread. Called when creating a new thread.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">suspend</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Start of an extended sync point. Called before any blocking operation to let the collector</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#exitThread">exitThread</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Clean up the thread-local state for the current thread.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">resume</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Called after a blocking operation to finish a <span class="symbol">suspend</span> call. The collector will no longer do collections until this thread reaches the next sync point.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#init">init</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Initialize the garbage collector. This also does an implicit enterThread() call.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">allocContext</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">Return a reference to the thread-local context pointer for the current thread. This should only need to be done once per function that allocates memory. The compiler will generate a call to this as needed, and pass the result to <span class="symbol">alloc</span>.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#removeFinalizer">removeFinalizer</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Unregister a finalizer function for an object.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">alloc</span>(<span class="symbol">context</span>:<span class="type-name">Object</span>, <span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">Obtain a block of memory from the alloc pool associated with the given thread local state. This is implicitly a sync point. This should be passed the context object returned by <span class="symbol">allocContext</span>.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#resume">resume</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Called after a blocking operation to finish a <span class="symbol">suspend</span> call. The collector will no longer do collections until this thread reaches the next sync point.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">collect</span>(<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Force an immediate garbage collection.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#suspend">suspend</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Start of an extended sync point. Called before any blocking operation to let the collector</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">addFinalizer</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span>[<span class="type-name">void</span>, ()]<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Register a finalizer function for an object.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#sync">sync</a>(</td>
-                    <td class="sig2"><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">A sync point. Called to let the garbage collector know it's OK to do a collection at the</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">removeFinalizer</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span>[<span class="type-name">void</span>, ()]<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Unregister a finalizer function for an object.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -165,44 +133,17 @@
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="addFinalizer">
-	              def <span class="symbol">addFinalizer</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span><span style="white-space: nowrap">)</span>
+              <a name="init">
+	              def  <span class="symbol">init</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
-            <p>Register a finalizer function for an object.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="alloc">
-	              def <span class="symbol">alloc</span>(<span class="symbol">context</span>:<span class="type-name">Object</span>, <span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Obtain a block of memory from the alloc pool associated with the given thread local state. This is implicitly a sync point. This should be passed the context object returned by <span class="symbol">allocContext</span>.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="allocContext">
-	              def <span class="symbol">allocContext</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Return a reference to the thread-local context pointer for the current thread. This should only need to be done once per function that allocates memory. The compiler will generate a call to this as needed, and pass the result to <span class="symbol">alloc</span>.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="collect">
-	              def <span class="symbol">collect</span>(<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Force an immediate garbage collection.</p>
+            <p>Initialize the garbage collector. This also does an implicit enterThread() call.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="enterThread">
-	              def <span class="symbol">enterThread</span>(<span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">enterThread</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -211,7 +152,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="exitThread">
-	              def <span class="symbol">exitThread</span>(<span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">exitThread</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -219,35 +160,18 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="init">
-	              def <span class="symbol">init</span>(<span style="white-space: nowrap">)</span>
+              <a name="sync">
+	              def  <span class="symbol">sync</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
-            <p>Initialize the garbage collector. This also does an implicit enterThread() call.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="removeFinalizer">
-	              def <span class="symbol">removeFinalizer</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Unregister a finalizer function for an object.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="resume">
-	              def <span class="symbol">resume</span>(<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Called after a blocking operation to finish a <span class="symbol">suspend</span> call. The collector will no longer do collections until this thread reaches the next sync point.</p>
+            <p>A sync point. Called to let the garbage collector know it's OK to do a collection at the</p>
+            <p>point where this function is called. Objects may move during this call.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="suspend">
-	              def <span class="symbol">suspend</span>(<span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">suspend</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -257,18 +181,62 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="sync">
-	              def <span class="symbol">sync</span>(<span style="white-space: nowrap">)</span>
+              <a name="resume">
+	              def  <span class="symbol">resume</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
-            <p>A sync point. Called to let the garbage collector know it's OK to do a collection at the</p>
-            <p>point where this function is called. Objects may move during this call.</p>
+            <p>Called after a blocking operation to finish a <span class="symbol">suspend</span> call. The collector will no longer do collections until this thread reaches the next sync point.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="allocContext">
+	              def  <span class="symbol">allocContext</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Return a reference to the thread-local context pointer for the current thread. This should only need to be done once per function that allocates memory. The compiler will generate a call to this as needed, and pass the result to <span class="symbol">alloc</span>.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="alloc">
+	              def  <span class="symbol">alloc</span>(<span class="symbol">context</span>:<span class="type-name">Object</span>, <span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Obtain a block of memory from the alloc pool associated with the given thread local state. This is implicitly a sync point. This should be passed the context object returned by <span class="symbol">allocContext</span>.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="collect">
+	              def  <span class="symbol">collect</span>(<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Force an immediate garbage collection.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="addFinalizer">
+	              def  <span class="symbol">addFinalizer</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span>[<span class="type-name">void</span>, ()]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Register a finalizer function for an object.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="removeFinalizer">
+	              def  <span class="symbol">removeFinalizer</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">finalizer</span>:<span class="type-name">Function</span>[<span class="type-name">void</span>, ()]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Unregister a finalizer function for an object.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="traceTableOf">
-	              static def <span class="symbol">traceTableOf</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">tart.gc.TraceDescriptor</span>]</span>
+	              static def  <span class="symbol">traceTableOf</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">tart.gc.TraceDescriptor</span>]</span>
               </a>
             </header>
             <div class="member-description">

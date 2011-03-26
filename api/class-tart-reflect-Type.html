@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="apidocs.css">
 <meta charset="UTF-8">
 <head>
-  <title>class Type</title>
+  <title>tart.reflect.Type</title>
   <link rel="stylesheet" type="text/css" href="apidoc.css">
   </head>
 <body>
@@ -14,15 +14,7 @@
   </section>
   <section class="nav-section">
   <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="packages.html">Packages</a>
-  </nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="index.html">Packages</a>
   </nav>
     •
   <nav class="nav-item">
@@ -38,6 +30,10 @@
       <span class="defn-declarator">class</span>
       tart.reflect.<span class="defn-name">Type</span>
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherits from:</header>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+      </section>
 	    <section class="defn-section-description">
           <p>The metatype object - the class that describes a type.</p>
 	    </section>
@@ -47,16 +43,14 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static enum <a class="member-table-link symbol" href="#TypeKind">TypeKind</a></td>
-                    <td class="sig2"></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">static enum  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">TypeKind</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -67,96 +61,74 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isBooleanType">isBooleanType</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is a boolean type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">typeKind</span>:<span class="type-name">tart.reflect.Type.TypeKind</span></div>
+	                <div class="member-summary">What general kind of type this is (CLASS, STRUCT, etc.)</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isCharType">isCharType</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is a boolean type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isVoidType</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is the void type.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isClass">isClass</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is a class.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isNullType</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is the null type.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isFloatType">isFloatType</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is a floating-point type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isBooleanType</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is a boolean type.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isIntegerType">isIntegerType</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is an integer type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isCharType</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is a boolean type.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isNullType">isNullType</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is the null type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isIntegerType</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is an integer type.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isSignedIntegerType">isSignedIntegerType</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is a signed integer type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isSignedIntegerType</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is a signed integer type.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isStruct">isStruct</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is a struct.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isUnsignedIntegerType</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is an unsigned integer type.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isUnsignedIntegerType">isUnsignedIntegerType</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is an unsigned integer type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isFloatType</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is a floating-point type.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#isVoidType">isVoidType</a>:</td>
-                    <td class="sig2"><span class="type-name">bool</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">True if this is the void type.</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isClass</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is a class.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">property <a class="member-table-link symbol" href="#typeKind">typeKind</a>:</td>
-                    <td class="sig2"><span class="type-name">tart.reflect.Type.TypeKind</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">What general kind of type this is (CLASS, STRUCT, etc.)</td>
+                <td class="member-table-row-header member-declarator">property  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">isStruct</span>:<span class="type-name">bool</span></div>
+	                <div class="member-summary">True if this is a struct.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -167,16 +139,14 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">static def <a class="member-table-link symbol" href="#of">of</a>(</td>
-                    <td class="sig2"><span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Given a type literal, return the reflected type object.</td>
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">of</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span></div>
+	                <div class="member-summary">Given a type literal, return the reflected type object.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -187,64 +157,68 @@
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
 	            	 <th class="member-table-col-header">Method</th>
-	            	 <th class="member-table-col-header" width="66%">Description</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#checkCast">checkCast</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">If <span class="symbol">obj</span> is castable to this type, do the cast and return the object, otherwise throw a typecast exception.</td>
+                <td class="member-table-row-header member-declarator">protected def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">construct</span>(<span class="symbol">typeKind</span>:<span class="type-name">tart.reflect.Type.TypeKind</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary"></div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">protected def <a class="member-table-link symbol" href="#construct">construct</a>(</td>
-                    <td class="sig2"><span class="symbol">typeKind</span>:<span class="type-name">tart.reflect.Type.TypeKind</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data"></td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">downCast</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">void</span>]</span></div>
+	                <div class="member-summary">If <span class="symbol">obj</span> is castable to this type, do the cast and return the raw address, otherwise throw a typecast exception.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#downCast">downCast</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">void</span>]</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">If <span class="symbol">obj</span> is castable to this type, do the cast and return the raw address, otherwise throw a typecast exception.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">checkCast</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">If <span class="symbol">obj</span> is castable to this type, do the cast and return the object, otherwise throw a typecast exception.</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#getFieldValue">getFieldValue</a>(</td>
-                    <td class="sig2"><span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Given the address of a field of this type, return a boxed copy of the field value.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">getFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">Given the address of a field of this type, return a boxed copy of the field value.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#getPropertyValue">getPropertyValue</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">getterFn</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Given an object reference and a pointer to a getter function which returns this type, invoke the getter and return the result, boxing the result if needed.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">setFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Given the address of a field of this type, and a boxed value, set the field to the unboxed</div>
+	              </td>
 	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#setFieldValue">setFieldValue</a>(</td>
-                    <td class="sig2"><span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Given the address of a field of this type, and a boxed value, set the field to the unboxed</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">getPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">getterFn</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-summary">Given an object reference and a pointer to a getter function which returns this type, invoke the getter and return the result, boxing the result if needed.</div>
+	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header">
-                  <table border="0" cellspacing="0" cellpadding="0"><tr>
-                    <td class="sig1">def <a class="member-table-link symbol" href="#setPropertyValue">setPropertyValue</a>(</td>
-                    <td class="sig2"><span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">setterFn</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></td>
-                  </tr></table>
-                </td>
-	              <td class="member-table-data">Given an object reference and a pointer to a setter function which takes a value of this type, unbox the value yielding a value of this type, and pass that to the setter.</td>
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">setPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">setterFn</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Given an object reference and a pointer to a setter function which takes a value of this type, unbox the value yielding a value of this type, and pass that to the setter.</div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <header class="member-table-header">Overridden Methods Summary</header>
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header">Method</th>
+	            	 <th class="member-table-col-header" width="85%">Description</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">abstract override  </td>
+	              <td class="member-table-data">
+	                <div class="member-signature"><span class="symbol">toString</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Return a string representation of this type.</div>
+	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -254,7 +228,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="TypeKind">
-                static enum <span class="symbol">TypeKind</span>
+                static enum  <span class="symbol">TypeKind</span>
               </a>
             </header>
             <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
@@ -263,10 +237,22 @@
                 <th class="enum-constant-value-header">Description</th>
               </tr>
               <tr>
-                <th class="enum-constant-name">ADDRESS</th>
+                <th class="enum-constant-name">OPAQUE</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PRIMITIVE</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">CLASS</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">STRUCT</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">INTERFACE</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">PROTOCOL</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">ENUM</th>
@@ -275,28 +261,16 @@
                 <th class="enum-constant-name">FUNCTION</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
-                <th class="enum-constant-name">INTERFACE</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">NATIVE_ARRAY</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">OPAQUE</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">PRIMITIVE</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">PROTOCOL</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
-                <th class="enum-constant-name">STRUCT</th>
-                <td class="enum-constant-value"></td>
-              </tr><tr>
                 <th class="enum-constant-name">TUPLE</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">UNION</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">ADDRESS</th>
+                <td class="enum-constant-value"></td>
+              </tr><tr>
+                <th class="enum-constant-name">NATIVE_ARRAY</th>
                 <td class="enum-constant-value"></td>
               </tr><tr>
                 <th class="enum-constant-name">UNIT</th>
@@ -309,8 +283,35 @@
           <header class="member-details-section-header">Property Details</header>
           <section class="member-section">
             <header class="member-header">
+              <a name="typeKind">
+	              property  <span class="symbol">typeKind</span>:<span class="type-name">tart.reflect.Type.TypeKind</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>What general kind of type this is (CLASS, STRUCT, etc.)</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="isVoidType">
+	              property  <span class="symbol">isVoidType</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if this is the void type.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="isNullType">
+	              property  <span class="symbol">isNullType</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if this is the null type.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="isBooleanType">
-	              property <span class="symbol">isBooleanType</span>:<span class="type-name">bool</span>
+	              property  <span class="symbol">isBooleanType</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -319,7 +320,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="isCharType">
-	              property <span class="symbol">isCharType</span>:<span class="type-name">bool</span>
+	              property  <span class="symbol">isCharType</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -327,26 +328,8 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="isClass">
-	              property <span class="symbol">isClass</span>:<span class="type-name">bool</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>True if this is a class.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="isFloatType">
-	              property <span class="symbol">isFloatType</span>:<span class="type-name">bool</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>True if this is a floating-point type.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="isIntegerType">
-	              property <span class="symbol">isIntegerType</span>:<span class="type-name">bool</span>
+	              property  <span class="symbol">isIntegerType</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -354,17 +337,8 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="isNullType">
-	              property <span class="symbol">isNullType</span>:<span class="type-name">bool</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>True if this is the null type.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="isSignedIntegerType">
-	              property <span class="symbol">isSignedIntegerType</span>:<span class="type-name">bool</span>
+	              property  <span class="symbol">isSignedIntegerType</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -372,17 +346,8 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="isStruct">
-	              property <span class="symbol">isStruct</span>:<span class="type-name">bool</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>True if this is a struct.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="isUnsignedIntegerType">
-	              property <span class="symbol">isUnsignedIntegerType</span>:<span class="type-name">bool</span>
+	              property  <span class="symbol">isUnsignedIntegerType</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
@@ -390,21 +355,30 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="isVoidType">
-	              property <span class="symbol">isVoidType</span>:<span class="type-name">bool</span>
+              <a name="isFloatType">
+	              property  <span class="symbol">isFloatType</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
-            <p>True if this is the void type.</p>
+            <p>True if this is a floating-point type.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="typeKind">
-	              property <span class="symbol">typeKind</span>:<span class="type-name">tart.reflect.Type.TypeKind</span>
+              <a name="isClass">
+	              property  <span class="symbol">isClass</span>:<span class="type-name">bool</span>
               </a>
             </header>
             <div class="member-description">
-            <p>What general kind of type this is (CLASS, STRUCT, etc.)</p>
+            <p>True if this is a class.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="isStruct">
+	              property  <span class="symbol">isStruct</span>:<span class="type-name">bool</span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>True if this is a struct.</p>
             </div>
           </section>
         </section>
@@ -412,23 +386,14 @@
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
             <header class="member-header">
-              <a name="checkCast">
-	              def <span class="symbol">checkCast</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>If <span class="symbol">obj</span> is castable to this type, do the cast and return the object, otherwise throw a typecast exception.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="construct">
-	              protected def <span class="symbol">construct</span>(<span class="symbol">typeKind</span>:<span class="type-name">tart.reflect.Type.TypeKind</span><span style="white-space: nowrap">)</span>
+	              protected def  <span class="symbol">construct</span>(<span class="symbol">typeKind</span>:<span class="type-name">tart.reflect.Type.TypeKind</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="downCast">
-	              def <span class="symbol">downCast</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">void</span>]</span>
+	              def  <span class="symbol">downCast</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">void</span>]</span>
               </a>
             </header>
             <div class="member-description">
@@ -436,8 +401,17 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="checkCast">
+	              def  <span class="symbol">checkCast</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>If <span class="symbol">obj</span> is castable to this type, do the cast and return the object, otherwise throw a typecast exception.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="getFieldValue">
-	              def <span class="symbol">getFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+	              def  <span class="symbol">getFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -445,26 +419,8 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="getPropertyValue">
-	              def <span class="symbol">getPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">getterFn</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Given an object reference and a pointer to a getter function which returns this type, invoke the getter and return the result, boxing the result if needed.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="of">
-	              static def <span class="symbol">of</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Given a type literal, return the reflected type object.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="setFieldValue">
-	              def <span class="symbol">setFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">setFieldValue</span>(<span class="symbol">fieldAddr</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
@@ -473,12 +429,30 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
+              <a name="getPropertyValue">
+	              def  <span class="symbol">getPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">getterFn</span>:Address[<span class="type-name">void</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Given an object reference and a pointer to a getter function which returns this type, invoke the getter and return the result, boxing the result if needed.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
               <a name="setPropertyValue">
-	              def <span class="symbol">setPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">setterFn</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">setPropertyValue</span>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">setterFn</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
             <div class="member-description">
             <p>Given an object reference and a pointer to a setter function which takes a value of this type, unbox the value yielding a value of this type, and pass that to the setter.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="of">
+	              static def  <span class="symbol">of</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span>
+              </a>
+            </header>
+            <div class="member-description">
+            <p>Given a type literal, return the reflected type object.</p>
             </div>
           </section>
         </section>

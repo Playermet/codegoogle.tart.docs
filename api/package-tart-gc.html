@@ -12,15 +12,7 @@
   <header class="page-header-title"><strong>Tart Standard Library</strong> [libstd]</header>
   </section>
   <section class="nav-section">
-  <nav class="nav-item">
-    <a class="nav-link" href="index.html">Overview</a>
-  </nav>
-    •
 	<nav class="nav-item nav-item-selected">Packages</nav>
-    •
-  <nav class="nav-item">
-    <a class="nav-link" href="modules.html">Modules</a>
-  </nav>
     •
   <nav class="nav-item">
     <a class="nav-link" href="types.html">Types</a>
@@ -47,14 +39,83 @@
 	        </ul>
 	      </section>
 	      <section class="defn-list-section">
-	        <header class="defn-list-header">General Classes</header>
+	        <header class="defn-list-header">Interfaces</header>
 	        <ul class="defn-list">
             <li>
-              <a class="defn-list-link" href="class-tart-gc-AllocationBlock.html">AllocationBlock</a>
-              - Class which represents a contiguous region of memory which is allocated via
+              <a class="defn-list-link" href="struct-tart-gc-TraceDescriptor.html">TraceDescriptor</a>
+              - Struct containing information on how to trace a type.
             </li><li>
               <a class="defn-list-link" href="class-tart-gc-TraceAction.html">TraceAction</a>
               - Handles the logic of a tracing pass.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-AllocationBlock.html">AllocationBlock</a>
+              - Class which represents a contiguous region of memory which is allocated via
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceMethodDescriptor.html">TraceMethodDescriptor</a>
+              - Trace descriptor for a trace method.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceMethod.html">TraceMethod</a>
+              - Indicates that the associated method is a garbage collector tracing helper function.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-AddressRange.html">AddressRange</a>
+              - A value type representing a range of addresses.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-StaticRoot.html">StaticRoot</a>
+              - Data structure that describes a static root.
+            </li>
+	        </ul>
+	      </section>
+	      <section class="defn-list-section">
+	        <header class="defn-list-header">General Classes</header>
+	        <ul class="defn-list">
+            <li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceDescriptor.html">TraceDescriptor</a>
+              - Struct containing information on how to trace a type.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceAction.html">TraceAction</a>
+              - Handles the logic of a tracing pass.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-AllocationBlock.html">AllocationBlock</a>
+              - Class which represents a contiguous region of memory which is allocated via
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceMethodDescriptor.html">TraceMethodDescriptor</a>
+              - Trace descriptor for a trace method.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceMethod.html">TraceMethod</a>
+              - Indicates that the associated method is a garbage collector tracing helper function.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-AddressRange.html">AddressRange</a>
+              - A value type representing a range of addresses.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-StaticRoot.html">StaticRoot</a>
+              - Data structure that describes a static root.
+            </li>
+	        </ul>
+	      </section>
+	      <section class="defn-list-section">
+	        <header class="defn-list-header">Exceptions</header>
+	        <ul class="defn-list">
+            <li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceDescriptor.html">TraceDescriptor</a>
+              - Struct containing information on how to trace a type.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceAction.html">TraceAction</a>
+              - Handles the logic of a tracing pass.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-AllocationBlock.html">AllocationBlock</a>
+              - Class which represents a contiguous region of memory which is allocated via
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceMethodDescriptor.html">TraceMethodDescriptor</a>
+              - Trace descriptor for a trace method.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceMethod.html">TraceMethod</a>
+              - Indicates that the associated method is a garbage collector tracing helper function.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-AddressRange.html">AddressRange</a>
+              - A value type representing a range of addresses.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-StaticRoot.html">StaticRoot</a>
+              - Data structure that describes a static root.
             </li>
 	        </ul>
 	      </section>
@@ -62,8 +123,26 @@
 	        <header class="defn-list-header">Attributes</header>
 	        <ul class="defn-list">
             <li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceDescriptor.html">TraceDescriptor</a>
+              - Struct containing information on how to trace a type.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceAction.html">TraceAction</a>
+              - Handles the logic of a tracing pass.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-AllocationBlock.html">AllocationBlock</a>
+              - Class which represents a contiguous region of memory which is allocated via
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceMethodDescriptor.html">TraceMethodDescriptor</a>
+              - Trace descriptor for a trace method.
+            </li><li>
               <a class="defn-list-link" href="class-tart-gc-TraceMethod.html">TraceMethod</a>
               - Indicates that the associated method is a garbage collector tracing helper function.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-AddressRange.html">AddressRange</a>
+              - A value type representing a range of addresses.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-StaticRoot.html">StaticRoot</a>
+              - Data structure that describes a static root.
             </li>
 	        </ul>
 	      </section>
@@ -71,26 +150,53 @@
 	        <header class="defn-list-header">Structs</header>
 	        <ul class="defn-list">
             <li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceDescriptor.html">TraceDescriptor</a>
+              - Struct containing information on how to trace a type.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceAction.html">TraceAction</a>
+              - Handles the logic of a tracing pass.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-AllocationBlock.html">AllocationBlock</a>
+              - Class which represents a contiguous region of memory which is allocated via
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceMethodDescriptor.html">TraceMethodDescriptor</a>
+              - Trace descriptor for a trace method.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceMethod.html">TraceMethod</a>
+              - Indicates that the associated method is a garbage collector tracing helper function.
+            </li><li>
               <a class="defn-list-link" href="struct-tart-gc-AddressRange.html">AddressRange</a>
               - A value type representing a range of addresses.
             </li><li>
               <a class="defn-list-link" href="struct-tart-gc-StaticRoot.html">StaticRoot</a>
               - Data structure that describes a static root.
-            </li><li>
-              <a class="defn-list-link" href="struct-tart-gc-TraceDescriptor.html">TraceDescriptor</a>
-              - Struct containing information on how to trace a type.
-            </li><li>
-              <a class="defn-list-link" href="struct-tart-gc-TraceMethodDescriptor.html">TraceMethodDescriptor</a>
-              - Trace descriptor for a trace method.
             </li>
 	        </ul>
 	      </section>
 	      <section class="defn-list-section">
-	        <header class="defn-list-header">Functions</header>
+	        <header class="defn-list-header">Enumerations</header>
 	        <ul class="defn-list">
             <li>
-              <a class="defn-list-link" href="method-tart-gc-infixEQ.html">infixEQ</a>
-              -
+              <a class="defn-list-link" href="struct-tart-gc-TraceDescriptor.html">TraceDescriptor</a>
+              - Struct containing information on how to trace a type.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceAction.html">TraceAction</a>
+              - Handles the logic of a tracing pass.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-AllocationBlock.html">AllocationBlock</a>
+              - Class which represents a contiguous region of memory which is allocated via
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-TraceMethodDescriptor.html">TraceMethodDescriptor</a>
+              - Trace descriptor for a trace method.
+            </li><li>
+              <a class="defn-list-link" href="class-tart-gc-TraceMethod.html">TraceMethod</a>
+              - Indicates that the associated method is a garbage collector tracing helper function.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-AddressRange.html">AddressRange</a>
+              - A value type representing a range of addresses.
+            </li><li>
+              <a class="defn-list-link" href="struct-tart-gc-StaticRoot.html">StaticRoot</a>
+              - Data structure that describes a static root.
             </li>
 	        </ul>
 	      </section>
