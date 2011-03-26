@@ -46,12 +46,6 @@
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#ErrorAction">ErrorAction</a></div>
 	                <div class="member-summary">Specifies what to do if erroneous input is encountered.</div>
 	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static enum  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#ErrorAction">ErrorAction</a></div>
-	                <div class="member-summary">Specifies what to do if erroneous input is encountered.</div>
-	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -63,12 +57,6 @@
 	            	 <th class="member-table-col-header" colspan="2">Properties</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">property  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#name">name</a>:<span class="type-name">String</span></div>
-	                <div class="member-summary">Name of this codec.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#name">name</a>:<span class="type-name">String</span></div>
@@ -93,18 +81,6 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#decode">decode</a>(<span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary">Decode the characters in <span class="symbol">src</span>.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#decodedLength">decodedLength</a>(<span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary">Return the length, in characters, of the byte array when decoded.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#decodedLength">decodedLength</a>(<span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
 	                <div class="member-summary">Return the length, in characters, of the byte array when decoded.</div>
 	              </td>
@@ -113,18 +89,6 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#encode">encode</a>(<span class="symbol">dst</span>:<span class="type-name">uint8</span>[], <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
 	                <div class="member-summary">Encode the characters in <span class="symbol">src</span>.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#encode">encode</a>(<span class="symbol">dst</span>:<span class="type-name">uint8</span>[], <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary">Encode the characters in <span class="symbol">src</span>.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-text-encodings-Codec.html#encodedLength">encodedLength</a>(<span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary">Return the length, in bytes, of the character array when encoded.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -158,70 +122,9 @@
               <p>Throw an exception. TODO: What kind?</p>
             </td>
               </tr><tr>
-                <th class="enum-constant-name">ABORT</th>
-                <td class="enum-constant-value">
-              <p>Throw an exception. TODO: What kind?</p>
-            </td>
-              </tr><tr>
                 <th class="enum-constant-name">REPLACE</th>
                 <td class="enum-constant-value">
               <p>Replace bad characters with the encoder's replacement character.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">REPLACE</th>
-                <td class="enum-constant-value">
-              <p>Replace bad characters with the encoder's replacement character.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">SKIP</th>
-                <td class="enum-constant-value">
-              <p>Skip over erroneous characters.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">SKIP</th>
-                <td class="enum-constant-value">
-              <p>Skip over erroneous characters.</p>
-            </td>
-              </tr>
-            </table>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="ErrorAction">
-                static enum  <span class="symbol">ErrorAction</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Specifies what to do if erroneous input is encountered.</p>
-            </div>
-            <table class="enum-constants-table" border="0" cellspacing="0" cellpadding="0">
-              <tr class="enum-constant-header">
-                <th class="enum-constant-name-header">Name</th>
-                <th class="enum-constant-value-header">Description</th>
-              </tr>
-              <tr>
-                <th class="enum-constant-name">ABORT</th>
-                <td class="enum-constant-value">
-              <p>Throw an exception. TODO: What kind?</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">ABORT</th>
-                <td class="enum-constant-value">
-              <p>Throw an exception. TODO: What kind?</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">REPLACE</th>
-                <td class="enum-constant-value">
-              <p>Replace bad characters with the encoder's replacement character.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">REPLACE</th>
-                <td class="enum-constant-value">
-              <p>Replace bad characters with the encoder's replacement character.</p>
-            </td>
-              </tr><tr>
-                <th class="enum-constant-name">SKIP</th>
-                <td class="enum-constant-value">
-              <p>Skip over erroneous characters.</p>
             </td>
               </tr><tr>
                 <th class="enum-constant-name">SKIP</th>
@@ -235,15 +138,6 @@
         <section class="member-details-section">
           <header class="member-details-section-header">Property Details</header>
           <section class="member-section">
-            <header class="member-header">
-              <a name="name">
-	              property  <span class="symbol">name</span>:<span class="type-name">String</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Name of this codec.</p>
-            </div>
-          </section><section class="member-section">
             <header class="member-header">
               <a name="name">
 	              property  <span class="symbol">name</span>:<span class="type-name">String</span>
@@ -298,80 +192,6 @@
               </table>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="decode">
-	              def  <span class="symbol">decode</span>(<span class="symbol">dst</span>:<span class="type-name">char</span>[], <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Decode the characters in <span class="symbol">src</span>.</p>
-            </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">dst</span>
-                      - The destination character array.
-                    </div><div class="parameter-name">
-                      <span class="symbol">dstOffset</span>
-                      - The start position in the destination array to write to.
-                    </div><div class="parameter-name">
-                      <span class="symbol">src</span>
-                      - The bytes to be decoded.
-                    </div><div class="parameter-name">
-                      <span class="symbol">srcOffset</span>
-                      - The starting position within the byte array.
-                    </div><div class="parameter-name">
-                      <span class="symbol">count</span>
-                      - The number of bytes to decode.
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="member-feature">Returns</th>
-                  <td class="member-feature-data">
-                    <div class="returns-desc">
-                      The number of characters written to <span class="symbol">dst</span>.
-                    </div>
-                  </td>
-                </tr>
-              </table>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="decodedLength">
-	              def  <span class="symbol">decodedLength</span>(<span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Return the length, in characters, of the byte array when decoded.</p>
-            </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">src</span>
-                      - The bytes to be decoded.
-                    </div><div class="parameter-name">
-                      <span class="symbol">srcOffset</span>
-                      - The starting position within the byte array.
-                    </div><div class="parameter-name">
-                      <span class="symbol">count</span>
-                      - The number of bytes to decode.
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="member-feature">Returns</th>
-                  <td class="member-feature-data">
-                    <div class="returns-desc">
-                      The number of encoded characters.
-                    </div>
-                  </td>
-                </tr>
-              </table>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="decodedLength">
 	              def  <span class="symbol">decodedLength</span>(<span class="symbol">src</span>:<span class="type-name">uint8</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
               </a>
@@ -440,80 +260,6 @@
                   <td class="member-feature-data">
                     <div class="returns-desc">
                       The number of bytes written to <span class="symbol">dst</span>.
-                    </div>
-                  </td>
-                </tr>
-              </table>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="encode">
-	              def  <span class="symbol">encode</span>(<span class="symbol">dst</span>:<span class="type-name">uint8</span>[], <span class="symbol">dstOffset</span>:<span class="type-name">int32</span>, <span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Encode the characters in <span class="symbol">src</span>.</p>
-            </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">dst</span>
-                      - The destination byte array.
-                    </div><div class="parameter-name">
-                      <span class="symbol">dstOffset</span>
-                      - The start position in the destination array to write to.
-                    </div><div class="parameter-name">
-                      <span class="symbol">src</span>
-                      - The characters to be encoded.
-                    </div><div class="parameter-name">
-                      <span class="symbol">srcOffset</span>
-                      - The starting position within the character array.
-                    </div><div class="parameter-name">
-                      <span class="symbol">count</span>
-                      - The number of characters to encode.
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="member-feature">Returns</th>
-                  <td class="member-feature-data">
-                    <div class="returns-desc">
-                      The number of bytes written to <span class="symbol">dst</span>.
-                    </div>
-                  </td>
-                </tr>
-              </table>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="encodedLength">
-	              def  <span class="symbol">encodedLength</span>(<span class="symbol">src</span>:<span class="type-name">char</span>[], <span class="symbol">srcOffset</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Return the length, in bytes, of the character array when encoded.</p>
-            </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">src</span>
-                      - The characters to be encoded.
-                    </div><div class="parameter-name">
-                      <span class="symbol">srcOffset</span>
-                      - The starting position within the character array.
-                    </div><div class="parameter-name">
-                      <span class="symbol">count</span>
-                      - The number of characters to encode.
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="member-feature">Returns</th>
-                  <td class="member-feature-data">
-                    <div class="returns-desc">
-                      The number of bytes required to encode the specified character range.
                     </div>
                   </td>
                 </tr>

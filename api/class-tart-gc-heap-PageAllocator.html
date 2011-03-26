@@ -53,18 +53,6 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">static let  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#PAGE_SIZE">PAGE_SIZE</a>:<span class="type-name">int32</span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static let  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#PAGE_SIZE_LOG2">PAGE_SIZE_LOG2</a>:<span class="type-name">int32</span></div>
-	                <div class="member-summary">64K Pages.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static let  </td>
-	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#PAGE_SIZE_LOG2">PAGE_SIZE_LOG2</a>:<span class="type-name">int32</span></div>
 	                <div class="member-summary">64K Pages.</div>
 	              </td>
@@ -79,12 +67,6 @@
 	            	 <th class="member-table-col-header" colspan="2">Properties</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">property  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#heapExtent">heapExtent</a>:<span class="type-name">tart.gc.AddressRange</span></div>
-	                <div class="member-summary">Deallocate the specified address range. The beginning and ending address must be aligned on a page boundary.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#heapExtent">heapExtent</a>:<span class="type-name">tart.gc.AddressRange</span></div>
@@ -109,28 +91,10 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#alloc">alloc</a>(<span class="symbol">numPages</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.gc.AddressRange</span></span></div>
-	                <div class="member-summary">Allocate the specified number of pages.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#construct">construct</a>(<span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#construct">construct</a>(<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#free">free</a>(<span class="symbol">pages</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary">Free the specified pages.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-heap-PageAllocator.html#free">free</a>(<span class="symbol">pages</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span></div>
@@ -143,15 +107,6 @@
         <section class="member-details-section">
           <header class="member-details-section-header">Property Details</header>
           <section class="member-section">
-            <header class="member-header">
-              <a name="heapExtent">
-	              property  <span class="symbol">heapExtent</span>:<span class="type-name">tart.gc.AddressRange</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Deallocate the specified address range. The beginning and ending address must be aligned on a page boundary.</p>
-            </div>
-          </section><section class="member-section">
             <header class="member-header">
               <a name="heapExtent">
 	              property  <span class="symbol">heapExtent</span>:<span class="type-name">tart.gc.AddressRange</span>
@@ -175,34 +130,10 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="alloc">
-	              def  <span class="symbol">alloc</span>(<span class="symbol">numPages</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.gc.AddressRange</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Allocate the specified number of pages.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="construct">
 	              def  <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
               </a>
             </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="construct">
-	              def  <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="free">
-	              def  <span class="symbol">free</span>(<span class="symbol">pages</span>:<span class="type-name">tart.gc.AddressRange</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Free the specified pages.</p>
-            </div>
           </section><section class="member-section">
             <header class="member-header">
               <a name="free">

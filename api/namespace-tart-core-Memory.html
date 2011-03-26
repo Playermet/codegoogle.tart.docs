@@ -46,12 +46,6 @@
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#DefaultAllocator">DefaultAllocator</a></div>
 	                <div class="member-summary">The default allocator instance for all objects. This calls the garbage collector's GC.alloc() function.</div>
 	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">class  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#DefaultAllocator">DefaultAllocator</a></div>
-	                <div class="member-summary">The default allocator instance for all objects. This calls the garbage collector's GC.alloc() function.</div>
-	              </td>
 	            </tr>
 	          </table>
           </div>
@@ -71,18 +65,6 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#addressOf">addressOf</a>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">T</span>]</span></div>
-	                <div class="member-summary">Take the address of a variable and return the result as a native pointer. <span class="symbol">Value</span> can be a complex expression that resolves to an l-value.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayCopy">arrayCopy</a>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary">Copies a range of elements from one native array to another. Does not check array bounds. Does not guarantee correct behavior if the source and destination overlap.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayCopy">arrayCopy</a>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Copies a range of elements from one native array to another. Does not check array bounds. Does not guarantee correct behavior if the source and destination overlap.</div>
 	              </td>
@@ -91,18 +73,6 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayCopy">arrayCopy</a>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayCopy">arrayCopy</a>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayCopy">arrayCopy</a>(<span class="symbol">dstBegin</span>:Address[<span class="type-name">T</span>], <span class="symbol">dstEnd</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary">Copies a range of elements from one native array to another. Does not check array bounds. Does not guarantee correct behavior if the source and destination overlap.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -119,18 +89,6 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayMove">arrayMove</a>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary">Copies a range of elements from one native array to another. Does not check array bounds. Handles the case of overlapping ranges.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayMove">arrayMove</a>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayMove">arrayMove</a>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
@@ -139,18 +97,6 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayMove">arrayMove</a>(<span class="symbol">dstBegin</span>:Address[<span class="type-name">T</span>], <span class="symbol">dstEnd</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Copies a range of elements from one native array to another. Does not check array bounds. Handles the case of overlapping ranges.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#arrayMove">arrayMove</a>(<span class="symbol">dstBegin</span>:Address[<span class="type-name">T</span>], <span class="symbol">dstEnd</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary">Copies a range of elements from one native array to another. Does not check array bounds. Handles the case of overlapping ranges.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#bitCast">bitCast</a>(<span class="symbol">from</span>:<span class="type-name">S</span><span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span></div>
-	                <div class="member-summary">An unchecked cast of one type to another. Types must be the same size.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -167,18 +113,6 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#deref">deref</a>(<span class="symbol">from</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span></div>
-	                <div class="member-summary">Dereference a pointer value.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#nullObject">nullObject</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">ElemTy</span></span></div>
-	                <div class="member-summary">The null pointer, converted to an object reference.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#nullObject">nullObject</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">ElemTy</span></span></div>
 	                <div class="member-summary">The null pointer, converted to an object reference.</div>
 	              </td>
@@ -187,18 +121,6 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#objectAddress">objectAddress</a>(<span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">Object</span>]</span></div>
 	                <div class="member-summary">Convert an object reference into a native address.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#objectAddress">objectAddress</a>(<span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">Object</span>]</span></div>
-	                <div class="member-summary">Convert an object reference into a native address.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#objectReference">objectReference</a>(<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span></div>
-	                <div class="member-summary">Convert a native address into an object reference.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -215,28 +137,10 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#ptrDiff">ptrDiff</a>(<span class="symbol">first</span>:Address[<span class="type-name">ValTy</span>], <span class="symbol">last</span>:Address[<span class="type-name">ValTy</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span></div>
-	                <div class="member-summary">Return the difference between two pointers. Subtracts the pointer values, and then divides by the size of <span class="symbol">T</span>. Raises an exception if the value is too large to be contained within a signed integer.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#ptrToInt">ptrToInt</a>(<span class="symbol">addr</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span></div>
-	                <div class="member-summary">Return the integer value of a pointer. Not guaranteed to be convertible back into a pointer (may be truncated.)</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#ptrToInt">ptrToInt</a>(<span class="symbol">addr</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span></div>
 	                <div class="member-summary">Return the integer value of a pointer. Not guaranteed to be convertible back into a pointer (may be truncated.)</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#reinterpretPtr">reinterpretPtr</a>(<span class="symbol">from</span>:Address[<span class="type-name">S</span>]<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">T</span>]</span></div>
-	                <div class="member-summary">An unchecked cast of one pointer type to another.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Memory.html#reinterpretPtr">reinterpretPtr</a>(<span class="symbol">from</span>:Address[<span class="type-name">S</span>]<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">T</span>]</span></div>
@@ -259,42 +163,6 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="addressOf">
-	              def  <span class="symbol">addressOf</span>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">T</span>]</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Take the address of a variable and return the result as a native pointer. <span class="symbol">Value</span> can be a complex expression that resolves to an l-value.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="arrayCopy">
-	              def  <span class="symbol">arrayCopy</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Copies a range of elements from one native array to another. Does not check array bounds. Does not guarantee correct behavior if the source and destination overlap.</p>
-            <p>The behavior is equivalent to the CLib function memcpy().</p>
-            </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">dst</span>
-                      - The array containing the destination range.
-                    </div><div class="parameter-name">
-                      <span class="symbol">src</span>
-                      - The array containing the source range.
-                    </div><div class="parameter-name">
-                      <span class="symbol">length</span>
-                      - The number of elements to copy.
-                    </div>
-                  </td>
-                </tr>
-              </table>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="arrayCopy">
 	              def  <span class="symbol">arrayCopy</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
               </a>
@@ -326,39 +194,6 @@
 	              def  <span class="symbol">arrayCopy</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="arrayCopy">
-	              def  <span class="symbol">arrayCopy</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="arrayCopy">
-	              def  <span class="symbol">arrayCopy</span>(<span class="symbol">dstBegin</span>:Address[<span class="type-name">T</span>], <span class="symbol">dstEnd</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Copies a range of elements from one native array to another. Does not check array bounds. Does not guarantee correct behavior if the source and destination overlap.</p>
-            <p>The behavior is equivalent to the CLib function memcpy().</p>
-            </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">dstBegin</span>
-                      - The start of the destination range.
-                    </div><div class="parameter-name">
-                      <span class="symbol">dstEnd</span>
-                      - The end of the destination range.
-                    </div><div class="parameter-name">
-                      <span class="symbol">src</span>
-                      - The start of the source range.
-                    </div>
-                  </td>
-                </tr>
-              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="arrayCopy">
@@ -422,75 +257,9 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="arrayMove">
-	              def  <span class="symbol">arrayMove</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Copies a range of elements from one native array to another. Does not check array bounds. Handles the case of overlapping ranges.</p>
-            <p>The behavior is equivalent to the CLib function memmove().</p>
-            </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">dst</span>
-                      - The array containing the destination range.
-                    </div><div class="parameter-name">
-                      <span class="symbol">dstOffset</span>
-                      - The starting index of the destination range.
-                    </div><div class="parameter-name">
-                      <span class="symbol">src</span>
-                      - The array containing the source range.
-                    </div><div class="parameter-name">
-                      <span class="symbol">srcOffset</span>
-                      - The starting index of the source ranbge.
-                    </div><div class="parameter-name">
-                      <span class="symbol">length</span>
-                      - The number of elements to copy.
-                    </div>
-                  </td>
-                </tr>
-              </table>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="arrayMove">
 	              def  <span class="symbol">arrayMove</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span>
               </a>
             </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="arrayMove">
-	              def  <span class="symbol">arrayMove</span>(<span class="symbol">dst</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>], <span class="symbol">length</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="arrayMove">
-	              def  <span class="symbol">arrayMove</span>(<span class="symbol">dstBegin</span>:Address[<span class="type-name">T</span>], <span class="symbol">dstEnd</span>:Address[<span class="type-name">T</span>], <span class="symbol">src</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Copies a range of elements from one native array to another. Does not check array bounds. Handles the case of overlapping ranges.</p>
-            <p>The behavior is equivalent to the CLib function memcpy().</p>
-            </div>
-              <table class="member-features-table" cellspacing="6px">
-                <tr>
-                  <th class="member-feature">Parameters</th>
-                  <td class="member-feature-data">
-                    <div class="parameter-name">
-                      <span class="symbol">dstBegin</span>
-                      - The start of the destination range.
-                    </div><div class="parameter-name">
-                      <span class="symbol">dstEnd</span>
-                      - The end of the destination range.
-                    </div><div class="parameter-name">
-                      <span class="symbol">src</span>
-                      - The start of the source range.
-                    </div>
-                  </td>
-                </tr>
-              </table>
           </section><section class="member-section">
             <header class="member-header">
               <a name="arrayMove">
@@ -529,39 +298,12 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="bitCast">
-	              def  <span class="symbol">bitCast</span>(<span class="symbol">from</span>:<span class="type-name">S</span><span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>An unchecked cast of one type to another. Types must be the same size.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="deref">
 	              def  <span class="symbol">deref</span>(<span class="symbol">from</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Dereference a pointer value.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="deref">
-	              def  <span class="symbol">deref</span>(<span class="symbol">from</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Dereference a pointer value.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="nullObject">
-	              def  <span class="symbol">nullObject</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">ElemTy</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>The null pointer, converted to an object reference.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
@@ -583,24 +325,6 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="objectAddress">
-	              def  <span class="symbol">objectAddress</span>(<span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">Object</span>]</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Convert an object reference into a native address.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="objectReference">
-	              def  <span class="symbol">objectReference</span>(<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Convert a native address into an object reference.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="objectReference">
 	              def  <span class="symbol">objectReference</span>(<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span></span>
               </a>
@@ -619,39 +343,12 @@
             </div>
           </section><section class="member-section">
             <header class="member-header">
-              <a name="ptrDiff">
-	              def  <span class="symbol">ptrDiff</span>(<span class="symbol">first</span>:Address[<span class="type-name">ValTy</span>], <span class="symbol">last</span>:Address[<span class="type-name">ValTy</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">int32</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Return the difference between two pointers. Subtracts the pointer values, and then divides by the size of <span class="symbol">T</span>. Raises an exception if the value is too large to be contained within a signed integer.</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
               <a name="ptrToInt">
 	              def  <span class="symbol">ptrToInt</span>(<span class="symbol">addr</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Return the integer value of a pointer. Not guaranteed to be convertible back into a pointer (may be truncated.)</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="ptrToInt">
-	              def  <span class="symbol">ptrToInt</span>(<span class="symbol">addr</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint32</span></span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>Return the integer value of a pointer. Not guaranteed to be convertible back into a pointer (may be truncated.)</p>
-            </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="reinterpretPtr">
-	              def  <span class="symbol">reinterpretPtr</span>(<span class="symbol">from</span>:Address[<span class="type-name">S</span>]<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">T</span>]</span>
-              </a>
-            </header>
-            <div class="member-description">
-            <p>An unchecked cast of one pointer type to another.</p>
             </div>
           </section><section class="member-section">
             <header class="member-header">
