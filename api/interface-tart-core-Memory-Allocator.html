@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="apidocs.css">
+<meta charset="UTF-8">
+<head>
+  <title>tart.core.Memory.Allocator</title>
+  <link rel="stylesheet" type="text/css" href="apidoc.css">
+  </head>
+<body>
+  <section class="page-header">
+  <header class="page-header-title"><strong>Tart Standard Library</strong> [libstd]</header>
+  </section>
+  <section class="nav-section">
+  <nav class="nav-item">
+    <a class="nav-link" href="index.html">Packages</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="types.html">Types</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="names.html">Index</a>
+  </nav>
+  </section>
+  <section class="content-section">
+    <header class="content-header">
+      <span class="defn-declarator">interface  </span>
+      tart.core.Memory.<span class="defn-name">Allocator</span>
+    </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Implemented by:</header>
+        <div class="base-class"><a href="class-tart-core-Memory-DefaultAllocator.html" class="type-name-link">tart.core.Memory.DefaultAllocator</a>
+        , <a href="class-tart-gc-GCRuntimeSupport-MallocAllocator.html" class="type-name-link">tart.gc.GCRuntimeSupport.MallocAllocator</a>
+        </div>
+      </section>
+	    <section class="defn-section-description">
+            <p>A general interface for allocators.</p>
+	    </section>
+    <header class="member-table-header">Member Summary</header>
+        <section class="member-list-section">
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-core-Memory-Allocator.html#alloc">alloc</a>(<span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">uint8</span>]</span></div>
+	                <div class="member-summary">Allocate <span class="symbol">size</span> bytes of memory and return it. The memory will not be initialized, and may contain random data. If the allocator is one that supports garbage collection, it must fill in any fields that it needs, such as the <span class="symbol">__gcstate</span> field of class Object.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-core-Memory-Allocator.html#free">free</a>(<span class="symbol">ptr</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">)</span></div>
+	                <div class="member-summary">Explicitly free a region of memory previously allocated by <span class="symbol">alloc</span>. Not supported by all allocator types.</div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-details-section">
+          <header class="member-details-section-header">Method Details</header>
+          <section class="member-section">
+            <header class="member-header">
+              <a name="alloc">
+	              def  <span class="symbol">alloc</span>(<span class="symbol">size</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">) -&gt; Address[<span class="type-name">uint8</span>]</span>
+              </a>
+            </header>
+            <div class="member-description">
+              <p>Allocate <span class="symbol">size</span> bytes of memory and return it. The memory will not be initialized, and may contain random data. If the allocator is one that supports garbage collection, it must fill in any fields that it needs, such as the <span class="symbol">__gcstate</span> field of class Object.</p>
+            </div>
+          </section><section class="member-section">
+            <header class="member-header">
+              <a name="free">
+	              def  <span class="symbol">free</span>(<span class="symbol">ptr</span>:Address[<span class="type-name">uint8</span>]<span style="white-space: nowrap">)</span>
+              </a>
+            </header>
+            <div class="member-description">
+              <p>Explicitly free a region of memory previously allocated by <span class="symbol">alloc</span>. Not supported by all allocator types.</p>
+            </div>
+          </section>
+        </section>
+  </section>
+  <section class="page-footer">Generated by doclobster.</section>
+</body>
+</html>

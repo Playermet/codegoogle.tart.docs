@@ -22,6 +22,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -38,7 +46,29 @@
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
+	            	 <th class="member-table-col-header" colspan="2">Inner Types</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">struct  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="struct-tart-core-Hashing-HashFn.html">HashFn</a>[<span class="type-name">T</span>]</div>
+	                <div class="member-summary">Hash functor that calls computeHash().</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">struct  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="struct-tart-core-Hashing-Hasher.html">Hasher</a></div>
+	                <div class="member-summary">An incremental hasher.</div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -55,7 +85,7 @@
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#hash">hash</a>(<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-core-Hashing.html#hash">hash</a>[<span class="type-name">T</span>](<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span></div>
 	                <div class="member-summary">Hash a pointer.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
@@ -121,7 +151,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="hash">
-	              def  <span class="symbol">hash</span>(<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span>
+	              def  <span class="symbol">hash</span>[<span class="type-name">T</span>](<span class="symbol">value</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">uint64</span></span>
               </a>
             </header>
             <div class="member-description">

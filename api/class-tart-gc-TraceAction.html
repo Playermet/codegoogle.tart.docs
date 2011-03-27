@@ -22,6 +22,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -32,7 +40,8 @@
     </header>
       <section class="base-class-section">
         <header class="base-class-section-header">Inherits from:</header>
-        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a>
+        </div>
       </section>
 	    <section class="defn-section-description">
           <p>Handles the logic of a tracing pass.</p>
@@ -42,33 +51,27 @@
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#construct">construct</a>(<span style="white-space: nowrap">)</span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#traceDescriptors">traceDescriptors</a>(<span class="symbol">baseAddr</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">descriptorList</span>:Address[<span class="type-name">tart.gc.TraceDescriptor</span>]<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Trace an object given a list of trace descriptor structures.</div>
 	              </td>
-	            </tr><tr class="member-table-row ">
+	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#traceObject">traceObject</a>(<span class="symbol">v</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Trace the object <span class="symbol">v</span>, which must not be null.</div>
 	              </td>
-	            </tr><tr class="member-table-row row-even">
+	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">protected abstract def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#tracePointer">tracePointer</a>(<span class="symbol">ptrAddr</span>:Address[<span class="type-name">Object</span>]<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Trace a single pointer. Override this in the subclass to implement the trace algorithm.</div>
 	              </td>
-	            </tr><tr class="member-table-row ">
+	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">protected def  </td>
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#tracePointers">tracePointers</a>(<span class="symbol">baseAddr</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">fieldOffsets</span>:Address[<span class="type-name">uint32</span>], <span class="symbol">fieldCount</span>:<span class="type-name">uint32</span><span style="white-space: nowrap">)</span></div>
@@ -165,19 +168,19 @@
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">macro  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#trace">trace</a>(<span class="symbol">v</span>:<span class="type-name">T</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#trace">trace</a>[<span class="type-name">T</span>](<span class="symbol">v</span>:<span class="type-name">T</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Tracer for object fields - updates the object reference.</div>
 	              </td>
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">macro  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#trace">trace</a>(<span class="symbol">v</span>:<span class="type-name">T</span><span style="white-space: nowrap">)</span></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#trace">trace</a>[<span class="type-name">T</span>](<span class="symbol">v</span>:<span class="type-name">T</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Trace an arbitrary value type.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">macro  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#trace">trace</a>(<span class="symbol">v</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-gc-TraceAction.html#trace">trace</a>[<span class="type-name">T</span>](<span class="symbol">v</span>:Address[<span class="type-name">T</span>]<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Don't trace addresses.</div>
 	              </td>
 	            </tr>
@@ -187,12 +190,6 @@
         <section class="member-details-section">
           <header class="member-details-section-header">Method Details</header>
           <section class="member-section">
-            <header class="member-header">
-              <a name="construct">
-	              def  <span class="symbol">construct</span>(<span style="white-space: nowrap">)</span>
-              </a>
-            </header>
-          </section><section class="member-section">
             <header class="member-header">
               <a name="traceDescriptors">
 	              final def  <span class="symbol">traceDescriptors</span>(<span class="symbol">baseAddr</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">descriptorList</span>:Address[<span class="type-name">tart.gc.TraceDescriptor</span>]<span style="white-space: nowrap">)</span>

@@ -22,6 +22,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -30,21 +38,27 @@
       <span class="defn-declarator">interface  </span>
       tart.core.<span class="defn-name">Iterator</span>[%<span class="type-variable-name">T</span>]
     </header>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Implemented by:</header>
+        <div class="base-class"><a href="class-tart-collections-Iterators-CountingIterator.html" class="type-name-link">tart.collections.Iterators.CountingIterator</a>
+        , <a href="class-tart-collections-Iterators-Enumerator.html" class="type-name-link">tart.collections.Iterators.Enumerator</a>, <a href="class-tart-core-String-StringIterator.html" class="type-name-link">tart.core.String.StringIterator</a>, <a href="class-tart-reflect-AttributeList-IteratorImpl.html" class="type-name-link">tart.reflect.AttributeList.IteratorImpl</a>, <a href="class-tart-reflect-FieldList-IteratorImpl.html" class="type-name-link">tart.reflect.FieldList.IteratorImpl</a>, <a href="class-tart-reflect-MethodList-IteratorImpl.html" class="type-name-link">tart.reflect.MethodList.IteratorImpl</a>, <a href="class-tart-reflect-PropertyList-IteratorImpl.html" class="type-name-link">tart.reflect.PropertyList.IteratorImpl</a>, <a href="class-tart-reflect-TypeList-IteratorImpl.html" class="type-name-link">tart.reflect.TypeList.IteratorImpl</a>
+        </div>
+      </section>
 	    <section class="defn-section-description">
-          <p>The iterator interface. An iterator has a <span class="symbol">next</span> method which returns either the next value in the sequence, or <span class="symbol">Nothing</span> to indicate the end of the sequence.</p>
+          <p>The iterator interface. An iterator has a <span class="symbol">next</span> method which returns either the next value in the sequence, or <span class="symbol">void</span> to indicate the end of the sequence.</p>
 	    </section>
     <header class="member-table-header">Member Summary</header>
         <section class="member-list-section">
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-core-Iterator.html#next">next</a>(<span style="white-space: nowrap">) -&gt; union??</span></div>
-	                <div class="member-summary"></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="interface-tart-core-Iterator.html#next">next</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span> or <span class="type-name">void</span></span></div>
+	                <div class="member-summary">Return the next element in the sequence, or <span class="symbol">void</span> to indicate the end of the sequence.</div>
 	              </td>
 	            </tr>
 	          </table>
@@ -55,9 +69,12 @@
           <section class="member-section">
             <header class="member-header">
               <a name="next">
-	              def  <span class="symbol">next</span>(<span style="white-space: nowrap">) -&gt; union??</span>
+	              def  <span class="symbol">next</span>(<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span> or <span class="type-name">void</span></span>
               </a>
             </header>
+            <div class="member-description">
+            <p>Return the next element in the sequence, or <span class="symbol">void</span> to indicate the end of the sequence.</p>
+            </div>
           </section>
         </section>
   </section>

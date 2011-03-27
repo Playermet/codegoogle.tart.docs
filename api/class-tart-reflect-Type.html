@@ -22,6 +22,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -32,7 +40,14 @@
     </header>
       <section class="base-class-section">
         <header class="base-class-section-header">Inherits from:</header>
-        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a>
+        </div>
+      </section>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherited by:</header>
+        <div class="base-class"><a href="class-tart-reflect-CompositeType.html" class="type-name-link">tart.reflect.CompositeType</a>
+        , <a href="class-tart-reflect-DerivedType.html" class="type-name-link">tart.reflect.DerivedType</a>, <a href="class-tart-reflect-EnumType.html" class="type-name-link">tart.reflect.EnumType</a>, <a href="class-tart-reflect-FunctionType.html" class="type-name-link">tart.reflect.FunctionType</a>, <a href="class-tart-reflect-PrimitiveType.html" class="type-name-link">tart.reflect.PrimitiveType</a>
+        </div>
       </section>
 	    <section class="defn-section-description">
           <p>The metatype object - the class that describes a type.</p>
@@ -134,23 +149,7 @@
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Static Methods</th>
-	            </tr>
-	            <tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Type.html#of">of</a>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span></div>
-	                <div class="member-summary">Given a type literal, return the reflected type object.</div>
-	              </td>
-	            </tr>
-	          </table>
-          </div>
-        </section>
-        <section class="member-list-section">
-          <div class="member-table-box">
-	          <table class="member-table" cellspacing="0" cellpadding="0">
-	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -193,6 +192,22 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Type.html#setPropertyValue">setPropertyValue</a>(<span class="symbol">obj</span>:<span class="type-name">Object</span>, <span class="symbol">setterFn</span>:Address[<span class="type-name">void</span>], <span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">Given an object reference and a pointer to a setter function which takes a value of this type, unbox the value yielding a value of this type, and pass that to the setter.</div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header" colspan="2">Static Methods</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Type.html#of">of</a>[<span class="type-name">T</span>](<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span></div>
+	                <div class="member-summary">Given a type literal, return the reflected type object.</div>
 	              </td>
 	            </tr>
 	          </table>
@@ -420,7 +435,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="of">
-	              static def  <span class="symbol">of</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span>
+	              static def  <span class="symbol">of</span>[<span class="type-name">T</span>](<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Type</span></span>
               </a>
             </header>
             <div class="member-description">

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="apidocs.css">
+<meta charset="UTF-8">
+  <title>Class Hierarchy</title>
+</head>
+<body>
+  <section class="page-header">
+  <header class="page-header-title"><strong>Tart Standard Library</strong> [libstd]</header>
+  </section>
+  <section class="nav-section">
+  <nav class="nav-item">
+    <a class="nav-link" href="index.html">Packages</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="types.html">Types</a>
+  </nav>
+    •
+	<nav class="nav-item nav-item-selected">Hierarchy</nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="names.html">Index</a>
+  </nav>
+  </section>
+  <section class="content-section">
+    <header class="content-header">Class Hierarchy</header>
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-core-Object.html">tart.core.Object</a> - Base class of all reference types.
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-annex-Coalesce.html">tart.annex.Coalesce</a> - Attribute on a template which causes the compiler to merge instances of that template if possible. For example, if a template <span class="symbol">Foo</span> is marked with this attribute, then the generated code for <span class="symbol">Foo[String]</span> and <span class="symbol">Foo[Object]</span> will be merged into a single definition.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-annex-Essential.html">tart.annex.Essential</a> - Attribute that indicates that the associated definition is treated specially by the compiler. The evaluation of this attribute causes the associated definition to be registered by the compiler into a table of definitions that require special treatment.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-annex-GenerateStackTrace.html">tart.annex.GenerateStackTrace</a> - Attribute used on an exception declaration in a catch statement that instructs the compiler to emit code to generate a stack trace.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-annex-Intrinsic.html">tart.annex.Intrinsic</a> - Attribute that indicates that the associated function is a built-in compiler intrinsic.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-annex-TargetProperty.html">tart.annex.TargetProperty</a> - Attribute that indicates that this property is a global variable whose value is determined at link time based on the selection of the target platform.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-collections-ArrayList.html">tart.collections.ArrayList</a> - Array-backed list type.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-collections-HashMap.html">tart.collections.HashMap</a> - A quadratically-probed hash map.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-collections-HashSet.html">tart.collections.HashSet</a> - A quadratically-probed hash set.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-collections-ImmutableList.html">tart.collections.ImmutableList</a> - A list type with a fixed set of elements.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-collections-Iterators-CountingIterator.html">tart.collections.Iterators.CountingIterator</a> - An iterator that returns the integers 0..N-1, for some N.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-collections-Iterators-Enumerator.html">tart.collections.Iterators.Enumerator</a> -
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-concurrent-ThreadLocal.html">tart.concurrent.ThreadLocal</a> - Attribute that is used to indicate a thread-local variable.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-Array.html">tart.core.Array</a> - Built-in array class
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-Attribute.html">tart.core.Attribute</a> - Base class for all attributes.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-EntryPoint.html">tart.core.EntryPoint</a> - Attribute that indicates that the associated function is where execution of the application should start.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-Extern.html">tart.core.Extern</a> - Attribute that specifies that this method or variable is an externally-defined symbol.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-Flags.html">tart.core.Flags</a> - Attribute used to indicate that an enumeration is a set of flags.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-LinkageName.html">tart.core.LinkageName</a> - Attribute that allows the linkage name of this function to be explicitly specified.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-Memory-DefaultAllocator.html">tart.core.Memory.DefaultAllocator</a> - The default allocator instance for all objects. This calls the garbage collector's GC.alloc() function.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-NoInline.html">tart.core.NoInline</a> - Attribute that indicates that the associated function should not be inlined.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-Ref.html">tart.core.Ref</a> - Abstract class used to represent a reference to some value. <span class="symbol">Ref</span> wraps a value type, transforming it into a reference type.
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-core-MutableRef.html">tart.core.MutableRef</a> - A wrapper class that wraps a value type, turning it into a reference type. This allows multiple references to the same value. This is used for implementing closure cells, among other things.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-ValueRef.html">tart.core.ValueRef</a> - A reference type used to contain an immutable value type.
+        </li>
+      </ul>
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-String.html">tart.core.String</a> - The built-in string class. Strings are immutable.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-String-StringIterator.html">tart.core.String.StringIterator</a> - String iterator class.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-StringBuilder.html">tart.core.StringBuilder</a> - A mutable, extensible string.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-StringFormatter.html">tart.core.StringFormatter</a> - Class to handle string formatting.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-Throwable.html">tart.core.Throwable</a> - The base class for all throwable objects.
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-core-Exception.html">tart.core.Exception</a> - Base class of exceptions.
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-collections-KeyError.html">tart.collections.KeyError</a> - Exception thrown when a map key lookup fails.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-ArgumentError.html">tart.core.ArgumentError</a> - Exception thrown when a method argument is invalid.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-AssertionFailureError.html">tart.core.AssertionFailureError</a> - Exception thrown when an assertion fails.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-IndexError.html">tart.core.IndexError</a> - Exception thrown when an array index is outside of the valid range of array indices.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-InvalidArgumentError.html">tart.core.InvalidArgumentError</a> - Thrown to indicate a function has been passed an illegal argument value.
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-core-InputFormatError.html">tart.core.InputFormatError</a> - Exception that is thrown when attempting to convert a string to another type, such as a number or boolean, but the input string does not have the proper format.
+        </li>
+      </ul>
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-OverflowError.html">tart.core.OverflowError</a> - Exception that is thrown when an arithmetic, casting, or conversion operation on
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-TypecastError.html">tart.core.TypecastError</a> - Exception thrown when an attempt to cast an object reference to a type that is not a subclass of the instance.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-UnsupportedOperationError.html">tart.core.UnsupportedOperationError</a> - Exception thrown when a method does not have an implementation.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-io-IOError.html">tart.io.IOError</a> - Exception that signals an i/o error.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-DecodingError.html">tart.reflect.DecodingError</a> - Exception which indicates that the reflection metadata could not be decoded.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-InstantiationError.html">tart.reflect.InstantiationError</a> - Exception which is thrown when an attempt is made to instantiate a type via reflection which is not instantiable.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-InvocationError.html">tart.reflect.InvocationError</a> - Exception which is thrown when the attempt to call a method via reflection has the incorrect number of arguments.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-text-encodings-InvalidCharacterError.html">tart.text.encodings.InvalidCharacterError</a> - Exception thrown when an attempt is made to encode a character that is not supported by the encoding.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-text-encodings-MalformedInputError.html">tart.text.encodings.MalformedInputError</a> - Exception thrown when attempting to decode a sequence of input bytes which is not valid for the encoding.
+        </li>
+      </ul>
+        </li>
+      </ul>
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-Throwable-StackFrame.html">tart.core.Throwable.StackFrame</a> -
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-core-Unsafe.html">tart.core.Unsafe</a> - Attribute that indicates that the associated function or type cannot be used without the <span class="symbol">unsafe</span> option to the compiler.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-gc-AllocationBlock.html">tart.gc.AllocationBlock</a> - Class which represents a contiguous region of memory which is allocated via
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-gc-GCRuntimeSupport-MallocAllocator.html">tart.gc.GCRuntimeSupport.MallocAllocator</a> - An allocator which calls <span class="symbol">malloc</span>.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-gc-TraceAction.html">tart.gc.TraceAction</a> - Handles the logic of a tracing pass.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-gc-TraceMethod.html">tart.gc.TraceMethod</a> - Indicates that the associated method is a garbage collector tracing helper function.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-gc-heap-PageAllocator.html">tart.gc.heap.PageAllocator</a> - Manages the allocation of low-level pages of memory.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-gc-heap-Space.html">tart.gc.heap.Space</a> - Manages a region of memory under a specific allocation and collection policy.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-io-StdFileStream.html">tart.io.StdFileStream</a> - A stream which can read / write to a C stdio FILE handle.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-io-StringReader.html">tart.io.StringReader</a> - Class that reads characters from a string.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-AttributeList.html">tart.reflect.AttributeList</a> - An immutable list of attributes that points to a statically-initialized array.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-AttributeList-IteratorImpl.html">tart.reflect.AttributeList.IteratorImpl</a> -
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-FieldList.html">tart.reflect.FieldList</a> - An immutable list of attributes that points to a statically-initialized array.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-FieldList-IteratorImpl.html">tart.reflect.FieldList.IteratorImpl</a> -
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Member.html">tart.reflect.Member</a> - A member of a type
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-DataMember.html">tart.reflect.DataMember</a> - Common base class for fields and properties - any member that can be read (and possibly written).
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Field.html">tart.reflect.Field</a> - Description of a class field.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Property.html">tart.reflect.Property</a> - Description of a property.
+        </li>
+      </ul>
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Method.html">tart.reflect.Method</a> - Description of a callable method.
+        </li>
+      </ul>
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-MethodList.html">tart.reflect.MethodList</a> - An immutable list of methods that points to a statically-initialized array.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-MethodList-IteratorImpl.html">tart.reflect.MethodList.IteratorImpl</a> -
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Module.html">tart.reflect.Module</a> - Description of a compiled module.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-NameTable.html">tart.reflect.NameTable</a> - Contains the encoded table of strings for a module.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Package.html">tart.reflect.Package</a> - Description of a package.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Parameter.html">tart.reflect.Parameter</a> - Reflection class for a method parameter. This structure is shared by all parameters that have the same name, unless the list of attributes is non-empty.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-PropertyList.html">tart.reflect.PropertyList</a> - An immutable list of attributes that points to a statically-initialized array.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-PropertyList-IteratorImpl.html">tart.reflect.PropertyList.IteratorImpl</a> -
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Proxy-ProxyImpl.html">tart.reflect.Proxy.ProxyImpl</a> -
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Reflect.html">tart.reflect.Reflect</a> - Attribute that indicates that the compiler should generate reflection information for the target type or member.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-StreamDecoder.html">tart.reflect.StreamDecoder</a> - Used to decode a compressed stream of reflection data.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-Type.html">tart.reflect.Type</a> - The metatype object - the class that describes a type.
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-CompositeType.html">tart.reflect.CompositeType</a> - Reflection type for classes, structs, and interfaces.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-DerivedType.html">tart.reflect.DerivedType</a> - Reflection type class for pointers, unions, tuples, and so on.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-EnumType.html">tart.reflect.EnumType</a> - Interface type for enums.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-FunctionType.html">tart.reflect.FunctionType</a> - Reflection type class for functions. This object is shared by all functions that have the same type signature.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-PrimitiveType.html">tart.reflect.PrimitiveType</a> - Reflection type class for primitive and enum types.
+      <ul class="class-hierarchy">
+        <li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-PrimitiveNullType.html">tart.reflect.PrimitiveNullType</a> -
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-PrimitiveTypeImpl.html">tart.reflect.PrimitiveTypeImpl</a> -
+        </li>
+      </ul>
+        </li>
+      </ul>
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-TypeList.html">tart.reflect.TypeList</a> - An immutable list of types that points to a statically-initialized array.
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-reflect-TypeList-IteratorImpl.html">tart.reflect.TypeList.IteratorImpl</a> -
+        </li><li>
+          <a class="class-hierarchy-link" href="class-tart-text-encodings-UTF8.html">tart.text.encodings.UTF8</a> -
+        </li>
+      </ul>
+        </li>
+      </ul>
+  </section>
+  <section class="page-footer">Generated by doclobster.</section>
+</body>
+</html>

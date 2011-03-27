@@ -22,6 +22,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -32,7 +40,8 @@
     </header>
       <section class="base-class-section">
         <header class="base-class-section-header">Inherits from:</header>
-        <div class="base-class"><a href="class-tart-reflect-Type.html" class="type-name-link">tart.reflect.Type</a></div>
+        <div class="base-class"><a href="class-tart-reflect-Type.html" class="type-name-link">tart.reflect.Type</a>
+        </div>
       </section>
 	    <section class="defn-section-description">
           <p>Reflection type class for functions. This object is shared by all functions that have the same type signature.</p>
@@ -76,18 +85,18 @@
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-FunctionType.html#construct">construct</a>(<span class="symbol">returnType</span>:<span class="type-name">tart.reflect.Type</span>, <span class="symbol">selfType</span>:union??, <span class="symbol">paramTypes</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>], <span class="symbol">invoke</span>:fn-type??<span style="white-space: nowrap">)</span></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-FunctionType.html#construct">construct</a>(<span class="symbol">returnType</span>:<span class="type-name">tart.reflect.Type</span>, <span class="symbol">selfType</span>:<span class="type-name">tart.reflect.Type</span> or <span class="type-name">Null</span>, <span class="symbol">paramTypes</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>], <span class="symbol">invoke</span>:fn-type??<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary"></div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-FunctionType.html#invoke">invoke</a>(<span class="symbol">func</span>:Address[<span class="type-name">void</span>], <span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-FunctionType.html#invoke">invoke</a>(<span class="symbol">func</span>:Address[<span class="type-name">void</span>], <span class="symbol">obj</span>:<span class="type-name">Object</span> or <span class="type-name">Null</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span></div>
 	                <div class="member-summary">Trampoline function to invoke a method of this type.</div>
 	              </td>
 	            </tr>
@@ -155,13 +164,13 @@
           <section class="member-section">
             <header class="member-header">
               <a name="construct">
-	              def  <span class="symbol">construct</span>(<span class="symbol">returnType</span>:<span class="type-name">tart.reflect.Type</span>, <span class="symbol">selfType</span>:union??, <span class="symbol">paramTypes</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>], <span class="symbol">invoke</span>:fn-type??<span style="white-space: nowrap">)</span>
+	              def  <span class="symbol">construct</span>(<span class="symbol">returnType</span>:<span class="type-name">tart.reflect.Type</span>, <span class="symbol">selfType</span>:<span class="type-name">tart.reflect.Type</span> or <span class="type-name">Null</span>, <span class="symbol">paramTypes</span>:<span class="type-name">tart.collections.List</span>[<span class="type-name">tart.reflect.Type</span>], <span class="symbol">invoke</span>:fn-type??<span style="white-space: nowrap">)</span>
               </a>
             </header>
           </section><section class="member-section">
             <header class="member-header">
               <a name="invoke">
-	              final def  <span class="symbol">invoke</span>(<span class="symbol">func</span>:Address[<span class="type-name">void</span>], <span class="symbol">obj</span>:union??, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
+	              final def  <span class="symbol">invoke</span>(<span class="symbol">func</span>:Address[<span class="type-name">void</span>], <span class="symbol">obj</span>:<span class="type-name">Object</span> or <span class="type-name">Null</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">Object</span></span>
               </a>
             </header>
             <div class="member-description">

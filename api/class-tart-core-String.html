@@ -22,6 +22,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -32,11 +40,13 @@
     </header>
       <section class="base-class-section">
         <header class="base-class-section-header">Inherits from:</header>
-        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a>
+        </div>
       </section>
       <section class="base-class-section">
         <header class="base-class-section-header">Implements:</header>
-        <div class="base-class"><a href="interface-tart-core-Iterable.html" class="type-name-link">Iterable</a>[<span class="type-name">char</span>]</div>
+        <div class="base-class"><a href="interface-tart-core-Iterable.html" class="type-name-link">Iterable</a>[<span class="type-name">char</span>]
+        </div>
       </section>
 	    <section class="defn-section-description">
           <p>The built-in string class. Strings are immutable.</p>
@@ -68,101 +78,7 @@
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Static Methods</th>
-	            </tr>
-	            <tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#concat">concat</a>(<span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Concatenate a list of strings.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#concat">concat</a>(<span class="symbol">strings</span>:<span class="type-name">Iterable</span>[<span class="type-name">String</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Concatenate a list of strings.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">bytes</span>:<span class="type-name">uint8</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Construct a string from a byte array. The byte array is presumed to contain character data encoded as UTF-8.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">bytes</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Construct a string from a subrange of a byte array. The byte array is presumed to contain character data encoded as UTF-8.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">str</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Construct a string from a subrange of another string. Note that the bytes that make up the string are shared between the two instances rather than copied.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Construct a string from an array of characters.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">bytes</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Construct a string from a native byte array.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Explicitly convert values to String types.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Create a string from a type that has a <span class="symbol">toString</span> method.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Create a string from a subclass of <span class="symbol">Object</span> using the object's <span class="symbol">toString</span> method.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#format">format</a>(<span class="symbol">formatString</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Create a new <span class="symbol">String</span> object using a format string and a list of arguments.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#format">format</a>(<span class="symbol">formatString</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Create a new <span class="symbol">String</span> object using a format string and an array of arguments.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#join">join</a>(<span class="symbol">sep</span>:<span class="type-name">String</span>, <span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Join together a list of strings with a separator string.</div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#join">join</a>(<span class="symbol">sep</span>:<span class="type-name">String</span>, <span class="symbol">strings</span>:<span class="type-name">Iterable</span>[<span class="type-name">String</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
-	                <div class="member-summary">Join together a list of strings with a separator string.</div>
-	              </td>
-	            </tr>
-	          </table>
-          </div>
-        </section>
-        <section class="member-list-section">
-          <div class="member-table-box">
-	          <table class="member-table" cellspacing="0" cellpadding="0">
-	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -271,6 +187,100 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#toUpperCase">toUpperCase</a>(<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
 	                <div class="member-summary">Return the value of this string, converted to upper case.</div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header" colspan="2">Static Methods</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#concat">concat</a>(<span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Concatenate a list of strings.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#concat">concat</a>(<span class="symbol">strings</span>:<span class="type-name">Iterable</span>[<span class="type-name">String</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Concatenate a list of strings.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">bytes</span>:<span class="type-name">uint8</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Construct a string from a byte array. The byte array is presumed to contain character data encoded as UTF-8.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">bytes</span>:<span class="type-name">uint8</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Construct a string from a subrange of a byte array. The byte array is presumed to contain character data encoded as UTF-8.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">str</span>:<span class="type-name">String</span>, <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Construct a string from a subrange of another string. Note that the bytes that make up the string are shared between the two instances rather than copied.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">chars</span>:<span class="type-name">char</span>[], <span class="symbol">start</span>:<span class="type-name">int32</span>, <span class="symbol">count</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Construct a string from an array of characters.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">bytes</span>:Address[<span class="type-name">uint8</span>], <span class="symbol">length</span>:<span class="type-name">int32</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Construct a string from a native byte array.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>[<span class="type-name">T</span>](<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Explicitly convert values to String types.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>[<span class="type-name">T</span>](<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Create a string from a type that has a <span class="symbol">toString</span> method.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#create">create</a>(<span class="symbol">value</span>:<span class="type-name">Object</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Create a string from a subclass of <span class="symbol">Object</span> using the object's <span class="symbol">toString</span> method.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#format">format</a>(<span class="symbol">formatString</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Create a new <span class="symbol">String</span> object using a format string and a list of arguments.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#format">format</a>(<span class="symbol">formatString</span>:<span class="type-name">String</span>, <span class="symbol">args</span>:<span class="type-name">Object</span>[]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Create a new <span class="symbol">String</span> object using a format string and an array of arguments.</div>
+	              </td>
+	            </tr><tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#join">join</a>(<span class="symbol">sep</span>:<span class="type-name">String</span>, <span class="symbol">s</span>:<span class="type-name">String</span>...<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Join together a list of strings with a separator string.</div>
+	              </td>
+	            </tr><tr class="member-table-row row-even">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-core-String.html#join">join</a>(<span class="symbol">sep</span>:<span class="type-name">String</span>, <span class="symbol">strings</span>:<span class="type-name">Iterable</span>[<span class="type-name">String</span>]<span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span></div>
+	                <div class="member-summary">Join together a list of strings with a separator string.</div>
 	              </td>
 	            </tr>
 	          </table>
@@ -614,7 +624,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              static def  <span class="symbol">create</span>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+	              static def  <span class="symbol">create</span>[<span class="type-name">T</span>](<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -623,7 +633,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="create">
-	              static def  <span class="symbol">create</span>(<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
+	              static def  <span class="symbol">create</span>[<span class="type-name">T</span>](<span class="symbol">value</span>:<span class="type-name">T</span><span style="white-space: nowrap">) -&gt; <span class="type-name">String</span></span>
               </a>
             </header>
             <div class="member-description">

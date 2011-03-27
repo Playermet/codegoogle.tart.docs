@@ -22,6 +22,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -32,7 +40,14 @@
     </header>
       <section class="base-class-section">
         <header class="base-class-section-header">Inherits from:</header>
-        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a></div>
+        <div class="base-class"><a href="class-tart-core-Object.html" class="type-name-link">Object</a>
+        </div>
+      </section>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherited by:</header>
+        <div class="base-class"><a href="class-tart-reflect-DataMember.html" class="type-name-link">tart.reflect.DataMember</a>
+        , <a href="class-tart-reflect-Method.html" class="type-name-link">tart.reflect.Method</a>
+        </div>
       </section>
 	    <section class="defn-section-description">
           <p>A member of a type</p>
@@ -104,37 +119,19 @@
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">final def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#findAttribute">findAttribute</a>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; union??</span></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#findAttribute">findAttribute</a>[<span class="type-name">T</span>](<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span> or <span class="type-name">Null</span></span></div>
 	                <div class="member-summary">Return the first attribute of type <span class="symbol">attrType</span>.</div>
 	              </td>
 	            </tr><tr class="member-table-row row-even">
                 <td class="member-table-row-header member-declarator">final def  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#hasAttribute">hasAttribute</a>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#hasAttribute">hasAttribute</a>[<span class="type-name">T</span>](<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span></div>
 	                <div class="member-summary">Return true if this member has an attribute of type <span class="symbol">attrType</span>.</div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#infixBitAnd">infixBitAnd</a>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row row-even">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#infixBitOr">infixBitOr</a>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span></div>
-	                <div class="member-summary"></div>
-	              </td>
-	            </tr><tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-Member.html#infixBitXor">infixBitXor</a>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span></div>
-	                <div class="member-summary"></div>
 	              </td>
 	            </tr>
 	          </table>
@@ -248,7 +245,7 @@
           <section class="member-section">
             <header class="member-header">
               <a name="findAttribute">
-	              final def  <span class="symbol">findAttribute</span>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; union??</span>
+	              final def  <span class="symbol">findAttribute</span>[<span class="type-name">T</span>](<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">T</span> or <span class="type-name">Null</span></span>
               </a>
             </header>
             <div class="member-description">
@@ -257,30 +254,12 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="hasAttribute">
-	              final def  <span class="symbol">hasAttribute</span>(<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
+	              final def  <span class="symbol">hasAttribute</span>[<span class="type-name">T</span>](<span class="symbol">attrType</span>:type-literal??<span style="white-space: nowrap">) -&gt; <span class="type-name">bool</span></span>
               </a>
             </header>
             <div class="member-description">
             <p>Return true if this member has an attribute of type <span class="symbol">attrType</span>.</p>
             </div>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="infixBitAnd">
-	              def  <span class="symbol">infixBitAnd</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="infixBitOr">
-	              def  <span class="symbol">infixBitOr</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
-              </a>
-            </header>
-          </section><section class="member-section">
-            <header class="member-header">
-              <a name="infixBitXor">
-	              def  <span class="symbol">infixBitXor</span>(<span class="symbol">e1</span>:<span class="type-name">tart.reflect.Member.Traits</span>, <span class="symbol">e2</span>:<span class="type-name">tart.reflect.Member.Traits</span><span style="white-space: nowrap">) -&gt; <span class="type-name">tart.reflect.Member.Traits</span></span>
-              </a>
-            </header>
           </section>
         </section>
   </section>

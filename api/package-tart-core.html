@@ -19,6 +19,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -49,7 +57,7 @@
               - Namespace of convenience macros that support design-by-contract programming.
             </li><li>
               <a class="defn-list-link" href="namespace-tart-core-Refs.html">Refs</a>
-              - Abstract class used to represent a reference to some value.
+              - Conversion methods for dealing with <span class="symbol">Ref</span> types.
             </li><li>
               <a class="defn-list-link" href="namespace-tart-core-Strings.html">Strings</a>
               - Collection of utility functions for converting and manipulating strings.
@@ -70,7 +78,7 @@
               - An iterface for iterable collections.
             </li><li>
               <a class="defn-list-link" href="interface-tart-core-Iterator.html">Iterator</a>
-              - The iterator interface. An iterator has a <span class="symbol">next</span> method which returns either the next value in the sequence, or <span class="symbol">Nothing</span> to indicate the end of the sequence.
+              - The iterator interface. An iterator has a <span class="symbol">next</span> method which returns either the next value in the sequence, or <span class="symbol">void</span> to indicate the end of the sequence.
             </li><li>
               <a class="defn-list-link" href="interface-tart-core-ScopedObject.html">ScopedObject</a>
               - Represents an object that has a bounded lifetime. Typically used in
@@ -85,13 +93,13 @@
               - Built-in array class
             </li><li>
               <a class="defn-list-link" href="class-tart-core-MutableRef.html">MutableRef</a>
-              - A reference to a mutable value. Use for implementing closure cells, among other things.
+              - A wrapper class that wraps a value type, turning it into a reference type. This allows multiple references to the same value. This is used for implementing closure cells, among other things.
             </li><li>
               <a class="defn-list-link" href="class-tart-core-Object.html">Object</a>
               - Base class of all reference types.
             </li><li>
               <a class="defn-list-link" href="class-tart-core-Ref.html">Ref</a>
-              - Abstract class used to represent a reference to some value.
+              - Abstract class used to represent a reference to some value. <span class="symbol">Ref</span> wraps a value type, transforming it into a reference type.
             </li><li>
               <a class="defn-list-link" href="class-tart-core-String.html">String</a>
               - The built-in string class. Strings are immutable.
@@ -103,7 +111,7 @@
               - Class to handle string formatting.
             </li><li>
               <a class="defn-list-link" href="class-tart-core-ValueRef.html">ValueRef</a>
-              - A reference type used to contain a value type.
+              - A reference type used to contain an immutable value type.
             </li>
 	        </ul>
 	      </section>
@@ -124,7 +132,7 @@
               - Exception thrown when an array index is outside of the valid range of array indices.
             </li><li>
               <a class="defn-list-link" href="class-tart-core-InputFormatError.html">InputFormatError</a>
-              - Exception that is thrown when attempting to convert a string to another type, such
+              - Exception that is thrown when attempting to convert a string to another type, such as a number or boolean, but the input string does not have the proper format.
             </li><li>
               <a class="defn-list-link" href="class-tart-core-InvalidArgumentError.html">InvalidArgumentError</a>
               - Thrown to indicate a function has been passed an illegal argument value.

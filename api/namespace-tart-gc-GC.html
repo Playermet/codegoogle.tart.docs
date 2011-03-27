@@ -22,6 +22,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -38,23 +46,7 @@
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Static Methods</th>
-	            </tr>
-	            <tr class="member-table-row ">
-                <td class="member-table-row-header member-declarator">static def  </td>
-	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-gc-GC.html#traceTableOf">traceTableOf</a>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">tart.gc.TraceDescriptor</span>]</span></div>
-	                <div class="member-summary">Return the list of trace descriptors for the given type.</div>
-	              </td>
-	            </tr>
-	          </table>
-          </div>
-        </section>
-        <section class="member-list-section">
-          <div class="member-table-box">
-	          <table class="member-table" cellspacing="0" cellpadding="0">
-	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">def  </td>
@@ -121,6 +113,22 @@
 	              <td class="member-table-data" width="90%">
 	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-gc-GC.html#sync">sync</a>(<span style="white-space: nowrap">)</span></div>
 	                <div class="member-summary">A sync point. Called to let the garbage collector know it's OK to do a collection at the</div>
+	              </td>
+	            </tr>
+	          </table>
+          </div>
+        </section>
+        <section class="member-list-section">
+          <div class="member-table-box">
+	          <table class="member-table" cellspacing="0" cellpadding="0">
+	            <tr>
+	            	 <th class="member-table-col-header" colspan="2">Static Methods</th>
+	            </tr>
+	            <tr class="member-table-row ">
+                <td class="member-table-row-header member-declarator">static def  </td>
+	              <td class="member-table-data" width="90%">
+	                <div class="member-signature"><a class="member-table-link symbol" href="namespace-tart-gc-GC.html#traceTableOf">traceTableOf</a>[<span class="type-name">T</span>](<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">tart.gc.TraceDescriptor</span>]</span></div>
+	                <div class="member-summary">Return the list of trace descriptors for the given type.</div>
 	              </td>
 	            </tr>
 	          </table>
@@ -233,7 +241,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="traceTableOf">
-	              static def  <span class="symbol">traceTableOf</span>(<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">tart.gc.TraceDescriptor</span>]</span>
+	              static def  <span class="symbol">traceTableOf</span>[<span class="type-name">T</span>](<span class="symbol">typeName</span>:type-literal??<span style="white-space: nowrap">) -&gt; Address[<span class="type-name">tart.gc.TraceDescriptor</span>]</span>
               </a>
             </header>
             <div class="member-description">

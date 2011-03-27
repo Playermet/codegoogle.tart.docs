@@ -22,6 +22,14 @@
   </nav>
     •
   <nav class="nav-item">
+    <a class="nav-link" href="hierarchy.html">Hierarchy</a>
+  </nav>
+    •
+  <nav class="nav-item">
+    <a class="nav-link" href="namespaces.html">Namespaces</a>
+  </nav>
+    •
+  <nav class="nav-item">
     <a class="nav-link" href="names.html">Index</a>
   </nav>
   </section>
@@ -32,7 +40,14 @@
     </header>
       <section class="base-class-section">
         <header class="base-class-section-header">Inherits from:</header>
-        <div class="base-class"><a href="class-tart-reflect-Member.html" class="type-name-link">tart.reflect.Member</a></div>
+        <div class="base-class"><a href="class-tart-reflect-Member.html" class="type-name-link">tart.reflect.Member</a>
+        </div>
+      </section>
+      <section class="base-class-section">
+        <header class="base-class-section-header">Inherited by:</header>
+        <div class="base-class"><a href="class-tart-reflect-Field.html" class="type-name-link">tart.reflect.Field</a>
+        , <a href="class-tart-reflect-Property.html" class="type-name-link">tart.reflect.Property</a>
+        </div>
       </section>
 	    <section class="defn-section-description">
           <p>Common base class for fields and properties - any member that can be read (and possibly written).</p>
@@ -59,7 +74,7 @@
 	            </tr><tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">property  </td>
 	              <td class="member-table-data" width="90%">
-	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-DataMember.html#selfType">selfType</a>:union??</div>
+	                <div class="member-signature"><a class="member-table-link symbol" href="class-tart-reflect-DataMember.html#selfType">selfType</a>:<span class="type-name">tart.reflect.Type</span> or <span class="type-name">Null</span></div>
 	                <div class="member-summary">The type that contains this member, or null if this is static or global.</div>
 	              </td>
 	            </tr>
@@ -70,7 +85,7 @@
           <div class="member-table-box">
 	          <table class="member-table" cellspacing="0" cellpadding="0">
 	            <tr>
-	            	 <th class="member-table-col-header" colspan="2">Instance Methods</th>
+	            	 <th class="member-table-col-header" colspan="2">Methods</th>
 	            </tr>
 	            <tr class="member-table-row ">
                 <td class="member-table-row-header member-declarator">abstract def  </td>
@@ -108,7 +123,7 @@
           </section><section class="member-section">
             <header class="member-header">
               <a name="selfType">
-	              property  <span class="symbol">selfType</span>:union??
+	              property  <span class="symbol">selfType</span>:<span class="type-name">tart.reflect.Type</span> or <span class="type-name">Null</span>
               </a>
             </header>
             <div class="member-description">
