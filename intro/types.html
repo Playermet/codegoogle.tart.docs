@@ -51,7 +51,7 @@
           <div class="body">
             
   <div class="section" id="type-expressions">
-<span id="index-25"></span><h1>Type Expressions<a class="headerlink" href="#type-expressions" title="Permalink to this headline">¶</a></h1>
+<span id="index-93"></span><h1>Type Expressions<a class="headerlink" href="#type-expressions" title="Permalink to this headline">¶</a></h1>
 <p>Because Tart is a strongly-typed language, it supports a rich hierarchy of types. All types in
 Tart fall into one of the following groups:</p>
 <table border="1" class="docutils">
@@ -91,10 +91,10 @@ Tart fall into one of the following groups:</p>
 </tbody>
 </table>
 <div class="section" id="primitive-types">
-<h2>Primitive Types<a class="headerlink" href="#primitive-types" title="Permalink to this headline">¶</a></h2>
+<span id="index-94"></span><h2>Primitive Types<a class="headerlink" href="#primitive-types" title="Permalink to this headline">¶</a></h2>
 <p>Tart supports the following primitive types:</p>
 <div class="section" id="integer-types">
-<h3>Integer Types<a class="headerlink" href="#integer-types" title="Permalink to this headline">¶</a></h3>
+<span id="index-95"></span><h3>Integer Types<a class="headerlink" href="#integer-types" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="16%" />
@@ -137,11 +137,11 @@ individual characters. For sequences of characters, it is more convenient to use
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">There is also a special integer type used for constants, which does not have a fixed
-size (and therefor can hold any sized number). You cannot declare a variable of this type.</p>
+size (and therefore can hold any sized number). You cannot declare a variable of this type.</p>
 </div>
 </div>
 <div class="section" id="floating-point-types">
-<h3>Floating-point Types<a class="headerlink" href="#floating-point-types" title="Permalink to this headline">¶</a></h3>
+<span id="index-96"></span><h3>Floating-point Types<a class="headerlink" href="#floating-point-types" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="31%" />
@@ -173,12 +173,40 @@ largest type that can be supported by the floating-point coprocessor.</td></tr>
 </table>
 </div>
 <div class="section" id="boolean-type">
-<h3>Boolean Type<a class="headerlink" href="#boolean-type" title="Permalink to this headline">¶</a></h3>
+<span id="index-97"></span><h3>Boolean Type<a class="headerlink" href="#boolean-type" title="Permalink to this headline">¶</a></h3>
 <p>The primitive boolean type is called <tt class="xref docutils literal"><span class="pre">bool</span></tt> and supports the built-in values
 <tt class="xref docutils literal"><span class="pre">true</span></tt> and <tt class="xref docutils literal"><span class="pre">false</span></tt>.</p>
 </div>
+<div class="section" id="methods-on-numeric-types">
+<span id="index-98"></span><h3>Methods on numeric types<a class="headerlink" href="#methods-on-numeric-types" title="Permalink to this headline">¶</a></h3>
+<p>All of the primitive types have a <tt class="xref docutils literal"><span class="pre">toString()</span></tt> method that returns a string representation of
+a value of that type:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">x</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
+<span class="k">var</span> <span class="nv">s</span> <span class="o">=</span> <span class="nv">x</span><span class="o">.</span><span class="nv">toString</span><span class="p">();</span>  <span class="c">// Assign the string &quot;1&quot; to s.</span>
+</pre></div>
+</div>
+<p>Each type also has a static <tt class="xref docutils literal"><span class="pre">parse()</span></tt> method that can convert a string to that type, or
+throw an exception if the string cannot be converted:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">x</span> <span class="o">=</span> <span class="kt">int</span><span class="o">.</span><span class="nv">parse</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In addition, each of the integer types also define two constants, <tt class="docutils literal"><span class="pre">minVal</span></tt> and <tt class="docutils literal"><span class="pre">maxVal</span></tt>, which
+represent the minimum and maximum values that can be represented by that type:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">x</span> <span class="o">=</span> <span class="nv">uint8</span><span class="o">.</span><span class="nv">minVal</span><span class="p">;</span> <span class="c">// Assigns the value 256 to x.</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Even though you can call the <tt class="xref docutils literal"><span class="pre">toString()</span></tt> method on a variable of
+type <tt class="xref docutils literal"><span class="pre">int</span></tt>, this does not mean that integers are actually objects. Unlike some
+languages which are designed around the &#8216;everything is an object&#8217; philosophy, Tart tries
+to maximize performance and efficiency, which means that integers are just plain everyday
+machine words like in C++. The compiler transforms the call to <tt class="xref docutils literal"><span class="pre">toString()</span></tt> into a regular
+function call, with the integer value as the argument to the function.</p>
+</div>
+</div>
 <div class="section" id="null-type">
-<h3>Null Type<a class="headerlink" href="#null-type" title="Permalink to this headline">¶</a></h3>
+<span id="index-99"></span><h3>Null Type<a class="headerlink" href="#null-type" title="Permalink to this headline">¶</a></h3>
 <p>The special value <tt class="xref docutils literal"><span class="pre">null</span></tt> indicates an invalid object reference. It&#8217;s type is <tt class="xref docutils literal"><span class="pre">Nothing</span></tt>,
 however you cannot declare a variable of that type.</p>
 <div class="admonition note">
@@ -192,23 +220,96 @@ of reference type.</p>
 </div>
 </div>
 <div class="section" id="void-type">
-<h3>Void Type<a class="headerlink" href="#void-type" title="Permalink to this headline">¶</a></h3>
+<span id="index-100"></span><h3>Void Type<a class="headerlink" href="#void-type" title="Permalink to this headline">¶</a></h3>
 <p><tt class="xref docutils literal"><span class="pre">void</span></tt> is used to indicate &#8220;no value&#8221;. It can be used to declare a function that does not
 return a value. It can also be used in disjoint types. Other than those two cases, it is not
 permitted to declare a variable having void type.</p>
 </div>
 </div>
+<div class="section" id="enumeration-types">
+<span id="index-101"></span><h2>Enumeration Types<a class="headerlink" href="#enumeration-types" title="Permalink to this headline">¶</a></h2>
+<p>Tart supports enumeration types similar to those in C++:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="c">// A basic enumeration declaration</span>
+<span class="k">enum</span> <span class="nc">Direction</span> <span class="k">{</span>
+  <span class="nv">NORTH</span> <span class="o">=</span> <span class="mf">0</span><span class="p">,</span>
+  <span class="nv">EAST</span><span class="p">,</span>
+  <span class="nv">SOUTH</span><span class="p">,</span>
+  <span class="nv">WEST</span><span class="p">,</span>
+<span class="k">}</span>
+
+<span class="k">var</span> <span class="nv">x</span> <span class="o">=</span> <span class="nv">Direction</span><span class="o">.</span><span class="nv">EAST</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>As you can see, enumeration constants can be defined with an integer expression. Also,
+a trailing comma is allowed in enumeration lists - this makes it easier to add new enumeration
+constants.</p>
+<p>In addition to the explicitly created enumeration constants, the compiler will automatically
+generate the constants <tt class="docutils literal"><span class="pre">minVal</span></tt> and <tt class="docutils literal"><span class="pre">maxVal</span></tt>, representing the smallest and largest values
+in the enumeration, as well as a <tt class="xref docutils literal"><span class="pre">toString()</span></tt> method to convert values of the enum type
+to a string representation.</p>
+<p>Normally the compiler will automatically determine the size of the enumeration type (that is,
+how many bits of storage are required to hold any of the declared values.) However, you can
+force the compiler to use a specific size by declaring the enumeration to be based on an
+integer type:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">enum</span> <span class="nc">Direction</span> <span class="p">:</span> <span class="nc">uint8</span> <span class="k">{</span>
+  <span class="nv">NORTH</span><span class="p">,</span>
+  <span class="nv">EAST</span><span class="p">,</span>
+  <span class="nv">SOUTH</span><span class="p">,</span>
+  <span class="nv">WEST</span><span class="p">,</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>Tart also supports bitfield or &#8216;flag&#8217; enumerations, using the <tt class="docutils literal"><span class="pre">&#64;Flags</span></tt> annotation:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="nv">@Flags</span> <span class="k">enum</span> <span class="nc">Traits</span> <span class="k">{</span>
+  <span class="nv">ABSTRACT</span><span class="p">,</span>
+  <span class="nv">FINAL</span><span class="p">,</span>
+  <span class="nv">STATIC</span><span class="p">,</span>
+
+  <span class="nv">MASK</span> <span class="o">=</span> <span class="nv">ABSTRACT</span> <span class="o">|</span> <span class="nv">FINAL</span> <span class="o">|</span> <span class="nv">STATIC</span><span class="p">,</span>
+<span class="k">}</span>
+
+<span class="k">var</span> <span class="nv">x</span> <span class="o">=</span> <span class="nv">Traits</span><span class="o">.</span><span class="nv">ABSTRACT</span> <span class="o">|</span> <span class="nv">Traits</span><span class="o">.</span><span class="nv">FINAL</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The presence of the <tt class="docutils literal"><span class="pre">&#64;Flags</span></tt> annotation causes a number of things to happen:</p>
+<blockquote>
+<ul class="simple">
+<li>The default sequence of initialization values is 1, 2, 4, 8, and so on, rather
+than 0, 1, 2, 3, etc. In other words, any enumeration constant that does not have
+an explicit initialization expression will be assigned the next available bit number
+after the previous value.</li>
+<li>The compiler will auto-generate the bitwise operators <tt class="docutils literal"><span class="pre">|</span></tt> and <tt class="docutils literal"><span class="pre">&amp;</span></tt> for that type.</li>
+<li>The compiler will also auto-generate the <tt class="xref docutils literal"><span class="pre">contains()</span></tt> method, which allows
+the use of the <tt class="docutils literal"><span class="pre">in</span></tt> operator, enabling expressions such as <tt class="docutils literal"><span class="pre">if</span> <span class="pre">ABSTRACT</span> <span class="pre">in</span> <span class="pre">traits</span></tt>.</li>
+<li>In the current version of Tart, the <tt class="xref docutils literal"><span class="pre">toString()</span></tt> method is not defined on
+flag enums.</li>
+</ul>
+</blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Tart enumerations do not support Java&#8217;s ability to add arbitrary properties to enums.</p>
+</div>
+</div>
 <div class="section" id="derived-types">
-<h2>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this headline">¶</a></h2>
-<p>Most derived types in Tart are simply generic composite types - that is, classes or structs which
-happen to have one or more template parameters. For example, the <tt class="xref docutils literal"><span class="pre">Array</span></tt> type is not
-a built-in type, it is a template class. (For that matter, <tt class="xref docutils literal"><span class="pre">Object</span></tt> is not a built-in type
-either, however it is a type that the compiler knows a lot about.)</p>
-<p>There are a couple of exceptions to this rule, meaning types that are so special (or so weird)
-that the compiler has to treat them in a fundamentally different way. These types
-are <em>functions</em>, <em>disjoint types</em>, <em>tuples</em>, and <em>native types</em>. These all all derived from
-one or more base types, and their identity is determined solely by these base types - thus a
-tuple containing (String, int) is always the same type as any other tuple containing (String, int).</p>
+<span id="index-102"></span><h2>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this headline">¶</a></h2>
+<p>A derived type is a type that is built out of other types. There are several different flavors
+of derived types:</p>
+<blockquote>
+<ul class="simple">
+<li><em>Composite types</em>, such as classes or structs.</li>
+<li><em>Function types</em>, that is, the type of a callable object.</li>
+<li><em>Tuples</em>, which represent a heterogeneous sequence of types such as <tt class="docutils literal"><span class="pre">(String,</span> <span class="pre">int)</span></tt>.</li>
+<li><em>Disjoint</em> or <em>Union</em> types, which can hold one of several different types.</li>
+<li><em>Native</em> types, such as machine pointers.</li>
+</ul>
+</blockquote>
+<p>Except in the case of Composite types, the identity of each derived type is determined solely
+by the base types - thus a tuple containing <tt class="docutils literal"><span class="pre">(String,</span> <span class="pre">int)</span></tt> is always the same type as any other
+tuple containing <tt class="docutils literal"><span class="pre">(String,</span> <span class="pre">int)</span></tt>.</p>
+<p id="index-103">You might also notice one type that is missing from this list - array types. The Tart array type
+is not a built-in type, but rather it is an instance of the <tt class="xref docutils literal"><span class="pre">Array</span></tt> template class.
+(For that matter, <tt class="xref docutils literal"><span class="pre">Object</span></tt> is not a built-in type either, however it is a type that
+the compiler knows a lot about.)</p>
 <p>Although the <tt class="xref docutils literal"><span class="pre">Array</span></tt> type is just a template class, there is some special syntax for
 declaring arrays - the type expression <tt class="docutils literal"><em><span class="pre">type</span></em><span class="pre">[]</span></tt> denotes an array of <tt class="docutils literal"><em><span class="pre">type</span></em></tt>,
 which is equivalent to the type expression <tt class="docutils literal"><span class="pre">Array[</span><em><span class="pre">type</span></em><span class="pre">]</span></tt>. In the latter case, however,
@@ -232,10 +333,12 @@ to distinguish the two cases.)</p>
 <li><a class="reference external" href="#integer-types">Integer Types</a></li>
 <li><a class="reference external" href="#floating-point-types">Floating-point Types</a></li>
 <li><a class="reference external" href="#boolean-type">Boolean Type</a></li>
+<li><a class="reference external" href="#methods-on-numeric-types">Methods on numeric types</a></li>
 <li><a class="reference external" href="#null-type">Null Type</a></li>
 <li><a class="reference external" href="#void-type">Void Type</a></li>
 </ul>
 </li>
+<li><a class="reference external" href="#enumeration-types">Enumeration Types</a></li>
 <li><a class="reference external" href="#derived-types">Derived Types</a></li>
 </ul>
 </li>
@@ -290,7 +393,7 @@ to distinguish the two cases.)</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 15, 2011.
+      Last updated on Mar 26, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

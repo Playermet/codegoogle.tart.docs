@@ -22,7 +22,7 @@
     <link rel="top" title="Tart v0.1.1 documentation" href="../index.html" />
     <link rel="up" title="Introduction to Tart" href="index.html" />
     <link rel="next" title="Typecasts and conversions" href="conversions.html" />
-    <link rel="prev" title="Collections" href="collections.html" /> 
+    <link rel="prev" title="Function Type Expressions" href="functions.html" /> 
   </head>
   <body>
     <div class="related">
@@ -38,7 +38,7 @@
           <a href="conversions.html" title="Typecasts and conversions"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="collections.html" title="Collections"
+          <a href="functions.html" title="Function Type Expressions"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">Tart v0.1.1 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">Introduction to Tart</a> &raquo;</li> 
@@ -51,15 +51,16 @@
           <div class="body">
             
   <div class="section" id="classes">
-<span id="index-1"></span><h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
+<span id="index-225"></span><h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword is one of the four keywords that are used to define a new
 aggregate type. The others are <tt class="xref docutils literal"><span class="pre">struct</span></tt>, <tt class="xref docutils literal"><span class="pre">interface</span></tt> and <tt class="xref docutils literal"><span class="pre">protocol</span></tt>.</p>
 <ul>
-<li><p class="first">A <tt class="xref docutils literal"><span class="pre">class</span></tt> is <em>reference</em> type - it is always passed around by reference. When you assign
-one class instance variable to another, all that gets copied is a pointer to the object.</p>
+<li><p class="first">A <tt class="xref docutils literal"><span class="pre">class</span></tt> is <em>reference</em> type, meaning it is always passed around by reference.
+When you assign a value of class type to a variable, all that gets copied is a pointer to
+the object, not the object&#8217;s contents.</p>
 </li>
 <li><p class="first">A <tt class="xref docutils literal"><span class="pre">struct</span></tt> is a <em>value</em> type. That means that normally when you assign one struct
-instance to another, it does a member-wise copy of the entire thing.</p>
+variable to another, it does a member-wise copy of the entire thing.</p>
 </li>
 <li><p class="first">An <tt class="xref docutils literal"><span class="pre">interface</span></tt> defines an pure abstract type which can only contain methods, types
 and constants. Like Java and C#, Tart does not support multiple inheritance, but does allow
@@ -74,7 +75,7 @@ or the support can be determined implicitly.</p>
 </li>
 </ul>
 <div class="section" id="declaring-a-new-class">
-<span id="index-2"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
+<span id="index-226"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword defines a new class. Here is a sample of a class definition:</p>
 <div class="highlight-tart"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -126,7 +127,7 @@ or the support can be determined implicitly.</p>
     <span class="k">friend</span> <span class="nc">ShapeTest</span><span class="p">;</span>
 
     <span class="c">// Some variables.</span>
-    <span class="k">var</span> <span class="nv">fillStyle</span><span class="p">:</span><span class="nc">Style</span><span class="p">;</span>
+    <span class="k">var</span> <span class="nv">fillStyle</span><span class="p">:</span><span class="nc">Style</span> <span class="o">=</span> <span class="nv">Style</span><span class="o">.</span><span class="nv">Filled</span><span class="p">;</span>
     <span class="k">var</span> <span class="nv">fillColor</span><span class="p">:</span><span class="nc">Color</span><span class="p">;</span>
 
     <span class="c">// A variable with parameterized type.</span>
@@ -166,22 +167,58 @@ member without exposing everything. In Java, not having the ability to
 expose private data to certain classes causes Java programmers to declare
 class members <tt class="docutils literal"><span class="pre">public</span></tt> far more than the would otherwise.</p>
 </div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><tt class="docutils literal"><span class="pre">friend</span></tt> is not implemented in the current release.</p>
+</div>
 <p><strong>Dynamic dispatch is the default</strong>: Like most object-oriented languages (other than C++), all
 functions are dynamically overridable (<tt class="docutils literal"><span class="pre">virtual</span></tt> in C++ parlance) unless declared <tt class="docutils literal"><span class="pre">final</span></tt>.</p>
 </div>
+<div class="section" id="class-members">
+<span id="index-227"></span><h2>Class members<a class="headerlink" href="#class-members" title="Permalink to this headline">¶</a></h2>
+<p>There is no restriction on the kinds of declarations which can appear in the body of a
+<tt class="xref docutils literal"><span class="pre">class</span></tt> or <tt class="xref docutils literal"><span class="pre">struct</span></tt>, but most commonly they will be variable or method
+declarations.</p>
+<p>Variable declarations can include an optional initialization expression. If present, the
+variable will be initialized to this value, instead of the built-in default for that type,
+when the class instance is created.</p>
+<p>Within a class method, the special variable <tt class="xref docutils literal"><span class="pre">self</span></tt> refers to the current instance.
+Unlike Python, you do not need to declare the  <tt class="xref docutils literal"><span class="pre">self</span></tt> variable explicitly.</p>
+<p>Instance variables can be referred to directly by name, you do not need to qualify them
+with <tt class="xref docutils literal"><span class="pre">self</span></tt> unless you also have a local variable or parameter with the same name.
+<tt class="xref docutils literal"><span class="pre">self</span></tt> is often used in constructors:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span><span class="kt">int</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span><span class="kt">int</span><span class="p">)</span> <span class="k">{</span>
+  <span class="bp">self</span><span class="o">.</span><span class="nv">x</span> <span class="o">=</span> <span class="nv">x</span><span class="p">;</span>
+  <span class="bp">self</span><span class="o">.</span><span class="nv">y</span> <span class="o">=</span> <span class="nv">y</span><span class="p">;</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>In most cases the <tt class="xref docutils literal"><span class="pre">self</span></tt> parameter works exactly like other, explicitly declared
+parameters. The exception to this rule is in <tt class="xref docutils literal"><span class="pre">struct</span></tt> methods. Normally when
+the type of a parameter is a <tt class="xref docutils literal"><span class="pre">struct</span></tt>, the value that is passed is a copy of
+the struct, however in the case of <tt class="xref docutils literal"><span class="pre">self</span></tt>, what gets passed is a pointer to
+the struct. If this were not true, it would be impossible to write methods that modify
+struct members, since the method could only modify the temporary copy. Note, however,
+that if you assign the <tt class="xref docutils literal"><span class="pre">self</span></tt> parameter to another variable, the variable will
+still get a copy.</p>
+</div>
 <div class="section" id="creating-a-new-class-instance">
-<span id="index-3"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
+<span id="index-228"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for creating a new class instance is the same as in Python, which is
 to call the class as if it were a function:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">s</span> <span class="o">=</span> <span class="nv">Rectangle</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">20</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The creation syntax is the same regardless of whether an object is a value or reference type. If
-it&#8217;s a value type, the new object will be constructed in place; If it&#8217;s a reference type, then space
-for the object will be allocated on the global heap, and a pointer to the object returned.</p>
+it&#8217;s a value (<tt class="xref docutils literal"><span class="pre">struct</span></tt>) type, the new object will be constructed in place; If it&#8217;s a
+reference (<tt class="xref docutils literal"><span class="pre">class</span></tt>) type, then space for the object will be allocated on the global heap,
+and a pointer to the object assigned to the variable.</p>
+<div class="admonition note">
+<p class="first last admonition-title">Note</p>
+</div>
 </div>
 <div class="section" id="constructors">
-<span id="index-4"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-229"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <p>A <em>constructor method</em> is responsible for initializing the members of a class instance
 when it is created. The constructor method is named <tt class="xref docutils literal"><span class="pre">construct()</span></tt>, and must not declare a
 return value.</p>
@@ -246,47 +283,19 @@ calls it automatically.</p>
 to synthesize a default constructor.</p>
 </li>
 </ul>
-<p id="index-6">Any member variable which is not initialized by the constructor will be set to
+<p id="index-231">Any member variable which is not initialized by the constructor will be set to
 its default value. If the default value for the member variable has not been
 specified, then it uses the default value for that type.</p>
 </div>
 <div class="section" id="default-constructors">
-<span id="index-7"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
-<p>If the object has no constructor and no <tt class="xref docutils literal"><span class="pre">create()</span></tt> method, and every field within the object is
-either public or has a default value, then a default constructor will be generated by the compiler.
-The default constructor takes an argument for each public field, where the argument name is the same
-as the field name. If the field has a default value, then the parameter is optional and has a
-default value the same as the default value of the field. If the field does not have a default
-value, then the corresponding parameter is required and does not have a default value.</p>
-<p>If the object has a private field that does not have a default value, then the object cannot
-be default-constructed.</p>
-<p>Thus, if you call the default constructor with no arguments, then all member variables, both public
-and private, will get their default values. If you supply <em>some</em> arguments, then the member
-variables corresponding to those will be initialized to the supplied values, and the rest of the
-members will get their default values.</p>
-<p>Returning to our earlier example:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="c">// A basic structure declaration</span>
-<span class="k">struct</span> <span class="nc">Point</span> <span class="k">{</span>
-  <span class="k">var</span> <span class="nv">x</span><span class="p">:</span><span class="kt">int</span><span class="p">;</span>
-  <span class="k">var</span> <span class="nv">y</span><span class="p">:</span><span class="kt">int</span><span class="p">;</span>
-<span class="k">}</span>
-
-<span class="nv">p</span> <span class="o">=</span> <span class="nv">Point</span><span class="p">(</span><span class="nv">x</span><span class="o">=</span><span class="mf">10</span><span class="p">,</span> <span class="nv">y</span><span class="o">=</span><span class="mf">10</span><span class="p">);</span> <span class="c">// Initialize using keyword arguments.</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>Because required arguments must come before optional arguments, the order of function
-parameters cannot always be the same as the order in which the member fields which were declared.
-Fields which don&#8217;t have a default value (and are therefore required) will be placed before
-fields which do have a default value (and are therefore optional). Other than that, the parameters
-will be in the same order as the fields were declared.</p>
-<p class="last">You can insure that the default constructor parameters are always in the same order as the members
-by making sure that member fields with no default are always declared first.</p>
-</div>
+<span id="index-232"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
+<p>If the object has no <tt class="xref docutils literal"><span class="pre">construct()</span></tt> method and no <tt class="xref docutils literal"><span class="pre">create()</span></tt> method, then the compiler
+will attempt to create a default constructor. The default constructor takes no arguments,
+and will initialize every field to its default value. If any fields cannot be initialized
+to a default, then the compiler will emit an error.</p>
 </div>
 <div class="section" id="constructor-execution">
-<h2>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h2>
+<span id="index-233"></span><h2>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h2>
 <p>The compiler will attempt to ensure that all member fields are initialized during the execution of
 the constructor. Fields which have no defaults must be assigned in the constructor, whereas fields
 which do have defaults (either explicitly specified or implicit based on the type) may not be.
@@ -297,10 +306,7 @@ anyway, meaning that their values are fixed at compile time. However, Tart also 
 <tt class="xref docutils literal"><span class="pre">let</span></tt> variables to be assigned in the constructor, in which case they are constant for
 the life of that instance (similar to the way &#8220;final&#8221; is used in Java). Note that such variables
 may only be assigned once in the constructor body.</p>
-<p>Constructors can call the superclass constructor by using the syntax:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="nv">super</span><span class="o">.</span><span class="nv">construct</span><span class="p">();</span>
-</pre></div>
-</div>
+<p>Constructors can call the superclass constructor by using the syntax <tt class="docutils literal"><span class="pre">super()</span></tt>.</p>
 <p>Constructors can also invoke other constructors of the same class, by explicitly calling
 <tt class="xref docutils literal"><span class="pre">construct()</span></tt>.</p>
 <div class="admonition note">
@@ -315,15 +321,15 @@ were assigned during the call.</p>
 </div>
 </div>
 <div class="section" id="array-constructors">
-<h2>Array constructors<a class="headerlink" href="#array-constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-234"></span><h2>Array constructors<a class="headerlink" href="#array-constructors" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for constructing a new array instance is the type name, followed
 by the dimension of the array in square brackets:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Allocate an array of 10 rectangles.</span>
 <span class="k">let</span> <span class="nv">a</span> <span class="o">=</span> <span class="nv">Rectangle</span><span class="p">[</span><span class="mf">10</span><span class="p">];</span>
 </pre></div>
 </div>
-<p>If the element type of the array is a reference type, then what is actually
-allocated is an array of pointers to that type. If it&#8217;s a value type, then
+<p>If the element type of the array is a reference (<tt class="xref docutils literal"><span class="pre">class</span></tt>) type, then what is actually
+allocated is an array of pointers to that type. If it&#8217;s a value (<tt class="xref docutils literal"><span class="pre">struct</span></tt>) type, then
 the array actually contains embedded instances of that type.</p>
 <p>The array constructor call is actually implemented as a call to the Array
 template class. So the example above is transformed by the compiler into this:</p>
@@ -331,13 +337,58 @@ template class. So the example above is transformed by the compiler into this:</
 <span class="k">let</span> <span class="nv">a</span> <span class="o">=</span> <span class="nv">Array</span><span class="p">[</span><span class="nv">Rectangle</span><span class="p">](</span><span class="mf">10</span><span class="p">);</span>
 </pre></div>
 </div>
+<p>If you want to supply a list of initial values for the array, you can either use an array literal
+or the static <tt class="xref docutils literal"><span class="pre">of()</span></tt> method of the Array class. Both are equivalent:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="c">// Deduce the type of the array from the list of values</span>
+<span class="k">var</span> <span class="nv">x</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;One&quot;</span><span class="p">,</span> <span class="s">&quot;Two&quot;</span><span class="p">,</span> <span class="s">&quot;Three&quot;</span><span class="p">];</span>
+<span class="k">var</span> <span class="nv">y</span> <span class="o">=</span> <span class="nv">Array</span><span class="o">.</span><span class="nv">of</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>
+
+<span class="c">// Deduce the type of the array from the list of values and the</span>
+<span class="c">// type of the variable being assigned to.</span>
+<span class="k">var</span> <span class="nv">x</span><span class="p">:</span><span class="kt">String</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;One&quot;</span><span class="p">,</span> <span class="s">&quot;Two&quot;</span><span class="p">,</span> <span class="s">&quot;Three&quot;</span><span class="p">];</span>
+<span class="k">var</span> <span class="nv">y</span><span class="p">:</span><span class="kt">int</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">Array</span><span class="o">.</span><span class="nv">of</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>
+
+<span class="c">// The &#39;of&#39; method also allows you to explicitly specify the array type.</span>
+<span class="c">// Most concrete container types in Tart have an &#39;of&#39; method.</span>
+<span class="k">var</span> <span class="nv">y</span> <span class="o">=</span> <span class="nv">Array</span><span class="p">[</span><span class="nv">uint32</span><span class="p">]</span><span class="o">.</span><span class="nv">of</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Square brackets &#8216;[]&#8217; are used to indicate a template argument list.</p>
+<p>Within Tart expressions, square brackets &#8216;[]&#8217; can have several possible meanings:</p>
+<blockquote>
+<ul class="simple">
+<li>Empty brackets after a type name indicate an array type, such as <tt class="docutils literal"><span class="pre">int[]</span></tt>.</li>
+<li>Non-empty brackets after a type name indicate a template argument list, such as
+<tt class="docutils literal"><span class="pre">Array[int]</span></tt>.</li>
+<li>Non-empty brackets after a variable name indicate an element lookup operation, such
+as an array element dereference, or a hash table lookup, for example <tt class="docutils literal"><span class="pre">words[10]</span></tt>.
+Any class can support lookup operations using this syntax by declaring an
+&#8216;indexer&#8217; method using special syntax.</li>
+<li>A bracket that does not follow a symbol name or expression is used to indicate
+the beginning of an array literal.</li>
+</ul>
+</blockquote>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Almost all of the Tart language grammar is <em>context-free</em>, which basically means
+that a parser doesn&#8217;t need to understand the semantic meanings of the symbols
+in order to correctly parse the source text. This overloading of the square brackets
+is the single exception to this rule, which was unavoidable due to the fact that
+ASCII only has a limited number of bracketing delimiters - <tt class="docutils literal"><span class="pre">[]</span></tt>, <tt class="docutils literal"><span class="pre">()</span></tt> and <tt class="docutils literal"><span class="pre">{}</span></tt>.
+Java and C++ get around this by using <em>angle-brackets</em> - <tt class="docutils literal"><span class="pre">&lt;</span></tt> and <tt class="docutils literal"><span class="pre">&gt;</span></tt> - however, this
+causes even greater grammatical ambiguities due to confusion with the less-than
+and greater-than operators, and makes the parser even more complicated and less
+context-free.</p>
+</div>
 </div>
 </div>
 <div class="section" id="extending-types">
 <h2>Extending types<a class="headerlink" href="#extending-types" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><tt class="xref docutils literal"><span class="pre">extend</span></tt> is not implemented in the current release.</p>
+</div>
 <p>The <tt class="xref docutils literal"><span class="pre">extend</span></tt> keyword allows you to add additional methods to a user-defined type:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">/* Add an additional method to the String class. */</span>
 <span class="k">extend</span> <span class="nc">String</span> <span class="k">{</span>
@@ -422,6 +473,7 @@ applies when using the specialization:</p>
             <ul>
 <li><a class="reference external" href="#">Classes</a><ul>
 <li><a class="reference external" href="#declaring-a-new-class">Declaring a new class</a></li>
+<li><a class="reference external" href="#class-members">Class members</a></li>
 <li><a class="reference external" href="#creating-a-new-class-instance">Creating a new class instance</a></li>
 <li><a class="reference external" href="#constructors">Constructors</a></li>
 <li><a class="reference external" href="#default-constructors">Default constructors</a></li>
@@ -433,8 +485,8 @@ applies when using the specialization:</p>
 </ul>
 
             <h4>Previous topic</h4>
-            <p class="topless"><a href="collections.html"
-                                  title="previous chapter">Collections</a></p>
+            <p class="topless"><a href="functions.html"
+                                  title="previous chapter">Function Type Expressions</a></p>
             <h4>Next topic</h4>
             <p class="topless"><a href="conversions.html"
                                   title="next chapter">Typecasts and conversions</a></p>
@@ -473,7 +525,7 @@ applies when using the specialization:</p>
           <a href="conversions.html" title="Typecasts and conversions"
              >next</a> |</li>
         <li class="right" >
-          <a href="collections.html" title="Collections"
+          <a href="functions.html" title="Function Type Expressions"
              >previous</a> |</li>
         <li><a href="../index.html">Tart v0.1.1 documentation</a> &raquo;</li>
           <li><a href="index.html" >Introduction to Tart</a> &raquo;</li> 
@@ -481,7 +533,7 @@ applies when using the specialization:</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 15, 2011.
+      Last updated on Mar 27, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>
