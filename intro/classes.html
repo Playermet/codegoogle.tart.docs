@@ -51,7 +51,7 @@
           <div class="body">
             
   <div class="section" id="classes">
-<span id="index-225"></span><h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
+<span id="index-235"></span><h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword is one of the four keywords that are used to define a new
 aggregate type. The others are <tt class="xref docutils literal"><span class="pre">struct</span></tt>, <tt class="xref docutils literal"><span class="pre">interface</span></tt> and <tt class="xref docutils literal"><span class="pre">protocol</span></tt>.</p>
 <ul>
@@ -75,7 +75,7 @@ or the support can be determined implicitly.</p>
 </li>
 </ul>
 <div class="section" id="declaring-a-new-class">
-<span id="index-226"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
+<span id="index-236"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword defines a new class. Here is a sample of a class definition:</p>
 <div class="highlight-tart"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -175,7 +175,7 @@ class members <tt class="docutils literal"><span class="pre">public</span></tt> 
 functions are dynamically overridable (<tt class="docutils literal"><span class="pre">virtual</span></tt> in C++ parlance) unless declared <tt class="docutils literal"><span class="pre">final</span></tt>.</p>
 </div>
 <div class="section" id="class-members">
-<span id="index-227"></span><h2>Class members<a class="headerlink" href="#class-members" title="Permalink to this headline">¶</a></h2>
+<span id="index-237"></span><h2>Class members<a class="headerlink" href="#class-members" title="Permalink to this headline">¶</a></h2>
 <p>There is no restriction on the kinds of declarations which can appear in the body of a
 <tt class="xref docutils literal"><span class="pre">class</span></tt> or <tt class="xref docutils literal"><span class="pre">struct</span></tt>, but most commonly they will be variable or method
 declarations.</p>
@@ -203,7 +203,7 @@ that if you assign the <tt class="xref docutils literal"><span class="pre">self<
 still get a copy.</p>
 </div>
 <div class="section" id="creating-a-new-class-instance">
-<span id="index-228"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
+<span id="index-238"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for creating a new class instance is the same as in Python, which is
 to call the class as if it were a function:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">s</span> <span class="o">=</span> <span class="nv">Rectangle</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">20</span><span class="p">);</span>
@@ -214,11 +214,24 @@ it&#8217;s a value (<tt class="xref docutils literal"><span class="pre">struct</
 reference (<tt class="xref docutils literal"><span class="pre">class</span></tt>) type, then space for the object will be allocated on the global heap,
 and a pointer to the object assigned to the variable.</p>
 <div class="admonition note">
-<p class="first last admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
+<div class="last compound">
+<p class="compound-first">Value (<tt class="xref docutils literal"><span class="pre">struct</span></tt>) types can never exist on the heap except as instance variables
+inside other, reference types. The reason for this is fairly involved, but the short explanation
+is this: The garbage collector only deals with reference types. Every reference type has
+a special, invisible header field that is used by the garbage collector to track the status
+of the object. Structures, integers, floats, tuples, and other value types don&#8217;t have any
+invisible fields, they are just &#8216;plain old data&#8217; or &#8216;POD&#8217; types.</p>
+<p class="compound-last">Tart also restricts you from having long-lived pointers to these types, because there&#8217;s no
+way to track the lifetime of these objects. If you need to keep a long-lived copy of a value
+type around, it has to be wrapped inside another object. You can declare a value type as an
+instance member of a class, or you can use the provided <tt class="xref docutils literal"><span class="pre">ValueRef</span></tt> or <tt class="xref docutils literal"><span class="pre">MutableRef</span></tt>
+helper classes which will automatically wrap (&#8216;auto-box&#8217;) value types when needed.</p>
+</div>
 </div>
 </div>
 <div class="section" id="constructors">
-<span id="index-229"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-239"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <p>A <em>constructor method</em> is responsible for initializing the members of a class instance
 when it is created. The constructor method is named <tt class="xref docutils literal"><span class="pre">construct()</span></tt>, and must not declare a
 return value.</p>
@@ -283,19 +296,19 @@ calls it automatically.</p>
 to synthesize a default constructor.</p>
 </li>
 </ul>
-<p id="index-231">Any member variable which is not initialized by the constructor will be set to
+<p id="index-241">Any member variable which is not initialized by the constructor will be set to
 its default value. If the default value for the member variable has not been
 specified, then it uses the default value for that type.</p>
 </div>
 <div class="section" id="default-constructors">
-<span id="index-232"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-242"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
 <p>If the object has no <tt class="xref docutils literal"><span class="pre">construct()</span></tt> method and no <tt class="xref docutils literal"><span class="pre">create()</span></tt> method, then the compiler
 will attempt to create a default constructor. The default constructor takes no arguments,
 and will initialize every field to its default value. If any fields cannot be initialized
 to a default, then the compiler will emit an error.</p>
 </div>
 <div class="section" id="constructor-execution">
-<span id="index-233"></span><h2>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h2>
+<span id="index-243"></span><h2>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h2>
 <p>The compiler will attempt to ensure that all member fields are initialized during the execution of
 the constructor. Fields which have no defaults must be assigned in the constructor, whereas fields
 which do have defaults (either explicitly specified or implicit based on the type) may not be.
@@ -321,7 +334,7 @@ were assigned during the call.</p>
 </div>
 </div>
 <div class="section" id="array-constructors">
-<span id="index-234"></span><h2>Array constructors<a class="headerlink" href="#array-constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-244"></span><h2>Array constructors<a class="headerlink" href="#array-constructors" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for constructing a new array instance is the type name, followed
 by the dimension of the array in square brackets:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Allocate an array of 10 rectangles.</span>
@@ -533,7 +546,7 @@ applies when using the specialization:</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 27, 2011.
+      Last updated on Mar 29, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>
