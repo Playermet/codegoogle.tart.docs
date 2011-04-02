@@ -22,7 +22,7 @@
     <link rel="top" title="Tart v0.1.1 documentation" href="../index.html" />
     <link rel="up" title="Introduction to Tart" href="index.html" />
     <link rel="next" title="Statements" href="statements.html" />
-    <link rel="prev" title="Classes" href="classes.html" /> 
+    <link rel="prev" title="User-defined types: Composites" href="classes.html" /> 
   </head>
   <body>
     <div class="related">
@@ -38,7 +38,7 @@
           <a href="statements.html" title="Statements"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classes.html" title="Classes"
+          <a href="classes.html" title="User-defined types: Composites"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">Tart v0.1.1 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">Introduction to Tart</a> &raquo;</li> 
@@ -51,36 +51,24 @@
           <div class="body">
             
   <div class="section" id="typecasts-and-conversions">
-<span id="index-258"></span><h1>Typecasts and conversions<a class="headerlink" href="#typecasts-and-conversions" title="Permalink to this headline">¶</a></h1>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This section is out of date.</p>
-</div>
+<span id="index-444"></span><h1>Typecasts and conversions<a class="headerlink" href="#typecasts-and-conversions" title="Permalink to this headline">¶</a></h1>
 <p>Tart does not have a C-style casting operator. However, it does have syntax for converting or
 casting one type into another.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Although the words <em>cast</em> and <em>convert</em> are often used interchangeably when referring
+<p>Although the words <em>cast</em> and <em>convert</em> are often used interchangeably when referring
 to types, the design of Tart tries to maintain a distinction between them: &#8220;cast&#8221; or &#8220;type cast&#8221;
 generally refers to taking an existing value and seeing it in a different way, but without
 altering it, whereas &#8220;convert&#8221; generally implies a transformation of the data. Of course, in
 real programs the dividing line is not always so clear-cut.</p>
-</div>
 <div class="section" id="type-conversion">
-<h2>Type Conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h2>
+<span id="index-445"></span><h2>Type Conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h2>
 <p>Type conversion is normally done by calling the destination type&#8217;s constructor:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">f</span> <span class="o">=</span> <span class="kt">float</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 <span class="k">let</span> <span class="nv">i</span> <span class="o">=</span> <span class="kt">int</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>In cases where the constructor is already being used for something else, a classes will usually
-have a static method named <tt class="xref docutils literal"><span class="pre">from()</span></tt>:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">s</span> <span class="o">=</span> <span class="kt">String</span><span class="o">.</span><span class="nv">from</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="implicit-conversion">
-<h2>Implicit Conversion<a class="headerlink" href="#implicit-conversion" title="Permalink to this headline">¶</a></h2>
+<span id="index-446"></span><h2>Implicit Conversion<a class="headerlink" href="#implicit-conversion" title="Permalink to this headline">¶</a></h2>
 <p>Built-in types such as integers and floats can be converted implicitly as needed. A number type
 can be silently converted to any other number type, so long as the destination type is capable
 of representing all possible values of the source type.</p>
@@ -88,6 +76,15 @@ of representing all possible values of the source type.</p>
 The <tt class="xref docutils literal"><span class="pre">coerce()</span></tt> method is a static method of the destination type. For example, the
 <tt class="xref docutils literal"><span class="pre">Object</span></tt> class has a <tt class="xref docutils literal"><span class="pre">coerce()</span></tt> method that handles auto-boxing: It wraps (&#8220;boxes&#8221;)
 any value type inside of an object, making it usable as a reference type:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="c">/** String.format takes a list of Objects as arguments. The integer argument</span>
+<span class="c">    will be automatically converted into a ValueRef[int]. */</span>
+<span class="k">let</span> <span class="nv">s</span> <span class="o">=</span> <span class="kt">String</span><span class="o">.</span><span class="nv">format</span><span class="p">(</span><span class="s">&quot;Height: {0}&quot;</span><span class="p">,</span> <span class="mf">20</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Here&#8217;s the actual definition of the <tt class="xref docutils literal"><span class="pre">coerce()</span></tt> method in class <tt class="xref docutils literal"><span class="pre">Object</span></tt>. There
+are two overloaded definitions, one for subclasses of <tt class="xref docutils literal"><span class="pre">Object</span></tt> (which simply
+returns the value unchanged), and another for all other types which constructs a
+<tt class="xref docutils literal"><span class="pre">ValueRef</span></tt> that wraps the value.:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">/** Implicitly convert non-object values to Boxed types. */</span>
 <span class="k">static</span> <span class="k">def</span> <span class="nf">coerce</span><span class="p">[</span><span class="nc">%T</span><span class="p">]</span> <span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="nc">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">Object</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">ValueRef</span><span class="p">[</span><span class="nv">T</span><span class="p">](</span><span class="nv">value</span><span class="p">);</span> <span class="k">}</span>
 <span class="k">static</span> <span class="k">def</span> <span class="nf">coerce</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="nc">Object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">Object</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">value</span><span class="p">;</span> <span class="k">}</span>
@@ -95,10 +92,16 @@ any value type inside of an object, making it usable as a reference type:</p>
 </div>
 </div>
 <div class="section" id="unconditional-casting">
-<h2>Unconditional casting<a class="headerlink" href="#unconditional-casting" title="Permalink to this headline">¶</a></h2>
-<p>An unconditional cast is one that either succeeds or throws an <tt class="xref docutils literal"><span class="pre">TypecastError</span></tt>
-exception.</p>
-<p>The <tt class="xref docutils literal"><span class="pre">typecast()</span></tt> template function is used to do unconditional casts:</p>
+<span id="index-447"></span><h2>Unconditional casting<a class="headerlink" href="#unconditional-casting" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="typecast">
+<tt class="descname">typecast</tt><big>(</big><big>)</big><a class="headerlink" href="#typecast" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>The <a title="typecast" class="reference internal" href="#typecast"><tt class="xref docutils literal"><span class="pre">typecast()</span></tt></a> template function is used to do unconditional casts. If the cast operation
+succeeds, then execution proceeds as normal. If the cast fails for any reason, then a
+<tt class="xref docutils literal"><span class="pre">TypecastError</span></tt> exception is thrown.</p>
+<p>An example of a typecast:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">str</span> <span class="o">=</span> <span class="nv">typecast</span><span class="p">[</span><span class="kt">String</span><span class="p">](</span><span class="nv">inVal</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -107,21 +110,22 @@ exception.</p>
 </pre></div>
 </div>
 <p>Unconditional casts work with disjoint types as well as pointer types:</p>
-<blockquote>
-<p>// A variable which can either be an int or a float.
-let number:int or float = 10;</p>
-<p>// Cast to int, if it wasn&#8217;t an int then throw InvalidTypeError.
-let intVal:int = typecast(number);</p>
-</blockquote>
-<p>Application programmers are free to create additional overloads of <tt class="xref docutils literal"><span class="pre">typecast()</span></tt> for their own
+<div class="highlight-tart"><div class="highlight"><pre><span class="c">// A variable which can either be an int or a float.</span>
+<span class="k">let</span> <span class="nv">number</span><span class="p">:</span><span class="kt">int</span> <span class="nc">or</span> <span class="kt">float</span> <span class="o">=</span> <span class="mf">10</span><span class="p">;</span>
+
+<span class="c">// Cast to int, if it wasn&#39;t an int then throw InvalidTypeError.</span>
+<span class="k">let</span> <span class="nv">intVal</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="nv">typecast</span><span class="p">(</span><span class="nv">number</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Application programmers are free to create additional overloads of <a title="typecast" class="reference internal" href="#typecast"><tt class="xref docutils literal"><span class="pre">typecast()</span></tt></a> for their own
 types.</p>
 </div>
 <div class="section" id="conditional-casts">
 <h2>Conditional casts<a class="headerlink" href="#conditional-casts" title="Permalink to this headline">¶</a></h2>
-<p>The <tt class="xref docutils literal"><span class="pre">match</span></tt> statement is used for doing conditional casts.</p>
+<p>The <a class="reference external" href="statements.html#stmt-match"><tt class="xref docutils literal"><span class="pre">match</span></tt></a> statement is used for doing conditional casts.</p>
 </div>
 <div class="section" id="type-testing">
-<h2>Type testing<a class="headerlink" href="#type-testing" title="Permalink to this headline">¶</a></h2>
+<span id="index-448"></span><h2>Type testing<a class="headerlink" href="#type-testing" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you need to test the type of a variable, the <tt class="xref docutils literal"><span class="pre">isa</span></tt> keyword
 can be used for this. It works for both reference types and union types:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">if</span> <span class="nv">a</span> <span class="nv">isa</span> <span class="kt">float</span> <span class="k">{</span>
@@ -131,7 +135,7 @@ can be used for this. It works for both reference types and union types:</p>
 </div>
 </div>
 <div class="section" id="casts-and-union-types">
-<h2>Casts and union types<a class="headerlink" href="#casts-and-union-types" title="Permalink to this headline">¶</a></h2>
+<span id="index-449"></span><h2>Casts and union types<a class="headerlink" href="#casts-and-union-types" title="Permalink to this headline">¶</a></h2>
 <p><em>Union types</em> are types that can contain two or more types as alternatives.
 For example, the type <tt class="docutils literal"><span class="pre">int</span> <span class="pre">or</span> <span class="pre">float</span></tt> could contain either an int or
 a float. A variable of that type would include an extra bit that says
@@ -152,7 +156,7 @@ with an unconditional cast:</p>
 </pre></div>
 </div>
 <p>In general, any type conversion syntax that works on reference types
-also works on union types. So just as you can call the <tt class="xref docutils literal"><span class="pre">typecast()</span></tt> function
+also works on union types. So just as you can call the <a title="typecast" class="reference internal" href="#typecast"><tt class="xref docutils literal"><span class="pre">typecast()</span></tt></a> function
 to convert from a superclass to one of its children, you can also use
 the same function to convert from a union type to one of its contained
 types.</p>
@@ -165,9 +169,10 @@ may optionally contain a value:</p>
 <p>In this case, the special <tt class="xref docutils literal"><span class="pre">void</span></tt> type means that the variable does
 not contain a value at all. Because this feature is used fairly often,
 a shortcut syntax is available:</p>
-<blockquote>
-// Either holds an int, or it doesn&#8217;t.
-var a:optional int;</blockquote>
+<div class="highlight-tart"><div class="highlight"><pre><span class="c">// Either holds an int, or it doesn&#39;t.</span>
+<span class="k">var</span> <span class="nv">a</span><span class="p">:</span><span class="nc">optional</span> <span class="kt">int</span><span class="p">;</span>
+</pre></div>
+</div>
 <p>Note that <tt class="xref docutils literal"><span class="pre">void</span></tt> is not the same as <tt class="docutils literal"><span class="pre">null</span></tt>, which is a pointer
 that points to address zero. (Null pointers are possible in Tart, but
 highly restricted compared to C++.)</p>
@@ -199,7 +204,7 @@ highly restricted compared to C++.)</p>
 
             <h4>Previous topic</h4>
             <p class="topless"><a href="classes.html"
-                                  title="previous chapter">Classes</a></p>
+                                  title="previous chapter">User-defined types: Composites</a></p>
             <h4>Next topic</h4>
             <p class="topless"><a href="statements.html"
                                   title="next chapter">Statements</a></p>
@@ -238,7 +243,7 @@ highly restricted compared to C++.)</p>
           <a href="statements.html" title="Statements"
              >next</a> |</li>
         <li class="right" >
-          <a href="classes.html" title="Classes"
+          <a href="classes.html" title="User-defined types: Composites"
              >previous</a> |</li>
         <li><a href="../index.html">Tart v0.1.1 documentation</a> &raquo;</li>
           <li><a href="index.html" >Introduction to Tart</a> &raquo;</li> 
@@ -246,7 +251,7 @@ highly restricted compared to C++.)</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 29, 2011.
+      Last updated on Apr 02, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

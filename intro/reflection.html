@@ -21,8 +21,8 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="Tart v0.1.1 documentation" href="../index.html" />
     <link rel="up" title="Introduction to Tart" href="index.html" />
-    <link rel="next" title="Annotations" href="annotations.html" />
-    <link rel="prev" title="Operators" href="operators.html" /> 
+    <link rel="next" title="Collections" href="collections.html" />
+    <link rel="prev" title="Attibutes" href="annotations.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,10 +35,10 @@
           <a href="../modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="annotations.html" title="Annotations"
+          <a href="collections.html" title="Collections"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="operators.html" title="Operators"
+          <a href="annotations.html" title="Attibutes"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">Tart v0.1.1 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">Introduction to Tart</a> &raquo;</li> 
@@ -51,30 +51,64 @@
           <div class="body">
             
   <div class="section" id="types-and-reflection">
-<h1>Types and Reflection<a class="headerlink" href="#types-and-reflection" title="Permalink to this headline">¶</a></h1>
-<p>Tart supports reflection as a standard part of the language. Type literals are
-represented using the typeof operator:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">t</span><span class="p">:</span><span class="nc">Type</span> <span class="o">=</span> <span class="k">typeof</span><span class="p">(</span><span class="nv">Integer</span><span class="p">);</span>
-<span class="nv">sys</span><span class="o">.</span><span class="nv">stdout</span><span class="o">.</span><span class="nv">println</span><span class="p">(</span><span class="s">&quot;Name = &quot;</span><span class="p">,</span> <span class="nv">t</span><span class="o">.</span><span class="nv">name</span><span class="p">);</span>
-<span class="nv">sys</span><span class="o">.</span><span class="nv">stdout</span><span class="o">.</span><span class="nv">println</span><span class="p">(</span><span class="s">&quot;isArray = &quot;</span><span class="p">,</span> <span class="nv">t</span><span class="o">.</span><span class="nv">isArray</span><span class="p">);</span>
-<span class="nv">sys</span><span class="o">.</span><span class="nv">stdout</span><span class="o">.</span><span class="nv">println</span><span class="p">(</span><span class="s">&quot;isRefType = &quot;</span><span class="p">,</span> <span class="nv">t</span><span class="o">.</span><span class="nv">isRefType</span><span class="p">);</span>
+<span id="index-492"></span><h1>Types and Reflection<a class="headerlink" href="#types-and-reflection" title="Permalink to this headline">¶</a></h1>
+<p>Tart supports reflection as a standard part of the language. You can get the reflection
+information for a type by passing the name of the type to the <tt class="xref docutils literal"><span class="pre">of()</span></tt> method of class
+<tt class="xref docutils literal"><span class="pre">Type</span></tt>:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">import</span> <span class="nc">tart</span><span class="p">.</span><span class="nc">reflect</span><span class="p">.</span><span class="nc">Type</span><span class="p">;</span>
+
+<span class="k">let</span> <span class="nv">t</span><span class="p">:</span><span class="nc">Type</span> <span class="o">=</span> <span class="nv">Type</span><span class="o">.</span><span class="nv">of</span><span class="p">(</span><span class="kt">String</span><span class="p">);</span>
+<span class="nv">sys</span><span class="o">.</span><span class="nv">stdout</span><span class="o">.</span><span class="nv">println</span><span class="p">(</span><span class="s">&quot;isClass = &quot;</span><span class="p">,</span> <span class="nv">t</span><span class="o">.</span><span class="nv">isClass</span><span class="p">);</span>
+<span class="nv">sys</span><span class="o">.</span><span class="nv">stdout</span><span class="o">.</span><span class="nv">println</span><span class="p">(</span><span class="s">&quot;isIntegerType = &quot;</span><span class="p">,</span> <span class="nv">t</span><span class="o">.</span><span class="nv">isIntegerType</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>The <tt class="xref docutils literal"><span class="pre">Type</span></tt> type implements a large set of methods for discovering things about types,
-including properties, methods, constructors, and so on. Type literals are constants, and many of
-their properties are also constants, meaning that you can use those properties in compile-time
-expressions.</p>
+<p>For composite types such as classes and structs, you can use the class
+<tt class="xref docutils literal"><span class="pre">CompositeType</span></tt>, which has additional information about the type:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">let</span> <span class="nv">t</span><span class="p">:</span><span class="nc">CompositeType</span> <span class="o">=</span> <span class="nv">CompositeType</span><span class="o">.</span><span class="nv">of</span><span class="p">(</span><span class="kt">String</span><span class="p">);</span>
+<span class="nv">sys</span><span class="o">.</span><span class="nv">stdout</span><span class="o">.</span><span class="nv">println</span><span class="p">(</span><span class="s">&quot;name = &quot;</span><span class="p">,</span> <span class="nv">t</span><span class="o">.</span><span class="nv">name</span><span class="p">);</span>
+<span class="nv">sys</span><span class="o">.</span><span class="nv">stdout</span><span class="o">.</span><span class="nv">println</span><span class="p">(</span><span class="s">&quot;qualified name = &quot;</span><span class="p">,</span> <span class="nv">t</span><span class="o">.</span><span class="nv">qualifiedName</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The <tt class="xref docutils literal"><span class="pre">CompositeType</span></tt> type implements a large set of methods for discovering things
+about types, including properties, methods, constructors, and so on.</p>
 <p>Some examples of using the reflection functions:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Lookup a property by name</span>
-<span class="k">let</span> <span class="nv">p</span><span class="p">:</span><span class="nc">PropertyDescriptor</span> <span class="o">=</span> <span class="nv">List</span><span class="o">.</span><span class="nv">type</span><span class="o">.</span><span class="nv">getProperty</span><span class="p">(</span><span class="s">&quot;length&quot;</span><span class="p">);</span>
-<span class="k">let</span> <span class="nv">list</span><span class="p">:</span><span class="nc">List</span><span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="nv">Collections</span><span class="o">.</span><span class="nv">newArrayList</span><span class="p">();</span>
-<span class="k">let</span> <span class="nv">length</span> <span class="o">=</span> <span class="nv">p</span><span class="o">.</span><span class="nv">getValue</span><span class="p">(</span><span class="nv">list</span><span class="p">);</span>
+<span class="k">let</span> <span class="nv">p</span><span class="p">:</span><span class="nc">Property</span> <span class="o">=</span> <span class="nv">CompositeType</span><span class="o">.</span><span class="nv">of</span><span class="p">(</span><span class="nv">List</span><span class="p">)</span><span class="o">.</span><span class="nv">getProperty</span><span class="p">(</span><span class="s">&quot;length&quot;</span><span class="p">);</span>
 
 <span class="c">// List all property names</span>
-<span class="k">for</span> <span class="nv">p</span> <span class="k">in</span> <span class="nv">List</span><span class="o">.</span><span class="nv">type</span><span class="o">.</span><span class="nv">properties</span> <span class="k">{</span>
+<span class="k">for</span> <span class="nv">p</span> <span class="k">in</span> <span class="nv">CompositeType</span><span class="o">.</span><span class="nv">of</span><span class="p">(</span><span class="nv">List</span><span class="p">)</span><span class="o">.</span><span class="nv">properties</span> <span class="k">{</span>
   <span class="nv">sys</span><span class="o">.</span><span class="nv">stdout</span><span class="o">.</span><span class="nv">println</span><span class="p">(</span><span class="nv">p</span><span class="o">.</span><span class="nv">name</span><span class="p">);</span>
 <span class="k">}</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="the-reflect-attribute">
+<span id="index-493"></span><h1>The &#64;Reflect Attribute<a class="headerlink" href="#the-reflect-attribute" title="Permalink to this headline">¶</a></h1>
+<p>The compiler can generate a set of reflection tables that contains all of the
+information about a classes methods, properties, fields, and so on. However, this information
+can be quite large, especially when dealing with templates (each unique template instantiation
+gets its own copy of the reflection tables.) Because of this, the default behavior for the
+compiler is to only generate minimal information for the class - that is, information about
+the name, base classes, and type parameters. Information about the methods, properties,
+fields, and other class members is not generated unless you specifically ask for it.</p>
+<p>You can tell the compiler to generate the more detailed information by adding the <tt class="docutils literal"><span class="pre">&#64;Reflect</span></tt>
+attribute to the class:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="na">@Reflect</span> <span class="k">class</span> <span class="nc">SomeClass</span> <span class="k">{</span>
+  <span class="c">// All class members will be reflected.</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>This annotation is inheritable, meaning that it applies to all subclasses as well.</p>
+<p>Because of this, you need to plan ahead when using reflection. As a practical matter,
+most uses of reflection start from a known type. For example, a common use of reflection
+is to find all test methods in a unit test. These unit tests normally inherit from some
+base testing class such as <tt class="xref docutils literal"><span class="pre">Test</span></tt>. Adding the <tt class="docutils literal"><span class="pre">&#64;Reflect</span></tt> annotation to the
+<tt class="xref docutils literal"><span class="pre">Test</span></tt> class insures that all unit tests will have complete reflection information.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The compiler will also generate complete reflection information for any class
+member that is annotated with an attribute. This does not include compile-time-only
+attributes which are not retained in the compiler&#8217;s output.</p>
 </div>
 </div>
 
@@ -84,12 +118,18 @@ expressions.</p>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="#">Types and Reflection</a></li>
+<li><a class="reference external" href="#the-reflect-attribute">The &#64;Reflect Attribute</a></li>
+</ul>
+
             <h4>Previous topic</h4>
-            <p class="topless"><a href="operators.html"
-                                  title="previous chapter">Operators</a></p>
-            <h4>Next topic</h4>
             <p class="topless"><a href="annotations.html"
-                                  title="next chapter">Annotations</a></p>
+                                  title="previous chapter">Attibutes</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="collections.html"
+                                  title="next chapter">Collections</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
               <li><a href="../_sources/intro/reflection.txt"
@@ -122,10 +162,10 @@ expressions.</p>
           <a href="../modindex.html" title="Global Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="annotations.html" title="Annotations"
+          <a href="collections.html" title="Collections"
              >next</a> |</li>
         <li class="right" >
-          <a href="operators.html" title="Operators"
+          <a href="annotations.html" title="Attibutes"
              >previous</a> |</li>
         <li><a href="../index.html">Tart v0.1.1 documentation</a> &raquo;</li>
           <li><a href="index.html" >Introduction to Tart</a> &raquo;</li> 
@@ -133,7 +173,7 @@ expressions.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 15, 2011.
+      Last updated on Apr 02, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

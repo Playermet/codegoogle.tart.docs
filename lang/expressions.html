@@ -53,7 +53,7 @@
   <div class="section" id="expressions">
 <h1>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="primary-expressions">
-<span id="index-26"></span><h2>Primary Expressions<a class="headerlink" href="#primary-expressions" title="Permalink to this headline">¶</a></h2>
+<span id="index-480"></span><h2>Primary Expressions<a class="headerlink" href="#primary-expressions" title="Permalink to this headline">¶</a></h2>
 <pre>
 <strong id="grammar-token-primary">primary</strong> ::=  &quot;(&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;)&quot; | <a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> | <a class="reference external" href="lex.html#grammar-token-literal"><tt class="xref docutils literal"><span class="pre">literal</span></tt></a>
 </pre>
@@ -91,7 +91,7 @@
 <div class="section" id="operators">
 <h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="operator-overloading">
-<h3>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h3>
+<span id="id1"></span><h3>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h3>
 <p>Most operators can be overloaded by the application. Some operators have no
 built-in semantics at all; Their meaning is determined entirely by the
 application.</p>
@@ -124,67 +124,67 @@ redefine operators stay mostly within the bounds of these standard meanings.</p>
 </thead>
 <tbody valign="top">
 <tr><td>0</td>
-<td><tt class="docutils literal"><span class="pre">::</span></tt></td>
+<td><a class="reference internal" href="#oper-::"><tt class="xref docutils literal"><span class="pre">::</span></tt></a></td>
 <td>(application defined)</td>
 </tr>
 <tr><td>1</td>
-<td><tt class="docutils literal"><span class="pre">or</span></tt></td>
+<td><a class="reference internal" href="#oper-or"><tt class="xref docutils literal"><span class="pre">or</span></tt></a></td>
 <td>logical or</td>
 </tr>
 <tr><td>2</td>
-<td><tt class="docutils literal"><span class="pre">and</span></tt></td>
+<td><a class="reference internal" href="#oper-and"><tt class="xref docutils literal"><span class="pre">and</span></tt></a></td>
 <td>logical &#8216;and&#8217;</td>
 </tr>
 <tr><td>3</td>
-<td><tt class="docutils literal"><span class="pre">in</span></tt>, <tt class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></tt></td>
+<td><a class="reference internal" href="#oper-in"><tt class="xref docutils literal"><span class="pre">in</span></tt></a>, <a class="reference internal" href="#oper-notin"><tt class="xref docutils literal"><span class="pre">not</span> <span class="pre">in</span></tt></a></td>
 <td>membership test</td>
 </tr>
 <tr><td>4</td>
-<td><tt class="docutils literal"><span class="pre">as</span></tt>, <tt class="docutils literal"><span class="pre">is</span></tt>, <tt class="docutils literal"><span class="pre">is</span> <span class="pre">not</span></tt></td>
-<td>type testing and conversion</td>
+<td><tt class="xref docutils literal"><span class="pre">isa</span></tt>, <a class="reference internal" href="#oper-is"><tt class="xref docutils literal"><span class="pre">is</span></tt></a>, <tt class="docutils literal"><span class="pre">is</span> <span class="pre">not</span></tt></td>
+<td>type testing and reference equality</td>
 </tr>
 <tr><td>5</td>
-<td><tt class="docutils literal"><span class="pre">==</span></tt>, <tt class="docutils literal"><span class="pre">!=</span></tt>, <tt class="docutils literal"><span class="pre">&gt;</span></tt>, <tt class="docutils literal"><span class="pre">&lt;</span></tt>, <tt class="docutils literal"><span class="pre">&gt;=</span></tt>, <tt class="docutils literal"><span class="pre">&lt;=</span></tt>, <tt class="docutils literal"><span class="pre">&gt;?</span></tt>, <tt class="docutils literal"><span class="pre">&lt;?</span></tt>, <tt class="docutils literal"><span class="pre">&gt;=?</span></tt>, <tt class="docutils literal"><span class="pre">&lt;=?</span></tt></td>
+<td><a class="reference internal" href="#oper-=="><tt class="xref docutils literal"><span class="pre">==</span></tt></a>, <tt class="xref docutils literal"><span class="pre">=</span></tt>, <a class="reference internal" href="#oper-&gt;"><tt class="xref docutils literal"><span class="pre">&gt;</span></tt></a>, <tt class="xref docutils literal"></tt>, <a class="reference internal" href="#oper-&gt;="><tt class="xref docutils literal"><span class="pre">&gt;=</span></tt></a>, <tt class="xref docutils literal"></tt>, <a class="reference internal" href="#oper-&gt;?"><tt class="xref docutils literal"><span class="pre">&gt;?</span></tt></a>, <tt class="xref docutils literal"></tt>, <a class="reference internal" href="#oper-&gt;=?"><tt class="xref docutils literal"><span class="pre">&gt;=?</span></tt></a>, <tt class="xref docutils literal"></tt></td>
 <td>relational operators</td>
 </tr>
 <tr><td>6</td>
-<td><tt class="docutils literal"><span class="pre">|</span></tt></td>
+<td><a class="reference internal" href="#oper-|"><tt class="xref docutils literal"><span class="pre">|</span></tt></a></td>
 <td>bitwise &#8216;or&#8217;</td>
 </tr>
 <tr><td>7</td>
-<td><tt class="docutils literal"><span class="pre">^</span></tt></td>
+<td><a class="reference internal" href="#oper-^"><tt class="xref docutils literal"><span class="pre">^</span></tt></a></td>
 <td>bitwise &#8216;xor&#8217;</td>
 </tr>
 <tr><td>8</td>
-<td><tt class="docutils literal"><span class="pre">&amp;</span></tt></td>
+<td><a class="reference internal" href="#oper-&amp;"><tt class="xref docutils literal"><span class="pre">&amp;</span></tt></a></td>
 <td>bitwise &#8216;and&#8217;</td>
 </tr>
 <tr><td>8</td>
-<td><tt class="docutils literal"><span class="pre">&gt;&gt;</span></tt>, <tt class="docutils literal"><span class="pre">&lt;&lt;</span></tt></td>
+<td><a class="reference internal" href="#oper-&gt;&gt;"><tt class="xref docutils literal"><span class="pre">&gt;&gt;</span></tt></a>, <a class="reference internal" href="#oper-&lt;"><tt class="xref docutils literal"></tt></a></td>
 <td>shift operators</td>
 </tr>
 <tr><td>9</td>
-<td><tt class="docutils literal"><span class="pre">+</span></tt>, <tt class="docutils literal"><span class="pre">-</span></tt></td>
+<td><a class="reference internal" href="#oper-+"><tt class="xref docutils literal"><span class="pre">+</span></tt></a>, <a class="reference internal" href="#oper--"><tt class="xref docutils literal"><span class="pre">-</span></tt></a></td>
 <td>additive operators</td>
 </tr>
 <tr><td>10</td>
-<td><tt class="docutils literal"><span class="pre">*</span></tt>, <tt class="docutils literal"><span class="pre">/</span></tt>, <tt class="docutils literal"><span class="pre">%</span></tt></td>
+<td><a class="reference internal" href="#oper-*"><tt class="xref docutils literal"><span class="pre">*</span></tt></a>, <a class="reference internal" href="#oper-/"><tt class="xref docutils literal"><span class="pre">/</span></tt></a>, <a class="reference internal" href="#oper-%"><tt class="xref docutils literal"><span class="pre">%</span></tt></a></td>
 <td>multiplicative operators</td>
 </tr>
 <tr><td>11</td>
-<td><tt class="docutils literal"><span class="pre">**</span></tt></td>
+<td><a class="reference internal" href="#oper-**"><tt class="xref docutils literal"><span class="pre">**</span></tt></a></td>
 <td>exponentiation</td>
 </tr>
 <tr><td>12</td>
-<td><tt class="docutils literal"><span class="pre">..</span></tt></td>
+<td><a class="reference internal" href="#oper-.."><tt class="xref docutils literal"><span class="pre">..</span></tt></a></td>
 <td>range operator</td>
 </tr>
 <tr><td>13</td>
-<td><tt class="docutils literal"><span class="pre">-</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">++</span></tt>, <tt class="docutils literal"><span class="pre">--</span></tt>, <tt class="docutils literal"><span class="pre">typeof</span></tt></td>
+<td><a class="reference internal" href="#oper--"><tt class="xref docutils literal"><span class="pre">-</span></tt></a>, <tt class="xref docutils literal"><span class="pre">not</span></tt>, <tt class="xref docutils literal"><span class="pre">++</span></tt>, <tt class="xref docutils literal"><span class="pre">--</span></tt></td>
 <td>unary prefix operators</td>
 </tr>
 <tr><td>14</td>
-<td><tt class="docutils literal"><span class="pre">++</span></tt>, <tt class="docutils literal"><span class="pre">--</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">++</span></tt>, <tt class="xref docutils literal"><span class="pre">--</span></tt></td>
 <td>unary postfix operators</td>
 </tr>
 </tbody>
@@ -908,7 +908,7 @@ whose type defines some kind of ordering.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 15, 2011.
+      Last updated on Apr 02, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

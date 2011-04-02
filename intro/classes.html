@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Classes &mdash; Tart v0.1.1 documentation</title>
+    <title>User-defined types: Composites &mdash; Tart v0.1.1 documentation</title>
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -50,8 +50,8 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="classes">
-<span id="index-235"></span><h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="user-defined-types-composites">
+<span id="index-434"></span><h1>User-defined types: Composites<a class="headerlink" href="#user-defined-types-composites" title="Permalink to this headline">¶</a></h1>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword is one of the four keywords that are used to define a new
 aggregate type. The others are <tt class="xref docutils literal"><span class="pre">struct</span></tt>, <tt class="xref docutils literal"><span class="pre">interface</span></tt> and <tt class="xref docutils literal"><span class="pre">protocol</span></tt>.</p>
 <ul>
@@ -64,18 +64,18 @@ variable to another, it does a member-wise copy of the entire thing.</p>
 </li>
 <li><p class="first">An <tt class="xref docutils literal"><span class="pre">interface</span></tt> defines an pure abstract type which can only contain methods, types
 and constants. Like Java and C#, Tart does not support multiple inheritance, but does allow
-classes to derive from multiple interfaces.</p>
+classes to derive from multiple interfaces. See the section on <a class="reference internal" href="#interfaces"><em>Interfaces</em></a>.</p>
 </li>
 <li><p class="first">A <tt class="xref docutils literal"><span class="pre">protocol</span></tt> represents a contract which a type may conform to. A class or struct
 is said to <em>support</em> the protocol if that class or struct defines all of the method signatures
 that are defined by the protocol. Template arguments can be constrained to only match types
 which support a specified protocol. Classes may declare explicitly that they support a protocol,
 or the support can be determined implicitly.</p>
-<p>Protocols will be discussed further in the section on <em class="xref">protocols</em>.</p>
+<p>Protocols will be discussed further in the section on <a class="reference internal" href="#protocols"><em>Protocols</em></a>.</p>
 </li>
 </ul>
 <div class="section" id="declaring-a-new-class">
-<span id="index-236"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
+<span id="index-435"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword defines a new class. Here is a sample of a class definition:</p>
 <div class="highlight-tart"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -153,6 +153,8 @@ or the support can be determined implicitly.</p>
 </pre></div>
 </td></tr></table></div>
 <p>A couple of things are worth noticing in this example:</p>
+<p><strong>Dynamic dispatch is the default</strong>: Like most object-oriented languages (other than C++), all
+functions are dynamically overridable (<tt class="docutils literal"><span class="pre">virtual</span></tt> in C++ parlance) unless declared <tt class="docutils literal"><span class="pre">final</span></tt>.</p>
 <p><strong>Private members:</strong> You can declare a block of variables as <tt class="xref docutils literal"><span class="pre">private</span></tt>, rather than having
 to put the word <tt class="xref docutils literal"><span class="pre">private</span></tt> in front of every variable name. Within a <tt class="xref docutils literal"><span class="pre">private</span></tt> or
 <tt class="xref docutils literal"><span class="pre">protected</span></tt> block, you can declare <tt class="xref docutils literal"><span class="pre">friend</span></tt> classes that have direct access to
@@ -171,11 +173,9 @@ class members <tt class="docutils literal"><span class="pre">public</span></tt> 
 <p class="first admonition-title">Warning</p>
 <p class="last"><tt class="docutils literal"><span class="pre">friend</span></tt> is not implemented in the current release.</p>
 </div>
-<p><strong>Dynamic dispatch is the default</strong>: Like most object-oriented languages (other than C++), all
-functions are dynamically overridable (<tt class="docutils literal"><span class="pre">virtual</span></tt> in C++ parlance) unless declared <tt class="docutils literal"><span class="pre">final</span></tt>.</p>
 </div>
 <div class="section" id="class-members">
-<span id="index-237"></span><h2>Class members<a class="headerlink" href="#class-members" title="Permalink to this headline">¶</a></h2>
+<span id="index-436"></span><h2>Class members<a class="headerlink" href="#class-members" title="Permalink to this headline">¶</a></h2>
 <p>There is no restriction on the kinds of declarations which can appear in the body of a
 <tt class="xref docutils literal"><span class="pre">class</span></tt> or <tt class="xref docutils literal"><span class="pre">struct</span></tt>, but most commonly they will be variable or method
 declarations.</p>
@@ -195,15 +195,15 @@ with <tt class="xref docutils literal"><span class="pre">self</span></tt> unless
 </div>
 <p>In most cases the <tt class="xref docutils literal"><span class="pre">self</span></tt> parameter works exactly like other, explicitly declared
 parameters. The exception to this rule is in <tt class="xref docutils literal"><span class="pre">struct</span></tt> methods. Normally when
-the type of a parameter is a <tt class="xref docutils literal"><span class="pre">struct</span></tt>, the value that is passed is a copy of
-the struct, however in the case of <tt class="xref docutils literal"><span class="pre">self</span></tt>, what gets passed is a pointer to
+the type of a function parameter is a <tt class="xref docutils literal"><span class="pre">struct</span></tt> type, the value that is passed is
+a <em>copy</em> of the struct, however in the case of <tt class="xref docutils literal"><span class="pre">self</span></tt>, what gets passed is a <em>pointer</em> to
 the struct. If this were not true, it would be impossible to write methods that modify
 struct members, since the method could only modify the temporary copy. Note, however,
 that if you assign the <tt class="xref docutils literal"><span class="pre">self</span></tt> parameter to another variable, the variable will
 still get a copy.</p>
 </div>
 <div class="section" id="creating-a-new-class-instance">
-<span id="index-238"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
+<span id="index-437"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for creating a new class instance is the same as in Python, which is
 to call the class as if it were a function:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">s</span> <span class="o">=</span> <span class="nv">Rectangle</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">20</span><span class="p">);</span>
@@ -231,7 +231,7 @@ helper classes which will automatically wrap (&#8216;auto-box&#8217;) value type
 </div>
 </div>
 <div class="section" id="constructors">
-<span id="index-239"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-438"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <p>A <em>constructor method</em> is responsible for initializing the members of a class instance
 when it is created. The constructor method is named <tt class="xref docutils literal"><span class="pre">construct()</span></tt>, and must not declare a
 return value.</p>
@@ -296,19 +296,19 @@ calls it automatically.</p>
 to synthesize a default constructor.</p>
 </li>
 </ul>
-<p id="index-241">Any member variable which is not initialized by the constructor will be set to
+<p id="index-440">Any member variable which is not initialized by the constructor will be set to
 its default value. If the default value for the member variable has not been
 specified, then it uses the default value for that type.</p>
 </div>
 <div class="section" id="default-constructors">
-<span id="index-242"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-441"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
 <p>If the object has no <tt class="xref docutils literal"><span class="pre">construct()</span></tt> method and no <tt class="xref docutils literal"><span class="pre">create()</span></tt> method, then the compiler
 will attempt to create a default constructor. The default constructor takes no arguments,
 and will initialize every field to its default value. If any fields cannot be initialized
 to a default, then the compiler will emit an error.</p>
 </div>
 <div class="section" id="constructor-execution">
-<span id="index-243"></span><h2>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h2>
+<span id="index-442"></span><h2>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h2>
 <p>The compiler will attempt to ensure that all member fields are initialized during the execution of
 the constructor. Fields which have no defaults must be assigned in the constructor, whereas fields
 which do have defaults (either explicitly specified or implicit based on the type) may not be.
@@ -334,7 +334,7 @@ were assigned during the call.</p>
 </div>
 </div>
 <div class="section" id="array-constructors">
-<span id="index-244"></span><h2>Array constructors<a class="headerlink" href="#array-constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-443"></span><h2>Array constructors<a class="headerlink" href="#array-constructors" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for constructing a new array instance is the type name, followed
 by the dimension of the array in square brackets:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Allocate an array of 10 rectangles.</span>
@@ -395,6 +395,44 @@ and greater-than operators, and makes the parser even more complicated and less
 context-free.</p>
 </div>
 </div>
+</div>
+<div class="section" id="interfaces">
+<span id="id1"></span><h2>Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="protocols">
+<span id="id2"></span><h2>Protocols<a class="headerlink" href="#protocols" title="Permalink to this headline">¶</a></h2>
+<p>A <em>protocol</em> is a kind of abstract type that defines a <em>contract</em> which another type can
+support. An example would be a &#8220;HasToString&#8221; protocol:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">protocol</span> <span class="nc">HasToString</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="nf">toString</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">;</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>What this says is that in order to support the <tt class="docutils literal"><span class="pre">HasToString</span></tt> protocol, a class must define
+a <tt class="xref docutils literal"><span class="pre">toString()</span></tt> method that returns a String. There are two ways that a type can support
+a protocol, <em>explicit</em> and <em>implicit</em>. Explicitly supporting a protocol is done by declaring
+the protocol in the list of base types:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">A</span> <span class="p">:</span> <span class="nc">HasToString</span> <span class="k">{</span>
+  <span class="c">// It would be an error to declare support for HasToString and then</span>
+  <span class="c">// fail to define a toString() method.</span>
+  <span class="k">def</span> <span class="nf">toString</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="k">{</span>
+    <span class="k">return</span> <span class="s">&quot;Hi there&quot;</span><span class="p">;</span>
+  <span class="k">}</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>You can also support a protocol implicitly simply by adding the required methods to your type,
+without declaring the protocol as a base type. Moreover, this applies even to classes that
+know nothing about the protocol - as long as they have the right set of methods, they support
+the protocol. So for example, any class that has a <tt class="docutils literal"><span class="pre">toString</span> <span class="pre">-&gt;</span> <span class="pre">String</span></tt> method supports the
+<tt class="docutils literal"><span class="pre">HasToString</span></tt> protocol, even if that class were written before <tt class="docutils literal"><span class="pre">HasToString</span></tt> ever existed!</p>
+<p>Protocols can only be used as matching constraints - you can&#8217;t declare a variable or a
+function parameter whose type is a protocol. (Although, maybe someday...)</p>
+<p>Protocols are primarily used in instantiating templates. You can define a template and then
+add constraints to its template parameters, such that a parameter can only be bound to a type
+that supports the proper protocol.</p>
+<p>Note that protocols exist only at compile time, and declararing a protocol as a base type
+has no effect on the generated code for that type.</p>
 </div>
 <div class="section" id="extending-types">
 <h2>Extending types<a class="headerlink" href="#extending-types" title="Permalink to this headline">¶</a></h2>
@@ -484,7 +522,7 @@ applies when using the specialization:</p>
         <div class="sphinxsidebarwrapper">
             <h3><a href="../index.html">Table Of Contents</a></h3>
             <ul>
-<li><a class="reference external" href="#">Classes</a><ul>
+<li><a class="reference external" href="#">User-defined types: Composites</a><ul>
 <li><a class="reference external" href="#declaring-a-new-class">Declaring a new class</a></li>
 <li><a class="reference external" href="#class-members">Class members</a></li>
 <li><a class="reference external" href="#creating-a-new-class-instance">Creating a new class instance</a></li>
@@ -492,6 +530,8 @@ applies when using the specialization:</p>
 <li><a class="reference external" href="#default-constructors">Default constructors</a></li>
 <li><a class="reference external" href="#constructor-execution">Constructor Execution</a></li>
 <li><a class="reference external" href="#array-constructors">Array constructors</a></li>
+<li><a class="reference external" href="#interfaces">Interfaces</a></li>
+<li><a class="reference external" href="#protocols">Protocols</a></li>
 <li><a class="reference external" href="#extending-types">Extending types</a></li>
 </ul>
 </li>
@@ -546,7 +586,7 @@ applies when using the specialization:</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 29, 2011.
+      Last updated on Apr 02, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

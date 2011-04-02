@@ -81,10 +81,10 @@ sequence.</p>
 </div>
 <div class="section" id="input-elements-and-tokens">
 <h2>Input Elements and Tokens<a class="headerlink" href="#input-elements-and-tokens" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="white-space">
-<h2>White Space<a class="headerlink" href="#white-space" title="Permalink to this headline">¶</a></h2>
-<p>TBW</p>
+<p>A Tart source file consists of a sequence of tokens: identifiers, keywords, operators,
+literal values, and punctuation. &#8220;White space&#8221; characters such as space and tab are not
+considered tokens - they have no meaning except to act as separators for tokens. Comments
+are treated the same as white space.</p>
 </div>
 <div class="section" id="source-code-comments">
 <h2>Source-code Comments<a class="headerlink" href="#source-code-comments" title="Permalink to this headline">¶</a></h2>
@@ -123,16 +123,16 @@ greater detail in a later section. [TODO link]</p>
 <div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <p>The list of Tart keywords:</p>
-<div class="highlight-python"><pre>abstract   classify   finally    interface  null       set        switch     uint8
-and        const      float      internal   or         short      throw      ulong
-as         constable  fn         is         override   sint16     true       undef
-bool       continue   for        isa        private    sint32     try        using
-break      def        friend     let        protected  sint64     typecast   var
-byte       double     get        long       protocol   sint8      ubyte      void
-case       else       if         macro      public     static     uint       where
-catch      enum       import     mutable    readonly   struct     uint16     while
-char       false      in         namespace  repeat     short      uint32     yield
-class      final      int        not        return     super      uint64</pre>
+<div class="highlight-python"><pre>abstract   const      float      internal   or         static    uint16
+and        constable  fn         is         override   struct    uint32
+as         continue   for        isa        private    short     uint64
+bool       def        friend     let        protected  super     uint8
+break      double     get        macro      protocol   switch    undef
+byte       else       if         match      public     throw     var
+case       enum       import     mutable    readonly   true      void
+catch      false      in         namespace  repeat     try       where
+char       final      int        not        return     typecast  while
+class      finally    interface  null       set        uint      yield</pre>
 </div>
 </div>
 <div class="section" id="literals">
@@ -184,15 +184,17 @@ processor.</p>
 <div class="section" id="string-literals">
 <h3>String Literals<a class="headerlink" href="#string-literals" title="Permalink to this headline">¶</a></h3>
 <p>String literals are delimited by double-quotes. A string literal creates
-a instance of class <a title="tart.core.String" class="reference external" href="../lib/core/string.html#tart.core.String"><tt class="xref docutils literal"><span class="pre">tart.core.String</span></tt></a>.</p>
+a instance of class <a title="tart.core.String" class="reference external" href="../lib/core/string.html#tart.core.String"><tt class="xref docutils literal"><span class="pre">tart.core.String</span></tt></a>. String literals may contain
+<a class="reference internal" href="#escapes"><em>escape sequences</em></a>.</p>
 </div>
 <div class="section" id="character-literals">
 <h3>Character Literals<a class="headerlink" href="#character-literals" title="Permalink to this headline">¶</a></h3>
 <p>Character literals are delimited by single quotes. A character literal
-creates a single 32-bit Unicode character value.</p>
+creates a single 32-bit Unicode character value. A character literal may also consist of
+a character <a class="reference internal" href="#escapes"><em>escape sequence</em></a>.</p>
 </div>
 <div class="section" id="escape-sequences-for-character-and-string-literals">
-<h3>Escape Sequences for Character and String Literals<a class="headerlink" href="#escape-sequences-for-character-and-string-literals" title="Permalink to this headline">¶</a></h3>
+<span id="escapes"></span><h3>Escape Sequences for Character and String Literals<a class="headerlink" href="#escape-sequences-for-character-and-string-literals" title="Permalink to this headline">¶</a></h3>
 <p>Escape sequences in character and string literals are introduced by a backslash character (<tt class="docutils literal"><span class="pre">\</span></tt>).</p>
 <blockquote>
 <table border="1" class="docutils">
@@ -280,7 +282,6 @@ creates a single 32-bit Unicode character value.</p>
 <li><a class="reference external" href="#unicode">Unicode</a></li>
 <li><a class="reference external" href="#line-terminators">Line Terminators</a></li>
 <li><a class="reference external" href="#input-elements-and-tokens">Input Elements and Tokens</a></li>
-<li><a class="reference external" href="#white-space">White Space</a></li>
 <li><a class="reference external" href="#source-code-comments">Source-code Comments</a></li>
 <li><a class="reference external" href="#identifiers">Identifiers</a></li>
 <li><a class="reference external" href="#keywords">Keywords</a></li>
@@ -350,7 +351,7 @@ creates a single 32-bit Unicode character value.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 15, 2011.
+      Last updated on Apr 02, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

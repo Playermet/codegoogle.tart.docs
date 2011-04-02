@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="Tart v0.1.1 documentation" href="../index.html" />
     <link rel="up" title="Introduction to Tart" href="index.html" />
-    <link rel="next" title="Types and Reflection" href="reflection.html" />
+    <link rel="next" title="Attibutes" href="annotations.html" />
     <link rel="prev" title="Statements" href="statements.html" /> 
   </head>
   <body>
@@ -35,7 +35,7 @@
           <a href="../modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="reflection.html" title="Types and Reflection"
+          <a href="annotations.html" title="Attibutes"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="statements.html" title="Statements"
@@ -51,7 +51,7 @@
           <div class="body">
             
   <div class="section" id="operators">
-<h1>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h1>
+<span id="index-481"></span><h1>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h1>
 <p>Tart supports a rich set of operators:</p>
 <table border="1" class="docutils">
 <caption>Table of Operator Precedence</caption>
@@ -68,125 +68,116 @@
 </thead>
 <tbody valign="top">
 <tr><td>0</td>
-<td><tt class="docutils literal"><span class="pre">::</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-::"><tt class="xref docutils literal"><span class="pre">::</span></tt></a></td>
 <td>(application defined)</td>
 </tr>
 <tr><td>1</td>
-<td><tt class="docutils literal"><span class="pre">or</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-or"><tt class="xref docutils literal"><span class="pre">or</span></tt></a></td>
 <td>logical or</td>
 </tr>
 <tr><td>2</td>
-<td><tt class="docutils literal"><span class="pre">and</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-and"><tt class="xref docutils literal"><span class="pre">and</span></tt></a></td>
 <td>logical &#8216;and&#8217;</td>
 </tr>
 <tr><td>3</td>
-<td><tt class="docutils literal"><span class="pre">in</span></tt>, <tt class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-in"><tt class="xref docutils literal"><span class="pre">in</span></tt></a>, <a class="reference external" href="../lang/expressions.html#oper-notin"><tt class="xref docutils literal"><span class="pre">not</span> <span class="pre">in</span></tt></a></td>
 <td>membership test</td>
 </tr>
 <tr><td>4</td>
-<td><tt class="docutils literal"><span class="pre">as</span></tt>, <tt class="docutils literal"><span class="pre">is</span></tt>, <tt class="docutils literal"><span class="pre">is</span> <span class="pre">not</span></tt></td>
-<td>type testing and conversion</td>
+<td><tt class="xref docutils literal"><span class="pre">isa</span></tt>, <a class="reference external" href="../lang/expressions.html#oper-is"><tt class="xref docutils literal"><span class="pre">is</span></tt></a>, <tt class="docutils literal"><span class="pre">is</span> <span class="pre">not</span></tt></td>
+<td>type testing and reference equality</td>
 </tr>
 <tr><td>5</td>
-<td><tt class="docutils literal"><span class="pre">==</span></tt>, <tt class="docutils literal"><span class="pre">!=</span></tt>, <tt class="docutils literal"><span class="pre">&gt;</span></tt>, <tt class="docutils literal"><span class="pre">&lt;</span></tt>, <tt class="docutils literal"><span class="pre">&gt;=</span></tt>, <tt class="docutils literal"><span class="pre">&lt;=</span></tt>, <tt class="docutils literal"><span class="pre">&gt;?</span></tt>, <tt class="docutils literal"><span class="pre">&lt;?</span></tt>, <tt class="docutils literal"><span class="pre">&gt;=?</span></tt>, <tt class="docutils literal"><span class="pre">&lt;=?</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-=="><tt class="xref docutils literal"><span class="pre">==</span></tt></a>, <tt class="xref docutils literal"><span class="pre">=</span></tt>, <a class="reference external" href="../lang/expressions.html#oper-&gt;"><tt class="xref docutils literal"><span class="pre">&gt;</span></tt></a>, <tt class="docutils literal"><span class="pre">&lt;</span></tt>, <a class="reference external" href="../lang/expressions.html#oper-&gt;="><tt class="xref docutils literal"><span class="pre">&gt;=</span></tt></a>, <tt class="docutils literal"><span class="pre">&lt;=</span></tt>, <a class="reference external" href="../lang/expressions.html#oper-&gt;?"><tt class="xref docutils literal"><span class="pre">&gt;?</span></tt></a>, <tt class="docutils literal"><span class="pre">&lt;?</span></tt>, <a class="reference external" href="../lang/expressions.html#oper-&gt;=?"><tt class="xref docutils literal"><span class="pre">&gt;=?</span></tt></a>, <tt class="docutils literal"><span class="pre">&lt;=?</span></tt></td>
 <td>relational operators</td>
 </tr>
 <tr><td>6</td>
-<td><tt class="docutils literal"><span class="pre">|</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-|"><tt class="xref docutils literal"><span class="pre">|</span></tt></a></td>
 <td>bitwise &#8216;or&#8217;</td>
 </tr>
 <tr><td>7</td>
-<td><tt class="docutils literal"><span class="pre">^</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-^"><tt class="xref docutils literal"><span class="pre">^</span></tt></a></td>
 <td>bitwise &#8216;xor&#8217;</td>
 </tr>
 <tr><td>8</td>
-<td><tt class="docutils literal"><span class="pre">&amp;</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-&amp;"><tt class="xref docutils literal"><span class="pre">&amp;</span></tt></a></td>
 <td>bitwise &#8216;and&#8217;</td>
 </tr>
 <tr><td>8</td>
-<td><tt class="docutils literal"><span class="pre">&gt;&gt;</span></tt>, <tt class="docutils literal"><span class="pre">&lt;&lt;</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-&gt;&gt;"><tt class="xref docutils literal"><span class="pre">&gt;&gt;</span></tt></a>, <a class="reference external" href="../lang/expressions.html#oper-&lt;"><tt class="xref docutils literal"></tt></a></td>
 <td>shift operators</td>
 </tr>
 <tr><td>9</td>
-<td><tt class="docutils literal"><span class="pre">+</span></tt>, <tt class="docutils literal"><span class="pre">-</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-+"><tt class="xref docutils literal"><span class="pre">+</span></tt></a>, <a class="reference external" href="../lang/expressions.html#oper--"><tt class="xref docutils literal"><span class="pre">-</span></tt></a></td>
 <td>additive operators</td>
 </tr>
 <tr><td>10</td>
-<td><tt class="docutils literal"><span class="pre">*</span></tt>, <tt class="docutils literal"><span class="pre">/</span></tt>, <tt class="docutils literal"><span class="pre">%</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-*"><tt class="xref docutils literal"><span class="pre">*</span></tt></a>, <a class="reference external" href="../lang/expressions.html#oper-/"><tt class="xref docutils literal"><span class="pre">/</span></tt></a>, <a class="reference external" href="../lang/expressions.html#oper-%"><tt class="xref docutils literal"><span class="pre">%</span></tt></a></td>
 <td>multiplicative operators</td>
 </tr>
 <tr><td>11</td>
-<td><tt class="docutils literal"><span class="pre">**</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-**"><tt class="xref docutils literal"><span class="pre">**</span></tt></a></td>
 <td>exponentiation</td>
 </tr>
 <tr><td>12</td>
-<td><tt class="docutils literal"><span class="pre">..</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper-.."><tt class="xref docutils literal"><span class="pre">..</span></tt></a></td>
 <td>range operator</td>
 </tr>
 <tr><td>13</td>
-<td><tt class="docutils literal"><span class="pre">-</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">++</span></tt>, <tt class="docutils literal"><span class="pre">--</span></tt>, <tt class="docutils literal"><span class="pre">typeof</span></tt></td>
+<td><a class="reference external" href="../lang/expressions.html#oper--"><tt class="xref docutils literal"><span class="pre">-</span></tt></a>, <tt class="xref docutils literal"><span class="pre">not</span></tt>, <tt class="xref docutils literal"><span class="pre">++</span></tt>, <tt class="xref docutils literal"><span class="pre">--</span></tt></td>
 <td>unary prefix operators</td>
 </tr>
 <tr><td>14</td>
-<td><tt class="docutils literal"><span class="pre">++</span></tt>, <tt class="docutils literal"><span class="pre">--</span></tt></td>
+<td><tt class="xref docutils literal"><span class="pre">++</span></tt>, <tt class="xref docutils literal"><span class="pre">--</span></tt></td>
 <td>unary postfix operators</td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="operator-overloading">
-<h2>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h2>
+<span id="index-482"></span><h2>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h2>
 <p>Tart supports a limited form of operator overloading. This is important for
 things like complex number classes, or vectors - data types which need a way
 to define mathematical operations which shouldn&#8217;t be built in to the language.</p>
-<p>Unlike C++, however there&#8217;s no special syntax for operator overloading. Quite
-the converse - the &#8216;+&#8217; operator is merely syntactic sugar for a call to the
-method <tt class="xref docutils literal"><span class="pre">infixAdd()</span></tt>. The <tt class="xref docutils literal"><span class="pre">infixAdd()</span></tt> functions defines overloads for
-all of the appropriate built-in types, and new overloads for user-created types
+<p>Unlike C++, however there&#8217;s no special syntax for operator overloading. In
+fact the <a class="reference external" href="../lang/expressions.html#oper-+"><tt class="xref docutils literal"><span class="pre">+</span></tt></a> operator is merely syntactic sugar for a call to the
+function <tt class="xref docutils literal"><span class="pre">infixAdd()</span></tt>. There are definitions of <tt class="xref docutils literal"><span class="pre">infixAdd()</span></tt> for
+all of the built-in number types, and new overloads for user-created types
 can be added, either as static overloads or as generic functions. Of course, the
 compiler will try to inline such functions whenever possible, so that <tt class="docutils literal"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></tt>
 will still be a compile-time constant.</p>
-<p>For example, we can define string concatenation with the &#8216;+&#8217; operator:</p>
+<p>For example, we can define string concatenation with the <a class="reference external" href="../lang/expressions.html#oper-+"><tt class="xref docutils literal"><span class="pre">+</span></tt></a> operator:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">def</span> <span class="nf">infixAdd</span><span class="p">(</span><span class="nv">s0</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">s1</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="k">{</span>
   <span class="k">var</span> <span class="nv">result</span> <span class="o">=</span> <span class="kt">String</span><span class="o">.</span><span class="nv">concat</span><span class="p">(</span><span class="nv">s0</span><span class="p">,</span> <span class="nv">s1</span><span class="p">);</span>
 <span class="k">}</span>
 </pre></div>
 </div>
+<p>Refer to the language reference manual section on <a class="reference external" href="../lang/expressions.html#operator-overloading"><em>Operator Overloading</em></a> to see all
+of the operator functions and their names.</p>
 <p>Tart doesn&#8217;t allow you to arbitrarily define new and strange operators like
-some languages do. The reason is because the purpose of a programming language is to communicate with other programmers as well as communication with machines.
+some languages do. The reason is because the purpose of a programming language
+is to communicate with other programmers as well as communication with machines.
 Having a standardized set of punctuation symbols that every programmer can
 instantly recognize is an essential part of creating a robust culture of
 software developers, and the freedom to reinvent the language syntax hinders
 that cultural formation.</p>
 <p>But for people who want to experiment with DSLs (Domain Specific
 Languages), Tart has a set of semantically unassigned operators - that is,
-built-in operators such as &#8216;:=&#8217; which have no assigned meaning. These
-operators are available for application use.</p>
+built-in operators such as <a class="reference external" href="../lang/expressions.html#oper-::"><tt class="xref docutils literal"><span class="pre">::</span></tt></a> which have no predefined meaning. These
+operators are available for general application use.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>You might wonder what prevents people from redefining these unassigned
+<p class="last">You might wonder what prevents people from redefining these unassigned
 operators, or any operator for that matter, in such a way as to make the
 code obfuscated and hard to understand. From a technical standpoint, the
 answer is &#8220;nothing, really&#8221; - that is always a danger when operator
-overloading is permitted.</p>
-<p>However, the Tart reference manual defines a &#8220;standard meaning / standard
-metaphor&#8221; for each built-in operator. For example, the standard meaning of
-&#8216;+&#8217; is &#8220;1) summation of two mathematical objects, 2) concatenation&#8221;.</p>
-<p class="last">Programmers are encouraged to stay within the boundaries of the standard
-metaphor when defining new behavior for an operator. It will be up to the
-individual programmers and their code reviewers to enforce this.</p>
+overloading is permitted. However, Tart defines a set of conventions
+for the use of operators that all users of the language are encouraged to follow.
+These conventions are defined in the language reference manual, in the
+section on <a class="reference external" href="../lang/expressions.html#operator-overloading"><em>Operator Overloading</em></a></p>
 </div>
-<p>One set of operators defined by Tart are the &#8216;possible relation&#8217; operators
-which are used in interval arithmetic. So <tt class="docutils literal"><span class="pre">&lt;=?</span></tt> means &#8216;possibly less than&#8217;.</p>
-<p>Not all operators are overloaded via generic functions. There are a few unary
-operators that are defined as class methods.</p>
-<p>The design criteria for whether an operator is implemented as a generic
-function or a member function can be summarized in the following rule: &#8220;If
-it&#8217;s something done <em>with</em> the object, then it&#8217;s a generic function; If it&#8217;s
-something the object <em>itself</em> does, then it&#8217;s a member function.&#8221; So for
-example, &#8220;adding&#8221; is something that uses an object - one speaks of adding two
-numbers, rather than (Smalltalk and Ruby notwithstanding) numbers adding
-themselves together. On the other hand, the ability to &#8220;call&#8221; an object is
-seen as a facility that the object itself provides.</p>
+</div>
+<div class="section" id="callable-objects">
+<span id="index-483"></span><h2>Callable Objects<a class="headerlink" href="#callable-objects" title="Permalink to this headline">¶</a></h2>
 <p>To make an object callable, define a member function with no name:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Foo</span> <span class="k">{</span>
   <span class="k">def</span> <span class="p">(</span><span class="nv">s</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="k">{</span>
@@ -198,6 +189,9 @@ seen as a facility that the object itself provides.</p>
 <span class="nv">f</span><span class="p">(</span><span class="s">&quot;Hey there&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="subscriptable-objects">
+<span id="index-484"></span><h2>Subscriptable Objects<a class="headerlink" href="#subscriptable-objects" title="Permalink to this headline">¶</a></h2>
 <p>You can also overload the array subscript operator. The syntax is similar to
 defining a property:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">StringMap</span><span class="p">[</span><span class="nc">%T</span><span class="p">]</span> <span class="k">{</span>
@@ -224,6 +218,8 @@ defining a property:</p>
             <ul>
 <li><a class="reference external" href="#">Operators</a><ul>
 <li><a class="reference external" href="#operator-overloading">Operator Overloading</a></li>
+<li><a class="reference external" href="#callable-objects">Callable Objects</a></li>
+<li><a class="reference external" href="#subscriptable-objects">Subscriptable Objects</a></li>
 </ul>
 </li>
 </ul>
@@ -232,8 +228,8 @@ defining a property:</p>
             <p class="topless"><a href="statements.html"
                                   title="previous chapter">Statements</a></p>
             <h4>Next topic</h4>
-            <p class="topless"><a href="reflection.html"
-                                  title="next chapter">Types and Reflection</a></p>
+            <p class="topless"><a href="annotations.html"
+                                  title="next chapter">Attibutes</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
               <li><a href="../_sources/intro/operators.txt"
@@ -266,7 +262,7 @@ defining a property:</p>
           <a href="../modindex.html" title="Global Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="reflection.html" title="Types and Reflection"
+          <a href="annotations.html" title="Attibutes"
              >next</a> |</li>
         <li class="right" >
           <a href="statements.html" title="Statements"
@@ -277,7 +273,7 @@ defining a property:</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 15, 2011.
+      Last updated on Apr 02, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

@@ -52,12 +52,12 @@
             
   <div class="section" id="statements">
 <h1>Statements<a class="headerlink" href="#statements" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="basic-control-flow-statements">
-<h2>Basic control-flow statements<a class="headerlink" href="#basic-control-flow-statements" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="stmt-if"></span><span class="target" id="stmt-else"></span><span class="target" id="stmt-do"></span><span class="target" id="stmt-while"></span><div class="section" id="basic-control-flow-statements">
+<span id="stmt-repeat"></span><h2>Basic control-flow statements<a class="headerlink" href="#basic-control-flow-statements" title="Permalink to this headline">¶</a></h2>
 <p>Tart has all the usual statements that you would expect:
-<tt class="xref docutils literal"><span class="pre">if</span></tt>/<tt class="xref docutils literal"><span class="pre">else</span></tt>, <tt class="xref docutils literal"><span class="pre">for</span></tt>, <tt class="xref docutils literal"><span class="pre">while</span></tt>,
-<tt class="xref docutils literal"><span class="pre">do</span></tt>/<tt class="xref docutils literal"><span class="pre">while</span></tt>, as well as a few new ones such
-as <tt class="xref docutils literal"><span class="pre">repeat</span></tt>.</p>
+<a class="reference internal" href="#stmt-if"><tt class="xref docutils literal"><span class="pre">if</span></tt></a>/<a class="reference internal" href="#stmt-else"><tt class="xref docutils literal"><span class="pre">else</span></tt></a>, <a class="reference internal" href="#stmt-for"><tt class="xref docutils literal"><span class="pre">for</span></tt></a>, <a class="reference internal" href="#stmt-while"><tt class="xref docutils literal"><span class="pre">while</span></tt></a>,
+<a class="reference internal" href="#stmt-do"><tt class="xref docutils literal"><span class="pre">do</span></tt></a>/<a class="reference internal" href="#stmt-while"><tt class="xref docutils literal"><span class="pre">while</span></tt></a>, as well as a few new ones such
+as <a class="reference internal" href="#stmt-repeat"><tt class="xref docutils literal"><span class="pre">repeat</span></tt></a>.</p>
 <p>Here are a few examples:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// if/else statement</span>
 <span class="k">if</span> <span class="nv">a</span> <span class="o">&gt;</span> <span class="mf">2</span> <span class="k">{</span>
@@ -86,7 +86,7 @@ as <tt class="xref docutils literal"><span class="pre">repeat</span></tt>.</p>
 <p>The syntax is a little bit different from C or Java: You aren&#8217;t required to
 put parentheses around the test expression, but the braces around the statement
 body are always required.</p>
-<p>Tart supports both forms of <tt class="xref docutils literal"><span class="pre">for</span></tt> (the C++ and Python forms), just
+<p id="stmt-for">Tart supports both forms of <a class="reference internal" href="#stmt-for"><tt class="xref docutils literal"><span class="pre">for</span></tt></a> (the C++ and Python forms), just
 like Java &amp; JavaScript do:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// C-style for loop</span>
 <span class="k">var</span> <span class="nv">total</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
@@ -96,30 +96,24 @@ like Java &amp; JavaScript do:</p>
 
 <span class="c">// Python-style for-loop</span>
 <span class="k">var</span> <span class="nv">fact</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
-<span class="k">for</span> <span class="nv">n</span> <span class="k">in</span> <span class="mf">1</span> <span class="o">..</span> <span class="mf">10</span> <span class="k">{</span>
+<span class="k">for</span> <span class="nv">n</span> <span class="k">in</span> <span class="nv">range</span><span class="p">(</span><span class="mf">10</span><span class="p">)</span> <span class="k">{</span>
   <span class="nv">fact</span> <span class="o">*=</span> <span class="nv">n</span><span class="p">;</span>
 <span class="k">}</span>
 </pre></div>
 </div>
-<p>Because the <tt class="xref docutils literal"><span class="pre">break</span></tt>, <tt class="xref docutils literal"><span class="pre">continue</span></tt> and <tt class="xref docutils literal"><span class="pre">return</span></tt> statements
-are so often used conditionally, the Perl syntax of post-statement conditions
+<span class="target" id="stmt-break"></span></div>
+<div class="section" id="break-and-continue-statements">
+<span id="stmt-continue"></span><h2>Break and Continue Statements<a class="headerlink" href="#break-and-continue-statements" title="Permalink to this headline">¶</a></h2>
+<p>Because the <a class="reference internal" href="#stmt-break"><tt class="xref docutils literal"><span class="pre">break</span></tt></a> and <a class="reference internal" href="#stmt-continue"><tt class="xref docutils literal"><span class="pre">continue</span></tt></a> statements
+are so often used conditionally, the Perl syntax of <em>post-statement conditions</em>
 is supported for these statement types:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">break</span> <span class="k">if</span> <span class="nv">a</span> <span class="o">&gt;</span> <span class="mf">10</span><span class="p">;</span>
 <span class="k">continue</span> <span class="k">if</span> <span class="nv">a</span> <span class="o">&lt;</span> <span class="mf">10</span> <span class="nv">and</span> <span class="nv">a</span> <span class="nv">not</span> <span class="k">in</span> <span class="mf">0.</span><span class="o">.</span><span class="mf">5</span><span class="p">;</span>
-<span class="k">return</span> <span class="mf">10</span> <span class="k">if</span> <span class="nv">a</span> <span class="o">==</span> <span class="mf">10</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>In the case of the <tt class="xref docutils literal"><span class="pre">throw</span></tt> statement, there&#8217;s no special syntax,
-but you can use the <tt class="xref docutils literal"><span class="pre">when()</span></tt> method of the exception class:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="c">// Throw IllegalArgumentError when index &lt; 0</span>
-<span class="nv">IllegalArgumentError</span><span class="o">.</span><span class="nv">when</span><span class="p">(</span><span class="nv">index</span> <span class="o">&lt;</span> <span class="mf">0</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>This latter syntax is especially convenient for implementing pre- and
-post-conditions within a function body.</p>
 </div>
 <div class="section" id="switch-statements">
-<h2>Switch statements<a class="headerlink" href="#switch-statements" title="Permalink to this headline">¶</a></h2>
+<span id="stmt-switch"></span><h2>Switch statements<a class="headerlink" href="#switch-statements" title="Permalink to this headline">¶</a></h2>
 <p>Tart has a C-style &#8216;switch&#8217; statement:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">switch</span> <span class="nv">input</span> <span class="k">{</span>
   <span class="k">case</span> <span class="s">&#39;a&#39;</span> <span class="k">{</span>
@@ -135,41 +129,44 @@ post-conditions within a function body.</p>
     <span class="c">// ...</span>
   <span class="k">}</span>
 
-  <span class="k">default</span> <span class="k">{</span>
-    <span class="c">// ...</span>
+  <span class="k">else</span> <span class="k">{</span>
+    <span class="c">// The default case</span>
   <span class="k">}</span>
 <span class="k">}</span>
 </pre></div>
 </div>
 <p>The braces around the case body are required. There is no need for a &#8216;break&#8217;
 statement, as execution does not &#8216;fall through&#8217; from one case body to the next.</p>
-<p>There is also a <tt class="xref docutils literal"><span class="pre">typeselect</span></tt> statement which is used to differentiate
+</div>
+<div class="section" id="match-statements">
+<span id="stmt-match"></span><h2>Match statements<a class="headerlink" href="#match-statements" title="Permalink to this headline">¶</a></h2>
+<p>There is also a <a class="reference internal" href="#stmt-match"><tt class="xref docutils literal"><span class="pre">match</span></tt></a> statement which is used to differentiate
 based on the type of the input expression:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="nv">typeselect</span> <span class="nv">input</span> <span class="k">{</span>
-  <span class="k">case</span> <span class="nv">str</span><span class="p">:</span><span class="kt">String</span> <span class="k">{</span>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">match</span> <span class="nv">input</span> <span class="k">{</span>
+  <span class="k">as</span> <span class="nv">str</span><span class="p">:</span><span class="kt">String</span> <span class="k">{</span>
     <span class="c">// ...</span>
   <span class="k">}</span>
 
-  <span class="k">case</span> <span class="nv">w</span><span class="p">:</span><span class="nv">Widget</span> <span class="k">{</span>
+  <span class="k">as</span> <span class="nv">w</span><span class="p">:</span><span class="nv">Widget</span> <span class="k">{</span>
     <span class="c">// ...</span>
   <span class="k">}</span>
 
   <span class="k">default</span> <span class="k">{</span>
-    <span class="c">// ...</span>
+    <span class="c">// The default case</span>
   <span class="k">}</span>
 <span class="k">}</span>
 </pre></div>
 </div>
 <p>If the input value is one of the types specified, then the value is bound to
-the corresponding variable (<tt class="docutils literal"><span class="pre">str</span></tt> in the case of a String in the example
+the corresponding variable (<tt class="docutils literal"><span class="pre">str</span></tt> in the case of a <tt class="xref docutils literal"><span class="pre">String</span></tt> in the example
 above) and that variable will be available within the scope of the case body.
-If the input does not match any of the types listed, then the default case
-will be executed, or if there is no default case then the entire statement
+If the input does not match any of the types listed, then the <tt class="xref docutils literal"><span class="pre">else</span></tt> case
+will be executed, or if there is no <tt class="xref docutils literal"><span class="pre">else</span></tt> case then the entire statement
 is skipped.</p>
 </div>
 <div class="section" id="the-with-statement">
-<h2>The &#8220;with&#8221; statement<a class="headerlink" href="#the-with-statement" title="Permalink to this headline">¶</a></h2>
-<p>Another useful statement is the <tt class="xref docutils literal"><span class="pre">with</span></tt> statement:</p>
+<span id="stmt-with"></span><h2>The &#8220;with&#8221; statement<a class="headerlink" href="#the-with-statement" title="Permalink to this headline">¶</a></h2>
+<p>Another useful statement is the <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> statement:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Declare a new variable &#39;fh&#39; and assign an open file handle to it.</span>
 <span class="k">with</span> <span class="nv">fh</span> <span class="o">=</span> <span class="nv">File</span><span class="o">.</span><span class="nv">open</span><span class="p">(</span><span class="s">&quot;unicode.txt) {</span>
   <span class="c">// Do something with fh.</span>
@@ -177,19 +174,19 @@ is skipped.</p>
 <span class="k">}</span>
 </pre></div>
 </div>
-<p>The <tt class="xref docutils literal"><span class="pre">with</span></tt> statement can be used to guarantee that the appropriate cleanup
+<p>The <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> statement can be used to guarantee that the appropriate cleanup
 code is called after you are finished with an object. In the above example,
-the file handle <tt class="docutils literal"><span class="pre">fh</span></tt> will be closed upon exit from the <tt class="xref docutils literal"><span class="pre">with</span></tt> block,
+the file handle <tt class="docutils literal"><span class="pre">fh</span></tt> will be closed upon exit from the <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> block,
 regardless of how the block was existed (even if via <tt class="xref docutils literal"><span class="pre">return</span></tt> or an
 exception.)</p>
-<p>The <tt class="xref docutils literal"><span class="pre">with</span></tt> statement can also influence the set of effect annotations
+<p>The <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> statement can also influence the set of effect annotations
 that propagate outward from within the contained block. Similar to the way a
-<tt class="xref docutils literal"><span class="pre">try</span></tt> statement can filter out an exception effect, a <tt class="xref docutils literal"><span class="pre">with</span></tt>
+<a class="reference internal" href="#stmt-try"><tt class="xref docutils literal"><span class="pre">try</span></tt></a> statement can filter out an exception effect, a <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a>
 statement that acquires and then releases a mutex could potentially
 remove a &#8216;thread-unsafe&#8217; effect.</p>
-</div>
+<span class="target" id="stmt-try"></span><span class="target" id="stmt-catch"></span></div>
 <div class="section" id="exception-statements">
-<h2>Exception Statements<a class="headerlink" href="#exception-statements" title="Permalink to this headline">¶</a></h2>
+<span id="stmt-finally"></span><h2>Exception Statements<a class="headerlink" href="#exception-statements" title="Permalink to this headline">¶</a></h2>
 <p>Exceptions are very similar to Python and Java:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">try</span> <span class="k">{</span>
   <span class="nv">do_stuff</span><span class="p">();</span>
@@ -215,7 +212,9 @@ remove a &#8216;thread-unsafe&#8217; effect.</p>
             <ul>
 <li><a class="reference external" href="#">Statements</a><ul>
 <li><a class="reference external" href="#basic-control-flow-statements">Basic control-flow statements</a></li>
+<li><a class="reference external" href="#break-and-continue-statements">Break and Continue Statements</a></li>
 <li><a class="reference external" href="#switch-statements">Switch statements</a></li>
+<li><a class="reference external" href="#match-statements">Match statements</a></li>
 <li><a class="reference external" href="#the-with-statement">The &#8220;with&#8221; statement</a></li>
 <li><a class="reference external" href="#exception-statements">Exception Statements</a></li>
 </ul>
@@ -271,7 +270,7 @@ remove a &#8216;thread-unsafe&#8217; effect.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 15, 2011.
+      Last updated on Apr 02, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

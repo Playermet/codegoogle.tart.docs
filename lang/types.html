@@ -58,76 +58,70 @@
 <blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="20%" />
-<col width="16%" />
-<col width="64%" />
+<col width="21%" />
+<col width="79%" />
 </colgroup>
 <thead valign="bottom">
 <tr><th class="head">Type Name</th>
-<th class="head">Alternate Name</th>
 <th class="head">Description</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr><td><tt class="xref docutils literal"><span class="pre">void</span></tt></td>
-<td>&nbsp;</td>
 <td>Represents the absence of a value.</td>
 </tr>
 <tr><td><tt class="xref docutils literal"><span class="pre">bool</span></tt></td>
-<td>&nbsp;</td>
 <td>Boolean type, can be either <tt class="xref docutils literal"><span class="pre">true</span></tt> or <tt class="xref docutils literal"><span class="pre">false</span></tt>.</td>
 </tr>
 <tr><td><tt class="xref docutils literal"><span class="pre">char</span></tt></td>
-<td>&nbsp;</td>
 <td>A 32-bit character.</td>
 </tr>
-<tr><td><tt class="xref docutils literal"><span class="pre">byte</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">int8</span></tt></td>
+<tr><td><tt class="xref docutils literal"><span class="pre">int8</span></tt></td>
 <td>An 8-bit signed integer.</td>
 </tr>
-<tr><td><tt class="xref docutils literal"><span class="pre">short</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">int16</span></tt></td>
+<tr><td><tt class="xref docutils literal"><span class="pre">int16</span></tt></td>
 <td>A 16-bit signed integer.</td>
 </tr>
-<tr><td><tt class="xref docutils literal"><span class="pre">int</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">int32</span></tt></td>
+<tr><td><tt class="xref docutils literal"><span class="pre">int32</span></tt></td>
 <td>A 32-bit signed integer.</td>
 </tr>
-<tr><td><tt class="xref docutils literal"><span class="pre">long</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">int64</span></tt></td>
+<tr><td><tt class="xref docutils literal"><span class="pre">int64</span></tt></td>
 <td>A 64-bit signed integer.</td>
 </tr>
-<tr><td><tt class="xref docutils literal"><span class="pre">ubyte</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">uint8</span></tt></td>
+<tr><td><tt class="xref docutils literal"><span class="pre">uint8</span></tt></td>
 <td>An 8-bit unsigned integer.</td>
 </tr>
-<tr><td><tt class="xref docutils literal"><span class="pre">ushort</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">uint16</span></tt></td>
+<tr><td><tt class="xref docutils literal"><span class="pre">uint16</span></tt></td>
 <td>A 16-bit unsigned integer.</td>
 </tr>
-<tr><td><tt class="xref docutils literal"><span class="pre">uint</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">uint32</span></tt></td>
+<tr><td><tt class="xref docutils literal"><span class="pre">uint32</span></tt></td>
 <td>A 32-bit unsigned integer.</td>
 </tr>
-<tr><td><tt class="xref docutils literal"><span class="pre">ulong</span></tt></td>
-<td><tt class="xref docutils literal"><span class="pre">uint64</span></tt></td>
+<tr><td><tt class="xref docutils literal"><span class="pre">uint64</span></tt></td>
 <td>A 64-bit unsigned integer.</td>
 </tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">byte</span></tt></td>
+<td>Another name for <tt class="xref docutils literal"><span class="pre">uint8</span></tt>.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">int</span></tt></td>
+<td>Another name for <tt class="xref docutils literal"><span class="pre">int32</span></tt> or <tt class="xref docutils literal"><span class="pre">int64</span></tt>, depending on platform.</td>
+</tr>
+<tr><td><tt class="xref docutils literal"><span class="pre">uint</span></tt></td>
+<td>Another name for <tt class="xref docutils literal"><span class="pre">uint32</span></tt> or <tt class="xref docutils literal"><span class="pre">uint64</span></tt>, depending on platform.</td>
+</tr>
 <tr><td><tt class="xref docutils literal"><span class="pre">float</span></tt></td>
-<td>&nbsp;</td>
 <td>A 32-bit IEEE floating-point value.</td>
 </tr>
 <tr><td><tt class="xref docutils literal"><span class="pre">double</span></tt></td>
-<td>&nbsp;</td>
 <td>A 64-bit IEEE floating-point value.</td>
 </tr>
 <tr><td><tt class="xref docutils literal"><span class="pre">long</span> <span class="pre">double</span></tt></td>
-<td>&nbsp;</td>
 <td>A floating point value larger than 64 bits (platform specific).</td>
 </tr>
 </tbody>
 </table>
 </blockquote>
+<p>The <tt class="xref docutils literal"><span class="pre">int</span></tt> and <tt class="xref docutils literal"><span class="pre">uint</span></tt> types are integers that are the same size as a pointer.</p>
 <div class="section" id="the-null-type">
 <h3>The &#8216;Null&#8217; Type<a class="headerlink" href="#the-null-type" title="Permalink to this headline">¶</a></h3>
 <p>The <tt class="xref docutils literal"><span class="pre">Null</span></tt> type has a single value, <tt class="xref docutils literal"><span class="pre">null</span></tt>, which is used to indicate the absence
@@ -136,12 +130,12 @@ of a reference to an object. Any object reference can be compared with <tt class
 </div>
 <div class="section" id="reference-types-and-values">
 <h2>Reference Types and Values<a class="headerlink" href="#reference-types-and-values" title="Permalink to this headline">¶</a></h2>
-<p>Types in tart are either <em>reference types</em> or <em>value types</em>. Reference types are always passed
-around by reference. For example, when you pass an object of reference type as a function parameter,
-what actually gets passed is a pointer to the object. A class member of reference type also holds
-a pointer to the object, not the object itself.</p>
-<p>Value types are passed by value, meaning that the fields of the object are copied whenever the
-object is assigned or passed as a parameter.</p>
+<p>Types in tart are either <em>reference types</em> or <em>value types</em>. Variables of value type always contain
+their data, whereas variables of reference type store references to objects. With reference types,
+it is possible for two variables to reference the same object, and thus possible for operations
+on one variable to affect the object referenced by the other variable. With value types, the
+variables each have their own copy of the data, and it is not possible for operations on one to
+affect the other.</p>
 <p>The following example should illustrate the difference:</p>
 <div class="highlight-python"><pre>class RefExample { // Classes are reference types.
   var data:int;
@@ -304,7 +298,7 @@ as void or protocol types, are considered to be neither.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Mar 15, 2011.
+      Last updated on Apr 02, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>
