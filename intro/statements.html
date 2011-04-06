@@ -52,11 +52,11 @@
             
   <div class="section" id="statements">
 <h1>Statements<a class="headerlink" href="#statements" title="Permalink to this headline">¶</a></h1>
-<span class="target" id="stmt-if"></span><span class="target" id="stmt-else"></span><span class="target" id="stmt-do"></span><span class="target" id="stmt-while"></span><div class="section" id="basic-control-flow-statements">
+<span class="target" id="stmt-else"></span><span class="target" id="stmt-do"></span><span class="target" id="stmt-while"></span><div class="section" id="basic-control-flow-statements">
 <span id="stmt-repeat"></span><h2>Basic control-flow statements<a class="headerlink" href="#basic-control-flow-statements" title="Permalink to this headline">¶</a></h2>
 <p>Tart has all the usual statements that you would expect:
-<a class="reference internal" href="#stmt-if"><tt class="xref docutils literal"><span class="pre">if</span></tt></a>/<a class="reference internal" href="#stmt-else"><tt class="xref docutils literal"><span class="pre">else</span></tt></a>, <a class="reference internal" href="#stmt-for"><tt class="xref docutils literal"><span class="pre">for</span></tt></a>, <a class="reference internal" href="#stmt-while"><tt class="xref docutils literal"><span class="pre">while</span></tt></a>,
-<a class="reference internal" href="#stmt-do"><tt class="xref docutils literal"><span class="pre">do</span></tt></a>/<a class="reference internal" href="#stmt-while"><tt class="xref docutils literal"><span class="pre">while</span></tt></a>, as well as a few new ones such
+<a class="reference external" href="../lang/statements.html#stmt-if"><tt class="xref docutils literal"><span class="pre">if</span></tt></a>/<a class="reference internal" href="#stmt-else"><tt class="xref docutils literal"><span class="pre">else</span></tt></a>, <a class="reference external" href="../lang/statements.html#stmt-for"><tt class="xref docutils literal"><span class="pre">for</span></tt></a>, <a class="reference external" href="../lang/statements.html#stmt-while"><tt class="xref docutils literal"><span class="pre">while</span></tt></a>,
+<a class="reference internal" href="#stmt-do"><tt class="xref docutils literal"><span class="pre">do</span></tt></a>/<a class="reference external" href="../lang/statements.html#stmt-while"><tt class="xref docutils literal"><span class="pre">while</span></tt></a>, as well as a few new ones such
 as <a class="reference internal" href="#stmt-repeat"><tt class="xref docutils literal"><span class="pre">repeat</span></tt></a>.</p>
 <p>Here are a few examples:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// if/else statement</span>
@@ -86,7 +86,7 @@ as <a class="reference internal" href="#stmt-repeat"><tt class="xref docutils li
 <p>The syntax is a little bit different from C or Java: You aren&#8217;t required to
 put parentheses around the test expression, but the braces around the statement
 body are always required.</p>
-<p id="stmt-for">Tart supports both forms of <a class="reference internal" href="#stmt-for"><tt class="xref docutils literal"><span class="pre">for</span></tt></a> (the C++ and Python forms), just
+<p id="stmt-for">Tart supports both forms of <a class="reference external" href="../lang/statements.html#stmt-for"><tt class="xref docutils literal"><span class="pre">for</span></tt></a> (the C++ and Python forms), just
 like Java &amp; JavaScript do:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// C-style for loop</span>
 <span class="k">var</span> <span class="nv">total</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
@@ -104,7 +104,7 @@ like Java &amp; JavaScript do:</p>
 <span class="target" id="stmt-break"></span></div>
 <div class="section" id="break-and-continue-statements">
 <span id="stmt-continue"></span><h2>Break and Continue Statements<a class="headerlink" href="#break-and-continue-statements" title="Permalink to this headline">¶</a></h2>
-<p>Because the <a class="reference internal" href="#stmt-break"><tt class="xref docutils literal"><span class="pre">break</span></tt></a> and <a class="reference internal" href="#stmt-continue"><tt class="xref docutils literal"><span class="pre">continue</span></tt></a> statements
+<p>Because the <a class="reference external" href="../lang/statements.html#stmt-break"><tt class="xref docutils literal"><span class="pre">break</span></tt></a> and <a class="reference external" href="../lang/statements.html#stmt-continue"><tt class="xref docutils literal"><span class="pre">continue</span></tt></a> statements
 are so often used conditionally, the Perl syntax of <em>post-statement conditions</em>
 is supported for these statement types:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">break</span> <span class="k">if</span> <span class="nv">a</span> <span class="o">&gt;</span> <span class="mf">10</span><span class="p">;</span>
@@ -140,7 +140,7 @@ statement, as execution does not &#8216;fall through&#8217; from one case body t
 </div>
 <div class="section" id="match-statements">
 <span id="stmt-match"></span><h2>Match statements<a class="headerlink" href="#match-statements" title="Permalink to this headline">¶</a></h2>
-<p>There is also a <a class="reference internal" href="#stmt-match"><tt class="xref docutils literal"><span class="pre">match</span></tt></a> statement which is used to differentiate
+<p>There is also a <a class="reference external" href="../lang/statements.html#stmt-match"><tt class="xref docutils literal"><span class="pre">match</span></tt></a> statement which is used to differentiate
 based on the type of the input expression:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">match</span> <span class="nv">input</span> <span class="k">{</span>
   <span class="k">as</span> <span class="nv">str</span><span class="p">:</span><span class="kt">String</span> <span class="k">{</span>
@@ -163,27 +163,6 @@ above) and that variable will be available within the scope of the case body.
 If the input does not match any of the types listed, then the <tt class="xref docutils literal"><span class="pre">else</span></tt> case
 will be executed, or if there is no <tt class="xref docutils literal"><span class="pre">else</span></tt> case then the entire statement
 is skipped.</p>
-</div>
-<div class="section" id="the-with-statement">
-<span id="stmt-with"></span><h2>The &#8220;with&#8221; statement<a class="headerlink" href="#the-with-statement" title="Permalink to this headline">¶</a></h2>
-<p>Another useful statement is the <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> statement:</p>
-<div class="highlight-tart"><div class="highlight"><pre><span class="c">// Declare a new variable &#39;fh&#39; and assign an open file handle to it.</span>
-<span class="k">with</span> <span class="nv">fh</span> <span class="o">=</span> <span class="nv">File</span><span class="o">.</span><span class="nv">open</span><span class="p">(</span><span class="s">&quot;unicode.txt) {</span>
-  <span class="c">// Do something with fh.</span>
-  <span class="c">// It will be closed when the block exits.</span>
-<span class="k">}</span>
-</pre></div>
-</div>
-<p>The <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> statement can be used to guarantee that the appropriate cleanup
-code is called after you are finished with an object. In the above example,
-the file handle <tt class="docutils literal"><span class="pre">fh</span></tt> will be closed upon exit from the <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> block,
-regardless of how the block was existed (even if via <tt class="xref docutils literal"><span class="pre">return</span></tt> or an
-exception.)</p>
-<p>The <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> statement can also influence the set of effect annotations
-that propagate outward from within the contained block. Similar to the way a
-<a class="reference internal" href="#stmt-try"><tt class="xref docutils literal"><span class="pre">try</span></tt></a> statement can filter out an exception effect, a <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a>
-statement that acquires and then releases a mutex could potentially
-remove a &#8216;thread-unsafe&#8217; effect.</p>
 <span class="target" id="stmt-try"></span><span class="target" id="stmt-catch"></span></div>
 <div class="section" id="exception-statements">
 <span id="stmt-finally"></span><h2>Exception Statements<a class="headerlink" href="#exception-statements" title="Permalink to this headline">¶</a></h2>
@@ -215,7 +194,6 @@ remove a &#8216;thread-unsafe&#8217; effect.</p>
 <li><a class="reference external" href="#break-and-continue-statements">Break and Continue Statements</a></li>
 <li><a class="reference external" href="#switch-statements">Switch statements</a></li>
 <li><a class="reference external" href="#match-statements">Match statements</a></li>
-<li><a class="reference external" href="#the-with-statement">The &#8220;with&#8221; statement</a></li>
 <li><a class="reference external" href="#exception-statements">Exception Statements</a></li>
 </ul>
 </li>

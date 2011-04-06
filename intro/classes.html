@@ -51,12 +51,12 @@
           <div class="body">
             
   <div class="section" id="user-defined-types-composites">
-<span id="index-434"></span><h1>User-defined types: Composites<a class="headerlink" href="#user-defined-types-composites" title="Permalink to this headline">¶</a></h1>
+<span id="index-661"></span><h1>User-defined types: Composites<a class="headerlink" href="#user-defined-types-composites" title="Permalink to this headline">¶</a></h1>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword is one of the four keywords that are used to define a new
 aggregate type. The others are <tt class="xref docutils literal"><span class="pre">struct</span></tt>, <tt class="xref docutils literal"><span class="pre">interface</span></tt> and <tt class="xref docutils literal"><span class="pre">protocol</span></tt>.</p>
 <ul>
 <li><p class="first">A <tt class="xref docutils literal"><span class="pre">class</span></tt> is <em>reference</em> type, meaning it is always passed around by reference.
-When you assign a value of class type to a variable, all that gets copied is a pointer to
+When a value of class type is assigned to a variable, all that gets copied is a pointer to
 the object, not the object&#8217;s contents.</p>
 </li>
 <li><p class="first">A <tt class="xref docutils literal"><span class="pre">struct</span></tt> is a <em>value</em> type. That means that normally when you assign one struct
@@ -75,7 +75,7 @@ or the support can be determined implicitly.</p>
 </li>
 </ul>
 <div class="section" id="declaring-a-new-class">
-<span id="index-435"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
+<span id="index-662"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword defines a new class. Here is a sample of a class definition:</p>
 <div class="highlight-tart"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -174,16 +174,171 @@ class members <tt class="docutils literal"><span class="pre">public</span></tt> 
 <p class="last"><tt class="docutils literal"><span class="pre">friend</span></tt> is not implemented in the current release.</p>
 </div>
 </div>
-<div class="section" id="class-members">
-<span id="index-436"></span><h2>Class members<a class="headerlink" href="#class-members" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="defining-class-members">
+<span id="index-663"></span><h2>Defining class members<a class="headerlink" href="#defining-class-members" title="Permalink to this headline">¶</a></h2>
 <p>There is no restriction on the kinds of declarations which can appear in the body of a
 <tt class="xref docutils literal"><span class="pre">class</span></tt> or <tt class="xref docutils literal"><span class="pre">struct</span></tt>, but most commonly they will be variable or method
 declarations.</p>
+<div class="section" id="member-visibility">
+<span id="index-664"></span><h3>Member Visibility<a class="headerlink" href="#member-visibility" title="Permalink to this headline">¶</a></h3>
+<p>A member definition can have one of three visibility levels:</p>
+<blockquote>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">public</span></tt>, which is visible from everywhere;</li>
+<li><tt class="docutils literal"><span class="pre">protected</span></tt>, which is visible only within the body of the class and its subclasses.</li>
+<li><tt class="docutils literal"><span class="pre">private</span></tt>, which is visible only within the body of the class itself.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="member-variables">
+<span id="index-665"></span><h3>Member Variables<a class="headerlink" href="#member-variables" title="Permalink to this headline">¶</a></h3>
+<p>A variable declared within a class body is a class instance variable, unless it the
+<tt class="docutils literal"><span class="pre">static</span></tt> modifier is present, in which case it is a static variable.</p>
 <p>Variable declarations can include an optional initialization expression. If present, the
-variable will be initialized to this value, instead of the built-in default for that type,
-when the class instance is created.</p>
+variable will be initialized to this value when the class instance is created, instead of
+the built-in default for that type.</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Point</span> <span class="k">{</span>
+  <span class="k">var</span> <span class="nv">x</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+  <span class="k">var</span> <span class="nv">y</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>Variables may be defined with either <tt class="xref docutils literal"><span class="pre">let</span></tt> or <tt class="xref docutils literal"><span class="pre">var</span></tt>. Variables defined with <tt class="xref docutils literal"><span class="pre">let</span></tt>
+are constant, and may not be changed once initialized.</p>
+</div>
+<div class="section" id="properties">
+<span id="index-666"></span><h3>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
+<p>A <em>property</em> is a member definition that has a <em>getter</em> and <em>setter</em> function, and is otherwise
+accessed like a variable. Reading from the property calls the getter function, and writing to
+it calls the setter function. It is not required that both the getter and setter be defined,
+although at least one of them must be.</p>
+<p>Properties are defined with the <tt class="xref docutils literal"><span class="pre">def</span></tt> keyword, followed by a colon and the type of the
+property:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Rectangle</span> <span class="k">{</span>
+  <span class="c">// Some member variables</span>
+  <span class="k">var</span> <span class="nv">left</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+  <span class="k">var</span> <span class="nv">top</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+  <span class="k">var</span> <span class="nv">right</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+  <span class="k">var</span> <span class="nv">bottom</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+
+  <span class="c">// Width property</span>
+  <span class="k">def</span> <span class="nf">width</span><span class="p">:</span><span class="kt">int</span> <span class="k">{</span>
+    <span class="k">get</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">right</span> <span class="o">-</span> <span class="nv">left</span><span class="p">;</span> <span class="k">}</span>
+    <span class="k">set</span> <span class="k">{</span> <span class="nv">right</span> <span class="o">=</span> <span class="nv">left</span> <span class="o">+</span> <span class="nv">value</span><span class="p">;</span> <span class="k">}</span>
+  <span class="k">}</span>
+
+  <span class="c">// Height property</span>
+  <span class="k">def</span> <span class="nf">height</span><span class="p">:</span><span class="kt">int</span> <span class="k">{</span>
+    <span class="k">get</span> <span class="k">{</span> <span class="k">return</span> <span class="nv">bottom</span> <span class="o">-</span> <span class="nv">top</span><span class="p">;</span> <span class="k">}</span>
+    <span class="k">set</span> <span class="k">{</span> <span class="nv">bottom</span> <span class="o">=</span> <span class="nv">top</span> <span class="o">+</span> <span class="nv">value</span><span class="p">;</span> <span class="k">}</span>
+  <span class="k">}</span>
+<span class="k">}</span>
+
+<span class="nv">r</span> <span class="o">=</span> <span class="nv">Rectangle</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
+
+<span class="c">// Calls the getter method of the rectangle&#39;s &#39;width&#39; property</span>
+<span class="k">let</span> <span class="nv">w</span> <span class="o">=</span> <span class="nv">r</span><span class="o">.</span><span class="nv">width</span><span class="p">;</span>
+
+<span class="c">// Calls the setter method of the rectangle&#39;s &#39;height&#39; property</span>
+<span class="nv">r</span><span class="o">.</span><span class="nv">height</span> <span class="o">=</span> <span class="mf">3</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In the example above, we define two properties <tt class="docutils literal"><span class="pre">width</span></tt> and <tt class="docutils literal"><span class="pre">height</span></tt> which are synthesized
+from the coordinates of the rectangle. In the case of the <tt class="docutils literal"><span class="pre">get</span></tt> method, the return statement
+returns the value of the property.</p>
+<p>For <tt class="docutils literal"><span class="pre">set</span></tt> methods, the implicit pseudo-variable <tt class="docutils literal"><span class="pre">value</span></tt> contains the value being assigned
+to the property.</p>
+</div>
+<div class="section" id="methods">
+<span id="index-667"></span><h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<p>In Tart, the term <em>Method</em> and <em>Function</em> are interchangeable - usually &#8220;Function&#8221; is used
+when speaking of global functions, and &#8220;Method&#8221; when speaking of member functions.</p>
+<p>The <tt class="xref docutils literal"><span class="pre">def</span></tt> keyword defines a new method, as previously describe in the section on
+<a class="reference external" href="declarations.html#functiondeclarations"><em>Function Declarations</em></a>.</p>
+<p>Methods defined in a class are automatically inherited by subclasses of that class. An
+inherited method definition can be overridden using the <tt class="xref docutils literal"><span class="pre">override</span></tt> keyword. The subclass
+method definition must have the same name and type signature as the base class method
+being overridden:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Base</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="nf">doAction</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span><span class="nc">ActionCode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">ResultCode</span> <span class="k">{</span>
+    <span class="c">// Base class definition</span>
+  <span class="k">}</span>
+<span class="k">}</span>
+
+<span class="k">class</span> <span class="nc">Subclass</span> <span class="p">:</span> <span class="nc">Base</span> <span class="k">{</span>
+  <span class="k">override</span> <span class="nv">doAction</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span><span class="nv">ActionCode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">ResultCode</span> <span class="k">{</span>
+    <span class="c">// Subclass definition</span>
+  <span class="k">}</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>The <tt class="xref docutils literal"><span class="pre">def</span></tt> keyword cannot be used to override a base class method - it is an error
+to use <tt class="xref docutils literal"><span class="pre">def</span></tt> to define a method with the same name and type signature as a method
+in a base class.</p>
+<p>The <tt class="xref docutils literal"><span class="pre">override</span></tt> keyword is only required when overriding methods defined in a base class.
+It is <em>not</em> required (and is not allowed) when implementing a method defined in an interface.
+(Implementing an interface is not considered &#8220;inheritance&#8221;.)</p>
+<p>Methods overridden using <tt class="xref docutils literal"><span class="pre">override</span></tt> use dynamic dispatching, much like the way
+virtual functions work in C++. The decision of which method body gets executed when a method
+gets called is based on the real type of the object, not it&#8217;s declared type at that point
+in the code.</p>
+<p id="index-668">An inherited method definition can also be <em>undefined</em> using the <tt class="xref docutils literal"><span class="pre">undef</span></tt> keyword.
+An undefined method simply throws an <tt class="xref docutils literal"><span class="pre">UnsupportedOperationError</span></tt> exception, and
+is a convenient way to signal that a subclass does not support an operation that is defined
+in the base class:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Base</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="nf">caption</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="k">{</span>
+    <span class="k">return</span> <span class="s">&quot;Howdy!&quot;</span><span class="p">;</span>
+  <span class="k">}</span>
+<span class="k">}</span>
+
+<span class="k">class</span> <span class="nc">Subclass</span> <span class="p">:</span> <span class="nc">Base</span> <span class="k">{</span>
+  <span class="nv">undef</span> <span class="nv">caption</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">;</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>Unlike <tt class="xref docutils literal"><span class="pre">override</span></tt>, <tt class="xref docutils literal"><span class="pre">undef</span></tt> works with methods defined in interfaces as well as base
+classes. There is an additional use
+for <tt class="xref docutils literal"><span class="pre">undef</span></tt>, which is to suppress the creation of implicit methods which be added by the
+compiler, such as the default constructor. For example, suppose there is some data type which
+is never intended to be constructed within Tart code, but only created by some external C
+library:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">struct</span> <span class="nc">TimeStamp</span> <span class="k">{</span>
+  <span class="k">var</span> <span class="nv">value</span><span class="p">:</span><span class="nc">uint64</span><span class="p">;</span>
+
+  <span class="c">// Tell the compiler not to generate a default constructor.</span>
+  <span class="nv">undef</span> <span class="nv">construct</span><span class="p">;</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p id="index-669">A method may be declared <tt class="xref docutils literal"><span class="pre">final</span></tt>, informing the compiler that it is not permitted to
+override that method in subclasses. This will in some cases allow the compiler to make additional
+optimizations, avoiding the need for a dynamic dispatch:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Circle</span> <span class="k">{</span>
+  <span class="nv">final</span> <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="nv">dc</span><span class="p">:</span><span class="nc">DrawContext</span><span class="p">)</span> <span class="k">{</span>
+    <span class="c">// Code to draw a circle</span>
+  <span class="k">}</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>The <tt class="xref docutils literal"><span class="pre">final</span></tt> keyword can also be applied to an entire class, which means that the class
+cannot be subclassed at all.</p>
+<p id="index-670">A method declared as <tt class="xref docutils literal"><span class="pre">abstract</span></tt> has no method body. A class containing an abstract method
+must also be declared abstract:</p>
+<div class="highlight-tart"><div class="highlight"><pre><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Shape</span> <span class="k">{</span>
+  <span class="k">abstract</span> <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="nv">dc</span><span class="p">:</span><span class="nc">DrawContext</span><span class="p">);</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>Abstract classes cannot be directly instantiated, only subclasses of the abstract class can be
+instantiated, and only if those subclasses are themselves concrete (i.e. not abstract).
+A concrete subclass of an abstract class must provide concrete definitions for all of the
+inherited abstract methods.</p>
+</div>
+<div class="section" id="the-self-parameter">
+<span id="index-671"></span><h3>The <tt class="docutils literal"><span class="pre">self</span></tt> parameter<a class="headerlink" href="#the-self-parameter" title="Permalink to this headline">¶</a></h3>
 <p>Within a class method, the special variable <tt class="xref docutils literal"><span class="pre">self</span></tt> refers to the current instance.
-Unlike Python, you do not need to declare the  <tt class="xref docutils literal"><span class="pre">self</span></tt> variable explicitly.</p>
+You do not need to declare the  <tt class="xref docutils literal"><span class="pre">self</span></tt> variable explicitly.</p>
 <p>Instance variables can be referred to directly by name, you do not need to qualify them
 with <tt class="xref docutils literal"><span class="pre">self</span></tt> unless you also have a local variable or parameter with the same name.
 <tt class="xref docutils literal"><span class="pre">self</span></tt> is often used in constructors:</p>
@@ -194,16 +349,25 @@ with <tt class="xref docutils literal"><span class="pre">self</span></tt> unless
 </pre></div>
 </div>
 <p>In most cases the <tt class="xref docutils literal"><span class="pre">self</span></tt> parameter works exactly like other, explicitly declared
-parameters. The exception to this rule is in <tt class="xref docutils literal"><span class="pre">struct</span></tt> methods. Normally when
-the type of a function parameter is a <tt class="xref docutils literal"><span class="pre">struct</span></tt> type, the value that is passed is
+parameters. The exception to this rule is the <tt class="xref docutils literal"><span class="pre">self</span></tt> parameter of <tt class="xref docutils literal"><span class="pre">struct</span></tt> methods.
+Normally when the type of a function parameter is a <tt class="xref docutils literal"><span class="pre">struct</span></tt> type, the value that is
+passed to that function is
 a <em>copy</em> of the struct, however in the case of <tt class="xref docutils literal"><span class="pre">self</span></tt>, what gets passed is a <em>pointer</em> to
 the struct. If this were not true, it would be impossible to write methods that modify
 struct members, since the method could only modify the temporary copy. Note, however,
 that if you assign the <tt class="xref docutils literal"><span class="pre">self</span></tt> parameter to another variable, the variable will
 still get a copy.</p>
 </div>
+</div>
+<div class="section" id="struct-members">
+<span id="index-672"></span><h2>Struct members<a class="headerlink" href="#struct-members" title="Permalink to this headline">¶</a></h2>
+<p>Method definitions in structs are always <tt class="xref docutils literal"><span class="pre">final</span></tt> and cannot be overridden. The reason for
+this is because structs do not have a hidden dispatch table like classes do, so the decision
+of which method body gets executed has to be determined at compile time. Without the dispatch
+table, the compiler can only use the static type information to decide which method body to run.</p>
+</div>
 <div class="section" id="creating-a-new-class-instance">
-<span id="index-437"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
+<span id="index-673"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for creating a new class instance is the same as in Python, which is
 to call the class as if it were a function:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">s</span> <span class="o">=</span> <span class="nv">Rectangle</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">20</span><span class="p">);</span>
@@ -231,7 +395,7 @@ helper classes which will automatically wrap (&#8216;auto-box&#8217;) value type
 </div>
 </div>
 <div class="section" id="constructors">
-<span id="index-438"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-674"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <p>A <em>constructor method</em> is responsible for initializing the members of a class instance
 when it is created. The constructor method is named <tt class="xref docutils literal"><span class="pre">construct()</span></tt>, and must not declare a
 return value.</p>
@@ -296,19 +460,19 @@ calls it automatically.</p>
 to synthesize a default constructor.</p>
 </li>
 </ul>
-<p id="index-440">Any member variable which is not initialized by the constructor will be set to
+<p id="index-676">Any member variable which is not initialized by the constructor will be set to
 its default value. If the default value for the member variable has not been
 specified, then it uses the default value for that type.</p>
 </div>
 <div class="section" id="default-constructors">
-<span id="index-441"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-677"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
 <p>If the object has no <tt class="xref docutils literal"><span class="pre">construct()</span></tt> method and no <tt class="xref docutils literal"><span class="pre">create()</span></tt> method, then the compiler
 will attempt to create a default constructor. The default constructor takes no arguments,
 and will initialize every field to its default value. If any fields cannot be initialized
 to a default, then the compiler will emit an error.</p>
 </div>
 <div class="section" id="constructor-execution">
-<span id="index-442"></span><h2>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h2>
+<span id="index-678"></span><h2>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h2>
 <p>The compiler will attempt to ensure that all member fields are initialized during the execution of
 the constructor. Fields which have no defaults must be assigned in the constructor, whereas fields
 which do have defaults (either explicitly specified or implicit based on the type) may not be.
@@ -334,7 +498,7 @@ were assigned during the call.</p>
 </div>
 </div>
 <div class="section" id="array-constructors">
-<span id="index-443"></span><h2>Array constructors<a class="headerlink" href="#array-constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-679"></span><h2>Array constructors<a class="headerlink" href="#array-constructors" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for constructing a new array instance is the type name, followed
 by the dimension of the array in square brackets:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Allocate an array of 10 rectangles.</span>
@@ -398,6 +562,81 @@ context-free.</p>
 </div>
 <div class="section" id="interfaces">
 <span id="id1"></span><h2>Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this headline">¶</a></h2>
+<p>Tart supports &#8220;interface inheritance&#8221;, which means that a class can only have one base class,
+but can derive from any number of interfaces:</p>
+<div class="highlight-tart"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">// A sample base class</span>
+<span class="k">class</span> <span class="nc">Widget</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="nv">dc</span><span class="p">:</span><span class="nc">DrawContext</span><span class="p">)</span> <span class="k">{</span>
+    <span class="c">// Method body...</span>
+  <span class="k">}</span>
+<span class="k">}</span>
+
+<span class="c">// An interface</span>
+<span class="k">interface</span> <span class="nc">Selectable</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="nf">select</span><span class="p">(</span><span class="nv">selected</span><span class="p">:</span><span class="kt">bool</span><span class="p">);</span>
+<span class="k">}</span>
+
+<span class="c">// Another interface</span>
+<span class="k">interface</span> <span class="nc">HasEventListeners</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="nf">addListener</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span><span class="nc">fn</span><span class="gr">(e:Event</span><span class="p">));</span>
+<span class="k">}</span>
+
+<span class="c">// A class that derives from one base class and two interfaces.</span>
+<span class="k">class</span> <span class="nc">Window</span> <span class="p">:</span> <span class="nc">Widget</span><span class="p">,</span> <span class="nc">Selectable</span><span class="p">,</span> <span class="nc">HasEventListeners</span> <span class="k">{</span>
+  <span class="c">// Override method from base class</span>
+  <span class="k">override</span> <span class="nv">draw</span><span class="p">(</span><span class="nv">dc</span><span class="p">:</span><span class="nv">DrawContext</span><span class="p">)</span> <span class="k">{</span>
+    <span class="c">// Draw the window...</span>
+  <span class="k">}</span>
+
+  <span class="k">def</span> <span class="nf">select</span><span class="p">(</span><span class="nv">selected</span><span class="p">:</span><span class="kt">bool</span><span class="p">)</span> <span class="k">{</span>
+    <span class="c">// Implement select</span>
+  <span class="k">}</span>
+
+  <span class="k">def</span> <span class="nf">addListener</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span><span class="nc">fn</span><span class="gr">(e:Event</span><span class="p">))</span> <span class="k">{</span>
+    <span class="c">// Implement addListener.</span>
+  <span class="k">}</span>
+<span class="k">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Interfaces can only contain a retricted set of definitions:</p>
+<blockquote>
+<ul class="simple">
+<li>Interface methods (methods with no body).</li>
+<li>Type definitions</li>
+<li>Named constants</li>
+</ul>
+</blockquote>
 </div>
 <div class="section" id="protocols">
 <span id="id2"></span><h2>Protocols<a class="headerlink" href="#protocols" title="Permalink to this headline">¶</a></h2>
@@ -524,7 +763,15 @@ applies when using the specialization:</p>
             <ul>
 <li><a class="reference external" href="#">User-defined types: Composites</a><ul>
 <li><a class="reference external" href="#declaring-a-new-class">Declaring a new class</a></li>
-<li><a class="reference external" href="#class-members">Class members</a></li>
+<li><a class="reference external" href="#defining-class-members">Defining class members</a><ul>
+<li><a class="reference external" href="#member-visibility">Member Visibility</a></li>
+<li><a class="reference external" href="#member-variables">Member Variables</a></li>
+<li><a class="reference external" href="#properties">Properties</a></li>
+<li><a class="reference external" href="#methods">Methods</a></li>
+<li><a class="reference external" href="#the-self-parameter">The <tt class="docutils literal"><span class="pre">self</span></tt> parameter</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#struct-members">Struct members</a></li>
 <li><a class="reference external" href="#creating-a-new-class-instance">Creating a new class instance</a></li>
 <li><a class="reference external" href="#constructors">Constructors</a></li>
 <li><a class="reference external" href="#default-constructors">Default constructors</a></li>
@@ -586,7 +833,7 @@ applies when using the specialization:</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Apr 02, 2011.
+      Last updated on Apr 05, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

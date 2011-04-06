@@ -52,104 +52,224 @@
             
   <div class="section" id="statements-and-control-structures">
 <h1>Statements and Control Structures<a class="headerlink" href="#statements-and-control-structures" title="Permalink to this headline">¶</a></h1>
+<pre>
+<strong id="grammar-token-stmt">stmt</strong> ::=   <a class="reference internal" href="#grammar-token-expr_stmt"><tt class="xref docutils literal"><span class="pre">expr_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-assign_stmt"><tt class="xref docutils literal"><span class="pre">assign_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-return_stmt"><tt class="xref docutils literal"><span class="pre">return_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-decl_stmt"><tt class="xref docutils literal"><span class="pre">decl_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-with_stmt"><tt class="xref docutils literal"><span class="pre">with_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-switch_stmt"><tt class="xref docutils literal"><span class="pre">switch_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-match_stmt"><tt class="xref docutils literal"><span class="pre">match_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-if_stmt"><tt class="xref docutils literal"><span class="pre">if_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-while_stmt"><tt class="xref docutils literal"><span class="pre">while_stmt</span></tt></a>
+         | <tt class="xref docutils literal"><span class="pre">do_while_stmt</span></tt>
+         | <tt class="xref docutils literal"><span class="pre">for_stmt</span></tt>
+         | <tt class="xref docutils literal"><span class="pre">for_in_stmt</span></tt>
+         | <a class="reference internal" href="#grammar-token-break_stmt"><tt class="xref docutils literal"><span class="pre">break_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-continue_stmt"><tt class="xref docutils literal"><span class="pre">continue_stmt</span></tt></a>
+         | <a class="reference internal" href="#grammar-token-try_stmt"><tt class="xref docutils literal"><span class="pre">try_stmt</span></tt></a>
+         | <tt class="xref docutils literal"><span class="pre">import_stmt</span></tt>
+</pre>
+<div class="section" id="statement-blocks">
+<h2>Statement blocks<a class="headerlink" href="#statement-blocks" title="Permalink to this headline">¶</a></h2>
+<p>A statement block is a list of statements, separated by semicolons. The last statement in the
+block does not need to end with a semicolon.</p>
+<pre>
+<strong id="grammar-token-stmt_block">stmt_block</strong> ::=  &quot;{&quot; [ <a class="reference internal" href="#grammar-token-stmt"><tt class="xref docutils literal"><span class="pre">stmt</span></tt></a> (&quot;;&quot; <a class="reference internal" href="#grammar-token-stmt"><tt class="xref docutils literal"><span class="pre">stmt</span></tt></a>)* ] &quot;}&quot;
+</pre>
+</div>
 <div class="section" id="simple-statements">
 <h2>Simple Statements<a class="headerlink" href="#simple-statements" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="the-empty-statement">
-<span id="index-27"></span><h3>The Empty Statement<a class="headerlink" href="#the-empty-statement" title="Permalink to this headline">¶</a></h3>
-<pre>
-<strong id="grammar-token-empty_stmt">empty_stmt</strong> ::=  &quot;;&quot;
-</pre>
-</div>
 <div class="section" id="expression-statement">
-<span id="index-28"></span><h3>Expression Statement<a class="headerlink" href="#expression-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-expression"></span><h3>Expression Statement<a class="headerlink" href="#expression-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-expr_stmt">expr_stmt</strong> ::=  <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;;&quot;
+<strong id="grammar-token-expr_stmt">expr_stmt</strong> ::=  <tt class="xref docutils literal"><span class="pre">expression</span></tt>
 </pre>
+<p>An expression statement evaluates an expression. Typically this will be an expression with
+side-effects.</p>
 </div>
 <div class="section" id="assignment-statement">
-<span id="index-29"></span><h3>Assignment Statement<a class="headerlink" href="#assignment-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-assignment"></span><h3>Assignment Statement<a class="headerlink" href="#assignment-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-assign_stmt">assign_stmt</strong> ::=  <a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> &quot;=&quot; (<a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> &quot;=&quot;)* <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;;&quot;
+<strong id="grammar-token-assign_stmt">assign_stmt    </strong> ::=  <a class="reference internal" href="#grammar-token-assign"><tt class="xref docutils literal"><span class="pre">assign</span></tt></a> | <a class="reference internal" href="#grammar-token-aug_assign"><tt class="xref docutils literal"><span class="pre">aug_assign</span></tt></a>
+<strong id="grammar-token-assign">assign         </strong> ::=  <tt class="xref docutils literal"><span class="pre">lvalue</span></tt> &quot;=&quot; (<tt class="xref docutils literal"><span class="pre">lvalue</span></tt> &quot;=&quot;)* <tt class="xref docutils literal"><span class="pre">expression</span></tt>
+<strong id="grammar-token-aug_assign">aug_assign     </strong> ::=  <tt class="xref docutils literal"><span class="pre">lvalue</span></tt> <a class="reference internal" href="#grammar-token-aug_assign_oper"><tt class="xref docutils literal"><span class="pre">aug_assign_oper</span></tt></a> <tt class="xref docutils literal"><span class="pre">expression</span></tt>
+<strong id="grammar-token-aug_assign_oper">aug_assign_oper</strong> ::=  &quot;+=&quot; | &quot;-=&quot; | &quot;*=&quot; | &quot;/=&quot; | &quot;&amp;=&quot; | &quot;|=&quot; | &quot;^=&quot; | &quot;&gt;&gt;=&quot; | &quot;&lt;&lt;=&quot;
 </pre>
+<p>The assignment statement has two forms: <em>regular</em> and <em>augmented</em> assignment.</p>
+<p>The regular assignment statement can assign an expression to one or more variables:</p>
+<div class="highlight-python"><pre>// Assign 1 to both a and b.
+a = b = 1;</pre>
+</div>
+<p>The augmented assignment statement reads the value of a variable, operates on the value, and then
+stores the value back into the variable:</p>
+<div class="highlight-python"><pre>// Add 1 to a
+a += 1;</pre>
+</div>
 </div>
 <div class="section" id="return-statement">
-<span id="index-30"></span><h3>Return Statement<a class="headerlink" href="#return-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-return"></span><h3>Return Statement<a class="headerlink" href="#return-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-return_stmt">return_stmt</strong> ::=  &quot;return&quot; [<tt class="xref docutils literal"><span class="pre">expression</span></tt>] [&quot;if&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt>] &quot;;&quot;
+<strong id="grammar-token-return_stmt">return_stmt</strong> ::=  &quot;return&quot; [<tt class="xref docutils literal"><span class="pre">expression</span></tt>]
 </pre>
+<p>The <a class="reference internal" href="#stmt-return"><tt class="xref docutils literal"><span class="pre">return</span></tt></a> statement returns from the current function. A return value may be supplied.
+The type of the return value must be convertible to the return type of the current function.</p>
+<p>To return more than one value, use the comma (<tt class="xref docutils literal"><span class="pre">,</span></tt>) operator to construct a tuple:</p>
+<div class="highlight-python"><pre>def pair(a:int, b:int) -&gt; (int, int) {
+  return a, b;
+}</pre>
+</div>
 </div>
 </div>
 <div class="section" id="compound-statements">
 <h2>Compound Statements<a class="headerlink" href="#compound-statements" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="block-statement">
-<span id="index-31"></span><h3>Block Statement<a class="headerlink" href="#block-statement" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-block_stmt: &#8220;{&#8221; (<cite>statement</cite>)* &#8220;}&#8221;</blockquote>
+<div class="section" id="declaration-statement">
+<span id="stmt-declaration"></span><h3>Declaration Statement<a class="headerlink" href="#declaration-statement" title="Permalink to this headline">¶</a></h3>
+<pre>
+<strong id="grammar-token-decl_stmt">decl_stmt</strong> ::=  <tt class="xref docutils literal"><span class="pre">declaration</span></tt>
+</pre>
+<p>A declaration statement declares a variable in the current scope.</p>
 </div>
 <div class="section" id="with-statement">
-<span id="index-32"></span><h3>With Statement<a class="headerlink" href="#with-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-with"></span><h3>With Statement<a class="headerlink" href="#with-statement" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This statement is not implemented in the current release.</p>
+</div>
+<pre>
+<strong id="grammar-token-with_stmt">with_stmt</strong> ::=  &quot;with&quot; <a class="reference internal" href="#grammar-token-with_var"><tt class="xref docutils literal"><span class="pre">with_var</span></tt></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-with_var"><tt class="xref docutils literal"><span class="pre">with_var</span></tt></a>)* <a class="reference internal" href="#grammar-token-stmt_block"><tt class="xref docutils literal"><span class="pre">stmt_block</span></tt></a>
+<strong id="grammar-token-with_var">with_var </strong> ::=  <a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> [ &quot;:&quot; <tt class="xref docutils literal"><span class="pre">type</span></tt> ] &quot;=&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt>
+</pre>
+<p>The <a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> statement is used to explicitly control the lifetime of a value. It can be used
+to guarantee that the appropriate cleanup code is called after you are finished with an object.
+For example, you could use it to insure that a file handle gets closed after you are finished
+writing to the file:</p>
+<div class="highlight-python"><pre>// Declare a new variable 'fh' and assign an open file handle to it.
+with fh = File.open("unicode.txt) {
+  // Do something with fh.
+  // It will be closed when the block exits.
+}</pre>
+</div>
+<p>In the above example, the file handle <tt class="docutils literal"><span class="pre">fh</span></tt> will be closed upon exit from the
+<a class="reference internal" href="#stmt-with"><tt class="xref docutils literal"><span class="pre">with</span></tt></a> block, regardless of how the block was exited (even if via <a class="reference internal" href="#stmt-return"><tt class="xref docutils literal"><span class="pre">return</span></tt></a> or
+an exception.)</p>
 </div>
 </div>
 <div class="section" id="conditional-statements">
 <h2>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="if-statement">
-<span id="index-33"></span><h3>If Statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-if"></span><h3>If Statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-if_stmt">if_stmt</strong> ::=  &quot;if&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> <tt class="xref docutils literal"><span class="pre">statement</span></tt> [ &quot;else&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt> ]
+<strong id="grammar-token-if_stmt">if_stmt</strong> ::= &quot;if&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> <a class="reference internal" href="#grammar-token-stmt_block"><tt class="xref docutils literal"><span class="pre">stmt_block</span></tt></a> [ &quot;else&quot; <a class="reference internal" href="#grammar-token-stmt_block"><tt class="xref docutils literal"><span class="pre">stmt_block</span></tt></a> ]
 </pre>
+<span class="target" id="stmt-switch"></span></div>
+<div class="section" id="switch-statement">
+<span id="stmt-case"></span><h3>Switch Statement<a class="headerlink" href="#switch-statement" title="Permalink to this headline">¶</a></h3>
+<pre>
+<strong id="grammar-token-switch_stmt">switch_stmt</strong> ::=  &quot;switch&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;{&quot; (<a class="reference internal" href="#grammar-token-case_stmt"><tt class="xref docutils literal"><span class="pre">case_stmt</span></tt></a> | <a class="reference internal" href="#grammar-token-else_stmt"><tt class="xref docutils literal"><span class="pre">else_stmt</span></tt></a>)* &quot;}&quot;
+<strong id="grammar-token-case_stmt">case_stmt  </strong> ::=  &quot;case&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> ( &quot;case&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> )* <a class="reference internal" href="#grammar-token-stmt_block"><tt class="xref docutils literal"><span class="pre">stmt_block</span></tt></a>
+<strong id="grammar-token-else_stmt">else_stmt  </strong> ::=  &quot;else&quot; <a class="reference internal" href="#grammar-token-stmt_block"><tt class="xref docutils literal"><span class="pre">stmt_block</span></tt></a>
+</pre>
+<span class="target" id="stmt-match"></span></div>
+<div class="section" id="match-statement">
+<span id="stmt-as"></span><h3>Match Statement<a class="headerlink" href="#match-statement" title="Permalink to this headline">¶</a></h3>
+<pre>
+<strong id="grammar-token-match_stmt">match_stmt </strong> ::=  `match1_stmt` | `match1_stmt`
+<strong id="grammar-token-match1_stmt">match1_stmt</strong> ::=  &quot;match&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;{&quot; (<a class="reference internal" href="#grammar-token-as_stmt"><tt class="xref docutils literal"><span class="pre">as_stmt</span></tt></a> | <a class="reference internal" href="#grammar-token-else_stmt"><tt class="xref docutils literal"><span class="pre">else_stmt</span></tt></a>)* &quot;}&quot;
+<strong id="grammar-token-match2_stmt">match2_stmt</strong> ::=  &quot;match&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> &quot;as&quot; <a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> &quot;:&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> <a class="reference internal" href="#grammar-token-stmt_block"><tt class="xref docutils literal"><span class="pre">stmt_block</span></tt></a> (<a class="reference internal" href="#grammar-token-else_stmt"><tt class="xref docutils literal"><span class="pre">else_stmt</span></tt></a>)?
+<strong id="grammar-token-as_stmt">as_stmt    </strong> ::=  &quot;as&quot; <a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> &quot;:&quot; <tt class="xref docutils literal"><span class="pre">type</span></tt> <a class="reference internal" href="#grammar-token-stmt_block"><tt class="xref docutils literal"><span class="pre">stmt_block</span></tt></a>
+<strong id="id1">else_stmt  </strong> ::=  &quot;else&quot; <a class="reference internal" href="#grammar-token-stmt_block"><tt class="xref docutils literal"><span class="pre">stmt_block</span></tt></a>
+</pre>
+<p>A <a class="reference internal" href="#stmt-match"><tt class="xref docutils literal"><span class="pre">match</span></tt></a> statement takes different actions based on the type of a value. It has two forms,
+short and long.</p>
+<p>The long form of the <a class="reference internal" href="#stmt-match"><tt class="xref docutils literal"><span class="pre">match</span></tt></a> statement looks similar to a <a class="reference internal" href="#stmt-switch"><tt class="xref docutils literal"><span class="pre">switch</span></tt></a> statement:</p>
+<div class="highlight-python"><pre>match n {
+  as s:String { Debug.writeLn(s); }
+  as i:int { return i * 2; }
+  else { fail("Unrecognized type!"); }
+}</pre>
 </div>
-<div class="section" id="case-statement">
-<span id="index-34"></span><h3>Case Statement<a class="headerlink" href="#case-statement" title="Permalink to this headline">¶</a></h3>
+<p>In the example above, if <tt class="docutils literal"><span class="pre">n</span></tt> can be a <tt class="xref docutils literal"><span class="pre">String</span></tt>, an <tt class="xref docutils literal"><span class="pre">int</span></tt>, or some other type.
+If it&#8217;s a <tt class="xref docutils literal"><span class="pre">String</span></tt>, the value will be bound to the variable <tt class="docutils literal"><span class="pre">s</span></tt>, and the corresponding
+<a class="reference internal" href="#stmt-as"><tt class="xref docutils literal"><span class="pre">as</span></tt></a> block executed. If the value is an integer, then it would bind the value to the variable
+<tt class="docutils literal"><span class="pre">i</span></tt> and execute the second block. If it&#8217;s neither of those types, then the <a class="reference external" href="../intro/statements.html#stmt-else"><tt class="xref docutils literal"><span class="pre">else</span></tt></a> block
+would be executed. (If there is no <a class="reference external" href="../intro/statements.html#stmt-else"><tt class="xref docutils literal"><span class="pre">else</span></tt></a> block, then none of the <a class="reference internal" href="#stmt-as"><tt class="xref docutils literal"><span class="pre">as</span></tt></a> blocks are
+executed and control just falls through to the end.)</p>
+<p>Note that unlike the <a class="reference internal" href="#stmt-switch"><tt class="xref docutils literal"><span class="pre">switch</span></tt></a> statement, the <a class="reference internal" href="#stmt-as"><tt class="xref docutils literal"><span class="pre">as</span></tt></a> type tests are done in the order
+that they are declared. The example given above is equivalent to the following:</p>
+<div class="highlight-python"><pre>if n isa String {
+  let s = typecast[String](n);
+  Debug.writeLn(s);
+} else if n isa int {
+  let i = typecast[int](n);
+  return i * 2;
+} else {
+  fail("Unrecognized type!");
+}</pre>
+</div>
+<p>The short form of the <a class="reference internal" href="#stmt-match"><tt class="xref docutils literal"><span class="pre">match</span></tt></a> statement is used when you only have a single type test:</p>
+<div class="highlight-python"><pre>// Short form without 'else'
+match n as s:String {
+  Debug.writeLn(s);
+}
+
+// Short form with 'else'
+match n as i:int {
+  return i * 2;
+} else {
+  fail("Unrecognized type!");
+}</pre>
+</div>
 </div>
 </div>
 <div class="section" id="looping-statements">
-<h2>Looping Statements<a class="headerlink" href="#looping-statements" title="Permalink to this headline">¶</a></h2>
+<span id="index-539"></span><h2>Looping Statements<a class="headerlink" href="#looping-statements" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="while-statement">
-<span id="index-35"></span><h3>While Statement<a class="headerlink" href="#while-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-while"></span><h3>While Statement<a class="headerlink" href="#while-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-while_stmt">while_stmt</strong> ::=  &quot;while&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> <tt class="xref docutils literal"><span class="pre">statement</span></tt>
+<strong id="grammar-token-while_stmt">while_stmt</strong> ::= &quot;while&quot; <tt class="xref docutils literal"><span class="pre">expression</span></tt> <tt class="xref docutils literal"><span class="pre">statement</span></tt>
 </pre>
 </div>
 <div class="section" id="do-while-statement">
-<span id="index-36"></span><h3>Do / While Statement<a class="headerlink" href="#do-while-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-do/while"></span><h3>Do / While Statement<a class="headerlink" href="#do-while-statement" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="for-statement">
-<span id="index-37"></span><h3>For Statement<a class="headerlink" href="#for-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-for"></span><h3>For Statement<a class="headerlink" href="#for-statement" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="for-in-statement">
-<span id="index-38"></span><h3>For .. In Statement<a class="headerlink" href="#for-in-statement" title="Permalink to this headline">¶</a></h3>
+<h3>For .. In Statement<a class="headerlink" href="#for-in-statement" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="break-statement">
-<span id="index-39"></span><h3>Break Statement<a class="headerlink" href="#break-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-break"></span><h3>Break Statement<a class="headerlink" href="#break-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-break_stmt">break_stmt</strong> ::=  &quot;break&quot; [if <tt class="xref docutils literal"><span class="pre">expression</span></tt>] &quot;;&quot;
+<strong id="grammar-token-break_stmt">break_stmt</strong> ::= &quot;break&quot; [if <tt class="xref docutils literal"><span class="pre">expression</span></tt>]
 </pre>
 </div>
 <div class="section" id="continue-statement">
-<span id="index-40"></span><h3>Continue Statement<a class="headerlink" href="#continue-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-continue"></span><h3>Continue Statement<a class="headerlink" href="#continue-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-continue_stmt">continue_stmt</strong> ::=  &quot;continue&quot; [if <tt class="xref docutils literal"><span class="pre">expression</span></tt>] &quot;;&quot;
+<strong id="grammar-token-continue_stmt">continue_stmt</strong> ::= &quot;continue&quot; [if <tt class="xref docutils literal"><span class="pre">expression</span></tt>]
 </pre>
 </div>
 </div>
 <div class="section" id="exception-handling-statements">
 <h2>Exception Handling Statements<a class="headerlink" href="#exception-handling-statements" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="throw-statement">
-<span id="index-41"></span><h3>Throw Statement<a class="headerlink" href="#throw-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-throw"></span><h3>Throw Statement<a class="headerlink" href="#throw-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-throw_stmt">throw_stmt</strong> ::=  &quot;throw&quot; [ <tt class="xref docutils literal"><span class="pre">expression</span></tt> ] ;
+<strong id="grammar-token-throw_stmt">throw_stmt</strong> ::= &quot;throw&quot; [ <tt class="xref docutils literal"><span class="pre">expression</span></tt> ] ;
 </pre>
-</div>
+<span class="target" id="stmt-try"></span><span class="target" id="stmt-catch"></span></div>
 <div class="section" id="try-catch-statement">
-<span id="index-42"></span><h3>Try/Catch Statement<a class="headerlink" href="#try-catch-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-finally"></span><h3>Try/Catch Statement<a class="headerlink" href="#try-catch-statement" title="Permalink to this headline">¶</a></h3>
 <pre>
-<strong id="grammar-token-try_stmt">try_stmt </strong> ::=  try_stmt1 | try_stmt2
-<strong id="grammar-token-try_stmt1">try_stmt1</strong> ::=  &quot;try&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>
-               (&quot;except&quot; [<a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> &quot;:&quot; <tt class="xref docutils literal"><span class="pre">type</span></tt>] <tt class="xref docutils literal"><span class="pre">statement</span></tt>)+
-               [&quot;else&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>]
-               [&quot;finally&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>]
-<strong id="grammar-token-try_stmt2">try_stmt2</strong> ::=  &quot;try&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>
-               &quot;finally&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>
+<strong id="grammar-token-try_stmt">try_stmt </strong> ::= try_stmt1 | try_stmt2
+<strong id="grammar-token-try_stmt1">try_stmt1</strong> ::= &quot;try&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>
+              (&quot;except&quot; [<a class="reference external" href="lex.html#grammar-token-ident"><tt class="xref docutils literal"><span class="pre">ident</span></tt></a> &quot;:&quot; <tt class="xref docutils literal"><span class="pre">type</span></tt>] <tt class="xref docutils literal"><span class="pre">statement</span></tt>)+
+              [&quot;else&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>]
+              [&quot;finally&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>]
+<strong id="grammar-token-try_stmt2">try_stmt2</strong> ::= &quot;try&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>
+              &quot;finally&quot; <tt class="xref docutils literal"><span class="pre">statement</span></tt>
 </pre>
 </div>
 </div>
@@ -158,7 +278,7 @@ block_stmt: &#8220;{&#8221; (<cite>statement</cite>)* &#8220;}&#8221;</blockquot
 <p>Compilation directives are statements that don&#8217;t generate executable code or
 data directly, but influence how subsequent code is compiled.</p>
 <div class="section" id="import-statement">
-<span id="index-43"></span><h3>Import Statement<a class="headerlink" href="#import-statement" title="Permalink to this headline">¶</a></h3>
+<span id="stmt-import"></span><h3>Import Statement<a class="headerlink" href="#import-statement" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>
@@ -172,21 +292,22 @@ data directly, but influence how subsequent code is compiled.</p>
             <h3><a href="../index.html">Table Of Contents</a></h3>
             <ul>
 <li><a class="reference external" href="#">Statements and Control Structures</a><ul>
+<li><a class="reference external" href="#statement-blocks">Statement blocks</a></li>
 <li><a class="reference external" href="#simple-statements">Simple Statements</a><ul>
-<li><a class="reference external" href="#the-empty-statement">The Empty Statement</a></li>
 <li><a class="reference external" href="#expression-statement">Expression Statement</a></li>
 <li><a class="reference external" href="#assignment-statement">Assignment Statement</a></li>
 <li><a class="reference external" href="#return-statement">Return Statement</a></li>
 </ul>
 </li>
 <li><a class="reference external" href="#compound-statements">Compound Statements</a><ul>
-<li><a class="reference external" href="#block-statement">Block Statement</a></li>
+<li><a class="reference external" href="#declaration-statement">Declaration Statement</a></li>
 <li><a class="reference external" href="#with-statement">With Statement</a></li>
 </ul>
 </li>
 <li><a class="reference external" href="#conditional-statements">Conditional Statements</a><ul>
 <li><a class="reference external" href="#if-statement">If Statement</a></li>
-<li><a class="reference external" href="#case-statement">Case Statement</a></li>
+<li><a class="reference external" href="#switch-statement">Switch Statement</a></li>
+<li><a class="reference external" href="#match-statement">Match Statement</a></li>
 </ul>
 </li>
 <li><a class="reference external" href="#looping-statements">Looping Statements</a><ul>
@@ -260,7 +381,7 @@ data directly, but influence how subsequent code is compiled.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Apr 02, 2011.
+      Last updated on Apr 05, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>

@@ -94,6 +94,8 @@ for the iteration variable::
 .. index::
   single: def
   pair: function; declaring
+  
+.. _functionDeclarations:
 
 Function Declarations
 ---------------------
