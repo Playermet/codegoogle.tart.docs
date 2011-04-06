@@ -263,7 +263,7 @@ in the base class::
 
 Unlike :kw:`override`, :kw:`undef` works with methods defined in interfaces as well as base
 classes. There is an additional use
-for :kw:`undef`, which is to suppress the creation of implicit methods which be added by the
+for :kw:`undef`, which is to suppress the creation of implicit methods which would be added by the
 compiler, such as the default constructor. For example, suppose there is some data type which
 is never intended to be constructed within Tart code, but only created by some external C
 library::
@@ -337,10 +337,10 @@ still get a copy.
 Struct members
 --------------
 
-Method definitions in structs are always :kw:`final` and cannot be overridden. The reason for
-this is because structs do not have a hidden dispatch table like classes do, so the decision
-of which method body gets executed has to be determined at compile time. Without the dispatch
-table, the compiler can only use the static type information to decide which method body to run. 
+Method definitions in structs are always implicitly :kw:`final` and cannot be overridden.
+The reason for  this is because structs do not have a hidden dispatch table like classes do,
+so the decision of which method body gets executed has to be determined at compile time using
+only the static type information at the calling site.
 
 .. index::
   pair: class; new instance
@@ -462,7 +462,7 @@ specified, then it uses the default value for that type.
   pair: keyword; arguments
 
 Default constructors
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 If the object has no :func:`construct` method and no :func:`create` method, then the compiler
 will attempt to create a default constructor. The default constructor takes no arguments,
@@ -512,7 +512,7 @@ to a default, then the compiler will emit an error.
   single: construction
 
 Constructor Execution
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 The compiler will attempt to ensure that all member fields are initialized during the execution of
 the constructor. Fields which have no defaults must be assigned in the constructor, whereas fields
@@ -544,8 +544,8 @@ Constructors can also invoke other constructors of the same class, by explicitly
   pair: array; constructor
   pair: array; literal
 
-Array constructors
-------------------
+Creating Array Instances
+------------------------
 
 The syntax for constructing a new array instance is the type name, followed
 by the dimension of the array in square brackets::
@@ -651,6 +651,10 @@ Interfaces can only contain a retricted set of definitions:
   * Type definitions
   * Named constants
 
+A class that derives from an interface type must provide definitions of all of the methods in
+the interface, unless that class is declared abstract. Any missing definitions will be flagged
+by the compiler.
+
 .. _protocols:
 
 Protocols
@@ -663,7 +667,8 @@ support. An example would be a "HasToString" protocol::
     def toString -> String;
   }
 
-What this says is that in order to support the ``HasToString`` protocol, a class must define
+What this says is that in order to support the ``HasToString`` protocol, a class, interface
+or struct must define
 a :meth:`toString` method that returns a String. There are two ways that a type can support
 a protocol, *explicit* and *implicit*. Explicitly supporting a protocol is done by declaring
 the protocol in the list of base types::

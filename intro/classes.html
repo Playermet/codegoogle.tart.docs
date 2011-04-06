@@ -51,7 +51,7 @@
           <div class="body">
             
   <div class="section" id="user-defined-types-composites">
-<span id="index-661"></span><h1>User-defined types: Composites<a class="headerlink" href="#user-defined-types-composites" title="Permalink to this headline">¶</a></h1>
+<span id="index-828"></span><h1>User-defined types: Composites<a class="headerlink" href="#user-defined-types-composites" title="Permalink to this headline">¶</a></h1>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword is one of the four keywords that are used to define a new
 aggregate type. The others are <tt class="xref docutils literal"><span class="pre">struct</span></tt>, <tt class="xref docutils literal"><span class="pre">interface</span></tt> and <tt class="xref docutils literal"><span class="pre">protocol</span></tt>.</p>
 <ul>
@@ -75,7 +75,7 @@ or the support can be determined implicitly.</p>
 </li>
 </ul>
 <div class="section" id="declaring-a-new-class">
-<span id="index-662"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
+<span id="index-829"></span><h2>Declaring a new class<a class="headerlink" href="#declaring-a-new-class" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="xref docutils literal"><span class="pre">class</span></tt> keyword defines a new class. Here is a sample of a class definition:</p>
 <div class="highlight-tart"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -175,12 +175,12 @@ class members <tt class="docutils literal"><span class="pre">public</span></tt> 
 </div>
 </div>
 <div class="section" id="defining-class-members">
-<span id="index-663"></span><h2>Defining class members<a class="headerlink" href="#defining-class-members" title="Permalink to this headline">¶</a></h2>
+<span id="index-830"></span><h2>Defining class members<a class="headerlink" href="#defining-class-members" title="Permalink to this headline">¶</a></h2>
 <p>There is no restriction on the kinds of declarations which can appear in the body of a
 <tt class="xref docutils literal"><span class="pre">class</span></tt> or <tt class="xref docutils literal"><span class="pre">struct</span></tt>, but most commonly they will be variable or method
 declarations.</p>
 <div class="section" id="member-visibility">
-<span id="index-664"></span><h3>Member Visibility<a class="headerlink" href="#member-visibility" title="Permalink to this headline">¶</a></h3>
+<span id="index-831"></span><h3>Member Visibility<a class="headerlink" href="#member-visibility" title="Permalink to this headline">¶</a></h3>
 <p>A member definition can have one of three visibility levels:</p>
 <blockquote>
 <ul class="simple">
@@ -191,7 +191,7 @@ declarations.</p>
 </blockquote>
 </div>
 <div class="section" id="member-variables">
-<span id="index-665"></span><h3>Member Variables<a class="headerlink" href="#member-variables" title="Permalink to this headline">¶</a></h3>
+<span id="index-832"></span><h3>Member Variables<a class="headerlink" href="#member-variables" title="Permalink to this headline">¶</a></h3>
 <p>A variable declared within a class body is a class instance variable, unless it the
 <tt class="docutils literal"><span class="pre">static</span></tt> modifier is present, in which case it is a static variable.</p>
 <p>Variable declarations can include an optional initialization expression. If present, the
@@ -207,7 +207,7 @@ the built-in default for that type.</p>
 are constant, and may not be changed once initialized.</p>
 </div>
 <div class="section" id="properties">
-<span id="index-666"></span><h3>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
+<span id="index-833"></span><h3>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
 <p>A <em>property</em> is a member definition that has a <em>getter</em> and <em>setter</em> function, and is otherwise
 accessed like a variable. Reading from the property calls the getter function, and writing to
 it calls the setter function. It is not required that both the getter and setter be defined,
@@ -250,7 +250,7 @@ returns the value of the property.</p>
 to the property.</p>
 </div>
 <div class="section" id="methods">
-<span id="index-667"></span><h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<span id="index-834"></span><h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <p>In Tart, the term <em>Method</em> and <em>Function</em> are interchangeable - usually &#8220;Function&#8221; is used
 when speaking of global functions, and &#8220;Method&#8221; when speaking of member functions.</p>
 <p>The <tt class="xref docutils literal"><span class="pre">def</span></tt> keyword defines a new method, as previously describe in the section on
@@ -282,7 +282,7 @@ It is <em>not</em> required (and is not allowed) when implementing a method defi
 virtual functions work in C++. The decision of which method body gets executed when a method
 gets called is based on the real type of the object, not it&#8217;s declared type at that point
 in the code.</p>
-<p id="index-668">An inherited method definition can also be <em>undefined</em> using the <tt class="xref docutils literal"><span class="pre">undef</span></tt> keyword.
+<p id="index-835">An inherited method definition can also be <em>undefined</em> using the <tt class="xref docutils literal"><span class="pre">undef</span></tt> keyword.
 An undefined method simply throws an <tt class="xref docutils literal"><span class="pre">UnsupportedOperationError</span></tt> exception, and
 is a convenient way to signal that a subclass does not support an operation that is defined
 in the base class:</p>
@@ -299,7 +299,7 @@ in the base class:</p>
 </div>
 <p>Unlike <tt class="xref docutils literal"><span class="pre">override</span></tt>, <tt class="xref docutils literal"><span class="pre">undef</span></tt> works with methods defined in interfaces as well as base
 classes. There is an additional use
-for <tt class="xref docutils literal"><span class="pre">undef</span></tt>, which is to suppress the creation of implicit methods which be added by the
+for <tt class="xref docutils literal"><span class="pre">undef</span></tt>, which is to suppress the creation of implicit methods which would be added by the
 compiler, such as the default constructor. For example, suppose there is some data type which
 is never intended to be constructed within Tart code, but only created by some external C
 library:</p>
@@ -311,7 +311,7 @@ library:</p>
 <span class="k">}</span>
 </pre></div>
 </div>
-<p id="index-669">A method may be declared <tt class="xref docutils literal"><span class="pre">final</span></tt>, informing the compiler that it is not permitted to
+<p id="index-836">A method may be declared <tt class="xref docutils literal"><span class="pre">final</span></tt>, informing the compiler that it is not permitted to
 override that method in subclasses. This will in some cases allow the compiler to make additional
 optimizations, avoiding the need for a dynamic dispatch:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Circle</span> <span class="k">{</span>
@@ -323,7 +323,7 @@ optimizations, avoiding the need for a dynamic dispatch:</p>
 </div>
 <p>The <tt class="xref docutils literal"><span class="pre">final</span></tt> keyword can also be applied to an entire class, which means that the class
 cannot be subclassed at all.</p>
-<p id="index-670">A method declared as <tt class="xref docutils literal"><span class="pre">abstract</span></tt> has no method body. A class containing an abstract method
+<p id="index-837">A method declared as <tt class="xref docutils literal"><span class="pre">abstract</span></tt> has no method body. A class containing an abstract method
 must also be declared abstract:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Shape</span> <span class="k">{</span>
   <span class="k">abstract</span> <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="nv">dc</span><span class="p">:</span><span class="nc">DrawContext</span><span class="p">);</span>
@@ -336,7 +336,7 @@ A concrete subclass of an abstract class must provide concrete definitions for a
 inherited abstract methods.</p>
 </div>
 <div class="section" id="the-self-parameter">
-<span id="index-671"></span><h3>The <tt class="docutils literal"><span class="pre">self</span></tt> parameter<a class="headerlink" href="#the-self-parameter" title="Permalink to this headline">¶</a></h3>
+<span id="index-838"></span><h3>The <tt class="docutils literal"><span class="pre">self</span></tt> parameter<a class="headerlink" href="#the-self-parameter" title="Permalink to this headline">¶</a></h3>
 <p>Within a class method, the special variable <tt class="xref docutils literal"><span class="pre">self</span></tt> refers to the current instance.
 You do not need to declare the  <tt class="xref docutils literal"><span class="pre">self</span></tt> variable explicitly.</p>
 <p>Instance variables can be referred to directly by name, you do not need to qualify them
@@ -360,14 +360,14 @@ still get a copy.</p>
 </div>
 </div>
 <div class="section" id="struct-members">
-<span id="index-672"></span><h2>Struct members<a class="headerlink" href="#struct-members" title="Permalink to this headline">¶</a></h2>
-<p>Method definitions in structs are always <tt class="xref docutils literal"><span class="pre">final</span></tt> and cannot be overridden. The reason for
-this is because structs do not have a hidden dispatch table like classes do, so the decision
-of which method body gets executed has to be determined at compile time. Without the dispatch
-table, the compiler can only use the static type information to decide which method body to run.</p>
+<span id="index-839"></span><h2>Struct members<a class="headerlink" href="#struct-members" title="Permalink to this headline">¶</a></h2>
+<p>Method definitions in structs are always implicitly <tt class="xref docutils literal"><span class="pre">final</span></tt> and cannot be overridden.
+The reason for  this is because structs do not have a hidden dispatch table like classes do,
+so the decision of which method body gets executed has to be determined at compile time using
+only the static type information at the calling site.</p>
 </div>
 <div class="section" id="creating-a-new-class-instance">
-<span id="index-673"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
+<span id="index-840"></span><h2>Creating a new class instance<a class="headerlink" href="#creating-a-new-class-instance" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for creating a new class instance is the same as in Python, which is
 to call the class as if it were a function:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="k">var</span> <span class="nv">s</span> <span class="o">=</span> <span class="nv">Rectangle</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">20</span><span class="p">);</span>
@@ -395,7 +395,7 @@ helper classes which will automatically wrap (&#8216;auto-box&#8217;) value type
 </div>
 </div>
 <div class="section" id="constructors">
-<span id="index-674"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-841"></span><h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <p>A <em>constructor method</em> is responsible for initializing the members of a class instance
 when it is created. The constructor method is named <tt class="xref docutils literal"><span class="pre">construct()</span></tt>, and must not declare a
 return value.</p>
@@ -460,19 +460,18 @@ calls it automatically.</p>
 to synthesize a default constructor.</p>
 </li>
 </ul>
-<p id="index-676">Any member variable which is not initialized by the constructor will be set to
+<p id="index-843">Any member variable which is not initialized by the constructor will be set to
 its default value. If the default value for the member variable has not been
 specified, then it uses the default value for that type.</p>
-</div>
 <div class="section" id="default-constructors">
-<span id="index-677"></span><h2>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h2>
+<span id="index-844"></span><h3>Default constructors<a class="headerlink" href="#default-constructors" title="Permalink to this headline">¶</a></h3>
 <p>If the object has no <tt class="xref docutils literal"><span class="pre">construct()</span></tt> method and no <tt class="xref docutils literal"><span class="pre">create()</span></tt> method, then the compiler
 will attempt to create a default constructor. The default constructor takes no arguments,
 and will initialize every field to its default value. If any fields cannot be initialized
 to a default, then the compiler will emit an error.</p>
 </div>
 <div class="section" id="constructor-execution">
-<span id="index-678"></span><h2>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h2>
+<span id="index-845"></span><h3>Constructor Execution<a class="headerlink" href="#constructor-execution" title="Permalink to this headline">¶</a></h3>
 <p>The compiler will attempt to ensure that all member fields are initialized during the execution of
 the constructor. Fields which have no defaults must be assigned in the constructor, whereas fields
 which do have defaults (either explicitly specified or implicit based on the type) may not be.
@@ -497,8 +496,9 @@ were assigned during the call.</p>
 <tt class="xref docutils literal"><span class="pre">let</span></tt>-defined members afterwards.</p>
 </div>
 </div>
-<div class="section" id="array-constructors">
-<span id="index-679"></span><h2>Array constructors<a class="headerlink" href="#array-constructors" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="creating-array-instances">
+<span id="index-846"></span><h2>Creating Array Instances<a class="headerlink" href="#creating-array-instances" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for constructing a new array instance is the type name, followed
 by the dimension of the array in square brackets:</p>
 <div class="highlight-tart"><div class="highlight"><pre><span class="c">// Allocate an array of 10 rectangles.</span>
@@ -609,7 +609,7 @@ but can derive from any number of interfaces:</p>
 
 <span class="c">// Another interface</span>
 <span class="k">interface</span> <span class="nc">HasEventListeners</span> <span class="k">{</span>
-  <span class="k">def</span> <span class="nf">addListener</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span><span class="nc">fn</span><span class="gr">(e:Event</span><span class="p">));</span>
+  <span class="k">def</span> <span class="nf">addListener</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span><span class="k">fn</span><span class="p">(</span><span class="nv">e</span><span class="p">:</span><span class="nc">Event</span><span class="p">));</span>
 <span class="k">}</span>
 
 <span class="c">// A class that derives from one base class and two interfaces.</span>
@@ -623,7 +623,7 @@ but can derive from any number of interfaces:</p>
     <span class="c">// Implement select</span>
   <span class="k">}</span>
 
-  <span class="k">def</span> <span class="nf">addListener</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span><span class="nc">fn</span><span class="gr">(e:Event</span><span class="p">))</span> <span class="k">{</span>
+  <span class="k">def</span> <span class="nf">addListener</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span><span class="k">fn</span><span class="p">(</span><span class="nv">e</span><span class="p">:</span><span class="nc">Event</span><span class="p">))</span> <span class="k">{</span>
     <span class="c">// Implement addListener.</span>
   <span class="k">}</span>
 <span class="k">}</span>
@@ -637,6 +637,9 @@ but can derive from any number of interfaces:</p>
 <li>Named constants</li>
 </ul>
 </blockquote>
+<p>A class that derives from an interface type must provide definitions of all of the methods in
+the interface, unless that class is declared abstract. Any missing definitions will be flagged
+by the compiler.</p>
 </div>
 <div class="section" id="protocols">
 <span id="id2"></span><h2>Protocols<a class="headerlink" href="#protocols" title="Permalink to this headline">¶</a></h2>
@@ -647,7 +650,8 @@ support. An example would be a &#8220;HasToString&#8221; protocol:</p>
 <span class="k">}</span>
 </pre></div>
 </div>
-<p>What this says is that in order to support the <tt class="docutils literal"><span class="pre">HasToString</span></tt> protocol, a class must define
+<p>What this says is that in order to support the <tt class="docutils literal"><span class="pre">HasToString</span></tt> protocol, a class, interface
+or struct must define
 a <tt class="xref docutils literal"><span class="pre">toString()</span></tt> method that returns a String. There are two ways that a type can support
 a protocol, <em>explicit</em> and <em>implicit</em>. Explicitly supporting a protocol is done by declaring
 the protocol in the list of base types:</p>
@@ -773,10 +777,12 @@ applies when using the specialization:</p>
 </li>
 <li><a class="reference external" href="#struct-members">Struct members</a></li>
 <li><a class="reference external" href="#creating-a-new-class-instance">Creating a new class instance</a></li>
-<li><a class="reference external" href="#constructors">Constructors</a></li>
+<li><a class="reference external" href="#constructors">Constructors</a><ul>
 <li><a class="reference external" href="#default-constructors">Default constructors</a></li>
 <li><a class="reference external" href="#constructor-execution">Constructor Execution</a></li>
-<li><a class="reference external" href="#array-constructors">Array constructors</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#creating-array-instances">Creating Array Instances</a></li>
 <li><a class="reference external" href="#interfaces">Interfaces</a></li>
 <li><a class="reference external" href="#protocols">Protocols</a></li>
 <li><a class="reference external" href="#extending-types">Extending types</a></li>
@@ -833,7 +839,7 @@ applies when using the specialization:</p>
     </div>
     <div class="footer">
       &copy; Copyright 2008-2011, Talin.
-      Last updated on Apr 05, 2011.
+      Last updated on Apr 06, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
     </div>
   </body>
